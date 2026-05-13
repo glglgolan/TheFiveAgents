@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 הכללים החשובים ביצירת וידאו ותמונות עם AI — Liraz Golan</title>
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --bg-paper: #f3efe9;
+      --bg-dark: #1a1614;
+      --bg-deep: #0f0d0c;
+      --text: #1a1614;
+      --text-muted: #5a544d;
+      --text-light: #8a8479;
+      --accent: #b8741a;       /* warm amber - matches Liraz's palette */
+      --accent-cool: #2d5d7a;  /* deep teal */
+      --border: #e0d9cf;
+      --gold: #d4a05a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                   "Arial Hebrew", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 95vh;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 95vh;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 80px 8vw;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%);
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      max-width: 900px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      max-width: 700px;
+      line-height: 1.5;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 6vw;
+    }
+
+    section { padding: 100px 0; }
+
+    section.alt-bg { background: var(--bg-paper); }
+    section.dark-bg { background: var(--bg-dark); color: #fff; }
+    section.dark-bg p { color: rgba(255,255,255,0.82); }
+    section.dark-bg strong { color: #fff; }
+
+    /* ===== INTRO ===== */
+    .intro p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      font-weight: 300;
+    }
+
+    .intro p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ===== RULES ===== */
+    .rule {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .rule:first-of-type { border-top: none; }
+
+    .rule.reverse {
+      direction: ltr;
+    }
+
+    .rule.reverse > * {
+      direction: rtl;
+    }
+
+    .rule img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .rule-num {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .rule h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      color: var(--text);
+    }
+
+    .rule p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .rule p strong { color: var(--text); font-weight: 600; }
+
+    .rule ul, .rule ol {
+      padding-right: 24px;
+      margin: 16px 0 20px;
+    }
+
+    .rule li {
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .rule li strong { color: var(--text); font-weight: 600; }
+
+    blockquote {
+      border-right: 3px solid var(--accent);
+      padding: 14px 22px;
+      margin: 20px 0;
+      background: rgba(184,116,26,0.06);
+      color: var(--text);
+      font-style: italic;
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+
+    section.dark-bg blockquote {
+      border-color: var(--gold);
+      background: rgba(212,160,90,0.08);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .rule { grid-template-columns: 1fr; gap: 30px; padding: 50px 0; }
+      section { padding: 60px 0; }
+    }
+
+    /* ===== SUMMARY ===== */
+    .summary-list {
+      list-style: none;
+      padding: 0;
+      margin: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .summary-list li {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 24px;
+      align-items: baseline;
+    }
+
+    .summary-list li .n {
+      font-size: 1.3rem;
+      font-weight: 200;
+      color: var(--gold);
+      letter-spacing: -1px;
+    }
+
+    .summary-list li .t {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .summary-list li .t strong {
+      color: #fff;
+      font-weight: 700;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .display-h {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 28px;
+      max-width: 900px;
+    }
+
+    /* ===== CREDITS ===== */
+    .credits {
+      background: var(--bg-deep);
+      color: #fff;
+      padding: 90px 6vw 80px;
+      text-align: center;
+      border-top: 1px solid #2a2522;
+    }
+
+    .credits .label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    .credits .name {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .credits .title {
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="../yuval/outputs/2026-05-13-rules-hero.png" alt="יוצרת תוכן בעבודה — שעת הזהב">
+    <div class="hero-overlay">
+      <div class="hero-kicker">מדריך · יוצרי תוכן AI</div>
+      <h1>5 הכללים החשובים ביצירת וידאו ותמונות עם בינה מלאכותית</h1>
+      <h2>איך לגרום ליצירה להיראות כמו שלכם — לא כמו של המודל.</h2>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <p>
+        כשהבינה המלאכותית הפכה לכלי עבודה יומיומי, התחרות הויזואלית עברה ממכשירים לאסתטיקה.
+        <strong>כל אחד יכול להפעיל מודל.</strong> הפחות יודעים איך לגרום לו להוציא משהו שמרגיש כמו שלהם.
+      </p>
+      <p>
+        הכללים הבאים זוקקו מאלפי איטרציות בפועל — סטוריבורדים, ניסויים, כישלונות וגילויים מקריים.
+        הם לא קסם. הם משמעת.
+      </p>
+    </div>
+  </section>
+
+  <!-- RULE 1 -->
+  <section>
+    <div class="container">
+      <div class="rule">
+        <div>
+          <div class="rule-num">כלל 01</div>
+          <h2>תכננו לפני שתפעילו את המודל.</h2>
+          <p>
+            הטעות הנפוצה ביותר: לפתוח את Midjourney, Veo או Kling ולהקליד. בלי כיוון, בלי מצב רגשי, בלי תכנון מבנה.
+          </p>
+          <p><strong>מה לעשות במקום:</strong></p>
+          <ul>
+            <li>נייר ועט. כותבים את <strong>התחושה</strong> שאתם רוצים שהצופה ירגיש בשנייה ה-3, ה-15, ה-29.</li>
+            <li>מפרקים את הסרטון לבלוקים של 5 שניות. כל בלוק מקבל פונקציה אחת: hook, reveal, payoff.</li>
+            <li>רק אחרי שיש לכם בריף של 30 שניות שניתן לקרוא בקול — תפעילו את המודל.</li>
+          </ul>
+          <blockquote>
+            המודל לא חושב במונחים של "סיפור". הוא מייצר frames. אתם זה שצריכים להחזיק את המסע.
+          </blockquote>
+        </div>
+        <div>
+          <img src="../yuval/outputs/2026-05-13-rules-storyboard.png" alt="סטוריבורד על נייר — נקודת ההתחלה">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULE 2 -->
+  <section class="alt-bg">
+    <div class="container">
+      <div class="rule reverse">
+        <div>
+          <img src="../yuval/outputs/2026-05-13-rules-consistency.png" alt="שלוש תמונות בעלות DNA ויזואלי משותף">
+        </div>
+        <div>
+          <div class="rule-num">כלל 02</div>
+          <h2>עקביות ויזואלית היא לא אופציה.</h2>
+          <p>
+            קל לייצר תמונה אחת מדהימה. הקושי הוא לייצר <strong>עשר תמונות שמרגישות אחיות.</strong>
+          </p>
+          <p><strong>שלושה דברים שצריכים להישאר זהים לאורך הפרויקט:</strong></p>
+          <ol>
+            <li><strong>פלטת צבעים</strong> — 3-4 צבעים דומיננטיים, נכפים על המודל בכל פרומפט.</li>
+            <li><strong>תאורה</strong> — שעת זהב? נורות ניאון? סטודיו רך? נעלו את זה בתמונה הראשונה.</li>
+            <li><strong>קומפוזיציה</strong> — close-up vs. wide, מרכזי vs. off-center. שמרו על קצב.</li>
+          </ol>
+          <p>
+            <strong>טריק מעשי:</strong> reference images כקלט (תמיכת <code>--cref</code>, <code>--sref</code>, image-to-image). המודל ינשום את הסגנון שלכם במקום להמציא חדש כל פעם.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULE 3 -->
+  <section class="dark-bg">
+    <div class="container">
+      <div class="rule">
+        <div>
+          <div class="rule-num" style="color: var(--gold);">כלל 03</div>
+          <h2 style="color:#fff;">המוזיקה היא המסגרת. תייצרו אותה ראשונה.</h2>
+          <p>
+            יוצרים רבים מייצרים את הוויזואל קודם, ואז "מחפשים מוזיקה שמתאימה". זו טעות שעולה ימי עריכה.
+          </p>
+          <p><strong>הסדר הנכון:</strong></p>
+          <ol style="color: rgba(255,255,255,0.82);">
+            <li><strong>מוזיקה / פסקול</strong> (Suno, Udio, הלחנה עצמית)</li>
+            <li><strong>תמונות בסיס</strong> — פרומפטים שמדברים את הטון של הפסקול</li>
+            <li><strong>תנועה</strong> (Veo, Kling, Runway) — תזמון שמתכתב עם החיתוכים</li>
+            <li><strong>עריכה</strong> — חיתוכים על beats, transitions על דרופים</li>
+          </ol>
+          <blockquote>
+            הקצב, הצבע והאנרגיה של המוזיקה הם המצפן. הוויזואל הוא תוצר. לא הפוך.
+          </blockquote>
+        </div>
+        <div>
+          <img src="../yuval/outputs/2026-05-13-rules-music.png" alt="DJ וגלי קול — הקצב מכתיב את החיתוך">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULE 4 -->
+  <section>
+    <div class="container">
+      <div class="rule reverse">
+        <div>
+          <img src="../yuval/outputs/2026-05-13-rules-serendipity.png" alt="אבסטרקט של צבע ואור — מקריות יצירתית">
+        </div>
+        <div>
+          <div class="rule-num">כלל 04</div>
+          <h2>חבקו את הבריחות.</h2>
+          <p>
+            ה-Gen AI יברח לכם מהמסגרת. <strong>זה לא באג, זו תכונה.</strong>
+          </p>
+          <p>
+            תמונה אחת מתוך עשר תהיה טובה יותר ממה שתכננתם. תנועה אחת תיצור זווית שלא חשבתם עליה. המודל יציע פילטר או אווירה שמשפרים את הסיפור.
+          </p>
+          <blockquote>
+            יוצרים בינוניים מאלצים את המודל לעשות בדיוק מה שתכננו.<br>
+            יוצרים מעולים מזהים מתי המודל גילה משהו טוב יותר — וכותבים את הסטוריבורד מחדש.
+          </blockquote>
+          <p>
+            השילוב היחיד שמייצר תוצר ייחודי: <strong>השליטה שלכם פוגשת את המקריות של ה-AI.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULE 5 -->
+  <section class="alt-bg">
+    <div class="container">
+      <div class="rule">
+        <div>
+          <div class="rule-num">כלל 05</div>
+          <h2>רגש קודם לטכנולוגיה.</h2>
+          <p>
+            הצופה שלכם לא יזכור איזה מודל השתמשתם בו, איך פתרתם את ה-prompt engineering, או כמה seeds רצתם.
+          </p>
+          <p>
+            <strong>הוא יזכור</strong> את הרגע שעיניים נדלקו. את הצחוק של הילדה. את הנשימה שעצרה את הפעולה.
+          </p>
+          <p><strong>איך לבדוק את עצמכם:</strong></p>
+          <ul>
+            <li>שלחו את העריכה הראשונית לחבר שלא מכיר AI. תשאלו: <em>"מה הרגשת?"</em></li>
+            <li>אם התשובה היא "וואו, איזה אפקטים מגניבים" — נכשלתם.</li>
+            <li>אם התשובה היא "האישה הזו... היא מי?" — הצלחתם.</li>
+          </ul>
+          <blockquote>
+            הטכנולוגיה היא העיפרון. הסיפור הוא הציור.
+          </blockquote>
+        </div>
+        <div>
+          <img src="../yuval/outputs/2026-05-13-rules-emotion.png" alt="תקריב רגשי — איפה שהמסע מתחיל ונגמר">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="dark-bg">
+    <div class="container">
+      <div class="section-label">לסיכום</div>
+      <h2 class="display-h" style="color:#fff;">חמישה עקרונות. משמעת אחת.</h2>
+      <p style="color: rgba(255,255,255,0.78); max-width: 720px; font-size: 1.1rem; margin-bottom: 16px;">
+        חמשת הכללים האלה לא יהפכו אתכם ליוצרים גדולים אם הסיפור שלכם שטוח.
+        הם <strong style="color:#fff;">יוודאו</strong> שהסיפור שלכם לא ידולל על ידי הכלי.
+      </p>
+
+      <ol class="summary-list">
+        <li><span class="n">01</span><span class="t"><strong>תכננו.</strong> המודל הוא מבצע, לא במאי.</span></li>
+        <li><span class="n">02</span><span class="t"><strong>שמרו על DNA ויזואלי.</strong> עשר תמונות אחיות עדיפות ממאה תמונות זרות.</span></li>
+        <li><span class="n">03</span><span class="t"><strong>התחילו במוזיקה.</strong> היא נותנת את המסגרת.</span></li>
+        <li><span class="n">04</span><span class="t"><strong>חבקו את הבריחות.</strong> המקריות היא חברה.</span></li>
+        <li><span class="n">05</span><span class="t"><strong>רגש קודם.</strong> תמיד.</span></li>
+      </ol>
+
+      <p style="color: rgba(255,255,255,0.7); margin-top: 30px; font-style: italic;">
+        יוצרי התוכן הטובים בעולם של 2026 הם לא אלו שמפעילים את המודלים הכי חדשים.<br>
+        הם אלו שיודעים מה הם רוצים שירגישו — ומפעילים את הכלים ככלים.
+      </p>
+    </div>
+  </section>
+
+  <!-- CREDITS -->
+  <section class="credits">
+    <div class="label">קרדיטים</div>
+    <div class="name">Liraz Golan</div>
+    <div class="title">Visual AI Creator</div>
+  </section>
+
+</body>
+</html>
