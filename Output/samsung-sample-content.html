@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Back to Your Moments — מאחורי הקלעים</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', 'Arial Hebrew', Arial, sans-serif;
+      background: #0d0d0d;
+      color: #e8e8e8;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 80px 40px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h2 {
+      font-size: 1.2rem;
+      color: #a0b4d0;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 60px 30px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: #c8d8e8;
+      border-right: 4px solid #0f6fff;
+      padding-right: 20px;
+      margin-bottom: 50px;
+      line-height: 1.9;
+    }
+
+    .lead strong {
+      color: #4fa3ff;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin: 50px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      color: #7ec8e3;
+      margin: 36px 0 12px;
+    }
+
+    p {
+      color: #d0d8e0;
+      margin-bottom: 16px;
+    }
+
+    em {
+      color: #9ecfff;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #1e1e1e;
+      margin: 48px 0;
+    }
+
+    /* Stack table */
+    .stack-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 32px;
+      font-size: 0.95rem;
+    }
+
+    .stack-table th {
+      background: #1a2a3a;
+      color: #7ec8e3;
+      padding: 10px 16px;
+      text-align: right;
+      font-weight: 600;
+      border-bottom: 2px solid #0f6fff;
+    }
+
+    .stack-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #1e2a36;
+      color: #c8d8e8;
+    }
+
+    .stack-table tr:hover td {
+      background: #111d28;
+    }
+
+    .flow-line {
+      background: #0f1e2e;
+      border: 1px solid #1e3a5a;
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-family: monospace;
+      color: #4fa3ff;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Steps */
+    .step {
+      background: #111;
+      border: 1px solid #1e2a36;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      border-right: 4px solid #0f6fff;
+    }
+
+    .step h3 {
+      margin-top: 0;
+    }
+
+    /* Principles list */
+    ul {
+      padding-right: 22px;
+      margin: 12px 0 20px;
+    }
+
+    ul li {
+      color: #c8d8e8;
+      margin-bottom: 8px;
+    }
+
+    /* Scene table */
+    .scene-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.88rem;
+    }
+
+    .scene-table th {
+      background: #0f1e2e;
+      color: #7ec8e3;
+      padding: 10px 12px;
+      text-align: right;
+      font-weight: 600;
+      border-bottom: 2px solid #0f6fff;
+    }
+
+    .scene-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1a1a1a;
+      color: #c0ccd8;
+      vertical-align: top;
+    }
+
+    .scene-table tr:nth-child(even) td {
+      background: #0d1520;
+    }
+
+    /* Tone */
+    .tone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .tone-item {
+      background: #111820;
+      border-radius: 8px;
+      padding: 14px 18px;
+      border-right: 3px solid #0f6fff;
+    }
+
+    .tone-item strong {
+      display: block;
+      color: #4fa3ff;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .tone-item span {
+      color: #a0b4c8;
+      font-size: 0.88rem;
+    }
+
+    /* Closing */
+    .closing {
+      background: linear-gradient(135deg, #0f1e2e, #1a2a3a);
+      border-radius: 12px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-top: 50px;
+      border: 1px solid #1e3a5a;
+    }
+
+    .closing p {
+      color: #c0ccd8;
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+
+    .closing .tagline {
+      font-size: 1.2rem;
+      color: #4fa3ff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Flash Back to Your Moments</h1>
+    <h2>מאחורי הקלעים: מסע היצירה של סרטון ה-Galaxy S25 Ultra</h2>
+  </div>
+
+  <div class="container">
+
+    <p class="lead">
+      כאשת פיתוח תוכנה, אני רגילה לעולם של לוגיקה ומבנה נתונים. אבל בפרויקט הזה — אפשרתי לטכנולוגיה להפוך למכחול דיגיטלי.<br><br>
+      המצפן שבחרתי: <strong>"לראות מעבר ליכולות העין האנושית"</strong>. זה לא היה רק נושא הסרטון — זה היה העיקרון שהוביל כל החלטה לאורך הדרך.
+    </p>
+
+    <h2>המתודולוגיה: תכנון הנדסי + חופש יצירתי</h2>
+    <p>העבודה התבססה על סטאק טכנולוגי מתקדם ועל תוכנה ייעודית שפיתחתי בעצמי לעריכת תמונות — כדי להבטיח איכות ויזואלית ללא פשרות.</p>
+
+    <table class="stack-table">
+      <thead>
+        <tr><th>שלב</th><th>כלים</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>LLM</td><td>ChatGPT, Gemini, Grok</td></tr>
+        <tr><td>יצירת תמונות</td><td>Midjourney, Gemini NanoBanana, Grok, Adobe Photoshop + תוכנה עצמאית</td></tr>
+        <tr><td>יצירת וידאו</td><td>Midjourney, Kling, Grok, Veo 3</td></tr>
+        <tr><td>עריכת וידאו</td><td>CapCut</td></tr>
+        <tr><td>מוזיקה</td><td>Suno</td></tr>
+        <tr><td>עריכת מוזיקה</td><td>Adobe Audition</td></tr>
+      </tbody>
+    </table>
+
+    <div class="flow-line">Flow: LLM ← תמונות ← מוזיקה ← וידאו ← עריכה</div>
+
+    <hr>
+
+    <h2>שלב אחר שלב</h2>
+
+    <div class="step">
+      <h3>שלב 1: מחקר והשראה — The Deep Dive</h3>
+      <p>התהליך התחיל בצלילה עמוקה אל ה-DNA של סמסונג. חקרתי ספריות מותג, צפיתי בביקורות ובפרסומות, וניסיתי להבין לעומק אילו פיצ'רים הופכים את ה-Galaxy S25 Ultra לחוויית צילום שאין לה אח ורע.</p>
+      <p>ברגעים אלו — כשהחומרים זרמו על המסך — חזרתי דווקא לנייר ועט. המקום שבו השראה הופכת לרעיון גולמי.</p>
+    </div>
+
+    <div class="step">
+      <h3>שלב 2: סטוריבורד — הפאזל הדיגיטלי</h3>
+      <p>באמצעות מודלי שפה (ChatGPT, Gemini, Grok), זיקקתי את הרעיונות לבריף מהודק של 30 שניות. בניתי "פאזל" של סצנות — תוך ידיעה שב-Gen AI המערכת לפעמים "בורחת" מהמסגרת המתוכננת לטובת יצירתיות מפתיעה. בחרתי לחבק את הבריחות האלו.</p>
+    </div>
+
+    <div class="step">
+      <h3>שלב 3: תמונת הפתיחה — ה-Gatekeeper</h3>
+      <p>תמונת הפתיחה היא הכל. היא צריכה לתפוס את העין וליצור חיבור רגשי מיידי. הקדשתי לה זמן רב — ללא פשרות על פילטרים או קומפוזיציה — כדי שהמסע יתחיל בעוצמה מקסימלית.</p>
+    </div>
+
+    <div class="step">
+      <h3>שלב 4: בניית היסודות וסימפוניית הסאונד</h3>
+      <p>כמו בבניית בית, יצרתי תמונות בסיס באמצעות פרומפטים מורכבים. במקביל, הלחנתי את הפסקול ב-Suno וערכתי ב-Adobe Audition.</p>
+      <p>עבורי, המוזיקה היא ה"מסגרת" של הסרטון: היא נותנת את הטון, האנרגיה והקצב שעל פיהם נגזרים המעברים הוויזואליים.</p>
+    </div>
+
+    <div class="step">
+      <h3>שלב 5: מנוע היצירה — מתמונה לוידאו</h3>
+      <p>כאן מתרחש הקסם הטכנולוגי האמיתי. בעזרת Veo 3, Grok, Midjourney ו-Kling — מפיחה חיים בתמונות הבסיס.</p>
+      <p>זהו תהליך של ניסוי וטעייה: לעיתים פרומפט מדויק מייצר את התנועה המושלמת בניסיון הראשון; לעיתים מריצה את אותה הסצנה במספר מודלים במקביל. השילוב בין השליטה שלי לבין המקריות של הבינה המלאכותית הוא שהופך את היצירה לייחודית.</p>
+    </div>
+
+    <div class="step">
+      <h3>שלב 6: המלאכה בחדר העריכה — The Masterpiece</h3>
+      <p>זה השלב שבו כל החלקים מתחברים לכדי שלם אחד. CapCut פתוחה על המסך, ובונה את הרצף על ה-Timeline: מניפולציות מהירות, טרנזישנים חכמים, אפקטים, חיתוכים שמתכתבים עם קצב המוזיקה.</p>
+      <p>המטרה: זרימה מושלמת שתעביר את המסר — <em>Flash Back to Your Moments</em> — לא כאוסף סרטונים, אלא כחוויה רגשית וטכנולוגית רציפה.</p>
+    </div>
+
+    <hr>
+
+    <h2>התוצאה: נשימה עמוקה ואנחת רווחה</h2>
+    <p>הסרטון הסופי הוא שילוב של טכנולוגיה עילית ורגש טהור. כשראיתי את התוצאה — השילוב של המצלמה המתקדמת עם רגעי ה"פלאשבק" האנושיים — הרגשתי גאווה. רגע של הורדת הסרטון, ואז צפייה בו שוב ושוב, פשוט כי הוא מזקק בדיוק את מה שרציתי להגיד.</p>
+
+    <hr>
+
+    <h2>העקרונות שהובילו אותי</h2>
+    <p>בעולם שבו הכל נע מהר, הרגעים לא מחכים. חיוך ברקע, מחווה של אדם זר, קרן אור שפוגעת בפנים — הם חולפים כהרף עין. החדשנות של Galaxy נועדה לשמור עבורנו בדיוק את השניות האלו.</p>
+    <p>הרעיון מאחורי <em>Flash Back to Your Moments</em> הוא לא רק זיכרון — הוא עוסק בשימור הפרטים שלא הבחנו בהם, ובהענקת הכוח לחזור אליהם.</p>
+    <p><strong>מצלמת ה-Galaxy S25 Ultra לא תופסת את מה שרואים — היא שומרת את מה שכמעט פספסנו.</strong></p>
+
+    <ul>
+      <li>למקד מחדש את השימוש בתכונות הצילום המתקדמות</li>
+      <li>לחשוף רגשות חבויים המסתתרים ברקע</li>
+      <li>להעצים אור, צבע ועומק</li>
+      <li>להפוך לכידה פשוטה לסיפור רב-שכבתי</li>
+    </ul>
+
+    <p>השפה הוויזואלית של הקמפיין נשענת על עיקרון אחד: רגע הוא אף פעם לא סתם רגע. הוא זיכרון עתידי שמחכה להתגלות מחדש.</p>
+    <p><em>Galaxy S25 Ultra לא רק שומר את הזיכרונות — הוא עוזר ליצור את הרגעים שתחזרו אליהם בעתיד.</em></p>
+
+    <hr>
+
+    <h2>כיוון טון</h2>
+    <div class="tone-grid">
+      <div class="tone-item"><strong>Cinematic realism</strong><span>לכידת רגעים יומיומיים, לא פנטזיה</span></div>
+      <div class="tone-item"><strong>Human emotion first</strong><span>הרגש קודם לטכנולוגיה</span></div>
+      <div class="tone-item"><strong>Subtle transformation</strong><span>חדשנות שנחשפת בהדרגה</span></div>
+      <div class="tone-item"><strong>Warm colors + smooth transitions</strong><span>מעברים חלקים בעקבות הקצב</span></div>
+    </div>
+
+    <hr>
+
+    <h2>טבלת סצנות</h2>
+    <table class="scene-table">
+      <thead>
+        <tr><th>Scene</th><th>תיאור</th><th>תחושה</th><th>פרטים מיוחדים</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>The Hook</td><td>תקריב של אישה מחייכת עם הכיתוב "Flash Back to your Moments"</td><td>נוסטלגי ומזמין</td><td>Slow-motion, תאורה רכה</td></tr>
+        <tr><td>Inner Innovation</td><td>מבט פרוס על פנימיות ה-S25 Ultra עם גוני נחושת</td><td>היי-טק ומדויק</td><td>מעבר הרכבה מהיר, אפקטי סאונד מכניים</td></tr>
+        <tr><td>Dynamic Motion</td><td>סקייטבורד ברחוב עירוני עם ממשק "Saturation" פעיל</td><td>אנרגטי ותוסס</td><td>גזרה מהירה, מצלמה עוקבת</td></tr>
+        <tr><td>Crowd Connection</td><td>הליכה בסלואו-מושן ברחוב הומה</td><td>ממוקד ושקט</td><td>עומק שדה, טשטוש הרקע</td></tr>
+        <tr><td>Nightlife Energy</td><td>ריקוד בקונצרט בתאורת ניאון</td><td>חשמלי ומרגש</td><td>גזרות קצביות מהירות</td></tr>
+        <tr><td>Adventure Snap</td><td>מעבר מיידי ממדבר לחוף ים</td><td>הרפתקני וחופשי</td><td>שכבות-על, תיאום עם המוזיקה</td></tr>
+        <tr><td>Macro Detail</td><td>תקריב קיצוני על מודול המצלמה המשולשת</td><td>פרמיום ובולד</td><td>השתקפויות מבריקות, פלאר עדשה</td></tr>
+        <tr><td>The Companion</td><td>האישה וכלבה בשדה שטוף שמש, מעבר ללילה</td><td>חם ונאמן</td><td>ממשק "Picture Softening", שעת הזהב</td></tr>
+        <tr><td>AI Magic</td><td>שקיעה עירונית מושדרגת ע"י AI Generative Tools</td><td>עתידני ומפעים</td><td>אפקט "גל" ויזואלי לרחבי השמיים</td></tr>
+        <tr><td>The Gesture</td><td>סלפי עם גבר מבוגר המנופף בכף ידו</td><td>אנושי וידידותי</td><td>טקסט "Free-Hand Selfie", פוקוס עובר אליו</td></tr>
+        <tr><td>The Reveal</td><td>לוגו SAMSUNG על רקע שחור</td><td>איקוני וסמכותי</td><td>חשיפה דרמטית, fade-to-black קולנועי</td></tr>
+      </tbody>
+    </table>
+
+    <div class="closing">
+      <p>נהניתי מהתהליך הזה כמו שנהנים ממסע — שנבנה צעד אחר צעד, רגע אחר רגע.<br>
+      אני מקווה שגם אתם תרגישו את הקסם, את התנועה, ואת הרגעים שנשמרו כאן.</p>
+      <p class="tagline">תהנו מהרגע.</p>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+מאחורי הקלעים Flash Back to Your Moments -
+Workflow
+מסע היצירה של סרטון הGalaxy S25 Ultra
+כאשת פיתוח תוכנה, אני רגילה לעולם של לוגיקה ומבנה נתונים, אבל בפרויקט הזה אפשרתי לטכנולוגיה להפוך למכחול דיגיטלי. המסלול שבחרתי הוא ״לראות מעבר ליכולות העין האנושית״, זה לא היה רק נושא הסרטון, אלא המצפן שליווה את כל תהליך העבודה שלי.
+המתודולוגיה - שילוב של תכנון הנדסי וחופש יצירתי
+העבודה התבססה על סטאק טכנולוגי מתקדם ועל תוכנה ייעודית שפיתחתי בעצמי לעריכת תמונות, כדי להבטיח איכות ויזואלית ללא פשרות.
+הסטאק הטכנולוגי:
+LLM: ChatGPT, Gemini, Grok
+Gen AI image: Midjourney, Gemini- NanoBanana, Grok, Adobe Photoshop, self program I developed.
+Gen AI Video: Midjourney, Kling, Grok, Veo 3.
+Video Edit: CapCut
+Music: Suno
+Music Edit: Adobe Audition
+
+Usage Workflow:
+LLM->Images->Music->Video->Video Edit
+
+ 
+ 
+Step By Step
+שלב 1: מחקר והשראה (The Deep Dive) התהליך התחיל בצלילה עמוקה ל-DNA של סמסונג. חקרתי את ספריות המותג, צפיתי ב-Reviews ובפרסומות, וניסיתי להבין לעומק את הפיצ'רים ש הופכים את ה-Galaxy S25 Ultra  למכשיר עם חוויית צילום נדירה. ברגעים האלו, כשהחומרים זרמו על המסך, חזרתי דווקא לנייר ועט, המקום בו השראה הופכת לרעיון גולמי.
+שלב 2: סטוריבורד - הפאזל הדיגיטלי באמצעות מודלי שפה (ChatGPT, Gemini, Grok), זיקקתי את הרעיונות לבריף מהודק של 30 שניות. בניתי "פאזל" של סצנות, תוך ידיעה שבעולם ה- Gen-AI  המערכת לפעמים "בורחת" מהמסגרת המתוכננת לטובת יצירתיות מפתיעה - ואני בחרתי לחבק את הבריחות האלו.
+שלב 3: תמונת הפתיחה - ה-Gatekeeper תמונת הפתיחה היא הכל. היא צריכה לתפוס את העין ולייצר חיבור רגשי מיידי. הקדשתי זמן רב לדיוק שלה, ללא פשרות על פילטרים או קומפוזיציה, כדי להבטיח שהמסע יתחיל בעוצמה המקסימלית.
+שלב 4: בניית היסודות וסימפוניה של סאונד כמו בבניית בית, יצרתי את תמונות הבסיס באמצעות פרומפטים מורכבים. מיד אחריה, יצרתי את הפסקול ב-Suno ועריכה ב-Adobe Audition עבורי, המוזיקה היא ה"מסגור" של הסרטון; היא זו שנותנת את הטון, האנרגיה והקצב שעל פיו נגזרים המעברים הויזואליים.
+שלב 5: מנוע היצירה - מתמונה לוידאו (Gen-AI Motion) כאן מתרחש הקסם הטכנולוגי האמיתי. בעזרת מודלים מתקדמים כמו Veo 3, ,Grok, Midjourney ו-Kling אני מפיחה חיים בתמונות הבסיס שיצרתי. זהו תהליך של ניסוי וטעייה: לעיתים הפרומפט המדויק מייצר את התנועה המושלמת בניסיון הראשון, ולעיתים אני מריצה את אותה הסצנה במספר מודלים במקביל כדי למצוא את הדינמיקה הנכונה ביותר. ה-Gen-AI מאפשר לי "לפרוץ" את גבולות הסטוריבורד המקורי; אם המודל ייצר תנועה מפתיעה או זווית שלא חשבתי עליה, אני מעדכנת את החזון שלי בהתאם - השילוב בין השליטה שלי למקריות של הבינה המלאכותית הוא שהופך את היצירה לייחודית.
+שלב 6 – המלאכה בחדר העריכה (The Masterpiece) זה השלב שבו כל החלקים מתחברים לכדי שלם אחד על מסך ה-Mac כתוכנת העריכה המובילה שלי, CapCut פתוחה כל הזמן, ואני בונה את הרצף על גבי ה-Timeline כאן אני מבצעת מניפולציות של מהירות, שילוב טרנזישנים חכמים בין הסצנות, הוספת אפקטים וסאונד אפקטס, וחיתוכים מדויקים שמתכתבים עם קצב המוזיקה. בשלב זה אני גם משלבת את הטקסטים והגרפיקה במיקומים שנבחרו מראש, תוך הקפדה על טיפוגרפיה שמשדרת חדשנות. המטרה היא לייצר זרימה (Flow) מושלמת שתעביר את המסר- Flash Back to Your Moments – זה כבר לא רק אוסף סרטונים, אלא חוויה רגשית וטכנולוגית רציפה.
+התוצאה: נשימה עמוקה ואנחת רווחה
+הסרטון הסופי הוא שילוב של טכנולוגיה עילית ורגש טהור. כשראיתי את התוצאה הסופית - השילוב של המצלמה המתקדמת עם רגעי ה"פלאשבק" האנושיים - הרגשתי גאווה. זהו רגע של אנחת רווחה, הורדת הסרטון, וצפייה בו שוב ושוב, פשוט כי הוא מזקק את כל מה שרציתי להגיד על היכולת שלנו לראות מעבר.
+
+
+העקרונות שהובילו אותי
+בעולם שבו הכל נע מהר, הרגעים לא מחכים. הם חולפים כהרף עין, חיוך ברקע, מחווה של אדם זר, קרן אור שפוגעת בפנים ומוסיקה קצבית שמתארת את המהירות שבה רגעים חולפים וחייב לתפוס אותם בדיוק בשנייה הנכונה. החדשנות של Galaxy נועדה לשמור עבורנו את השניות האלו.
+הרעיון מאחורי Flash Back to Your Moments  הוא לא רק זיכרון. הוא עוסק בשימור הפרטים שלא הבחנו בהם ובהענקת הכוח לחזור אליהם, לעצב אותם מחדש ולחוות את אותם הרגעים כזיכרונות.
+מצלמת ה - Galaxy S25 Ultra לא תופסת את מה שרואים, היא שומרת עבורנו את מה שכמעט פספסנו.
+העקרונות המובילים:
+•	למקד מחדש את השימוש בתכונות המופלאות של המצלמה.
+•	לחשוף רגשות חבויים המסתתרים ברקע.
+•	להעצים אור, צבע ועומק.
+•	להפוך לכידה פשוטה לסיפור רב-שכבתי.
+השפה הוויזואלית של הקמפיין נשענת על עיקרון אחד: רגע הוא אף פעם לא סתם רגע.
+הוא זיכרון עתידי שמחכה להתגלות מחדש.
+אנחנו מתחילים בתמונה ספונטנית, אנושית, אמיתית ואז אנחנו עושים "פלאשבק", לא כדי להחזיר את הזמן לאחור, אלא כדי לפתוח משמעויות חדשות בתוכו.
+Galaxy S25 Ultra לא רק שומר את הזיכרונות, הוא עוזר ליצור את הרגעים שנראה בעתיד.
+כי הרגעים שאתם לוכדים היום, הם הסיפורים אליהם תחזרו מחר.
+Tone Direction Summary
+•	Cinematic realism, catching daily moments (not fantasy)
+•	Human emotion first, tech second
+•	Innovation revealed through subtle transformation
+•	Warm colors
+•	Smooth transitions (glitches mostly following by music beats)
+
+ 
+Scene Table
+Scene Title	Description	Feeling	Special Details
+The Hook	Close-up of a woman smiling with the text "Flash Back to your Moments".	Nostalgic & Inviting	Slow-motion focus, soft ambient lighting.
+Inner Innovation	3D exploded view of the Samsung S25 Ultra internals with copper accents.	High-Tech & Precise	Rapid assembly transition, mechanical sound effects.
+Dynamic Motion	The woman skateboarding in a city street with "Saturation" UI active.	Energetic & Vibrant	Quick cut, camera tracking the subject's movement.
+Crowd Connection	A slow-motion walk through a busy street, highlighting the woman's clear features.	Focused & Serene	Depth-of-field effect, blurring the background crowd.
+Nightlife Energy	Vivid, colorful shots of her dancing at a concert/party.	Electric & Exciting	Rapid rhythmic cuts, neon lighting.
+Adventure Snap	A split-second transition from a desert drum scene to a beach jump.	Adventurous & Free	Enhance the music beats. Layered overlay transition, matching the movement.
+Macro Detail	Ultra close-up of the triple-camera module on the back of the S25.	Premium & Bold	Gleaming reflections on the lenses, lens flare.
+The Companion	The woman and her German Shepherd in a sun-drenched field. Shift to now days at night.	Warm & Loyal	"Picture Softening" UI, golden hour lighting.
+AI Magic	A city sunset being enhanced by "AI Generative Tools".	Futuristic & Wonder	Visual "ripple" effect from the sun across the sky.
+The Gesture	Selfie shot featuring an elderly man waving his palm.	Friendly & Human	"Free-Hand Selfie" text, focus pull from her to him.
+The Reveal	The sleek "SAMSUNG" logo appearing on a black background.	Iconic & Authoritative	Dramatic reveal, cinematic fade-to-black.
+
+
+Summary
+נהניתי מהתהליך הזה כמו שנהנים ממסע החיים שנבנה צעד אחר צעד, רגע אחר רגע, ואני מקווה שגם אתם תרגישו את הקסם, את התנועה, ואת הרגעים שנשמרו כאן, ותחוו את היצירה הזו כפי שאני חוויתי אותה בזמן שנוצרה.
+תהנו מהרגע!
+לירז גולן
+  053-8271234
+Linkedin: https://www.linkedin.com/in/liraz-golan/
+Instagram: https://www.instagram.com/ai_gallery_of_art/
+
