@@ -19,6 +19,9 @@ letters, Latin, digits and punctuation; we restyle them.
 | `heebo` | neutral grotesque | 100–900 | default / UI / clean / ניטרלי |
 | `rubik` | geometric, slightly rounded | 300–900 | גיאומטרי / מודרני / round geometric |
 | `assistant` | humanist, friendly | 200–800 | הומניסטי / ידידותי / קריא / soft |
+| `dana-yad` | **handwriting** (static, 400 only) | 400 | **כתב יד** / שובב / יד / handwriting — **ברירת מחדל לכל בקשת כתב-יד** |
+
+> **Shortcut:** `--handwriting` flag = dana-yad + round=2 + slant=5° + contrast=0.18 + liga. Explicit flags always override.
 
 ## Transforms
 
