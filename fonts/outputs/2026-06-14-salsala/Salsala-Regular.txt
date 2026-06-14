@@ -1,0 +1,15 @@
+Family: Salsala Regular
+Base: dana-yad (free license, AlefAlefAlef handwriting)
+Recipe: --handwriting --round 3 --embolden 26 --curl-lamed
+  = round=3 · slant=5° · contrast=0.18 · embolden=26 · liga · curl-lamed
+
+Features:
+- עגלגל: round=3 (Chaikin) + dana-yad cursive base
+- שמנמן: embolden=26 (outline dilation)
+- שובב: slant 5° + natural dana-yad curls
+- ל מוגזמת ומסולסלת: spiral flourish on lamed ascender
+- סיומות מסולסלות: dana-yad natural curly terminals
+- ליגטורות: לא · של · כי · מי · וא
+
+Prompt: כתב יד עגלגל שמנמן ושובב, ל מוגזמת ומסולסלת, סיומות מסולסלות
+Generated: 2026-06-14

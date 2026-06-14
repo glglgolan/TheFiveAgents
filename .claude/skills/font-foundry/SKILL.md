@@ -32,7 +32,9 @@ letters, Latin, digits and punctuation; we restyle them.
 | `--slant` | degrees (e.g. `8`) | rightward shear → italic / handwriting lean |
 | `--width` | `0.7`–`1.3` | x-scale → condensed / extended |
 | `--contrast` | `0.0`–`0.35` | calligraphic stroke contrast: x-width swells at mid-height, simulating a broad-nib pen. `0.22` = strong handwriting feel |
+| `--embolden` | `0`–`30` | outline dilation in font units → plump/chubby strokes (שמנמן). `16` = fuller, `26` = chubby |
 | `--liga` | flag | adds OpenType `liga` feature with 5 common Hebrew pairs: לא, של, כי, מי, וא |
+| `--curl-lamed` | flag | exaggerated spiral flourish on the lamed's ascender (ל מוסלסלת) |
 
 ## Usage
 
@@ -51,7 +53,9 @@ single-weight TTF. For a family, run once per weight (e.g. Regular at
 ## Recipe → flags (heuristics for the agent)
 
 - "מעוגל" / "round" / "soft" → `--round 2` ("מאוד מעוגל" → `3`)
-- "כתב יד" / "handwriting" / "שובב" → `--round 3 --slant 7 --contrast 0.22 --liga`
+- "כתב יד" / "handwriting" / "שובב" → `--handwriting` (or `--round 3 --slant 7 --contrast 0.22 --liga`)
+- "שמנמן" / "plump" / "chubby" / "עבה" → `--embolden 22..28`
+- "ל מסולסלת" / "curly lamed" / "ל מוגזמת" → `--curl-lamed`
 - "נטוי" / "italic" / "כתב יד" → `--slant 8`
 - "צר" / "condensed" → `--width 0.85` · "רחב" / "extended" → `--width 1.15`
 - "דק" → `--weight 200/300` · "מודגש" → `--weight 700` · "שחור" → `--weight 800/900`

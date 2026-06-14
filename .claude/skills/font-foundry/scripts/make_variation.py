@@ -79,6 +79,90 @@ def apply_contrast(pts, contrast):
     return out
 
 
+def _signed_area(pts):
+    a = 0.0
+    n = len(pts)
+    for i in range(n):
+        x1, y1 = pts[i]; x2, y2 = pts[(i + 1) % n]
+        a += x1 * y2 - x2 * y1
+    return a / 2.0
+
+
+def embolden_contour(pts, amount):
+    """Offset every point outward along its (winding-aware) normal -> thicker
+    strokes. Outer contours grow, holes shrink, so net stroke weight rises.
+    Makes a font look 'plump' / שמנמן."""
+    if not pts or amount == 0:
+        return pts
+    n = len(pts)
+    # CCW (area>0) interior is on the left; outward normal of edge (dx,dy)
+    # is (dy,-dx) for CW and (-dy,dx) for CCW. Use sign to orient.
+    sign = 1.0 if _signed_area(pts) > 0 else -1.0
+    out = []
+    for i in range(n):
+        x0, y0 = pts[(i - 1) % n]
+        x1, y1 = pts[i]
+        x2, y2 = pts[(i + 1) % n]
+        def nrm(dx, dy):
+            l = math.hypot(dx, dy) or 1.0
+            return (dy / l, -dx / l)
+        n1 = nrm(x1 - x0, y1 - y0)
+        n2 = nrm(x2 - x1, y2 - y1)
+        nx, ny = n1[0] + n2[0], n1[1] + n2[1]
+        l = math.hypot(nx, ny) or 1.0
+        out.append((x1 + sign * nx / l * amount, y1 + sign * ny / l * amount))
+    return out
+
+
+def stamp_stroke(centerline, radius, segs=14):
+    """Turn an open centerline into filled contours by stamping overlapping
+    circles (round caps + joins for free). Returns list of circle contours.
+    Used for decorative flourishes (e.g. the curly lamed)."""
+    rings = []
+    # densify so circles overlap
+    dense = []
+    for i in range(len(centerline) - 1):
+        x0, y0 = centerline[i]; x1, y1 = centerline[i + 1]
+        d = math.hypot(x1 - x0, y1 - y0)
+        steps = max(1, int(d / (radius * 0.55)))
+        for s in range(steps):
+            t = s / steps
+            dense.append((x0 + (x1 - x0) * t, y0 + (y1 - y0) * t))
+    dense.append(centerline[-1])
+    for (cx, cy) in dense:
+        rings.append([(cx + radius * math.cos(2 * math.pi * k / segs),
+                       cy + radius * math.sin(2 * math.pi * k / segs))
+                      for k in range(segs)])
+    return rings
+
+
+def lamed_curl(contours, stroke_r):
+    """Append an exaggerated curly flourish spiralling off the top of the
+    lamed's ascender. Open spiral (< 1 turn) so it reads as a curl, not a blob."""
+    all_pts = [p for c in contours for p in c]
+    if not all_pts:
+        return contours
+    ymax = max(p[1] for p in all_pts)
+    top_pts = [p for p in all_pts if p[1] > ymax - 30]
+    ax = sum(p[0] for p in top_pts) / len(top_pts)
+    ay = ymax
+    # inward spiral whose OUTER end meets the ascender tip and winds up-left
+    N = 40
+    rmax, rmin = 62.0, 7.0
+    sweep = 1.65 * math.pi          # ~0.8 turn — open, airy curl
+    ang0 = math.radians(200)        # tight-center end points down-left
+    cx = ax - rmax * math.cos(sweep + ang0)
+    cy = ay - rmax * math.sin(sweep + ang0)
+    spiral = []
+    for i in range(N):
+        t = i / (N - 1)
+        ang = sweep * (1 - t) + ang0
+        rad = rmin + (rmax - rmin) * t
+        spiral.append((cx + rad * math.cos(ang), cy + rad * math.sin(ang)))
+    spiral.reverse()                # start at the tip, wind into the curl
+    return contours + stamp_stroke(spiral, stroke_r)
+
+
 def sample_quad(p0, pc, p1, K, acc):
     for k in range(1, K + 1):
         t = k / K
@@ -221,7 +305,7 @@ def set_name(font, family, style, full, ps, ver="1.0"):
 # ── main build ────────────────────────────────────────────────────────────────
 
 def build(base, weight, round_iters, slant, width, contrast, liga,
-          family, style, out):
+          embolden, curl_lamed, family, style, out):
     path = os.path.join(BASES, BASE_FILES[base])
     font = TTFont(path)
     wrange = WGHT_RANGE[base]
@@ -238,6 +322,10 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
     hmtx  = font["hmtx"]
     tan   = math.tan(math.radians(slant))
     tx    = Transform(width, 0, tan, 1, 0, 0)
+    # flourish stroke radius ~ matches the emboldened stroke half-width
+    flourish_r = 15 + embolden * 0.45
+
+    geometric = round_iters > 0 or contrast > 0 or embolden > 0 or curl_lamed
 
     for name in font.getGlyphOrder():
         try:
@@ -250,7 +338,7 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
         if not hasattr(g, "isComposite"):
             continue
         pen = TTGlyphPen(gset)
-        if round_iters <= 0 and contrast == 0:
+        if not geometric:
             tp = TransformPen(pen, (width, 0, tan, 1, 0, 0))
             dec = DecomposingRecordingPen(gset)
             gset[name].draw(dec)
@@ -269,6 +357,14 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
         # Stroke contrast (calligraphic width variation)
         if contrast > 0:
             contours = [apply_contrast(c, contrast) for c in contours]
+
+        # Embolden — plump strokes (שמנמן)
+        if embolden > 0:
+            contours = [embolden_contour(c, embolden) for c in contours]
+
+        # Exaggerated curly lamed
+        if curl_lamed and name == "uni05DC":
+            contours = lamed_curl(contours, flourish_r)
 
         for c in contours:
             tpts = [tx.transformPoint(p) for p in c]
@@ -316,7 +412,11 @@ def main():
     ap.add_argument("--slant",       type=float, default=0.0)
     ap.add_argument("--width",       type=float, default=1.0)
     ap.add_argument("--contrast",    type=float, default=0.0)
+    ap.add_argument("--embolden",    type=float, default=0.0,
+                    help="outline dilation in font units (plump/שמנמן); ~18-26 = chubby")
     ap.add_argument("--liga",        action="store_true")
+    ap.add_argument("--curl-lamed",  action="store_true", dest="curl_lamed",
+                    help="exaggerated curly flourish on the lamed (ל)")
     ap.add_argument("--handwriting", action="store_true",
                     help="preset: dana-yad base + round=2 slant=5 contrast=0.18 liga")
     ap.add_argument("--name",        required=True, dest="family")
@@ -337,9 +437,11 @@ def main():
         ap.error("--base is required (or use --handwriting for dana-yad preset)")
 
     w = build(a.base, a.weight, a.round_iters, a.slant, a.width,
-              a.contrast, a.liga, a.family, a.style, a.out)
+              a.contrast, a.liga, a.embolden, a.curl_lamed,
+              a.family, a.style, a.out)
     print(f"OK base={a.base} wght={w} round={a.round_iters} slant={a.slant} "
-          f"width={a.width} contrast={a.contrast} liga={a.liga} -> {a.out}")
+          f"width={a.width} contrast={a.contrast} embolden={a.embolden} "
+          f"liga={a.liga} curl_lamed={a.curl_lamed} -> {a.out}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,6 @@
+Family: ChupahHeb SemiBold
+Base: rubik (OFL)
+Weight: 600 | Round: 2 | Slant: 0° | Width: 1.0
+
+Prompt: פונט עברי עגול ופורמלי לטקסט הזמנה לחתונה — מבנה מעוגל ואלגנטי, קלאסי-חגיגי. SemiBold לשמות החתן והכלה.
+Generated: 2026-06-14

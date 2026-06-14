@@ -21,3 +21,11 @@
 **קבצים:** [outputs/2026-06-14-shovav/](../outputs/2026-06-14-shovav/)
 **prompt:** פונט כתב יד שובב, עגלגל, רוחב משתנה גרדואלי, ליגטורות מיוחדות
 ---
+
+## 2026-06-14 | Salsala
+**בסיס:** dana-yad | **משקלים:** Regular
+**recipe:** round=3 embolden=26 contrast=0.18 slant=5 liga curl-lamed
+**מיוחד:** ל מוגזמת ומסולסלת (spiral flourish), עיבוי outline (שמנמן)
+**קבצים:** [outputs/2026-06-14-salsala/](../outputs/2026-06-14-salsala/)
+**prompt:** כתב יד עגלגל שמנמן ושובב, ל מוגזמת ומסולסלת, סיומות מסולסלות
+---

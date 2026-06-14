@@ -1,0 +1,6 @@
+Family: ChupahHeb Regular
+Base: rubik (OFL)
+Weight: 400 | Round: 2 | Slant: 0° | Width: 1.0
+
+Prompt: פונט עברי עגול ופורמלי לטקסט הזמנה לחתונה — מבנה מעוגל ואלגנטי, קלאסי-חגיגי. Regular לגוף הטקסט.
+Generated: 2026-06-14
