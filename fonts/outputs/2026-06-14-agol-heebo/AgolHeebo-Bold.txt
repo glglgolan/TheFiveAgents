@@ -1,0 +1,6 @@
+Family: AgolHeebo Bold
+Base: heebo (OFL)
+Weight: 800 | Round: 2 | Slant: 0° | Width: 1.0
+
+Prompt: פונט עברי מעוגל מודגש (הדגמה ראשונה למנוע font-foundry)
+Generated: 2026-06-14

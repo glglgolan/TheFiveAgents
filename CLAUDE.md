@@ -17,6 +17,9 @@
 | **יעל** | כותבת התוכן — שכתוב, עריכה, תרגום, סיכום מאמרים |
 | **יובל** | מעצב התמונות — יצירת תמונות עקביות בסגנון מוגדר |
 | **חן** | חוקרת הרשת — חיפוש מקורות, מחקר, איסוף מאמרים עדכניים |
+| **דנה** | אנליסטית שימוש — דוחות עלויות OpenAI ו-OpenRouter |
+| **the-video-man** | מפיק הווידאו — יצירת קליפים ב-Kling / Seedance דרך OpenRouter |
+| **the-font-designer** | מעצב הפונטים — יצירת פונטים עבריים נכונים כווריאציה מבסיס OFL |
 
 ---
 
@@ -35,6 +38,22 @@ yael/          # workspace של יעל (style-guide, references)
 yuval/         # workspace של יובל
   ├── reference/   # תמונות השראה לסגנון
   └── outputs/     # תמונות מוגמרות (.png + .txt)
+dana/          # workspace של דנה
+  ├── Memory/
+  │   └── queries.md   # לוג בקשות אנליטיקה
+  └── reports/         # דוחות שימוש (.md)
+the-video-man/ # workspace של מפיק הווידאו
+  ├── Memory/
+  │   └── jobs.md      # לוג קליפים
+  ├── outputs/         # סרטונים — תת-תיקייה לפר-פרוייקט
+  │   └── <project>/<YYYY-MM-DD>-<slug>.mp4 (+ .txt)
+  └── reference/       # תמונות פתיחה — תת-תיקייה לפר-פרוייקט
+      └── <project>/<slug>.png
+fonts/         # workspace של מעצב הפונטים
+  ├── Memory/
+  │   └── jobs.md      # לוג פונטים שנבנו
+  └── outputs/         # פונטים מוגמרים — תת-תיקייה לפר-בקשה
+      └── <YYYY-MM-DD>-<slug>/<Family>-<Style>.ttf (+ .txt)
 Content/       # מאמרי גלם (מקור: ידני או מחן — input ליעל)
 Output/        # תוצרים סופיים (.md + .html)
 ```
@@ -62,6 +81,33 @@ Output/        # תוצרים סופיים (.md + .html)
 **Input:** נושא / מילות מפתח מראובן
 **Output:** `Content/<YYYY-MM-DD>-<slug>.md` + entry ב-`chen/Memory/searches.md`
 **Memory:** `chen/Memory/searches.md` — נבדק לפני כל חיפוש (Grep)
+
+### דנה — אנליסטית השימוש
+**Triggers (עברית):** אנליטיקה, ניתוח שימוש, כמה הוצאתי, עלויות, יתרה, סיכום חודשי, דוח שימוש
+**Triggers (English):** analytics, usage, spend, costs, billing, balance, credits, usage report
+**Input:** טווח תאריכים (או "החודש"/"השבוע") מראובן
+**Output:** `dana/reports/<YYYY-MM-DD>-<slug>.md` + entry ב-`dana/Memory/queries.md`
+**Skill:** `usage-analytics` (קורא ל-OpenAI Admin API ו-OpenRouter Credits API)
+**דרישה:** `OPENAI_ADMIN_KEY` ב-`.env` עבור נתוני OpenAI (project key לא מספיק)
+
+### the-video-man — מפיק הווידאו
+**Triggers (עברית):** וידאו, סרטון, אנימציה, קליפ, תיצור וידאו, הזיזי, הנפש
+**Triggers (English):** video, clip, animate, animation, generate video, motion
+**Input:** prompt או בריף סצנה מראובן (לרוב אחרי יובל בפרוייקט החתונה)
+**Output:** `the-video-man/outputs/<project>/<YYYY-MM-DD>-<slug>.mp4` + `.txt` + entry ב-Memory
+**Skill:** `openrouter-video-gen` (Kling 3.0 Standard / Seedance 2.0 / Seedance 2.0 Fast)
+**ברירות מחדל:** משך 5s · AR 16:9 (או נגזר מהרפרנס אם קיים)
+**התנהגות:** **תמיד שואל איזה מודל** לפני הרצה, ומציע המלצה לפי סוג הסצנה
+**דרישה:** `OPENROUTER_API_KEY` תקין ב-`.env`
+
+### the-font-designer — מעצב הפונטים
+**Triggers (עברית):** פונט, גופן, פונט עברי, תיצור פונט, וריאציה של פונט, פונט מעוגל, פונט נטוי, משקל חדש
+**Triggers (English):** font, typeface, build a font, font variation, custom font, rounded font
+**Input:** בריף סגנון מראובן (לדוגמה "פונט עברי מעוגל מודגש")
+**Output:** `fonts/outputs/<YYYY-MM-DD>-<slug>/<Family>-<Style>.ttf` + `.txt` + entry ב-Memory
+**Skill:** `font-foundry` (וריאציה מבסיס Heebo / Rubik / Assistant)
+**עיקרון:** **לעולם לא מצייר אותיות מאפס** — תמיד וריאציה מבסיס OFL תקין, כדי שהעברית תהיה נכונה
+**התנהגות:** גוזר recipe מהפרומפט (base/round/slant/width/weight); שואל רק אם שם המשפחה או מספר המשקלים לא ברורים
 
 ---
 

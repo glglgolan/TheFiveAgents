@@ -1,0 +1,6 @@
+Family: AgolHeebo Regular
+Base: heebo (OFL)
+Weight: 400 | Round: 2 | Slant: 0° | Width: 1.0
+
+Prompt: פונט עברי מעוגל (הדגמה ראשונה למנוע font-foundry)
+Generated: 2026-06-14

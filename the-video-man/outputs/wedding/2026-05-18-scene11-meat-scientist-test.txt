@@ -1,0 +1,14 @@
+Scene: 11 — The Meat Scientist (ממלכת הבשר) (2:25–2:42)
+Project: wedding
+Model: bytedance/seedance-2.0
+Duration: 5s
+Aspect ratio: 16:9
+Reference: the-video-man/reference/wedding/scene11-meat-scientist.png
+
+Prompt:
+Slow cinematic dolly-in toward the BBQ setup. Thick warm smoke billows upward from both smokers (BRISKET QUEEN and THE BEAST), curling and swirling slowly in the warm night air. Glowing orange embers visible inside the smoker chambers, fire flickering. Hanan looks down at the brisket on the cutting board with focused passionate expression, slowly lifts the knife and begins to slice through the smoked meat, juices glistening. Idit smiles warmly beside him. The fairy lights twinkle in the background. Atmospheric food-laboratory feel, slow cinematic camera movement, warm golden lighting, sensual smoke movement, glowing fire, cooking passion. Pixar 3D cinematic realism.
+
+Generated: 2026-05-18
+Actual cost: $0.7560 (Seedance 2.0, 5s image-to-video with reference)
+Job ID: jNONTkVQpf4ufIuDo9LL
+Notes: Reference image sent correctly ✓ (reference=✓ confirmed by script)
