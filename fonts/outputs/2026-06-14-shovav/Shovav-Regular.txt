@@ -1,0 +1,7 @@
+Family: Shovav Regular
+Base: assistant (OFL)
+Weight: 500 | Round: 3 | Slant: 7° | Width: 1.05 | Contrast: 0.22 | Liga: true
+
+Ligatures (OpenType liga): לא · של · כי · מי · וא
+Prompt: פונט כתב יד שובב, עגלגל, רוחב משתנה גרדואלי, ליגטורות
+Generated: 2026-06-14
