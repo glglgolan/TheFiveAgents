@@ -27,8 +27,13 @@ from fontTools.varLib import instancer
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASES = os.path.join(os.path.dirname(HERE), "bases")
-BASE_FILES = {"heebo": "Heebo.ttf", "rubik": "Rubik.ttf", "assistant": "Assistant.ttf"}
-WGHT_RANGE = {"heebo": (100, 900), "rubik": (300, 900), "assistant": (200, 800)}
+BASE_FILES  = {"heebo": "Heebo.ttf", "rubik": "Rubik.ttf", "assistant": "Assistant.ttf",
+               "dana-yad": "DanaYad.ttf"}
+WGHT_RANGE  = {"heebo": (100, 900), "rubik": (300, 900), "assistant": (200, 800),
+               "dana-yad": None}          # static font — no weight axis
+# Handwriting preset: use dana-yad as base
+HANDWRITING_DEFAULTS = dict(base="dana-yad", weight=400, round_iters=2,
+                             slant=5, width=1.0, contrast=0.18, liga=True)
 
 # Common Hebrew ligature pairs: (first_glyph, second_glyph, liga_name, x_overlap)
 # These are the most visually recognizable Hebrew pairs in handwriting
@@ -219,9 +224,14 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
           family, style, out):
     path = os.path.join(BASES, BASE_FILES[base])
     font = TTFont(path)
-    lo, hi = WGHT_RANGE[base]
-    w = max(lo, min(hi, weight))
-    instancer.instantiateVariableFont(font, {"wght": float(w)}, inplace=True)
+    wrange = WGHT_RANGE[base]
+    if wrange is None:
+        # static font — use as-is, ignore --weight
+        w = font["OS/2"].usWeightClass
+    else:
+        lo, hi = wrange
+        w = max(lo, min(hi, weight))
+        instancer.instantiateVariableFont(font, {"wght": float(w)}, inplace=True)
 
     glyf  = font["glyf"]
     gset  = font.getGlyphSet()
@@ -300,17 +310,32 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--base",     required=True, choices=list(BASE_FILES))
-    ap.add_argument("--weight",   type=int,   default=400)
-    ap.add_argument("--round",    type=int,   default=0,   dest="round_iters")
-    ap.add_argument("--slant",    type=float, default=0.0)
-    ap.add_argument("--width",    type=float, default=1.0)
-    ap.add_argument("--contrast", type=float, default=0.0)
-    ap.add_argument("--liga",     action="store_true")
-    ap.add_argument("--name",     required=True, dest="family")
-    ap.add_argument("--style",    default="Regular")
-    ap.add_argument("--out",      required=True)
+    ap.add_argument("--base",        choices=list(BASE_FILES))
+    ap.add_argument("--weight",      type=int,   default=400)
+    ap.add_argument("--round",       type=int,   default=0,   dest="round_iters")
+    ap.add_argument("--slant",       type=float, default=0.0)
+    ap.add_argument("--width",       type=float, default=1.0)
+    ap.add_argument("--contrast",    type=float, default=0.0)
+    ap.add_argument("--liga",        action="store_true")
+    ap.add_argument("--handwriting", action="store_true",
+                    help="preset: dana-yad base + round=2 slant=5 contrast=0.18 liga")
+    ap.add_argument("--name",        required=True, dest="family")
+    ap.add_argument("--style",       default="Regular")
+    ap.add_argument("--out",         required=True)
     a = ap.parse_args()
+
+    # Apply handwriting preset first, then let explicit flags override
+    if a.handwriting:
+        hd = HANDWRITING_DEFAULTS
+        if not a.base:       a.base        = hd["base"]
+        if a.round_iters==0: a.round_iters = hd["round_iters"]
+        if a.slant==0.0:     a.slant       = hd["slant"]
+        if a.contrast==0.0:  a.contrast    = hd["contrast"]
+        if not a.liga:       a.liga        = hd["liga"]
+
+    if not a.base:
+        ap.error("--base is required (or use --handwriting for dana-yad preset)")
+
     w = build(a.base, a.weight, a.round_iters, a.slant, a.width,
               a.contrast, a.liga, a.family, a.style, a.out)
     print(f"OK base={a.base} wght={w} round={a.round_iters} slant={a.slant} "
