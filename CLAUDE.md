@@ -18,8 +18,11 @@
 | **יובל** | מעצב התמונות — יצירת תמונות עקביות בסגנון מוגדר |
 | **חן** | חוקרת הרשת — חיפוש מקורות, מחקר, איסוף מאמרים עדכניים |
 | **דנה** | אנליסטית שימוש — דוחות עלויות OpenAI ו-OpenRouter |
+| **במבי** | הבמאי — סיפור גולמי → סטוריבורד מובנה (סצנות + prompts לתמונה/וידאו) |
 | **the-video-man** | מפיק הווידאו — יצירת קליפים ב-Kling / Seedance דרך OpenRouter |
 | **the-font-designer** | מעצב הפונטים — יצירת פונטים עבריים נכונים כווריאציה מבסיס OFL |
+| **presentation_builder** | בונה המצגות — מצגות/פיצ'דקים מנושא + חומרי רקע (HTML / PPTX / Remotion MP4) |
+| **spa-builder** | בונה אפליקציות הווב — אפליקציות SPA / דפים אינטראקטיביים / דשבורדים / כלים |
 
 ---
 
@@ -54,6 +57,18 @@ fonts/         # workspace של מעצב הפונטים
   │   └── jobs.md      # לוג פונטים שנבנו
   └── outputs/         # פונטים מוגמרים — תת-תיקייה לפר-בקשה
       └── <YYYY-MM-DD>-<slug>/<Family>-<Style>.ttf (+ .txt)
+bambi/         # workspace של במבי, הבמאי
+  ├── input/           # חומר גלם — סיפור מלוכלך או סטוריבורד מוכן (תת-תיקייה לפר-פרוייקט)
+  │   └── <project>/
+  ├── cast/            # עוגני דמויות — cast.json + תמונת עוגן לכל דמות (במבי מחזיק, יובל מרנדר)
+  │   └── <project>/<id>.png
+  ├── outputs/         # סטוריבורדים מוגמרים — תת-תיקייה לפר-בקשה
+  │   └── <project>/<YYYY-MM-DD>-<slug>/
+  │       ├── storyboard.json
+  │       ├── storyboard.md
+  │       └── scenes/  # תמונות פריים-ראשון פר סצנה (sNN.png)
+  └── Memory/
+      └── jobs.md      # לוג סטוריבורדים
 Content/       # מאמרי גלם (מקור: ידני או מחן — input ליעל)
 Output/        # תוצרים סופיים (.md + .html)
 ```
@@ -90,6 +105,15 @@ Output/        # תוצרים סופיים (.md + .html)
 **Skill:** `usage-analytics` (קורא ל-OpenAI Admin API ו-OpenRouter Credits API)
 **דרישה:** `OPENAI_ADMIN_KEY` ב-`.env` עבור נתוני OpenAI (project key לא מספיק)
 
+### במבי — הבמאי
+**Triggers (עברית):** סטוריבורד, תסריט, פירוק לסצנות, סצנות לקליפ, במאי, תכנון וידאו
+**Triggers (English):** storyboard, shot list, scene breakdown, script to scenes, director, video plan
+**Input:** חומר גלם ב-`bambi/input/<project>/` — סיפור מלוכלך *או* סטוריבורד מוכן לסידור
+**Output:** `bambi/outputs/<project>/<YYYY-MM-DD>-<slug>/storyboard.json` + `storyboard.md` + entry ב-`bambi/Memory/jobs.md`
+**Skill:** `storyboard-director` (כולל `schema.json` + `scripts/render_md.py`)
+**התנהגות:** מזהה **לבד** סיפור גולמי (פירוק מלא) מול סטוריבורד מוכן (נירמול בלבד); מחזיר JSON+MD לאישור; **לא** מפעיל סוכנים אחרים
+**הערה:** את התמונות/וידאו מריץ **ראובן** אחרי אישור — ראה Flow "סיפור → סטוריבורד → תמונות → וידאו"
+
 ### the-video-man — מפיק הווידאו
 **Triggers (עברית):** וידאו, סרטון, אנימציה, קליפ, תיצור וידאו, הזיזי, הנפש
 **Triggers (English):** video, clip, animate, animation, generate video, motion
@@ -109,6 +133,24 @@ Output/        # תוצרים סופיים (.md + .html)
 **עיקרון:** **לעולם לא מצייר אותיות מאפס** — תמיד וריאציה מבסיס OFL תקין, כדי שהעברית תהיה נכונה
 **התנהגות:** גוזר recipe מהפרומפט (base/round/slant/width/weight); שואל רק אם שם המשפחה או מספר המשקלים לא ברורים
 
+### presentation_builder — בונה המצגות
+**Triggers (עברית):** מצגת, שקופיות, פרזנטציה, דק, פיצ'דק, תיצור מצגת, סליידים
+**Triggers (English):** presentation, slide deck, slides, pitch, deck, pitch deck
+**Input:** נושא + חומרי רקע אופציונליים (`ref_text/`, `ref_images/`) מראובן
+**Output:** `output/<name>.pptx` (ברירת מחדל) · `.mp4` (Remotion) · `.html` (דורש התקנת `frontend-slides`)
+**Skill:** `presentation-builder`
+**התנהגות:** שואל שפה (עברית RTL / אנגלית), סגנון/מיתוג, ופורמט פלט; מריץ QA ויזואלי לפני סיום
+**הבחנה:** ל**מצגות/דקים** בלבד. אפליקציות/דפים אינטראקטיביים → `spa-builder`
+
+### spa-builder — בונה אפליקציות הווב
+**Triggers (עברית):** אפליקציה, אפליקציית ווב, דף אינטראקטיבי, דשבורד, כלי, מחשבון, ויזואליזציה, לדינג פייג', אתר עמוד-יחיד
+**Triggers (English):** web app, SPA, single-page app, interactive page, dashboard, tool, calculator, data viz, landing page, build an app
+**Input:** prompt + חומרי רקע אופציונליים (`ref_text/`, `ref_images/`) מראובן
+**Output:** `output/<name>.html` (קובץ יחיד, ללא build) · או `output/<name>/` (Vite + React + TS)
+**Skill:** `spa-builder`
+**התנהגות:** **מחליט לבד** קובץ-יחיד מול framework לפי הבקשה; שואל רק כשעמום. שאלות מינימליות (סגנון, שפה אם לא ברור); QA בדפדפן אמיתי
+**הבחנה:** ל**אפליקציות/דפים** בלבד. מצגות/דקים → `presentation_builder`
+
 ---
 
 ## Flow מלא: מחקר → תוכן → תמונות
@@ -124,6 +166,25 @@ Output/        # תוצרים סופיים (.md + .html)
 5. **שילוב סופי** — ראובן מחליף כל `{{IMAGE_NEEDED}}` בלינק לתמונה ושומר גרסה סופית ב-`Output/`.
 
 **מקרה קצה:** אם המשתמש מוסר תוכן מוכן (לא דורש חיפוש), מדלגים על שלב 1.
+
+---
+
+## Flow: סיפור → סטוריבורד → תמונות → וידאו
+
+כשמקבלים חומר גלם (סיפור/סטוריבורד) ורוצים קליפ וידאו:
+
+1. **שלב סטוריבורד** — ראובן מפעיל את **במבי** על `bambi/input/<project>/`. במבי מחזיר `storyboard.json` + `storyboard.md` ב-`bambi/outputs/<project>/<run>/`. **עוצרים לאישור אנושי** של הטבלה.
+2. **שלב עוגני cast** — לכל דמות ב-`cast` עם `anchor_ready:false`, ראובן מפעיל את **יובל** (text-to-image) על `cast.description` → `bambi/cast/<project>/<id>.png`:
+   ```bash
+   bash .claude/skills/gpt-image-gen/scripts/generate.sh "<cast.description>" "bambi/cast/<project>/<id>.png"
+   ```
+3. **שלב פריים-ראשון פר סצנה** (השלב "הבא" — עקביות אחת-אחת) — לכל סצנה, ראובן מפעיל את **יובל** עם `image_prompt` ו-`--reference` = `scene.reference` (עוגן הדמות) → `image_output`:
+   ```bash
+   bash .claude/skills/gpt-image-gen/scripts/generate.sh "<image_prompt>" "<image_output>" --reference "<scene.reference>"
+   ```
+4. **שלב וידאו פר סצנה** — לכל סצנה, ראובן מפעיל את **the-video-man** עם `video_prompt` ו-`--reference` = `image_output` (first frame) → `video_output`. the-video-man שואל מודל כרגיל.
+
+**מקרה קצה:** אם ה-input כבר סטוריבורד מוכן, במבי רק מנרמל אותו לסכמה (שלב 1 מתקצר); השלבים 2–4 זהים.
 
 ---
 

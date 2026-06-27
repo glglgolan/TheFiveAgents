@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Storyboard",
+  "type": "object",
+  "required": ["project", "title", "aspect_ratio", "visual_theme", "cast", "scenes"],
+  "properties": {
+    "project": { "type": "string", "description": "מזהה פרויקט (slug) — משמש לנתיבי תיקיות" },
+    "title": { "type": "string" },
+    "logline": { "type": "string", "description": "משפט תקציר אחד" },
+    "language": { "type": "string", "default": "he" },
+    "aspect_ratio": { "type": "string", "enum": ["16:9", "9:16", "1:1"], "default": "16:9" },
+    "visual_theme": {
+      "type": "object",
+      "description": "הלוק המשותף שכל סצנה חייבת לכבד — מקור העקביות ברמת הסגנון",
+      "required": ["palette", "lighting", "film_look", "mood"],
+      "properties": {
+        "palette": { "type": "string", "description": "פלטת צבעים, למשל 'espresso brown, cream, muted amber'" },
+        "lighting": { "type": "string", "description": "סגנון תאורה, למשל 'warm golden backlight'" },
+        "film_look": { "type": "string", "description": "עדשה / מראה פילם, למשל '35mm full-frame, subtle 16mm grain'" },
+        "motion": { "type": "string", "description": "שפת תנועה משותפת למצלמה/סובייקט" },
+        "mood": { "type": "string" }
+      }
+    },
+    "cast": {
+      "type": "array",
+      "description": "דמויות/אובייקטים/לוקיישנים חוזרים. כל אחד מקבל תמונת-עוגן יחידה לעקביות",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "anchor_image"],
+        "properties": {
+          "id": { "type": "string", "description": "מזהה קצר, kebab/snake — משמש ב-characters וב-reference" },
+          "name": { "type": "string" },
+          "description": { "type": "string", "description": "תיאור ויזואלי יציב (אנגלית) לייצור תמונת-העוגן" },
+          "anchor_image": { "type": "string", "description": "נתיב יעד לתמונת-העוגן, למשל bambi/cast/<project>/<id>.png" },
+          "anchor_ready": { "type": "boolean", "default": false, "description": "האם העוגן כבר יוצר ע\"י יובל" }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["scene_number", "description", "image_prompt", "video_prompt"],
+        "properties": {
+          "scene_number": { "type": "integer", "minimum": 1 },
+          "title": { "type": "string" },
+          "duration_sec": { "type": "integer", "default": 5 },
+          "description": { "type": "string", "description": "מה קורה בסצנה — עברית" },
+          "characters": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "רשימת cast.id המופיעים בסצנה"
+          },
+          "shot": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "description": "ECU | CU | MCU | MS | MLS | LS | EWS" },
+              "angle": { "type": "string", "description": "eye-level | low | high | dutch | overhead" },
+              "camera_move": { "type": "string", "description": "static | push-in | pull-out | pan | tilt | tracking | crane" }
+            }
+          },
+          "image_prompt": { "type": "string", "description": "אנגלית — prompt לפריים הראשון (gpt-image-gen)" },
+          "video_prompt": { "type": "string", "description": "אנגלית, 40-80 מילים — prompt לווידאו (openrouter-video-gen)" },
+          "reference": { "type": "string", "description": "נתיב תמונת-העוגן של הדמות הדומיננטית לשימוש כ---reference; ריק = text-to-image" },
+          "image_output": { "type": "string", "description": "נתיב יעד לפריים-הראשון, למשל bambi/outputs/<project>/<run>/scenes/sNN.png" },
+          "video_output": { "type": "string", "description": "נתיב יעד ל-mp4" }
+        }
+      }
+    }
+  }
+}
