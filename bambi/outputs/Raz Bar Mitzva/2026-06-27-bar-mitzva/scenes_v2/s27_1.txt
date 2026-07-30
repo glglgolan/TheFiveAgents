@@ -1,0 +1,4 @@
+Keep this exact frame identical: do not change the composition, wardrobe, family positions (exactly two younger brothers), the dog, or the clear golden-hour sky. The ONLY change: add round black-framed glasses on the central teen boy (Raz). Preserve the clean modern comic-book / graphic-novel illustration style, crisp linework, cel shading. Keep the exact faces, hair and appearance from the reference image.
+
+[EDIT PASS 2 - self-referential, glasses fix for i2v endpoint]
+--size 1536x1024 --reference <snapshot of prior s27_1.png>

@@ -1,0 +1,4 @@
+clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, bright even lighting, vibrant true-to-life colors - NOT painterly, NOT photorealistic; Emotional finale at golden hour: keep the exact same scene, the same family members in the same positions, exactly TWO younger brothers (no third child), Teen Raz standing proud center now WEARING round black-framed glasses, festive white shirt; the golden-hour sky behind them CLEAR and open with NO glowing memory in the sky; same style. Keep the exact faces, hair and appearance from the reference image.
+
+[EDIT PASS 2 - reveal morph pair, clear-sky variant; referenced to prior s27_3.png for matching blocking + 2 brothers]
+--size 1536x1024 --reference <snapshot of prior s27_3.png>

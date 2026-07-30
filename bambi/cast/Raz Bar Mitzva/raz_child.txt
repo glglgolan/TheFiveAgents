@@ -1,0 +1,4 @@
+Portrait of Raz as an elementary-school boy around 8-10 years old, slim and a bit tall for his age, friendly intelligent face, short dark brown hair, warm focused brown eyes, clean skin, wearing a casual modern t-shirt, curious calm expression. Clean bright background. Modern clean semi-cartoon illustration style, bright fresh sky-blue and mint palette, smooth gradient shading, crisp outlines, clean daylight, warm mood.
+
+[reference: yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg]
+[model: gpt-image-1.5, edits, 1024x1024]

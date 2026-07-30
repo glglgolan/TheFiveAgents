@@ -1,0 +1,7 @@
+PROMPT:
+Warm portrait of a couple in their late 50s-60s standing close together and smiling: the grandfather (Rafi) with short greying hair wearing a light blue striped shirt, kind face; the grandmother (Michal) with curly reddish-brown shoulder-length hair and a warm bright smile. Only the two of them, clean bright background. Modern clean semi-cartoon illustration style, bright fresh sky-blue and mint palette, smooth gradient shading, crisp outlines, clean daylight, warm loving mood.
+
+REFERENCE: yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg
+SIZE: 1024x1024
+MODEL: gpt-image-1.5 (edits)
+NOTE: Original photo includes a young woman on the right (Adi) and a baby — rendered only the elderly couple (striped-shirt man + curly-haired woman).

@@ -164,7 +164,7 @@ def main() -> int:
     parser.add_argument("prompt", help="Video prompt")
     parser.add_argument("output", help="Output .mp4 path")
     parser.add_argument("--model", required=True,
-                        help="OpenRouter model id (e.g. kwaivgi/kling-video-3.0-standard)")
+                        help="OpenRouter model id (e.g. kwaivgi/kling-v3.0-pro)")
     parser.add_argument("--duration", type=int, default=5, help="Seconds (default 5)")
     parser.add_argument("--aspect-ratio", help="16:9 | 9:16 | 1:1 (auto-derived from reference if omitted)")
     parser.add_argument("--reference", help="Optional first-frame reference image")

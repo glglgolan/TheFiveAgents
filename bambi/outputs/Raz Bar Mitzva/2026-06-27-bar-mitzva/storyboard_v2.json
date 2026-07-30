@@ -1,0 +1,738 @@
+{
+ "project": "Raz Bar Mitzva",
+ "title": "רז — הדרך היחידה להפסיד היא לוותר (v2)",
+ "logline": "מסע של תנועה: מהשלג הראשון בעפרה ועד בר המצווה — סיפורו של רז, הילד שנולד בתנועה ולא מפסיק לחלום.",
+ "language": "he",
+ "aspect_ratio": "16:9",
+ "narration_source": "bambi/input/Raz Bar Mitzva/קריינות - רז פסדר בר מצווה גרסה 2.md (גרסה 2.0 מתוקנת של עדי)",
+ "style_reference": "bambi/input/Raz Bar Mitzva/v2 image style.jpg",
+ "visual_theme": {
+  "palette": "vibrant true-to-life colors, warm natural tanned skin tones, clean bright backgrounds",
+  "lighting": "bright even daylight, soft natural shadows, warm golden accents for emotional beats",
+  "film_look": "clean modern comic-book / graphic-novel illustration — crisp precise linework, smooth cel shading, natural realistic proportions — NOT painterly, NO visible brushwork, NOT photorealistic",
+  "motion": "smooth playful camera, gentle parallax, lively but light kinetic energy; momentum and forward movement as a recurring motif",
+  "mood": "joyful, vibrant, heartwarming — a modern cool bar-mitzva vibe full of optimism, warmth and determination"
+ },
+ "glasses_rule": "רז נער עם משקפיים רק כשהרפרנס הוא book-raz-22 (סצנות 21, 26); בשאר — book-raz-10 בלי משקפיים",
+ "cast": [
+  {
+   "id": "raz_toddler",
+   "name": "רז כפעוט",
+   "description": "Toddler Raz, soft dark brown curly hair, big dark brown eyes, round chubby cheeks",
+   "anchor_image": "yuval/reference/Raz/_proxy/2016-toddler-zoomz.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "raz_child",
+   "name": "רז כילד",
+   "description": "Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes",
+   "anchor_image": "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "raz_teen",
+   "name": "רז נער (13)",
+   "description": "Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes — עם משקפיים עגולים רק בסצנות 21/26 (רפרנס book-raz-22)",
+   "anchor_image": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "anchor_alt_glasses": "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "mom_adi",
+   "name": "אמא עדי",
+   "description": "mom Adi, dark wavy hair, warm big smile, dark eyes",
+   "anchor_image": "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "dad_amos",
+   "name": "אבא עמוס",
+   "description": "dad Amos, athletic build, short dark hair, big white smile, tanned skin",
+   "anchor_image": "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "yair",
+   "name": "יאיר (אח, 11)",
+   "description": "Yair, slim cheerful boy with short brown hair and playful eyes",
+   "anchor_image": "",
+   "anchor_ready": false,
+   "note": "אין עדיין רפרנס סולו עדכני — סדרת 'רז ויאיר 2021' בדרייב"
+  },
+  {
+   "id": "tomer",
+   "name": "תומר (אח, 6)",
+   "description": "Tomer, small round-cheeked boy with big happy eyes",
+   "anchor_image": "",
+   "anchor_ready": false,
+   "note": "אין תמונה עדכנית בגיל 6"
+  },
+  {
+   "id": "taya",
+   "name": "טאיה",
+   "description": "Taya, an Australian Cattle Dog / blue heeler with a grey-and-white speckled mottled coat, black pointed ears, tan facial markings",
+   "anchor_image": "yuval/reference/Raz/_proxy/taya-11-24.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "grandparents_adi",
+   "name": "סבתא מיכל וסבא רפי",
+   "description": "Michal, curly reddish-brown shoulder-length hair, warm bright smile; Rafi, short greying hair, light blue striped shirt",
+   "anchor_image": "yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "grandparents_amos",
+   "name": "סבתא רות וסבא דוד",
+   "description": "Ruti, colorful headscarf (mitpachat) and glasses, gentle smile; David, white sun hat, glasses, white polo shirt",
+   "anchor_image": "yuval/reference/Raz/_proxy/grandparents-amos-raz4-131.jpg",
+   "anchor_ready": true
+  },
+  {
+   "id": "adi_amos_wedding",
+   "name": "עדי ועמוס — חתונה",
+   "description": "bride Adi in a white lace dress with veil; groom Amos in a dark suit with a white tallit",
+   "anchor_image": "yuval/reference/Raz/_proxy/wedding-mg-8869.jpg",
+   "anchor_ready": true
+  }
+ ],
+ "scenes": [
+  {
+   "scene_number": 1,
+   "title": "פתיחה — רז נולד בתנועה (שלג בעפרה)",
+   "duration_sec": 16,
+   "description": "מערכה 1 — פתיחה. שלג נדיר מכסה את עפרה בחורף הראשון של רז — הטבע מסמן את הדרך למי שעומד לרוץ מהר מכולם.",
+   "characters": [],
+   "shot": {
+    "type": "EWS",
+    "angle": "high",
+    "camera_move": "slow aerial drift forward"
+   },
+   "narration": "יש ילדים שנולדים עם כישרון. יש כאלה שנולדים עם חלום. ורז? רז נולד בתנועה. הוא הגיע לעולם בקיץ, בעפרה, וכבר בחורף הראשון שלו הטבע סימן לו את הדרך. סופת שלגים נדירה כיסתה את היישוב, אולי כסימן למי שעומד לרוץ מהר יותר מכולם.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Wide aerial establishing shot of Ofra, a small hillside town in the Judean hills, Israel — modern white flat-roofed houses with red-tiled accent roofs nestled among green trees, dusted in a rare gentle snowfall, dry golden desert hills rising in the background under a partly cloudy sky, one warm golden glowing window standing out among the houses, snowflakes drifting in bright clean winter light. Magical, welcoming winter morning — a world about to meet its hero. Keep the exact town layout, architecture and hillside geography from the reference image, adding only the snow and golden window light.",
+   "video_prompt": "Slow cinematic aerial drift over Ofra's snow-dusted flat-roofed houses and dry hillside, snowflakes floating gently past the lens, the camera easing toward one warm glowing window among the rooftops. Calm, magical, expectant winter-morning atmosphere — a story about to begin. Soft light, gentle motion, no characters.",
+   "reference": "yuval/reference/Raz/ofra.webp",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s01.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s01.mp4"
+  },
+  {
+   "scene_number": 2,
+   "title": "השורשים — סבתא רות וסבא דוד",
+   "duration_sec": 14,
+   "description": "מערכה 1 — שורשים. ההורים של עמוס: רות ודוד. חום, ערכים ונתינה.",
+   "characters": [
+    "grandparents_amos"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow push-in"
+   },
+   "narration": "המסע של רז מתחיל הרבה לפני הצעד הראשון שלו. הוא מתחיל בשורשים, בסבים ובסבתות: סבתא רות וסבא דוד…",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Warm portrait of Raz's paternal grandparents standing close together in a bright sunny garden: Ruti, colorful headscarf (mitpachat) and glasses, gentle smile; David, white sun hat, glasses, white polo shirt. Loving, dignified and joyful — the roots of the family. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow gentle push-in on a loving older couple standing close in a sunny garden, she adjusts her colorful headscarf and smiles softly, he tips his white hat with a warm grin. Leaves flicker in a light breeze. Warm, dignified, heartwarming family-album feeling.",
+   "reference": "yuval/reference/Raz/_proxy/grandparents-amos-raz4-131.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s02.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s02.mp4"
+  },
+  {
+   "scene_number": 3,
+   "title": "השורשים — סבתא מיכל וסבא רפי",
+   "duration_sec": 14,
+   "description": "מערכה 1 — שורשים. ההורים של עדי: מיכל ורפי. הבתים שתמיד אפשר לחזור אליהם.",
+   "characters": [
+    "grandparents_adi"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow push-in"
+   },
+   "narration": "…סבתא מיכל וסבא רפי. ארבעתם מביאים איתם אהבה, ערכים, נתינה וחום, ואל הבתים שלהם תמיד אפשר לחזור ולמצוא מקום בו צוחקים יחד, מחבקים חזק וחוגגים כל רגע קטן.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Warm portrait of Raz's maternal grandparents standing close together in a bright sunny home garden: Rafi, short greying hair, light blue striped shirt; Michal, curly reddish-brown shoulder-length hair, warm bright smile. Laughing together warmly — a home you can always come back to. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow push-in on a joyful older couple in a sunny garden — she laughs brightly, her curly reddish-brown hair catching the light; he pulls her close with a warm smile. Sun flares softly through the trees. Heartwarming, welcoming, full of home.",
+   "reference": "yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s03.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s03.mp4",
+   "regenerate": true,
+   "note": "קיימת גרסה בסגנון הישן ב-scenes/ — לייצר מחדש בסגנון v2"
+  },
+  {
+   "scene_number": 4,
+   "title": "עדי ועמוס — חתונה",
+   "duration_sec": 16,
+   "description": "מערכה 1 — ההתחלה. עדי ועמוס בוחרים ללכת יחד בדרך משותפת ומקימים בית מלא אהבה ועשייה.",
+   "characters": [
+    "adi_amos_wedding"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "eye-level",
+    "camera_move": "slow crane-up"
+   },
+   "narration": "ואז, נפגשו אמא עדי ואבא עמוס, שבחרו ללכת יחד בדרך משותפת ולהקים בית מלא באהבה ועשייה, בית בו כל ילד יכול להיות בדיוק מי שהוא רוצה להיות.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Joyful wedding moment: bride Adi in a white lace dress with a veil holding a bouquet; groom Amos in a dark suit with a white prayer shawl (tallit) over his shoulders — holding hands and laughing together under a bright open sky, soft petals drifting through the air. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "A radiant wedding moment — the couple holds hands and laughs, petals drift through golden light, the camera cranes slowly upward revealing the bright open sky above them. Celebratory, romantic, full of beginnings. Gentle slow motion on the falling petals.",
+   "reference": "yuval/reference/Raz/_proxy/wedding-mg-8869.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s04.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s04.mp4"
+  },
+  {
+   "scene_number": 5,
+   "title": "שנה אחרי החתונה — נולד רז",
+   "duration_sec": 16,
+   "description": "מערכה 1 — הלידה. שנה אחרי החתונה נולד רז, ומהרגע הראשון ברור שהוא לא עומד במקום.",
+   "characters": [
+    "raz_toddler",
+    "mom_adi",
+    "dad_amos"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "overhead",
+    "camera_move": "slow descend"
+   },
+   "narration": "שנה אחרי החתונה נולד רז, ומהרגע הראשון היה ברור שהוא לא מתכוון לעמוד במקום.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Tender overhead moment: newborn baby Raz cradled gently in his parents' arms — mom Adi, dark wavy hair, warm big smile, dark eyes and dad Amos, athletic build, short dark hair, big white smile, tanned skin lean over him from above, looking down with pure loving wonder and soft smiles; bright softly lit modern room. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow overhead descend toward a newborn cradled in his parents' arms, both parents looking down with wonder, the baby's tiny hand curling around a finger — then a playful little kick of his legs, already in motion. Tender, warm, softly lit. Something precious just arrived.",
+   "reference": "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s05.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s05.mp4"
+  },
+  {
+   "scene_number": 6,
+   "title": "האהבה הראשונה — מכוניות (ישן עם כולן)",
+   "duration_sec": 16,
+   "description": "מערכה 2 — ילדות מוקדמת. עוד לפני כיתה א' — מכוניות. לא עם אחת, עם כולן.",
+   "characters": [
+    "raz_toddler"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "high",
+    "camera_move": "slow push-in"
+   },
+   "narration": "עוד לפני שידע לקרוא, ולפני שעלה לכיתה א', הייתה לו אהבה אחת שאי אפשר היה לפספס. מכוניות. לא רק לשחק בהן. לא רק להסיע אותן על הרצפה. רז פשוט ישן איתן. לא עם אחת, עם כולן. גם בחלומות שלו הכול כבר היה בתנועה.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Toddler Raz, soft dark brown curly hair, big dark brown eyes, round chubby cheeks, lying happily in a cozy bright bed surrounded by dozens of colorful little toy cars tucked under the blanket all around him — not one car, ALL of them — clutching one toy car to his chest with both hands, sweet content sleepy smile, warm bedroom light. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Gentle push-in on a toddler asleep in bed surrounded by dozens of toy cars under the blanket, hugging one to his chest; he stirs, smiles in his sleep, and a little toy car rolls off the blanket. Cozy, warm, adorable — even his dreams are in motion.",
+   "reference": "yuval/reference/Raz/_proxy/2016-toddler-zoomz.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s06.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s06.mp4",
+   "regenerate": true,
+   "note": "קיימת גרסה בסגנון הישן ב-scenes/ — לייצר מחדש בסגנון v2"
+  },
+  {
+   "scene_number": 7,
+   "title": "בגיל שנה — בית גמליאל",
+   "duration_sec": 14,
+   "description": "מערכה 2 — הבית. המעבר לבית גמליאל, הבית עד היום.",
+   "characters": [
+    "raz_toddler",
+    "mom_adi"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "eye-level",
+    "camera_move": "tracking follow"
+   },
+   "narration": "בגיל שנה הוא הגיע לבית גמליאל, שהפך לביתו עד היום.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Bright moving day at a sunny village home in Beit Gamliel: Toddler Raz, soft dark brown curly hair, big dark brown eyes, round chubby cheeks, toddling excitedly toward the open front door holding a tiny toy car; mom Adi, dark wavy hair, warm big smile, dark eyes reaching out warmly behind him; cardboard boxes near the door, golden light pouring out, green trees and bright sky. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Tracking shot following a toddler's wobbly excited steps toward the open golden doorway of a new village home, his mother's hand reaching lovingly behind him, boxes by the door. Warm, hopeful, the beginning of home. Gentle handheld warmth.",
+   "reference": "yuval/reference/Raz/_proxy/2016-toddler-zoomz.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s07.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s07.mp4"
+  },
+  {
+   "scene_number": 8,
+   "title": "האחים — צמד שהפך לשלישייה מנצחת",
+   "duration_sec": 18,
+   "description": "מערכה 2 — האחים. יאיר מצטרף כצמד בלתי נפרד, תומר משלים שלישייה. בית מלא צחוק, משחקים ואהבה.",
+   "characters": [
+    "raz_child",
+    "yair",
+    "tomer"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow arc"
+   },
+   "narration": "אל הבית במושב הצטרף יאיר, ומאז הם צמד: אחים שהם החברים הכי טובים, משלימים זה את זה. כעבור כמה שנים, הצטרף תומר הקטן והשלים לשלישייה מנצחת. מאז הבית תמיד מלא. בצחוק. במשחקים. בוויכוחים קטנים שנעלמים אחרי שתי דקות. בהמון אהבה.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Three brothers walking hand-in-hand across a golden-hour dry-grass field: Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes, tallest, on the left, holding hands with his younger brothers; Yair, a slim cheerful boy with short brown hair and playful eyes, in the middle, roughly 6-7 years old; little curly-haired toddler Tomer, small and round-cheeked with big happy eyes, on the right, being helped along. Warm golden sunlight, tall grass swaying, joyful candid moment. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow tracking shot alongside three brothers walking hand-in-hand through a golden sunlit field, swaying grass, laughter carried on the breeze — the middle brother swings the toddler's arm playfully. Warm, joyful, unhurried. A winning trio.",
+   "reference": "yuval/reference/Raz/_proxy/2021-likrat-hachoref-29.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s08.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s08.mp4"
+  },
+  {
+   "scene_number": 9,
+   "title": "אבא עמוס רץ — כולם מנסים לעקוב",
+   "duration_sec": 16,
+   "description": "מערכה 2 — ההורים. עמוס רץ קדימה בביטחון; כל המשפחה (עדי, רז ואחיו) רצה מאחוריו מותשת ומתנשפת — חוץ מרז, שקרוב אליו יחסית ומתעקש להדביק את הקצב.",
+   "characters": [
+    "dad_amos",
+    "mom_adi",
+    "raz_teen",
+    "yair",
+    "tomer"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "gentle dolly"
+   },
+   "narration": "מאחורי כל ילד עומדים אנשים שמעצבים אותו. אמא עדי, שמצלמת ומתעדת אירועים מיוחדים, ומזכירה לכולם לעצור ולהסתכל על הרגעים הקטנים. אבא עמוס, שאוהב לרוץ, להתאמן ולהוכיח שאין דבר כזה \"אי אפשר\". רק עוד ניסיון אחד.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Comic action moment on a sunny country road: dad Amos, athletic build, short dark hair, big white smile, tanned skin, running confidently well ahead of the pack with an easy energetic stride. Behind him, the rest of the family is running to keep up and clearly exhausted — mom Adi, dark wavy hair, warm big smile, dark eyes, out of breath with a comically strained smile; two younger brothers lagging further back, huffing and puffing. Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, is noticeably closer to dad Amos than the rest, pushing hard to keep pace, determined grin despite the effort. Bright golden-hour country road, green fields either side. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Dynamic side-tracking shot: dad Amos runs ahead with easy confident strides; the camera pulls back to reveal the rest of the family straggling behind, out of breath and laughing at themselves; teen Raz pushes hard to close the gap, determined. Comic, warm, full of family energy — everyone trying (and failing) to keep up with dad.",
+   "reference": "",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s09.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s09.mp4",
+   "face_swap_plan": {
+    "dad_amos": "yuval/reference/Raz/_proxy/wedding-aa-119.jpg",
+    "mom_adi": "yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg",
+    "raz_teen": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+    "note": "yair/tomer: no current reference photo available — left as generic description"
+   }
+  },
+  {
+   "scene_number": 10,
+   "title": "השילוב הנדיר — גובה מאמא, לב ענק",
+   "duration_sec": 14,
+   "description": "מערכה 2 — מי זה רז. פיקח, אכפתי, נחוש, ידיים טובות — וגובה (הגנים מאמא!) עם לב ענק. סצנה של שני פריימים (ראשון/אחרון) למעבר גדילה חלק בווידאו: רז קטן ליד אמא ← רז נער גבוה ליד אמא, באותה קומפוזיציה/רקע/זווית מצלמה.",
+   "characters": [
+    "raz_teen",
+    "mom_adi"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "low",
+    "camera_move": "slow push-in"
+   },
+   "narration": "ואולי, דווקא השילוב ביניהם הוא שהפך את רז למי שהוא. רז הוא ילד של אנשים, של עשייה ושל נחישות. הוא פיקח, אכפתי, בוגר, נחוש, ועם ידיים טובות. רזי שלנו הוא שילוב נדיר של גובה (כן, כן הגנים מאמא!), עם לב ענק.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; [FIRST FRAME — s10a] Warm living room, low-angle medium shot: Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes, standing side by side with his mom — mom Adi, dark wavy hair, warm big smile, dark eyes — his head reaching about her shoulder height, both smiling warmly at camera, soft bright daylight through a window behind them. Keep the exact face, hair and appearance from the reference image.\n\n[LAST FRAME — s10b] Same warm living room, same low-angle medium shot, same camera position and composition: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, standing side by side with the same mom Adi, dark wavy hair, warm big smile, dark eyes — he now towers well above her, proud loving grin, she looks up at him laughing in mock disbelief, same soft bright daylight through the same window. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Smooth growth-transition: starting on small Raz standing next to his mom, morphing/transitioning seamlessly as he grows taller frame by frame until he towers above her as a teen, same room, same camera position throughout. Warm, funny, full of love — years passing in one continuous breath.",
+   "reference": "",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s10a.png",
+   "image_prompts": [
+    {
+     "id": "s10a",
+     "label": "פריים ראשון — רז קטן ליד אמא",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Warm living room, low-angle medium shot: Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes, standing side by side with his mom — mom Adi, dark wavy hair, warm big smile, dark eyes — his head reaching about her shoulder height, both smiling warmly at camera, soft bright daylight through a window behind them. Keep the exact face, hair and appearance from the reference image.",
+     "reference": "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg",
+     "face_swap_plan": {
+      "raz_child": "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg",
+      "mom_adi": "yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg"
+     },
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s10a.png"
+    },
+    {
+     "id": "s10b",
+     "label": "פריים אחרון — רז נער גבוה ליד אמא",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Same warm living room, same low-angle medium shot, same camera position and composition: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, standing side by side with the same mom Adi, dark wavy hair, warm big smile, dark eyes — he now towers well above her, proud loving grin, she looks up at him laughing in mock disbelief, same soft bright daylight through the same window. Keep the exact face, hair and appearance from the reference image.",
+     "reference": "yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg",
+     "face_swap_plan": {
+      "raz_teen": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+      "mom_adi": "yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg"
+     },
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s10b.png"
+    }
+   ],
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s10.mp4",
+   "first_frame": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s10a.png",
+   "last_frame": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s10b.png"
+  },
+  {
+   "scene_number": 11,
+   "title": "מסורות — פנקייקים, פיצות, והשניצלים שרזי מטגן",
+   "duration_sec": 18,
+   "description": "מערכה 2 — מסורות. פנקייקים של ראשון, פיצות של אבא, שניצלים של שישי שרז כבר מטגן בעצמו.",
+   "characters": [
+    "raz_teen",
+    "dad_amos",
+    "yair",
+    "tomer"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow lateral track"
+   },
+   "narration": "וכמו בכל משפחה, גם אצלנו יש מסורות קטנות, שהפכו לזיכרונות גדולים: פנקייקים של ימי ראשון, ערב פיצות מעשה ידי אבא, השניצלים של שישי, שרזי מטגן בעצמו. יש רגעים שבהם אהבה לא צריכה מילים. היא פשוט מוגשת לשולחן.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Sunny family kitchen: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, wearing an apron, confidently frying golden schnitzels in a pan at the stove with a proud grin; behind him a warm table with a tall stack of Sunday pancakes and fresh pizza; dad Amos, athletic build, short dark hair, big white smile, tanned skin and the younger brothers reaching in happily, steam and warmth everywhere. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Lateral track across a busy warm family kitchen — the tall teen flips a golden schnitzel in the pan like a pro, dad slides a pizza onto the table, brothers sneak a pancake from the stack. Steam, laughter, golden light. Love served straight to the table.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s11.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s11.mp4"
+  },
+  {
+   "scene_number": 12,
+   "title": "טאיה — כולם מפחדים מכלבים, חוץ מרז",
+   "duration_sec": 16,
+   "description": "מערכה 2 — טאיה. מגיעה לבית שכולם בו מפחדים מכלבים — חוץ מרז — וכובשת את כולם.",
+   "characters": [
+    "raz_teen",
+    "taya",
+    "yair",
+    "tomer"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "low",
+    "camera_move": "energetic follow"
+   },
+   "narration": "איך אפשר לספר על המשפחה מבלי להזכיר את טאיה הכלבה שלנו, שהגיעה לבית שבו כולם מפחדים מכלבים — חוץ מרז כמובן — ובאנרגיות הנמרצות והמתוקות שלה כבשה את כולנו והפכה להיות חלק בלתי נפרד מאיתנו.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Warm comic family moment in a bright living room. In the FOREGROUND, Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, sitting on the floor joyfully hugging Taya, an Australian Cattle Dog / blue heeler with a grey-and-white speckled mottled coat, black pointed ears, tan facial markings, who happily leans into him and licks his cheek — Raz is delighted and totally unafraid. BEHIND them, the rest of the family peeks nervously over the back of a couch with wide comically hesitant eyes: mom Adi, dark wavy hair, warm face, dark eyes; dad Amos, athletic build, short buzzed dark hair, tanned skin; and two younger brothers, all of them wary of the dog. Everyone afraid of dogs, except Raz. Keep the exact face, hair and appearance of the boy AND the exact look of the dog from the reference image.",
+   "video_prompt": "An energetic puppy bounds across the living room straight into the kneeling teen's open arms, tail wagging wildly, licking his cheek — while the family peeks from behind the couch, then slowly melts into smiles. Funny, sweet, irresistible. She conquers them all.",
+   "reference": "yuval/reference/Raz/_proxy/2024-teen-raz-tomer-19.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s12.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s12.mp4",
+   "face_swap_plan": {
+    "raz_teen": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+    "mom_adi": "yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg",
+    "dad_amos": "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg",
+    "note": "Raz+Taya come accurate from the real reference photo; swap Adi+Amos onto the peeking parents. Yair/Tomer: no current ref -> comic background."
+   }
+  },
+  {
+   "scene_number": 13,
+   "title": "רגעים שקטים — זום אנגלית עם סבא דוד",
+   "duration_sec": 14,
+   "description": "מערכה 2 — רגעים שקטים. זמן איכות עם סבא דוד בזום ללימוד אנגלית.",
+   "characters": [
+    "raz_child",
+    "grandparents_amos"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "over-shoulder",
+    "camera_move": "slow push-in"
+   },
+   "narration": "יש גם את הרגעים השקטים יותר. זמן האיכות עם סבא דוד בזום ללימוד אנגלית.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes, sitting at a bright tidy desk in front of a laptop; on the screen, David, white sun hat, glasses, white polo shirt waves warmly during an English video lesson; English alphabet flashcards pinned around the desk; Raz focused and smiling, pointing at the screen with a pencil. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Over-shoulder push-in on a boy at a bright desk waving back at his grandfather on the laptop screen; the grandfather holds up a flashcard, both laugh. Distance means nothing between people who love each other. Warm, quiet, connected.",
+   "reference": "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s13.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s13.mp4",
+   "regenerate": true,
+   "note": "קיימת גרסה בסגנון הישן ב-scenes/ — לייצר מחדש בסגנון v2"
+  },
+  {
+   "scene_number": 14,
+   "title": "הביקורים ברמת ישי — עוגות וחיבוקים",
+   "duration_sec": 16,
+   "description": "מערכה 2 — רגעים שקטים. הביקורים אצל סבתא מיכל וסבא רפי ברמת ישי — העוגות הכי שוות, החיבוקים הכי גדולים.",
+   "characters": [
+    "raz_teen",
+    "grandparents_adi"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "warm slow push-in"
+   },
+   "narration": "הביקורים אצל סבתא וסבא ברמת ישי עם העוגות הכי שוות והחיבוקים הכי גדולים. התחושה שתמיד טוב להיות ביחד.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Cozy warm home in Ramat Yishai: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, bending down happily to hug his grandparents at the doorway — Michal, curly reddish-brown shoulder-length hair, warm bright smile; Rafi, short greying hair, light blue striped shirt; behind them a table set with fresh delicious homemade cakes, warm afternoon light, big smiles everywhere. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "The tall teen wraps both grandparents in one big hug at the doorway, grandma reaches up to touch his cheek, grandpa pats his shoulder laughing; on the table behind, fresh cakes wait. Warm golden light. It is always good to be together.",
+   "reference": "yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s14.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s14.mp4"
+  },
+  {
+   "scene_number": 15,
+   "title": "ביזבז — עוד דקה של מתיחות",
+   "duration_sec": 14,
+   "description": "מערכה 3 — יום בחיים. רז לוקח דקה ועוד דקה בדיוק כשצריך לצאת — לכן קוראים לו ביזבז.",
+   "characters": [
+    "raz_teen",
+    "dad_amos",
+    "yair"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "eye-level",
+    "camera_move": "comic static + pans"
+   },
+   "narration": "המשפחה שלנו לא עוצרת לרגע, אבל רז אוהב לקחת דקה ועוד דקה של מתיחות, בדיוק כשצריך לצאת מהבית, עוד סיבוב אחד לוודא שלא שכח כלום, עוד התארגנות… לכן כולם מכירים אותו בתור \"ביזבז\".",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Comic scene at the front door, exactly THREE people: (1) Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, mid-luxurious-stretch with arms reaching the ceiling and eyes half closed; (2) dad Amos, athletic build, very short buzzed near-shaved hair, light stubble, tanned skin, standing at the open door tapping his wristwatch with a knowing smile; (3) his brother Yair, about 11, short brown hair, waiting at the door with arms crossed and an impatient grin; bright morning light, playful mood. Keep the exact faces, hair and appearance from the reference images.",
+   "video_prompt": "A teen boy stretches luxuriously by the front door while his dad taps his watch and his younger brother waits with crossed arms; gentle comedic beat, bright morning light, playful family energy.",
+   "reference": "yuval/reference/Raz/_proxy/shavuot-2025-148.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s15.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s15.mp4"
+  },
+  {
+   "scene_number": 16,
+   "title": "בוקר — 6:30 מצלצל, 6:45 קם",
+   "duration_sec": 18,
+   "description": "מערכה 3 — יום בחיים. השעון ב-6:30, רז ב-6:45. מסדר מיטה, מצחצח שיניים.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "eye-level",
+    "camera_move": "comic cuts"
+   },
+   "narration": "איך נראה יום בחיים של רז? השעון מצלצל ב-6:30. הוא מתעורר ב-6:45. מסדר את המיטה. מצחצח שיניים.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Comic morning frame in a bright teenage bedroom: an alarm clock ringing showing 6:30 in the foreground; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, sitting up sleepy-eyed at the edge of a neatly made bed, toothbrush already in hand, hair slightly tousled; warm golden morning light through the window. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Comic morning montage: the alarm rattles at 6:30 — a hand pats it quiet; at 6:45 the teen sits up with a yawn, smooths the blanket into a perfectly made bed, brushes his teeth with sleepy determination. Warm sunrise light, gentle humor, the day begins.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s16.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s16.mp4"
+  },
+  {
+   "scene_number": 17,
+   "title": "טיול עם טאיה + קורנפלקס",
+   "duration_sec": 14,
+   "description": "מערכה 3 — יום בחיים. טיול הבוקר עם טאיה, קערת קורנפלקס גדושה — וקדימה לעולם.",
+   "characters": [
+    "raz_teen",
+    "taya"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "eye-level",
+    "camera_move": "tracking"
+   },
+   "narration": "יוצא לטיול הבוקר עם טאיה. אוכל קערת קורנפלקס גדושה. וקדימה, לעולם.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Sunny village path in the early morning: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, walking briskly with Taya, an Australian Cattle Dog / blue heeler with a grey-and-white speckled mottled coat, black pointed ears, tan facial markings trotting happily beside him, leash loose, both enjoying the light through green hedges; warm fresh morning atmosphere. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Tracking alongside the teen and his speckled dog on a sunny village path — she trots proudly, he grins down at her; quick cut feeling of a huge overflowing cornflakes bowl, then out the gate with momentum. Fresh, bright, forward motion into the day.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s17.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s17.mp4"
+  },
+  {
+   "scene_number": 18,
+   "title": "סקייטבורד — חורש את הרחובות",
+   "duration_sec": 14,
+   "description": "מערכה 3 — תנועה. רז על הסקייטבורד, חורש את הרחובות.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "low",
+    "camera_move": "fast tracking"
+   },
+   "narration": "וברגע שהוא יוצא, הוא פשוט לא עוצר. תראו אותו על הסקטבורד, חורש את הרחובות.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, carving down a sunny street on a skateboard, crouched into a confident turn with arms out for balance, free joyful grin, casual trendy clothes, motion energy with light speed-blur in the bright surroundings. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Low fast tracking beside a skateboarder carving through sunny streets — quick weight shifts, wheels humming, a confident kick-push accelerating past the camera with a grin. Free, fast, alive. Energy without stopping.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s18.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s18.mp4"
+  },
+  {
+   "scene_number": 19,
+   "title": "קראטה — המשמעת העצמית המפורסמת",
+   "duration_sec": 16,
+   "description": "מערכה 3 — תנועה. אימוני הקראטה שבהם רז מביא לידי ביטוי את המשמעת העצמית שלו.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "low",
+    "camera_move": "push-in"
+   },
+   "narration": "או רץ לאימוני קרטה, בהם הוא מביא לידי ביטוי את המשמעת העצמית המפורסמת שלו.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, in a clean white karate gi with belt, standing tall in a focused fighting stance in a bright airy dojo, determined calm expression, sunlight streaming through tall windows behind him. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Low-angle push-in as the teen snaps a sharp clean karate strike then settles into a steady stance, gi cracking with the motion, eyes locked in calm focus. Bright dojo light, floating dust motes. Discipline as an art form.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s19.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s19.mp4",
+   "regenerate": true,
+   "note": "קיימת גרסה בסגנון הישן ב-scenes/ — לייצר מחדש בסגנון v2"
+  },
+  {
+   "scene_number": 20,
+   "title": "ריצות עם אבא",
+   "duration_sec": 14,
+   "description": "מערכה 3 — תנועה. ריצה עם אבא — כל פעם בדרך אחרת, תמיד עם אותה נחישות.",
+   "characters": [
+    "raz_teen",
+    "dad_amos"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "eye-level",
+    "camera_move": "tracking"
+   },
+   "narration": "או יוצא לריצה עם אבא. כל פעם בדרך אחרת, אבל תמיד עם אותה נחישות.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes and dad Amos, athletic build, short dark hair, big white smile, tanned skin, running side by side on a bright country road at golden hour, matching strides, both smiling through the effort, green fields and open sky around them. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Side tracking with father and son running in matched rhythm on a golden country road — a playful glance, a slight race-surge, both grinning. Effort and joy in the same breath. Golden hour light, open fields, forward momentum.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s20.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s20.mp4"
+  },
+  {
+   "scene_number": 21,
+   "title": "לא מוותר — לימודים, ספורט, שחמט",
+   "duration_sec": 16,
+   "description": "מערכה 3 — נחישות. מצטיין בלימודים, בספורט ובשחמט — תמיד מחפש להשתפר.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "eye-level",
+    "camera_move": "slow push-in"
+   },
+   "narration": "הוא לא מוותר לעצמו. לא בלימודים, שם הוא מצטיין, ולא בספורט. לא בשחמט. הוא תמיד מחפש להשתפר. עוד קצת. עוד צעד. עוד אתגר. גם כשהדרך ארוכה. וגם כשהיא לא פשוטה.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, at a bright study desk — open notebooks and school books on one side, a chess board mid-game on the other; he studies the board and reaches to move a piece with quiet focused determination; warm daylight through the window. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow push-in on the teen at his desk — a glance at the open notebook, then eyes narrowing at the chessboard; he lifts a knight, holds it thinking, places it with quiet confidence. One more step, one more challenge. Focused, calm, determined.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s21.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s21.mp4"
+  },
+  {
+   "scene_number": 22,
+   "title": "חלום — ספורטאי מקצועי (כדורגל / כדורסל)",
+   "duration_sec": 16,
+   "description": "מערכה 4 — חלומות. החלום הגדול: ספורטאי מקצועי בכדורגל או בכדורסל.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "low",
+    "camera_move": "dramatic rise"
+   },
+   "narration": "ויש גם חלומות. להיות ספורטאי מקצועי בכדורגל או בכדורסל.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Dream sequence in a packed glowing stadium: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, mid-action — striking a soccer ball with power on one side of the frame while a dreamlike echo of him rises for a basketball layup on the other; dramatic uplifting stadium lights, dreamy glow, roaring crowd as soft bokeh. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Dream-lit stadium: the teen strikes a soccer ball in slow motion, the shot morphs into him rising for a basketball layup, stadium lights blooming, crowd a soft glowing blur. Epic but hopeful — a dream taking shape. Uplifting cinematic energy.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s22.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s22.mp4"
+  },
+  {
+   "scene_number": 23,
+   "title": "חלום — גיטרה",
+   "duration_sec": 14,
+   "description": "מערכה 4 — חלומות. ללמוד גיטרה.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow orbit"
+   },
+   "narration": "ללמוד גיטרה.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Dream sequence: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, playing an acoustic guitar in a bright airy room, glowing musical notes floating around him like sparks, hopeful excited expression, soft dreamy light. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow orbit around the teen strumming an acoustic guitar, glowing notes drifting off the strings and floating around the room like fireflies. He closes his eyes and smiles. Dreamy, warm, full of possibility.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s23.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s23.mp4"
+  },
+  {
+   "scene_number": 24,
+   "title": "חלום — צלילה וגלישה",
+   "duration_sec": 14,
+   "description": "מערכה 4 — חלומות. לצלוח קורס צלילה וגלישה.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MLS",
+    "angle": "low",
+    "camera_move": "dynamic tracking"
+   },
+   "narration": "לצלוח קורס צלילה וגלישה.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Dream sequence: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, riding a clean bright turquoise wave on a surfboard, thrilled confident grin, sea spray sparkling in sunlight, a diving mask and snorkel hanging at his neck — dreams of both diving and surfing in one frame. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Dynamic tracking along a bright turquoise wave as the teen carves across its glassy face, spray catching sunlight like glitter; a quick dreamy dip beneath the surface into blue silence with fish, then back up into the sun. Thrilling, clean, joyful.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s24.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s24.mp4"
+  },
+  {
+   "scene_number": 25,
+   "title": "חלומות — ברבר, ניו זילנד, טלפורטציה",
+   "duration_sec": 18,
+   "description": "מערכה 4 — חלומות. ללמוד לספר חברים (פלאש קומי) → ניו זילנד הרחוקה → כוח-על: טלפורטציה.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "playful whip-pans"
+   },
+   "narration": "ללמוד לספר חברים. ואולי יום אחד גם להגיע לניו זילנד הרחוקה. ואם הוא היה יכול לקבל כוח-על? הוא היה מבקש טלפורטציה. כדי להיות בכל מקום בבת אחת.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Playful dream montage: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, giving a friend a haircut with clippers and a comically confident wink, barber cape and all; behind him a dreamlike glowing portal opens onto New Zealand's green mountains and fjords — teleportation sparkles, one foot already stepping through the portal. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Playful whip-pan montage: the teen snips a friend's hair with a confident barber flourish — whip — a glowing portal tears open revealing New Zealand's green fjords — whip — he steps through in a sparkle of teleportation light, grinning back at the camera. Fun, imaginative, limitless.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s25.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s25.mp4"
+  },
+  {
+   "scene_number": 26,
+   "title": "רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן",
+   "duration_sec": 26,
+   "description": "מערכה 4 — הרגעים השקטים. סצנה ארוכה עם 4 תמונות מתחלפות: ספר טוב · מארון 5 וקולדפליי · צחוקים עם חברים · פלייסטיישן ספיידרמן.",
+   "characters": [
+    "raz_teen"
+   ],
+   "shot": {
+    "type": "MCU",
+    "angle": "eye-level",
+    "camera_move": "slow cross-dissolves"
+   },
+   "narration": "בין כל העשייה הזו, רז יודע לעצור לרגע. לצלול אל תוך ספר טוב, להיסחף לעולמות חדשים ולתת לדמיון להוביל את הדרך. הוא אוהב את המוזיקה של מארון 5 וקולדפליי, נהנה מהצחוקים עם החברים, וכשמגיע הזמן להירגע, אפשר למצוא אותו עם שלט הפלייסטיישן ביד, שקוע בהרפתקאות של משחק הספיידרמן. כי גם ברגעים השקטים שלו, הסקרנות, הדמיון והאהבה לאתגרים נשארים חלק ממנו.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, curled up in a cozy bright reading nook deep inside a good book, soft imaginative dreamy wisps rising from the pages. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow cross-dissolve montage of four quiet moments: lost in a book with dreamy wisps rising from the pages; headphones on, eyes closed, floating in music; laughing freely with friends in golden afternoon light; leaning into a PlayStation game as a web-swinging superhero glows on the TV. Calm, curious, imaginative — the quiet side of the same fire.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s26.mp4",
+   "image_prompts": [
+    {
+     "id": "s26a",
+     "label": "ספר",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, curled up in a cozy bright reading nook, deep inside a good book, soft imaginative dreamy wisps rising from the pages, warm afternoon light. Keep the exact face, hair and appearance from the reference image.",
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26a.png"
+    },
+    {
+     "id": "s26b",
+     "label": "מוזיקה — מארון 5 וקולדפליי",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, lying back on his bed with headphones on, eyes closed in pure enjoyment, soft glowing sound waves and floating music notes around him, band posters on the wall behind him. Keep the exact face, hair and appearance from the reference image.",
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26b.png"
+    },
+    {
+     "id": "s26c",
+     "label": "צחוקים עם חברים",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, laughing out loud together with two friends outdoors, golden afternoon light, easy pure joy, casual clothes, arms around shoulders. Keep the exact face, hair and appearance from the reference image.",
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26c.png"
+    },
+    {
+     "id": "s26d",
+     "label": "פלייסטיישן — ספיידרמן",
+     "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, round black-framed glasses, sitting on a couch with a PlayStation controller in hand, leaning into the game with an excited grin, the TV glow showing a red-and-blue superhero web-swinging between skyscrapers, cozy dim-bright room. Keep the exact face, hair and appearance from the reference image.",
+     "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26d.png"
+    }
+   ]
+  },
+  {
+   "scene_number": 27,
+   "title": "סיום — רז שלנו, היום אתה חוגג בר מצווה",
+   "duration_sec": 40,
+   "description": "מערכה 5 — סיום. פנייה ישירה לרז: הנער הגבוה שעדיין רואים בו את הילד עם המכונית. המשפט מהווצאפ. מנוחה היא לא ויתור. חתימת המשפחה.",
+   "characters": [
+    "raz_teen",
+    "mom_adi",
+    "dad_amos",
+    "yair",
+    "tomer",
+    "taya"
+   ],
+   "shot": {
+    "type": "MS",
+    "angle": "eye-level",
+    "camera_move": "slow pull-back + crane"
+   },
+   "narration": "והנה, היום החגיגי שלך הגיע. רז שלנו, היום אתה חוגג בר מצווה. כשאנחנו מסתכלים עליך היום, אנחנו רואים נער גבוה, חכם, רגיש, מצחיק, נחוש ומלא חלומות. ואנחנו עדיין רואים בך גם את הילד הקטן שלנו שנרדם עם מכונית ביד. אנחנו מתרגשים לראות אותך צועד בדרכך המיוחדת, וגאים בך על מה שהפכת להיות. יש לך משפט בווצאפ שאנחנו בטוחים שילווה גם אותך בדרך לכל החלומות הגדולים שלך: \"הדרך היחידה להפסיד – היא לוותר.\" אז תמשיך לרוץ. תמשיך לכוון גבוה. תמשיך לחלום. ואל תשכח לעצור כשצריך, כי מנוחה היא לא ויתור. תמשיך להיות בדיוק מי שאתה. כי זה רז שאנחנו כל כך אוהבים. ותדע שאנחנו כאן מאחוריך, בכל צעד, בכל ריצה, ובכל חלום. אוהבים אותך המון, אמא אבא יאיר ותומר.",
+   "image_prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Emotional finale at golden hour: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, standing proud in a festive white shirt, his family gathered warmly around him — mom Adi, dark wavy hair, warm big smile, dark eyes; dad Amos, athletic build, short dark hair, big white smile, tanned skin; brothers Yair and Tomer; and Taya, an Australian Cattle Dog / blue heeler with a grey-and-white speckled mottled coat, black pointed ears, tan facial markings sitting at his feet; behind them a soft glowing memory of a toddler asleep hugging a toy car; warm celebration light, gentle lens flare. Keep the exact face, hair and appearance from the reference image.",
+   "video_prompt": "Slow pull-back and gentle crane: the family gathers around the tall proud teen at golden hour, arms around each other, the dog at his feet; a soft glowing memory of a sleeping toddler with a toy car fades in the warm sky behind them. The camera rises as they laugh together. Emotional, proud, full of love — the next chapter begins.",
+   "reference": "yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg",
+   "image_output": "bambi/outputs/Raz Bar Mitzva/2026-06-27-bar-mitzva/scenes_v2/s27.png",
+   "video_output": "the-video-man/outputs/Raz Bar Mitzva/v2-s27.mp4"
+  }
+ ]
+}

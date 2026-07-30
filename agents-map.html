@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Projects — Agents & Skills Map</title>
+<style>
+  :root{
+    --bg:#0e1117; --panel:#161b22; --panel2:#1c232d; --line:#2b3440;
+    --text:#e6edf3; --muted:#8b97a7; --chip:#222c38; --chipline:#33414f;
+    --p1:#7c9cff; /* claude_projects root  */
+    --p2:#5ed3a0; /* ai-stl-generator      */
+    --p3:#ffb86b; /* TheFiveAgents         */
+    --p0:#5a6675; /* empty / settings only */
+    --custom:#ff79c6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--text)}
+  a{color:var(--p1);text-decoration:none}
+  header{padding:24px 28px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(14,17,23,.92);backdrop-filter:blur(8px);z-index:20}
+  h1{margin:0 0 4px;font-size:21px;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:13px}
+  .totals{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+  .totals .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 14px}
+  .totals .stat b{font-size:20px;display:block}
+  .totals .stat span{color:var(--muted);font-size:12px}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+  .tabs{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px}
+  .tabs button{background:transparent;border:0;color:var(--muted);padding:7px 16px;border-radius:7px;cursor:pointer;font-size:14px;font-weight:600}
+  .tabs button.on{background:var(--panel2);color:var(--text)}
+  #search{flex:1;min-width:180px;background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:9px;padding:8px 12px;font-size:14px}
+  .pchips{display:flex;gap:6px;flex-wrap:wrap}
+  .pchip{cursor:pointer;border:1px solid var(--chipline);background:var(--chip);color:var(--muted);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
+  .pchip .dot{width:9px;height:9px;border-radius:50%}
+  .pchip.off{opacity:.35}
+  main{padding:22px 28px 60px;max-width:1280px;margin:0 auto}
+  .view{display:none}
+  .view.on{display:block}
+
+  /* ---- Catalog ---- */
+  .proj{margin-bottom:26px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .proj > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--panel);font-weight:700}
+  .proj > summary::-webkit-details-marker{display:none}
+  .proj > summary .pdot{width:12px;height:12px;border-radius:50%}
+  .proj > summary .pcount{margin-left:auto;color:var(--muted);font-weight:500;font-size:13px}
+  .proj .path{color:var(--muted);font-weight:400;font-size:12px;font-family:ui-monospace,Menlo,monospace}
+  .group{padding:6px 18px 16px}
+  .group h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:14px 4px 8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+  .card.skill{border-style:dashed}
+  .card h4{margin:0;font-size:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .rtl{direction:rtl;unicode-bidi:plaintext}
+  .badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;border:1px solid var(--chipline);color:var(--muted)}
+  .badge.custom{color:#0e1117;background:var(--custom);border-color:var(--custom)}
+  .badge.role{color:var(--text);background:var(--chip)}
+  .desc{color:var(--muted);font-size:13px;margin:7px 0 9px}
+  .chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+  .chip{font-size:11px;background:var(--chip);border:1px solid var(--chipline);border-radius:14px;padding:2px 9px;color:#c4d0de}
+  details.exp{margin-top:8px;border-top:1px solid var(--line);padding-top:7px}
+  details.exp summary{cursor:pointer;color:var(--p1);font-size:12px;font-weight:600;list-style:none}
+  details.exp summary::-webkit-details-marker{display:none}
+  details.exp summary::before{content:"▸ ";color:var(--muted)}
+  details.exp[open] summary::before{content:"▾ "}
+  details.exp ul{margin:7px 0 4px;padding-left:18px}
+  details.exp li{font-size:12.5px;color:#cdd7e2;margin:3px 0}
+  .folders code{display:inline-block;background:var(--chip);border:1px solid var(--chipline);border-radius:6px;padding:1px 7px;margin:3px 4px 0 0;font-size:11.5px;font-family:ui-monospace,Menlo,monospace;color:#9fd0b6}
+  .uses{font-size:12px;color:var(--muted);margin-top:4px}
+  .uses b{color:var(--custom)}
+
+  /* ---- Relations ---- */
+  #graphwrap{border:1px solid var(--line);border-radius:14px;background:
+     radial-gradient(circle at 20% 0%,#192230 0,transparent 60%) var(--panel)}
+  svg{width:100%;height:auto;display:block}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:12px 4px 0;color:var(--muted);font-size:12.5px}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .lg-line{width:26px;height:0;border-top:2px solid var(--muted)}
+  .node{cursor:pointer}
+  .node text{font-size:11px;fill:var(--text);pointer-events:none}
+  .node .nlabel{font-weight:600}
+  .node rect,.node circle{transition:opacity .15s}
+  .edge{fill:none;stroke:var(--line);stroke-width:1.6}
+  .edge.delegate{stroke-dasharray:5 4}
+  .edge.flow{stroke:var(--p3);stroke-dasharray:2 4;stroke-width:1.8}
+  .dim{opacity:.12}
+  .hl{opacity:1 !important}
+  .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--chipline);border-radius:8px;
+       padding:7px 10px;font-size:12px;max-width:240px;color:var(--text);opacity:0;transition:opacity .12s;z-index:50}
+  .note{color:var(--muted);font-size:12.5px;margin-top:14px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🗂️ Claude Projects — Agents &amp; Skills Map</h1>
+  <div class="sub">Everything under <code>~/claude_projects/</code> — who owns what, and how agents and skills connect.</div>
+  <div class="totals" id="totals"></div>
+  <div class="bar">
+    <div class="tabs">
+      <button id="tabCat" class="on" onclick="show('cat')">📋 Catalog</button>
+      <button id="tabRel" onclick="show('rel')">🕸️ Relations</button>
+    </div>
+    <input id="search" placeholder="Filter by name or description…" oninput="filter()">
+    <div class="pchips" id="pchips"></div>
+  </div>
+</header>
+
+<main>
+  <section id="cat" class="view on"></section>
+  <section id="rel" class="view">
+    <div id="graphwrap"></div>
+    <div class="legend">
+      <span><span class="lg-line" style="border-top-style:solid"></span> agent uses skill</span>
+      <span><span class="lg-line" style="border-top-style:dashed"></span> orchestrator delegates</span>
+      <span><span class="lg-line" style="border-top:2px dotted var(--p3)"></span> pipeline flow</span>
+      <span>● node color = owner project · click a node to open its card</span>
+    </div>
+    <p class="note">Hover a node to highlight its connections and read its description. Click to jump to the Catalog.</p>
+  </section>
+</main>
+<div class="tip" id="tip"></div>
+
+<script>
+/* ============ DATA ============ */
+const PROJECTS = [
+  {
+    id:"root", name:"claude_projects (root .claude)", color:"var(--p1)",
+    path:"~/claude_projects/.claude", note:"Shared STL pipeline + Obsidian/Remotion utility skills.",
+    agents:[
+      {id:"r-orch",name:"pipeline-orchestrator-agent",desc:"Runs the full image→printable-STL pipeline and delegates to the specialists.",
+        chips:["orchestration","state machine","delegation"],
+        abilities:["Manages pipeline state INPUT_SELECTION → EXPORT","Delegates to image / 3D / mesh / export agents","Tracks end-to-end workflow integrity"],
+        instr:["Coordinates the four specialist agents","Owns the state transitions of the whole pipeline"],
+        folders:[], delegatesTo:["r-img","r-i3d","r-mesh","r-exp"]},
+      {id:"r-img",name:"image-generation-agent",desc:"Generates images from a text prompt (Nano Banana / Stable Diffusion).",
+        chips:["text→image","Nano Banana","Stable Diffusion"],
+        abilities:["Create reference images from prompts","Feeds the image→3D stage"],instr:[],folders:[]},
+      {id:"r-i3d",name:"image-to-3d-agent",desc:"Converts a 2D image into a 3D mesh (TripoSR / Wonder3D / InstantMesh).",
+        chips:["image→3D","TripoSR","Wonder3D"],
+        abilities:["Turn a chosen image into an OBJ/GLB mesh"],instr:[],folders:[]},
+      {id:"r-mesh",name:"mesh-processing-agent",desc:"Prepares meshes for printing with headless Blender.",
+        chips:["Blender","hole-fill","manifold","simplify"],
+        abilities:["Cleanup, hole-filling, manifold fixing, simplification"],instr:[],folders:[],usesSkill:"s-meshrepair"},
+      {id:"r-exp",name:"export-agent",desc:"Exports final models as printable STL / 3MF for Bambu Studio.",
+        chips:["STL","3MF","Bambu Studio"],
+        abilities:["Export print-ready STL or 3MF archives"],instr:[],folders:[],usesSkill:"s-stlexport"},
+    ],
+    skills:[
+      {id:"s-meshrepair",name:"mesh-repair",desc:"Repair meshes using Blender and Trimesh for 3D printing.",chips:["Blender","Trimesh"],abilities:["Fix non-manifold geometry","Repair for printability"],instr:[],folders:[]},
+      {id:"s-stlexport",name:"stl-export",desc:"Export final 3D models as STL or 3MF for 3D printing.",chips:["STL","3MF"],abilities:["Write printable export files"],instr:[],folders:[]},
+      {id:"s-remotion",name:"remotion-best-practices",desc:"Best practices for Remotion — video creation in React.",chips:["Remotion","React","video"],abilities:["Guidance for React-based video"],instr:[],folders:[]},
+      {id:"s-obsbases",name:"obsidian-bases",desc:"Create & edit Obsidian Bases (.base) — views, filters, formulas.",chips:["Obsidian",".base","filters"],abilities:["Database-like views of notes"],instr:[],folders:[]},
+      {id:"s-obsmd",name:"obsidian-markdown",desc:"Author Obsidian-flavored Markdown — wikilinks, callouts, properties.",chips:["wikilinks","callouts","frontmatter"],abilities:["Obsidian-specific MD syntax"],instr:[],folders:[]},
+      {id:"s-obsvault-root",name:"obsidian-vault-workflow",desc:"Mandatory read/write vault protocol at start & end of every task.",chips:["vault","protocol","session"],abilities:["Read topic file at task start","Append dated summary at task end"],instr:["Locate topic file → read Overview + Session Log","Append compact dated summary when done"],folders:[]},
+    ]
+  },
+  {
+    id:"stl", name:"ai-stl-generator", color:"var(--p2)",
+    path:"~/claude_projects/ai-stl-generator/.claude", note:"The real STL project — refined versions of the five pipeline agents.",
+    agents:[
+      {id:"a-orch",name:"pipeline-orchestrator-agent",desc:"Controls state transitions and guards the pipeline's integrity.",
+        chips:["orchestration","state guard"],
+        abilities:["Coordinate image-gen → 3D → mesh → export","Enforce workflow ordering"],
+        instr:["CRITICAL: never allows 3D generation without a confirmed, user-selected image"],folders:[],
+        delegatesTo:["a-img","a-i3d","a-mesh","a-exp"]},
+      {id:"a-img",name:"image-generation-agent",desc:"Creates exactly 4 candidate images per prompt, with regeneration loops.",
+        chips:["4 candidates","regeneration"],
+        abilities:["Generate 3D-printable reference images","Loop until the user is satisfied"],instr:["Always produces 4 candidates per prompt"],folders:[]},
+      {id:"a-i3d",name:"image-to-3d-agent",desc:"Converts a confirmed image into a 3D mesh, returns OBJ/GLB.",
+        chips:["image→3D","OBJ/GLB"],
+        abilities:["TripoSR / Wonder3D / InstantMesh conversion"],instr:["Only runs after state IMAGE_READY + user confirmation"],folders:[]},
+      {id:"a-mesh",name:"mesh-processing-agent",desc:"Blender + Trimesh prep; can segment into 1–4 color parts for Bambu AMS.",
+        chips:["Blender","Trimesh","AMS segmenting"],
+        abilities:["Close holes, manifold, simplify, normalize scale","Segment into 1–4 color parts for multi-color printing"],instr:[],folders:[]},
+      {id:"a-exp",name:"export-agent",desc:"Exports per-segment STL files + optional 3MF for Bambu Studio.",
+        chips:["per-segment STL","3MF","Bambu"],
+        abilities:["Write download-ready print files"],instr:["Runs once mesh processing & segmentation are complete"],folders:[]},
+    ],
+    skills:[]
+  },
+  {
+    id:"five", name:"TheFiveAgents", color:"var(--p3)",
+    path:"~/claude_projects/TheFiveAgents/.claude", note:"Hebrew content-creation team, coordinated by ראובן (defined in CLAUDE.md).",
+    agents:[
+      {id:"f-reuven",name:"ראובן",role:"orchestrator",desc:"מנכ\"ל הצוות — מקבל בקשות, מנתב לצוות, ומריץ את flow המחקר→תוכן→תמונות.",rtl:true,
+        chips:["routing","orchestration","CLAUDE.md"],
+        abilities:["Receives the user request and decides who runs","Runs research→content→images flow","Swaps {{IMAGE_NEEDED}} placeholders with final images"],
+        instr:["Defined in CLAUDE.md, not an agent file","Runs obsidian-vault-workflow at session start"],
+        folders:["Content/","Output/"],usesSkill:"f-obsvault",
+        delegatesTo:["f-chen","f-yael","f-yuval","f-dana","f-video","f-fontdesigner"]},
+      {id:"f-chen",name:"חן (Chen)",role:"web research",desc:"חוקרת הרשת — מוצאת מקורות איכותיים ומכינה אותם כקלט ליעל.",rtl:true,
+        chips:["WebSearch","WebFetch","source filtering","quotes"],
+        abilities:["Search the web & fetch best results","Filter for reliable primary sources","Extract accurate quotes (no hallucination)"],
+        instr:["Checks chen/Memory/searches.md before every search","Saves output to Content/<date>-<slug>.md","Never calls Yael directly — reports to ראובן"],
+        folders:["Content/","chen/Memory/"]},
+      {id:"f-yael",name:"יעל (Yael)",role:"content writer",desc:"כותבת התוכן — שכתוב, עריכה, תרגום, סיכום.",rtl:true,
+        chips:["rewrite","edit","summarize","translate"],
+        abilities:["Rewrite in the team's voice","Output both .md and styled .html","Mark image spots with {{IMAGE_NEEDED}}"],
+        instr:["Reads yael/style-guide.md + yael/reference/ first","Mandatory credits block on every new article","Strips author links/CTAs; keeps in-story brands"],
+        folders:["Content/","yael/","Output/"]},
+      {id:"f-yuval",name:"יובל (Yuval)",role:"image designer",desc:"מעצב התמונות — תמונות עקביות בסגנון מוגדר.",rtl:true,
+        chips:["prompt craft","visual consistency","gpt-image"],
+        abilities:["Scan references to extract style/palette","Craft detailed English prompts","Keep visual consistency across a project"],
+        instr:["Saves PNG + sibling .txt prompt in yuval/outputs/","Model names are owned by the skill — must not change them"],
+        folders:["yuval/reference/","yuval/outputs/"],usesSkill:"f-gptimg"},
+      {id:"f-dana",name:"דנה (Dana)",role:"usage analyst",desc:"אנליסטית שימוש — דוחות עלויות OpenAI ו-OpenRouter.",rtl:true,
+        chips:["OpenAI costs","OpenRouter credits","reports"],
+        abilities:["Fetch OpenAI usage + OpenRouter credits","Aggregate into a Hebrew Markdown report","Surface top model / balance warnings"],
+        instr:["Needs OPENAI_ADMIN_KEY in .env for OpenAI data","Never prints key values, even on failure","Scripts touch .env — Dana only calls them"],
+        folders:["dana/reports/","dana/Memory/"],usesSkill:"f-usage"},
+      {id:"f-video",name:"the-video-man",role:"video producer",desc:"מפיק הווידאו — קליפים ב-Kling / Seedance דרך OpenRouter.",
+        chips:["Kling","Seedance","image→video","OpenRouter"],
+        abilities:["Text→video or image→video clips","Auto-derive aspect ratio from a reference","Recommend a model per scene type"],
+        instr:["Always asks which model before running","Reference always copied through the-video-man/reference/<project>/","Logs jobs to jobs.md (Dana reads it)"],
+        folders:["the-video-man/outputs/<project>/","the-video-man/reference/<project>/"],usesSkill:"f-orvideo"},
+      {id:"f-fontdesigner",name:"the-font-designer",role:"font designer",desc:"מעצב הפונטים — פונטים עבריים נכונים כווריאציה מבסיס OFL.",
+        chips:["Hebrew fonts","OFL variation","TTF"],
+        abilities:["Derive a TTF variation from an OFL base","Round / slant / width / weight transforms","Handwriting preset (dana-yad)"],
+        instr:["Never draws letters from scratch — always a real base","Always saves under a NEW family name (OFL rule)","Verifies Hebrew coverage before reporting"],
+        folders:["fonts/outputs/","fonts/Memory/"],usesSkill:"f-font"},
+    ],
+    skills:[
+      {id:"f-gptimg",name:"gpt-image-gen",custom:true,desc:"Generate/edit images via OpenAI gpt-image (OpenRouter fallback).",chips:["gpt-image-2","gpt-image-1.5","edits"],abilities:["Text→image (default gpt-image-2)","Image→image with reference for face consistency","Custom aspect ratios"],instr:["Auto-falls back to OpenRouter"],folders:[],ownerAgent:"f-yuval"},
+      {id:"f-orvideo",name:"openrouter-video-gen",custom:true,desc:"Async video via OpenRouter — Kling 3.0 / Seedance 2.0.",chips:["Kling 3.0","Seedance 2.0","async"],abilities:["Text→video or image→video","Auto aspect ratio from reference"],instr:["Async job polling"],folders:[],ownerAgent:"f-video"},
+      {id:"f-font",name:"font-foundry",custom:true,desc:"Build a correct Hebrew font as a variation of an OFL base.",chips:["Heebo","Rubik","Assistant","Chaikin round"],abilities:["Pin a weight off the variable axis","Corner-rounding / slant / width transforms"],instr:["Letterforms stay correct — derived from a real font"],folders:[],ownerAgent:"f-fontdesigner"},
+      {id:"f-usage",name:"usage-analytics",custom:true,desc:"Fetch OpenAI usage + OpenRouter credits → Hebrew report.",chips:["OpenAI Admin API","OpenRouter","aggregate"],abilities:["Three scripts: openai-usage, openrouter-usage, aggregate"],instr:["Requires Admin key for OpenAI data"],folders:[],ownerAgent:"f-dana"},
+      {id:"f-obsvault",name:"obsidian-vault-workflow",custom:true,desc:"Maintain a wiki-linked vault — one MD note per file.",chips:["vault","wiki-links","session start"],abilities:["Scan new/changed files at session start","One MD note per file, cross-linked"],instr:["Runs at start of every session & command"],folders:["obsidian-vault/"],ownerAgent:"f-reuven"},
+      // general "superpowers" skills (not bound to a specific agent)
+      {id:"g1",name:"brainstorming",gen:true,desc:"Explore intent & design before any creative/build work.",chips:["intent","design"],abilities:[],instr:[],folders:[]},
+      {id:"g2",name:"writing-plans",gen:true,desc:"Turn a spec into a multi-step implementation plan.",chips:["planning"],abilities:[],instr:[],folders:[]},
+      {id:"g3",name:"executing-plans",gen:true,desc:"Execute a written plan with review checkpoints.",chips:["execution"],abilities:[],instr:[],folders:[]},
+      {id:"g4",name:"writing-skills",gen:true,desc:"Create, edit & verify skills.",chips:["meta","skills"],abilities:[],instr:[],folders:[]},
+      {id:"g5",name:"using-superpowers",gen:true,desc:"How to find & use skills before responding.",chips:["meta"],abilities:[],instr:[],folders:[]},
+      {id:"g6",name:"dispatching-parallel-agents",gen:true,desc:"Run 2+ independent tasks in parallel.",chips:["parallel"],abilities:[],instr:[],folders:[]},
+      {id:"g7",name:"subagent-driven-development",gen:true,desc:"Execute plans via independent subagent tasks.",chips:["subagents"],abilities:[],instr:[],folders:[]},
+      {id:"g8",name:"test-driven-development",gen:true,desc:"Write tests before implementation.",chips:["TDD"],abilities:[],instr:[],folders:[]},
+      {id:"g9",name:"systematic-debugging",gen:true,desc:"Methodical approach to any bug or failure.",chips:["debugging"],abilities:[],instr:[],folders:[]},
+      {id:"g10",name:"verification-before-completion",gen:true,desc:"Prove work with evidence before claiming done.",chips:["verification"],abilities:[],instr:[],folders:[]},
+      {id:"g11",name:"requesting-code-review",gen:true,desc:"Verify work meets requirements before merge.",chips:["review"],abilities:[],instr:[],folders:[]},
+      {id:"g12",name:"receiving-code-review",gen:true,desc:"Handle review feedback with rigor.",chips:["review"],abilities:[],instr:[],folders:[]},
+      {id:"g13",name:"finishing-a-development-branch",gen:true,desc:"Decide how to integrate completed work.",chips:["git","merge"],abilities:[],instr:[],folders:[]},
+      {id:"g14",name:"using-git-worktrees",gen:true,desc:"Isolate feature work via git worktrees.",chips:["git","worktree"],abilities:[],instr:[],folders:[]},
+    ]
+  },
+  {
+    id:"empty", name:"Other projects (config only)", color:"var(--p0)",
+    path:"~/claude_projects/{rapidclips, rapidclips/frontend, MyPortfolio}", note:"Have .claude settings/launch configs only — no agents or skills.",
+    agents:[], skills:[]
+  }
+];
+
+/* ============ helpers ============ */
+const $=s=>document.querySelector(s);
+let activeProjects=new Set(PROJECTS.map(p=>p.id));
+
+function countAll(){
+  let a=0,s=0,cust=0;
+  PROJECTS.forEach(p=>{a+=p.agents.length;s+=p.skills.length;p.skills.forEach(k=>{if(k.custom)cust++})});
+  return {a,s,cust,owners:PROJECTS.filter(p=>p.agents.length||p.skills.length).length};
+}
+function esc(t){return (t||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+/* ============ totals + project chips ============ */
+(function(){
+  const c=countAll();
+  $("#totals").innerHTML=`
+    <div class="stat"><b>${c.owners}</b><span>projects with agents/skills</span></div>
+    <div class="stat"><b>${c.a}</b><span>agents</span></div>
+    <div class="stat"><b>${c.s}</b><span>skills (${c.cust} custom)</span></div>
+    <div class="stat"><b>${PROJECTS.length}</b><span>locations scanned</span></div>`;
+  $("#pchips").innerHTML=PROJECTS.map(p=>
+    `<span class="pchip" data-p="${p.id}" onclick="toggleProj('${p.id}')">
+       <span class="dot" style="background:${p.color}"></span>${esc(p.name)}</span>`).join("");
+})();
+
+function toggleProj(id){
+  activeProjects.has(id)?activeProjects.delete(id):activeProjects.add(id);
+  document.querySelectorAll(`.pchip[data-p="${id}"]`).forEach(e=>e.classList.toggle("off",!activeProjects.has(id)));
+  renderCatalog(); buildGraph(); filter();
+}
+
+/* ============ Catalog ============ */
+function entryCard(e,isSkill){
+  const skillName=id=>{for(const p of PROJECTS){const s=p.skills.find(x=>x.id===id);if(s)return s.name;}return id;};
+  const agentName=id=>{for(const p of PROJECTS){const a=p.agents.find(x=>x.id===id);if(a)return a.name;}return id;};
+  let badges="";
+  if(isSkill&&e.custom)badges+=`<span class="badge custom">custom</span>`;
+  if(isSkill&&e.gen)badges+=`<span class="badge">general</span>`;
+  if(e.role)badges+=`<span class="badge role">${esc(e.role)}</span>`;
+  const chips=(e.chips||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join("");
+  let exp="";
+  if(e.abilities&&e.abilities.length)
+    exp+=`<details class="exp"><summary>Abilities</summary><ul>${e.abilities.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></details>`;
+  if(e.instr&&e.instr.length)
+    exp+=`<details class="exp"><summary>Instructions</summary><ul>${e.instr.map(a=>`<li>${esc(a)}</li>`).join("")}</ul></details>`;
+  if(e.folders&&e.folders.length)
+    exp+=`<details class="exp folders"><summary>Related folders</summary><div>${e.folders.map(f=>`<code>${esc(f)}</code>`).join("")}</div></details>`;
+  let uses="";
+  if(e.usesSkill)uses=`<div class="uses">uses skill → <b>${esc(skillName(e.usesSkill))}</b></div>`;
+  if(isSkill&&e.ownerAgent)uses=`<div class="uses">used by → <b>${esc(agentName(e.ownerAgent))}</b></div>`;
+  const search=(e.name+" "+e.desc+" "+(e.chips||[]).join(" ")).toLowerCase();
+  return `<div class="card ${isSkill?'skill':''}" data-s="${esc(search)}">
+    <h4 class="${e.rtl?'rtl':''}">${esc(e.name)} ${badges}</h4>
+    <div class="desc ${e.rtl?'rtl':''}">${esc(e.desc)}</div>
+    <div class="chips">${chips}</div>${uses}${exp}</div>`;
+}
+
+function renderCatalog(){
+  $("#cat").innerHTML=PROJECTS.filter(p=>activeProjects.has(p.id)).map(p=>{
+    const empty=!p.agents.length&&!p.skills.length;
+    const ag=p.agents.length?`<div class="group"><h3>Agents · ${p.agents.length}</h3>
+        <div class="grid">${p.agents.map(a=>entryCard(a,false)).join("")}</div></div>`:"";
+    const sk=p.skills.length?`<div class="group"><h3>Skills · ${p.skills.length}</h3>
+        <div class="grid">${p.skills.map(s=>entryCard(s,true)).join("")}</div></div>`:"";
+    const body=empty?`<div class="group"><p class="note">${esc(p.note)}</p></div>`:ag+sk;
+    return `<details class="proj" ${empty?'':'open'}>
+      <summary><span class="pdot" style="background:${p.color}"></span>
+        ${esc(p.name)} <span class="path">${esc(p.path)}</span>
+        <span class="pcount">${p.agents.length} agents · ${p.skills.length} skills</span></summary>
+      ${body}</details>`;
+  }).join("");
+}
+
+function filter(){
+  const q=$("#search").value.trim().toLowerCase();
+  document.querySelectorAll("#cat .card").forEach(c=>{
+    c.style.display=(!q||c.dataset.s.includes(q))?"":"none";
+  });
+}
+
+/* ============ tabs ============ */
+function show(v){
+  $("#cat").classList.toggle("on",v==="cat");
+  $("#rel").classList.toggle("on",v==="rel");
+  $("#tabCat").classList.toggle("on",v==="cat");
+  $("#tabRel").classList.toggle("on",v==="rel");
+  if(v==="rel")buildGraph();
+}
+
+/* ============ Relations graph ============ */
+function buildGraph(){
+  const projs=PROJECTS.filter(p=>activeProjects.has(p.id)&&(p.agents.length||p.skills.length));
+  const colW=430, rowH=42, padTop=54, clusterGap=34;
+  const nodes={}, edges=[];
+  let y=20, maxRight=0;
+  const cols={proj:30, agent:250, skill:540};
+
+  projs.forEach(p=>{
+    const top=y;
+    // project node
+    nodes[p.id]={x:cols.proj,y:0,w:160,kind:"proj",color:p.color,label:p.name,desc:p.note,ref:p.id,_pid:p.id};
+    const aStart=y;
+    p.agents.forEach(a=>{
+      nodes[a.id]={x:cols.agent,y:y,w:188,kind:"agent",color:p.color,label:a.name,desc:a.desc,ref:a.id,_pid:p.id,rtl:a.rtl};
+      edges.push({from:p.id,to:a.id,type:"own"});
+      y+=rowH;
+    });
+    const aEnd=y;
+    nodes[p.id].y=p.agents.length?(aStart+aEnd-rowH)/2:y;
+    // skills column (only agent-bound + relevant; show all skills of project)
+    let sy=top;
+    p.skills.forEach(s=>{
+      // place skills compactly; skip the 14 general ones in the graph to keep it readable
+      if(s.gen)return;
+      nodes[s.id]={x:cols.skill,y:sy,w:178,kind:"skill",color:p.color,label:s.name,desc:s.desc,ref:s.id,_pid:p.id};
+      sy+=rowH;
+    });
+    y=Math.max(y,sy)+clusterGap;
+    // cluster separator y stored
+    nodes["_sep_"+p.id]={sep:true,y:y-clusterGap/2};
+  });
+
+  // edges: delegate + uses + flow
+  PROJECTS.forEach(p=>{
+    if(!activeProjects.has(p.id))return;
+    p.agents.forEach(a=>{
+      (a.delegatesTo||[]).forEach(t=>{if(nodes[t])edges.push({from:a.id,to:t,type:"delegate"});});
+      if(a.usesSkill&&nodes[a.usesSkill])edges.push({from:a.id,to:a.usesSkill,type:"uses"});
+    });
+  });
+  // pipeline flow edges
+  const flows=[["f-chen","f-yael"],["f-yael","f-yuval"],["f-yuval","f-video"],["f-video","f-dana"]];
+  flows.forEach(([f,t])=>{if(nodes[f]&&nodes[t])edges.push({from:f,to:t,type:"flow"});});
+
+  const H=Math.max(y,160), W=760;
+  const nodeId=n=>"n_"+n;
+  function center(n){return {x:n.x+(n.w||40), y:n.y+14};}
+  function anchorR(n){return {x:n.x+(n.w||40), y:n.y+14};}
+  function anchorL(n){return {x:n.x, y:n.y+14};}
+
+  let edgeSvg="";
+  edges.forEach((e,i)=>{
+    const A=nodes[e.from],B=nodes[e.to];if(!A||!B)return;
+    const a=anchorR(A), b=anchorL(B);
+    const mx=(a.x+b.x)/2;
+    const cls=e.type==="delegate"?"delegate":e.type==="flow"?"flow":"";
+    edgeSvg+=`<path class="edge ${cls}" data-from="${e.from}" data-to="${e.to}"
+       d="M${a.x},${a.y} C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}"
+       ${e.type==="flow"?'marker-end="url(#arrow)"':''}/>`;
+  });
+
+  let nodeSvg="";
+  Object.entries(nodes).forEach(([id,n])=>{
+    if(n.sep)return;
+    const w=n.w||40;
+    if(n.kind==="proj"){
+      nodeSvg+=`<g class="node" data-id="${id}" transform="translate(${n.x},${n.y-2})">
+        <rect width="${w}" height="30" rx="8" fill="${n.color}" opacity="0.16" stroke="${n.color}"/>
+        <text class="nlabel" x="10" y="19" fill="${n.color}">${esc(n.label)}</text></g>`;
+    } else {
+      const fill=n.kind==="skill"?"#1b232e":"#202a36";
+      const dash=n.kind==="skill"?'stroke-dasharray="4 3"':'';
+      nodeSvg+=`<g class="node" data-id="${id}" transform="translate(${n.x},${n.y})">
+        <rect width="${w}" height="28" rx="7" fill="${fill}" stroke="${n.color}" ${dash}/>
+        <circle cx="11" cy="14" r="4" fill="${n.color}"/>
+        <text x="22" y="18" ${n.rtl?`direction="rtl" text-anchor="end" x="${w-12}"`:''}>${esc(n.label.length>24?n.label.slice(0,23)+'…':n.label)}</text></g>`;
+    }
+  });
+
+  $("#graphwrap").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMin meet">
+    <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="var(--p3)"/></marker></defs>
+    ${edgeSvg}${nodeSvg}</svg>`;
+
+  // interactions
+  const svg=$("#graphwrap svg"), tip=$("#tip");
+  const nmap={};Object.entries(nodes).forEach(([id,n])=>{if(!n.sep)nmap[id]=n;});
+  svg.querySelectorAll(".node").forEach(g=>{
+    const id=g.dataset.id, n=nmap[id];
+    g.addEventListener("mouseenter",ev=>{
+      const connected=new Set([id]);
+      svg.querySelectorAll(".edge").forEach(p=>{
+        if(p.dataset.from===id||p.dataset.to===id){connected.add(p.dataset.from);connected.add(p.dataset.to);}
+      });
+      svg.querySelectorAll(".node").forEach(x=>x.classList.toggle("dim",!connected.has(x.dataset.id)));
+      svg.querySelectorAll(".edge").forEach(p=>{
+        const on=p.dataset.from===id||p.dataset.to===id;
+        p.classList.toggle("hl",on);p.classList.toggle("dim",!on);
+      });
+      tip.innerHTML=`<b>${esc(n.label)}</b><br>${esc(n.desc||"")}`;
+      tip.style.opacity=1;
+    });
+    g.addEventListener("mousemove",ev=>{tip.style.left=(ev.clientX+14)+"px";tip.style.top=(ev.clientY+14)+"px";});
+    g.addEventListener("mouseleave",()=>{
+      svg.querySelectorAll(".node,.edge").forEach(x=>x.classList.remove("dim","hl"));
+      tip.style.opacity=0;
+    });
+    g.addEventListener("click",()=>{
+      show("cat");
+      const card=[...document.querySelectorAll("#cat .card h4")].find(h=>h.textContent.trim().startsWith(n.label.trim().split(" ")[0]));
+      if(card){card.closest(".proj")&&(card.closest(".proj").open=true);
+        card.scrollIntoView({behavior:"smooth",block:"center"});
+        const c=card.closest(".card");c.style.outline="2px solid "+n.color;setTimeout(()=>c.style.outline="",1600);}
+    });
+  });
+}
+
+/* init */
+renderCatalog();
+</script>
+</body>
+</html>

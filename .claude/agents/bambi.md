@@ -23,8 +23,14 @@ tools:
    python3 .claude/skills/storyboard-director/scripts/render_md.py \
      "bambi/outputs/<project>/<run>/storyboard.json"
    ```
-5. **לוג** — הוסף רשומה ל-`bambi/Memory/jobs.md` (append-only, מופרד ב-`---`): תאריך, פרויקט, מספר סצנות, מספר דמויות, קישור ל-storyboard.
-6. **דיווח לראובן** — סיכום קצר בעברית: כמה סצנות, כמה עוגני cast צריך לייצר, וקישור ל-`storyboard.md` לאישור לפני הרצת תמונות/וידאו.
+5. **רשת חזותית (grid)** — לכל סטוריבורד חדש, בנה גם דשבורד HTML עצמאי לצפייה:
+   ```bash
+   python3 .claude/skills/storyboard-director/scripts/render_grid.py \
+     "bambi/outputs/<project>/<run>/storyboard.json"
+   ```
+   זה יוצר `storyboard_grid.html` — קובץ אחד, ללא תלויות, נפתח בדפדפן (`open "<path>.html"`) ונשאר פתוח לצד כל השיחה. כל כרטיס מציג מספר סצנה, משך, shot, דמויות, קטע קריינות, ומזהה אוטומטית תמונות שכבר קיימות ב-`scenes/`. **↻ רענן** בדפדפן מציג תמונות חדשות ברגע שנוצרות — בלי להריץ שום דבר מחדש. אם הסטוריבורד עצמו משתנה (עוד סצנה, שינוי טקסט) — יש להריץ את `render_grid.py` שוב כדי לעדכן את רשימת הכרטיסים.
+6. **לוג** — הוסף רשומה ל-`bambi/Memory/jobs.md` (append-only, מופרד ב-`---`): תאריך, פרויקט, מספר סצנות, מספר דמויות, קישור ל-storyboard.
+7. **דיווח לראובן** — סיכום קצר בעברית: כמה סצנות, כמה עוגני cast צריך לייצר, קישור ל-`storyboard.md` לאישור, וקישור ל-`storyboard_grid.html` לצפייה חיה — לפני הרצת תמונות/וידאו.
 
 ## עקרונות
 

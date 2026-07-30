@@ -1,0 +1,42 @@
+{
+  "title": "Sample Deck",
+  "name": "sample",
+  "lang": "en",
+  "dir": "ltr",
+  "secondsPerSlide": 5,
+  "theme": {
+    "primary": "1E2761",
+    "secondary": "CADCFC",
+    "accent": "FFFFFF",
+    "bg": "FFFFFF",
+    "text": "212121",
+    "headerFont": "Arial",
+    "bodyFont": "Arial"
+  },
+  "slides": [
+    {
+      "layout": "title",
+      "title": "Presentation Builder",
+      "subtitle": "Animated decks from your reference material"
+    },
+    {
+      "layout": "bullets",
+      "title": "What it does",
+      "bullets": [
+        "Reads your subject and references",
+        "Asks language, style, and format",
+        "Builds PPTX or animated MP4"
+      ]
+    },
+    {
+      "layout": "stat",
+      "title": "Built for impact",
+      "stat": {"value": "3x", "label": "more engagement with motion"}
+    },
+    {
+      "layout": "closing",
+      "title": "Thank you",
+      "subtitle": "Questions?"
+    }
+  ]
+}

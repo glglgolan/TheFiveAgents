@@ -6,7 +6,21 @@ Usage:
 
 Modes:
   - No --reference: text-to-image via /v1/images/generations (default model: gpt-image-2)
-  - With --reference: image-to-image via /v1/images/edits (default model: gpt-image-1.5)
+  - With --reference: image-to-image via /v1/images/edits (default model: gpt-image-1.5,
+    which supports input_fidelity:high for reference/face matching)
+
+Multiple references:
+  --reference may be repeated (the /edits endpoint accepts up to 16 image[] files).
+  Order matters: the FIRST reference is the scene/composition anchor; the following
+  ones are identity refs (e.g. solo face photos) used to lock additional characters
+  in a single call — often removing the need for a face-swap + restyle pass.
+
+Quality / token cost:
+  --quality low|medium|high (default medium). --light is shorthand for --quality low
+  ("light tokens" mode — cheapest render, good for drafts).
+
+Note: gpt-image-2 does NOT support input_fidelity. If a gpt-image-2* model is used in
+edits mode, input_fidelity is dropped automatically (the API rejects it otherwise).
 
 Reads OPENAI_API_KEY and OPENROUTER_API_KEY from the project .env file.
 """
@@ -26,6 +40,14 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parents[3]
 
 EDITS_SIZES = {"1024x1024", "1536x1024", "1024x1536"}
+
+# Models that do NOT accept the input_fidelity parameter in edits mode.
+NO_INPUT_FIDELITY = ("gpt-image-2",)
+
+
+def supports_input_fidelity(model: str) -> bool:
+    base = model.split("/")[-1]  # strip any "openai/" prefix
+    return not base.startswith(NO_INPUT_FIDELITY)
 
 
 def load_env() -> None:
@@ -59,12 +81,12 @@ def map_size_for_edits(size: str) -> str:
     return mapped
 
 
-def call_generations(endpoint: str, key: str, model: str, prompt: str, size: str) -> dict:
+def call_generations(endpoint: str, key: str, model: str, prompt: str, size: str, quality: str) -> dict:
     payload = json.dumps({
         "model": model,
         "prompt": prompt,
         "size": size,
-        "quality": "medium",
+        "quality": quality,
         "output_format": "png",
     }).encode()
     req = urllib.request.Request(
@@ -104,16 +126,18 @@ def build_multipart(fields: dict[str, str], files: list[tuple[str, Path]]) -> tu
     return buf.getvalue(), boundary
 
 
-def call_edits(endpoint: str, key: str, model: str, prompt: str, size: str, reference: Path) -> dict:
+def call_edits(endpoint: str, key: str, model: str, prompt: str, size: str, quality: str,
+               references: list[Path]) -> dict:
     fields = {
         "model": model,
         "prompt": prompt,
         "size": size,
-        "quality": "medium",
+        "quality": quality,
         "output_format": "png",
-        "input_fidelity": "high",
     }
-    body, boundary = build_multipart(fields, [("image[]", reference)])
+    if supports_input_fidelity(model):
+        fields["input_fidelity"] = "high"
+    body, boundary = build_multipart(fields, [("image[]", p) for p in references])
     req = urllib.request.Request(
         endpoint,
         data=body,
@@ -143,10 +167,17 @@ def main() -> int:
     parser.add_argument("prompt", help="Image prompt (for generations) or edit description (for edits)")
     parser.add_argument("output", help="Output PNG file path")
     parser.add_argument("--size", default="1024x1024", help="WxH (default 1024x1024). Edits auto-maps to {1024x1024,1536x1024,1024x1536}")
-    parser.add_argument("--reference", help="Reference image path → switches to /v1/images/edits")
+    parser.add_argument("--reference", action="append",
+                        help="Reference image path → switches to /v1/images/edits. "
+                             "Repeatable (first = scene/composition anchor, rest = identity/face refs)")
     parser.add_argument("--model", help="Override model. Default: gpt-image-1.5 with reference, gpt-image-2 without")
+    parser.add_argument("--quality", choices=["low", "medium", "high", "auto"], default="medium",
+                        help="Render quality / token cost (default medium)")
+    parser.add_argument("--light", action="store_true",
+                        help="Light tokens mode — shorthand for --quality low (cheapest render)")
 
     args = parser.parse_args()
+    quality = "low" if args.light else args.quality
     output = Path(args.output)
     load_env()
 
@@ -155,10 +186,15 @@ def main() -> int:
     size = map_size_for_edits(args.size) if has_ref else args.size
 
     if has_ref:
-        ref_path = Path(args.reference)
-        if not ref_path.exists():
-            print(f"ERROR: reference image not found: {ref_path}", file=sys.stderr)
+        ref_paths = [Path(r) for r in args.reference]
+        missing = [p for p in ref_paths if not p.exists()]
+        if missing:
+            for p in missing:
+                print(f"ERROR: reference image not found: {p}", file=sys.stderr)
             return 2
+        if len(ref_paths) > 5:
+            print(f"WARNING: {len(ref_paths)} references — each one adds input tokens "
+                  "(input_fidelity processes every reference at high res)", file=sys.stderr)
 
     openai_key = os.environ.get("OPENAI_API_KEY", "").strip()
     openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
@@ -173,13 +209,21 @@ def main() -> int:
     for label, base, key, mdl in providers:
         try:
             if has_ref:
-                print(f"Trying {label} ({mdl}, edits, size={size})...", file=sys.stderr)
-                data = call_edits(f"{base}/images/edits", key, mdl, args.prompt, size, ref_path)
+                fid = " +input_fidelity" if supports_input_fidelity(mdl) else " (no input_fidelity)"
+                nref = f", refs={len(ref_paths)}" if len(ref_paths) > 1 else ""
+                print(f"Trying {label} ({mdl}, edits, size={size}, quality={quality}{fid}{nref})...", file=sys.stderr)
+                data = call_edits(f"{base}/images/edits", key, mdl, args.prompt, size, quality, ref_paths)
             else:
-                print(f"Trying {label} ({mdl}, generations, size={size})...", file=sys.stderr)
-                data = call_generations(f"{base}/images/generations", key, mdl, args.prompt, size)
+                print(f"Trying {label} ({mdl}, generations, size={size}, quality={quality})...", file=sys.stderr)
+                data = call_generations(f"{base}/images/generations", key, mdl, args.prompt, size, quality)
             write_image(data["data"][0]["b64_json"], output)
-            print(f"OK via {label} ({mdl})")
+            usage = data.get("usage") or {}
+            if usage:
+                print(f"OK via {label} ({mdl}, quality={quality}) — "
+                      f"tokens: {usage.get('total_tokens', '?')} total "
+                      f"({usage.get('input_tokens', '?')} in / {usage.get('output_tokens', '?')} out)")
+            else:
+                print(f"OK via {label} ({mdl}, quality={quality})")
             return 0
         except urllib.error.HTTPError as exc:
             print(f"{label} failed: HTTP {exc.code} — {read_error(exc)}", file=sys.stderr)

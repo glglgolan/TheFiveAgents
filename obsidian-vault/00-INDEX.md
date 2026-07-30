@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-05-13
+last_updated: 2026-07-24
 ---
 
 # TheFiveAgents — מפתח ידע
@@ -16,6 +16,8 @@ last_updated: 2026-05-13
 | יעל | [[יעל-כותבת]] | כותבת התוכן |
 | יובל | [[יובל-מעצב]] | מעצב התמונות |
 | חן | [[חן-חוקרת]] | החוקרת |
+| במבי | [[במבי-הבמאי]] | הבמאי — סיפור → סטוריבורד |
+| the-video-man | [[the-video-man]] | מפיק הווידאו |
 
 ---
 
@@ -51,6 +53,11 @@ last_updated: 2026-05-13
 - [[finishing-a-development-branch]] — סיום ומיזוג ענף פיתוח
 - [[writing-skills]] — כתיבה ובדיקה של סקילס חדשים
 - [[obsidian-vault-workflow]] — תחזוקת ה-vault הזה
+
+### וידאו / סטוריבורד
+- [[storyboard-director]] — סיפור גולמי → סטוריבורד מובנה (במבי)
+- [[openrouter-video-gen]] — יצירת קליפים דרך OpenRouter (the-video-man)
+- [[video-editor]] — עריכה/הרכבה ב-ffmpeg: מעברים, מהירות, אודיו, ייצוא (the-video-man)
 
 ---
 

@@ -399,9 +399,46 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
         if w >= 600: mac |= 0x01
         if slant > 0.5: mac |= 0x02
         font["head"].macStyle = mac
+
+    fix_maxp_for_glyf(font)        # ensure a valid, installable TTF
+
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     font.save(out)
     return w
+
+
+def fix_maxp_for_glyf(font):
+    """A glyf-based TTF needs maxp v1.0 with all fields populated. Bases that
+    were converted from CFF keep maxp v0.5, which macOS rejects ('contains no
+    fonts which can be installed'). Upgrade + populate here.
+
+    All our glyphs are decomposed (simple, no components), so composite maxima
+    are 0 and we can compute point/contour maxima directly from coordinates."""
+    if "glyf" not in font or "maxp" not in font:
+        return
+    glyf = font["glyf"]
+    maxPoints = maxContours = 0
+    for name in glyf.keys():
+        g = glyf[name]
+        if getattr(g, "numberOfContours", 0) > 0:
+            maxContours = max(maxContours, g.numberOfContours)
+            maxPoints = max(maxPoints, len(getattr(g, "coordinates", [])))
+    maxp = font["maxp"]
+    maxp.tableVersion          = 0x00010000
+    maxp.numGlyphs             = len(glyf.glyphs)
+    maxp.maxPoints             = maxPoints
+    maxp.maxContours           = maxContours
+    maxp.maxCompositePoints    = 0
+    maxp.maxCompositeContours  = 0
+    maxp.maxZones              = 1
+    maxp.maxTwilightPoints     = 0
+    maxp.maxStorage            = 0
+    maxp.maxFunctionDefs       = 0
+    maxp.maxInstructionDefs    = 0
+    maxp.maxStackElements      = 0
+    maxp.maxSizeOfInstructions = 0
+    maxp.maxComponentElements  = 0
+    maxp.maxComponentDepth     = 0
 
 
 def main():

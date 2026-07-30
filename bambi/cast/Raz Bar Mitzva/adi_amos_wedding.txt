@@ -1,0 +1,6 @@
+PROMPT:
+Joyful wedding portrait of a young couple: the bride (Adi) radiant in a white lace dress with a veil holding a bouquet, dark hair, warm smile; the groom (Amos) in a dark suit with a white prayer shawl (tallit) over his shoulders, short dark hair, happy face. Standing together holding hands, bright clean background with soft greenery. Modern clean semi-cartoon illustration style, bright fresh sky-blue, white and soft coral palette, clean radiant light, smooth gradient shading, crisp outlines, romantic joyful mood.
+
+REFERENCE: yuval/reference/Raz/_proxy/wedding-mg-8869.jpg
+SIZE: 1024x1024
+MODEL: gpt-image-1.5 (edits)

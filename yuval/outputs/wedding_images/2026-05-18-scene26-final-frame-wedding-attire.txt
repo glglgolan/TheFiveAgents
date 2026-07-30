@@ -1,0 +1,18 @@
+Scene 26 v1 — Final Frame, Wedding Attire (5:58–6:10)
+Engine: Kling
+Style: Pixar-style 3D animated cinematic, intimate emotional ending
+Format: 1536x1024 (16:9-ish, auto-mapped from 1920x1080)
+
+Variation concept: The literal callback to wedding day — they're still in their wedding clothes
+but already settled into their "real life" rhythm: sharing a single cauliflower on the couch
+beside the plush penguin. The contrast between formal attire and the absurd domestic moment
+is the gentle comedy.
+
+Prompt:
+Pixar-style 3D animated cinematic scene, cozy emotional ending in warm intimate living room at night. The same couple from the reference image — keep their faces, hair, glasses identical. HANAN in elegant dark navy wedding suit, jacket unbuttoned, tie loosened, sleeves rolled up slightly, exhausted-content smile. IDIT in flowing white wedding dress, hair still styled from the wedding with a few loose strands, brown-framed glasses, soft tired smile. They sit close together on a warm beige sofa, each holding a silver fork, sharing from ONE white plate that has a single whole roasted cauliflower with charred golden edges on it. Beside them on the couch sits a LARGE SOFT PLUSH PENGUIN doll like a third companion, slightly leaning in. Soft golden warm lamp lighting from a wooden lamp, string fairy lights in background, framed photos on shelves, cozy knitted throw blanket draped over couch. They share a quiet content smile, looking at each other with gentle humor and deep love — the absurd quiet intimacy of sharing one cauliflower together after their wedding. Stylized Pixar/Disney 3D render, soft shading, expressive warm faces, cinematic depth of field, 16:9 widescreen composition, intimate atmosphere, golden hour interior color palette, gentle deadpan humor.
+
+Generation:
+- Model: OpenAI gpt-image-1.5 (edits endpoint)
+- Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg
+- Size: 1536x1024 (auto-mapped from 1920x1080)
+- Quality: medium, input_fidelity: high

@@ -1,19 +1,23 @@
 ---
 name: openrouter-video-gen
-description: Generate videos via OpenRouter Video API (async). Supports Kling 3.0 Standard, Seedance 2.0, and Seedance 2.0 Fast. Text-to-video or image-to-video with first-frame reference. Auto-derives aspect ratio from reference. Used by the-video-man agent.
+description: Generate videos via OpenRouter Video API (async). Supports Kling v3.0 Pro, Seedance 2.0, and Seedance 2.0 Fast. Text-to-video or image-to-video with reference image (sent via input_references). Auto-derives aspect ratio from reference. Used by the-video-man agent as the OpenRouter pathway (alongside an optional Kling-via-MCP pathway).
 ---
 
 # openrouter-video-gen
 
 מעטפת ליצירת וידאו דרך ה-Video API של OpenRouter (async). שם הסקיל לא כולל `gpt` כי המודלים כאן הם של Kuaishou ו-ByteDance, לא OpenAI.
 
+> הערה: קיים גם נתיב חלופי ל-Kling דרך MCP server (`klingai`, לא דרך הסקיל הזה) —
+> ראה `.claude/agents/the-video-man.md` לפרטים. סקיל זה נשאר ה-fallback הקבוע
+> ונתיב ברירת המחדל כשה-MCP אינו מחובר.
+
 ## מודלים נתמכים
 
 | מודל | ID | מחיר משוער |
 |---|---|---:|
-| Kling 3.0 Standard | `kwaivgi/kling-video-3.0-standard` | ~$0.03–0.05/sec |
+| Kling v3.0 Pro | `kwaivgi/kling-v3.0-pro` | ~$0.05/sec |
 | Seedance 2.0 | `bytedance/seedance-2.0` | ~$0.10/sec |
-| Seedance 2.0 Fast | `bytedance/seedance-2.0-fast` | ~$0.03/sec |
+| Seedance 2.0 Fast | `bytedance/seedance-2.0-fast` | ~$0.12/sec (עם רפרנס) |
 
 ## שימוש
 
@@ -22,7 +26,7 @@ description: Generate videos via OpenRouter Video API (async). Supports Kling 3.
 bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
     "<prompt>" \
     "<output>.mp4" \
-    --model kwaivgi/kling-video-3.0-standard
+    --model kwaivgi/kling-v3.0-pro
 
 # עם משך מותאם ו-aspect ratio
 bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
@@ -36,7 +40,7 @@ bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
 bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
     "<prompt>" \
     "<output>.mp4" \
-    --model kwaivgi/kling-video-3.0-standard \
+    --model kwaivgi/kling-v3.0-pro \
     --reference yuval/outputs/wedding_images/scene21.png
 ```
 
@@ -49,7 +53,7 @@ bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
 - `--aspect-ratio` — `16:9`/`9:16`/`1:1`. אם לא צוין:
   - יש `--reference` → נגזר אוטומטית מממדי התמונה.
   - אין → `16:9`.
-- `--reference` — נתיב לתמונה (PNG/JPG). תקודד ל-base64 ותישלח כ-`image` ב-payload.
+- `--reference` — נתיב לתמונה (PNG/JPG). תקודד ל-base64 data URL ותישלח כ-`input_references: [{type: "image_url", image_url: {url: ...}}]` ב-payload (הפורמט הרשמי של OpenRouter, לפי cookbook: reference-to-video).
 
 ## Flow פנימי
 

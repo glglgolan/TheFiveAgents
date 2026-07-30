@@ -1,0 +1,74 @@
+{
+  "project": "Raz Bar Mitzva",
+  "note": "Real reference photos of Raz & family, ingested from a read-only Google Drive sync. Originals (full-res) live at '/Users/lirazgolan/Documents/Liraz Golan/Projects/Raz Pasder Bar Mitzva/Raz Images'. The paths below are 768px proxies in yuval/reference/Raz/_proxy/ — cheap for vision and for gpt-image-gen --reference. Tagging done in a single vision pass; buckets confirmed via EXIF capture dates (Raz born ~2013).",
+  "proxy_dir": "yuval/reference/Raz/_proxy",
+  "observations": [
+    "Taya the dog is an Australian Cattle Dog / blue heeler — grey-and-white speckled (mottled) coat, perky pointed ears, NOT a generic dog. See 2024-teen-raz-tomer-19.",
+    "Raz wears round glasses in 2026 photos (book-raz-22, whatsapp) but not in earlier ones. Decide whether raz_teen anchor includes glasses.",
+    "Raz is consistently tall/lean with short dark hair (buzzed/short on sides in recent years), warm brown eyes, friendly calm expression.",
+    "Several photos contain multiple people (family/sibling shots) — listed under each relevant cast id."
+  ],
+  "cast": {
+    "raz_toddler": {
+      "best": ["2016-toddler-zoomz.jpg"],
+      "all": ["2013-toddler-dsc0005.jpg", "2015-toddler-dsc6751.jpg", "2015-toddler-dsc6789.jpg", "2015-toddler-dsc9613.jpg", "2015-toddler-dsc9805.jpg", "2016-toddler-zoomz.jpg", "2016-toddler-kisim-817.jpg"],
+      "notes": "Ages 0-3. Curly soft brown hair as a toddler, big brown eyes, round cheeks. zoomz = the red 'DANGEROUS' shirt already used for the bright anchor."
+    },
+    "raz_child": {
+      "best": ["2019-child-opening-53.jpg", "2023-child-shkediot-33.jpg"],
+      "all": ["2016-toddler-kisim-816.jpg", "2016-toddler-kisim-817.jpg", "2018-child-raz-yair-eitan-30.jpg", "2019-child-opening-53.jpg", "2021-child-winter-17.jpg", "2023-child-shkediot-33.jpg", "2020-child-tomer5-42.jpg"],
+      "notes": "Ages ~5-10. opening-53 = 1st grade (kippah + backpack, 'כיתה א'' shirt). shkediot-33 = age ~10 in almond blossom. Short hair, slim, already tall for age."
+    },
+    "raz_teen": {
+      "best": ["2026-teen-book-raz-10.jpg", "2026-teen-book-raz-22.jpg"],
+      "all": ["2024-teen-raz-tomer-14.jpg", "2024-teen-raz-tomer-19.jpg", "2026-teen-book-raz-10.jpg", "2026-teen-book-raz-22.jpg", "2026-teen-whatsapp.jpg"],
+      "notes": "Current, ~13. Tall, lean-athletic, short dark hair (short sides). book-raz-10 = clean portrait, brown sweater. book-raz-22 = with round glasses, black tee, in front of a JCB machine (ties to his technical/building interest). PREFERRED anchor source."
+    },
+    "mom_adi": {
+      "best": ["2026-teen-whatsapp.jpg", "2026-parents-kisim-109.jpg"],
+      "all": ["2016-toddler-kisim-816.jpg", "2020-child-barmitzva-hadar.jpg", "2026-teen-whatsapp.jpg", "2026-parents-kisim-109.jpg"],
+      "notes": "Adi, the mother (photographer). Dark wavy/curly hair, dark complexion, warm big smile, dark eyes, small earring. kisim-109 = excellent overhead selfie with baby Raz and Amos — best for birth/family scenes."
+    },
+    "dad_amos": {
+      "best": ["2026-parents-kisim-109.jpg"],
+      "all": ["2020-child-barmitzva-hadar.jpg", "2026-parents-kisim-109.jpg"],
+      "notes": "Amos, the father. Athletic build, short dark hair, very big white smile, tanned skin, dark eyes. kisim-109 = clear solo-quality crop from family selfie — much better than 2020 group photo."
+    },
+    "yair": {
+      "best": ["2020-child-tomer5-42.jpg"],
+      "all": ["2020-child-barmitzva-hadar.jpg", "2020-child-tomer5-42.jpg"],
+      "notes": "Yair, brother (11). In tomer5-42 he is the middle boy lying down; in the family photo one of the two polo-shirt boys. Ambiguous vs Raz — a dedicated current solo photo of Yair would help."
+    },
+    "tomer": {
+      "best": ["2020-child-tomer5-42.jpg"],
+      "all": ["2020-child-barmitzva-hadar.jpg", "2020-child-tomer5-42.jpg"],
+      "notes": "Tomer, youngest brother (6). Appears as the baby in 2020 photos. No recent solo photo — a current photo of Tomer (age 6) would help the anchor."
+    },
+    "taya": {
+      "best": ["2024-teen-raz-tomer-19.jpg"],
+      "all": ["2024-teen-raz-tomer-19.jpg"],
+      "notes": "Taya the dog — Australian Cattle Dog / blue heeler, grey-and-white speckled/mottled coat, pointed ears, tongue out / happy. Crop from the photo with Raz."
+    }
+  },
+  "DRIVE_AUDIT_2026-06-29": {
+    "finding": "The LOCAL sync folder had only ~20 photos, but the Drive source folder (parentId 1zHJQtH3rhy1YDTtfr8_X43fCBN13fIGw) contains 100+ photos. The local proxy set was a small subset — this is why early scene-4 generation fell back to the stylized toddler anchor instead of a real parent photo. Going forward: query Drive directly for the best reference per cast member, pull + proxy on demand.",
+    "rich_on_drive_just_pull_and_proxy": {
+      "raz_teen": "בוק רז series — 8-9 studio portraits (בוק רז-10/22/24/41/52/60/83). Excellent.",
+      "raz_child": "רז 10 series (רז 10-16/18/19/31/36), שקדיות2023 series, פתיחת 2019 series. Good age 7-10 coverage.",
+      "yair": "רז ויאיר 2021 series (-3/7/12/14/57/91) — finally real Yair references!",
+      "parents_adi_amos": "כיסים פסדר (109) — overhead selfie of Adi+Amos+baby Raz. PULLED + proxied (2026-parents-kisim-109.jpg).",
+      "family_group": "Pazderfamille_ series (-233/237/239/252), 5Q1A studio series, כותנה נבחרות series."
+    },
+    "RESOLVED_2026-06-29": {
+      "grandparents_amos": "Ruti + David (paternal). Source 'רז בן 4-131' → proxy grandparents-amos-raz4-131.jpg. Grandmother in headscarf+glasses, grandfather in white hat+glasses (a face-painted grandchild in front — crop/exclude).",
+      "grandparents_adi": "Michal + Rafi (maternal). Source 'כיסים פסדר (228)' → proxy grandparents-adi-kisim-228.jpg. Rafi in blue striped shirt, Michal with curly reddish-brown hair (Adi is the younger woman on the right — exclude).",
+      "adi_amos_wedding": "Sources: _MG_8869 (both at chuppah) → wedding-mg-8869.jpg; A&A (119) groom solo → wedding-aa-119.jpg; A&A (109) bride solo → wedding-aa-109.jpg. Use mg-8869 for the couple anchor.",
+      "taya": "Source '11-24' → taya-11-24.jpg — PERFECT clean solo of the Australian Cattle Dog (blue heeler, grey-white speckled, black ears). Also taya-raz-tomer-35.jpg (with teen Raz)."
+    }
+  },
+  "missing_or_weak": {
+    "dad_amos": "only one group photo — no solo / current portrait",
+    "yair": "no clear current solo photo (ambiguous with Raz in group shots)",
+    "tomer": "no current photo at age 6 — only as a baby in 2020"
+  }
+}

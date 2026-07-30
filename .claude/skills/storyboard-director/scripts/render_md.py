@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Render a storyboard.json into a Hebrew Markdown table (storyboard.md).
+"""Render a storyboard.json into a Hebrew Markdown table (<stem>.md).
 
 stdlib only — no external deps (matches gpt-image-gen / openrouter-video-gen).
 
 Usage:
     python3 render_md.py <storyboard.json> [output.md]
 
-If output.md is omitted, writes a sibling storyboard.md next to the input,
-and also prints the Markdown to stdout.
+If output.md is omitted, writes a sibling <stem>.md next to the input
+(e.g. storyboard_v2.json -> storyboard_v2.md — never overwrites a
+differently-named storyboard's .md), and also prints the Markdown to stdout.
 """
 import json
 import sys
@@ -94,8 +95,9 @@ def main():
     with open(src, encoding="utf-8") as f:
         sb = json.load(f)
     md = render(sb)
+    stem = os.path.splitext(os.path.basename(src))[0]  # storyboard_v2.json -> storyboard_v2
     dst = sys.argv[2] if len(sys.argv) > 2 else os.path.join(
-        os.path.dirname(os.path.abspath(src)), "storyboard.md")
+        os.path.dirname(os.path.abspath(src)), f"{stem}.md")
     with open(dst, "w", encoding="utf-8") as f:
         f.write(md + "\n")
     print(md)

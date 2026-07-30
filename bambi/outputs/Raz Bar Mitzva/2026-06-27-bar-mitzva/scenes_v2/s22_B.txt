@@ -1,0 +1,6 @@
+clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic; Dream sequence in the same packed glowing stadium, same dramatic uplifting stadium lights and dreamy glow, roaring crowd as soft bokeh: Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, now mid-air at the peak of a powerful basketball layup — body stretched fully upward, one arm extended high releasing the ball toward an unseen hoop, triumphant focused expression; the soccer ball from before now rolling on the pitch below him, stadium lights blooming brighter around his rising silhouette. Keep the exact face, hair and appearance from the reference image.
+
+--size: 1536x1024 (3:2 landscape)
+--reference: yuval/reference/Raz/_proxy/2026-teen-book-raz-10.jpg
+model: gpt-image-1.5 (edits, input_fidelity)
+post: no face-fidelity swap — face is small and in profile mid-jump, base cel-shading clean, no seam risk

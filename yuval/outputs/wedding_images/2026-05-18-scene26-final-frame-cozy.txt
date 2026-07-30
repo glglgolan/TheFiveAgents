@@ -1,0 +1,17 @@
+Scene 26 v2 — Final Frame, Cozy Loungewear (5:58–6:10)
+Engine: Kling
+Style: Pixar-style 3D animated cinematic, intimate emotional ending
+Format: 1536x1024 (16:9-ish, auto-mapped from 1920x1080)
+
+Variation concept: A "year-from-now" peek — same couch, same penguin, same cauliflower,
+but they're in everyday clothes. The wedding is over, this is who they actually are.
+Quieter humor, deeper intimacy, more autobiographical.
+
+Prompt:
+Pixar-style 3D animated cinematic scene, late-night cozy intimate moment in a warm Israeli living room. The same couple from the reference image — keep their faces, hair, glasses identical. HANAN wearing soft grey cotton lounge t-shirt and dark pajama pants, content relaxed expression. IDIT wearing oversized cream cardigan over a simple white sleep-shirt, brown-framed glasses, hair down naturally, soft cozy smile. They sit close together cross-legged on a worn warm-toned sofa, each holding a silver fork, sharing from ONE plate that has a single whole roasted cauliflower with charred golden edges on it — both leaning toward the plate. Beside them on the couch sits a LARGE SOFT PLUSH PENGUIN doll like a third family member, slightly leaning in. Soft golden warm lamp light from a wooden side lamp, string fairy lights in background, bookshelves with science books and small framed photos, a cozy knitted throw blanket on the couch, mugs of tea on coffee table. They share an authentic content smile — gentle humor of two people who really do share everything, including a single cauliflower at midnight. Stylized Pixar/Disney 3D render, soft shading, expressive warm faces, cinematic depth of field, 16:9 widescreen composition, intimate quiet atmosphere, warm honey color palette, gentle deadpan humor.
+
+Generation:
+- Model: OpenAI gpt-image-1.5 (edits endpoint)
+- Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg
+- Size: 1536x1024 (auto-mapped from 1920x1080)
+- Quality: medium, input_fidelity: high

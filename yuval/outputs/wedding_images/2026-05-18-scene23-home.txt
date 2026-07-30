@@ -1,0 +1,7 @@
+Scene 23 — Home (5:08–5:24)
+Engine: Kling | Style: Pixar 3D, intimate domestic atmosphere | Format: 1536x1024 (auto-mapped from 1920x1080)
+
+Prompt:
+Pixar-style 3D animated cinematic scene, cozy emotional home interior at dusk. The same couple from the reference image — keep their faces, hair, glasses identical. HANAN in soft cream knit sweater. IDIT in warm rust-orange cardigan over a simple top, brown-framed glasses. They are in their warm Israeli living room, sitting close together on a worn warm-toned sofa with a knitted throw blanket. A LARGE SOFT PLUSH PENGUIN doll sits between them like family. Through a wide window in the background, the garden is visible at twilight — a large outdoor smoker grill emits soft curling smoke into the blue evening air, string fairy lights twinkling around the patio. Inside: bookshelves with science books, framed photos of the couple, warm wooden lamps casting honey-golden light, a small succulent on the side table. Warm interior light meets cool blue dusk through the window for cinematic contrast. They look quietly content, gentle smiles, the small daily warmth of being home together. Stylized Pixar/Disney 3D render, soft shading, expressive warm faces, cinematic depth of field, 16:9 widescreen composition, intimate domestic atmosphere, warm honey interior + cool blue exterior color palette.
+
+Generation: OpenAI gpt-image-1.5 edits | Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg

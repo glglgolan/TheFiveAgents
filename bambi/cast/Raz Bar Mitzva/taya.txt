@@ -1,0 +1,6 @@
+PROMPT:
+Portrait of Taya the dog — an Australian Cattle Dog (blue heeler) with a distinctive grey-and-white speckled mottled coat, black pointed ears, tan markings on the face, alert friendly expression, sitting on green grass. Modern clean semi-cartoon illustration style, bright fresh sky-blue and mint palette, smooth gradient shading, crisp outlines, clean daylight, warm friendly mood.
+
+REFERENCE: yuval/reference/Raz/_proxy/taya-11-24.jpg
+SIZE: 1024x1024
+MODEL: gpt-image-1.5 (edits)

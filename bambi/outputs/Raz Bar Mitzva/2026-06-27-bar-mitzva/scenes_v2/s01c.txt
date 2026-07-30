@@ -1,0 +1,16 @@
+SCENE: s01c — NEW additional intro beat (extra shot, not a replacement) — warm close-up portrait of toddler Raz, right after the wide Ofra snow establishing shot.
+Source real reference photo: yuval/reference/Raz/zoomz2016 (18).jpg (same photo session as _proxy/2016-toddler-zoomz.jpg used for Scenes 6-7, but a different/fresh frame — not previously illustrated).
+
+STEP 1 — base generation (gpt-image-gen, --reference = zoomz2016 (18).jpg, --size 1536x1024):
+
+clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic. A warm, intimate close-up portrait of a toddler boy (about 3-4 years old) outdoors, soft warm-brown wavy/curly hair, big warm dark brown eyes looking directly at camera, gentle content half-smile, wearing a plain solid red t-shirt (no readable text or letters on it), soft blurred green foliage and bokeh background, warm natural daylight, tender and personal mood, shallow depth of field feel, centered composition, part of an opening/intro montage introducing the boy himself, right after a wide snowy establishing shot. Keep the exact face, hair, eyes and expression from the reference image.
+
+STEP 2 — local face-fidelity swap (face-fidelity/scripts/swap.sh):
+Source face: yuval/reference/Raz/zoomz2016 (18).jpg (same real photo, 1 face detected in source and target)
+Result: swap applied cleanly onto correct face, but left a visible photoreal skin seam (soft dotted blend boundary) around the face against the flat cel-shaded illustration style.
+
+STEP 3 — restyle pass (gpt-image-gen, --reference = swapped image, --size 1536x1024), to eliminate the seam:
+
+clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic. Redraw this image in the same clean comic-book / cel-shaded illustration style, keep the exact face, hair, eyes and expression exactly as shown, eliminate any photoreal skin texture or blending seam around the face, smooth flat cel-shaded skin matching the rest of the illustration, plain solid red t-shirt with no readable text, soft green bokeh foliage background outdoors, warm natural daylight.
+
+Final file: s01c.png (this restyled result) — 1536x1024, no visible seam, matches film's established cel-shaded style, strong likeness to the real reference photo (hair swoop, eyebrow shape, eye shape/gaze, half-smile, ear shape, skin tone).

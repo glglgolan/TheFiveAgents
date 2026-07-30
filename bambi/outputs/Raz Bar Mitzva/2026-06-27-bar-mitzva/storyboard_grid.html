@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>רז — הדרך היחידה להפסיד זה לוותר</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#1a1d24; --card2:#20242d; --line:#2c313c;
+    --ink:#e8eaed; --dim:#9aa0aa; --accent:#f0a63c; --focus:#5aa9e6;
+    --regen:#e0574b; --multi:#8b5cf6; --ok:#3fb950; --pending:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"Segoe UI","Heebo",Arial,sans-serif;padding:20px}
+  header{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    margin-bottom:6px;border-bottom:1px solid var(--line);padding-bottom:14px}
+  h1{font-size:20px;margin:0;font-weight:700}
+  .sub{color:var(--dim);font-size:13px}
+  .stats{margin-inline-start:auto;display:flex;gap:18px;font-size:13px;color:var(--dim)}
+  .stats b{color:var(--ink)}
+  .bar{font-size:12px;color:var(--dim);margin:12px 0 18px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:5px}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  button{background:var(--card2);color:var(--ink);border:1px solid var(--line);
+    border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}
+  button:hover{border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;display:flex;flex-direction:column;transition:.15s}
+  .card:hover{border-color:#3a4150;transform:translateY(-2px)}
+  .thumb{position:relative;aspect-ratio:16/9;background:var(--card2);
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph{color:var(--pending);font-size:12px;text-align:center;padding:8px;line-height:1.5}
+  .ph .big{font-size:26px;opacity:.5;display:block;margin-bottom:4px}
+  .num{position:absolute;top:8px;inset-inline-start:8px;background:rgba(0,0,0,.72);
+    color:#fff;font-weight:700;font-size:13px;border-radius:6px;padding:2px 9px}
+  .badges{position:absolute;top:8px;inset-inline-end:8px;display:flex;gap:5px}
+  .b{font-size:10px;font-weight:700;border-radius:5px;padding:2px 6px;color:#fff}
+  .b.regen{background:var(--regen)} .b.multi{background:var(--multi)}
+  .b.done{background:var(--ok)}
+  .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .title{font-size:13.5px;font-weight:600;line-height:1.35}
+  .meta{display:flex;gap:8px;font-size:11px;color:var(--dim);flex-wrap:wrap}
+  .meta .t{color:var(--accent);font-weight:600}
+  .chars{display:flex;gap:4px;flex-wrap:wrap}
+  .cc{font-size:10px;background:var(--card2);border:1px solid var(--line);
+    border-radius:20px;padding:1px 8px;color:var(--dim)}
+  .narr{font-size:11.5px;color:var(--dim);line-height:1.5;
+    border-inline-start:2px solid var(--line);padding-inline-start:8px;margin-top:2px}
+  footer{margin-top:20px;color:var(--dim);font-size:11px;text-align:center;line-height:1.7}
+  kbd{background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎬 רז — הדרך היחידה להפסיד זה לוותר</h1>
+  <span class="sub" id="subtitle"></span>
+  <div class="stats">
+    <span><b id="sceneCount">–</b> סצנות</span>
+    <span><b id="totalDur">–</b></span>
+    <span><b id="imgCount">–</b> תמונות</span>
+  </div>
+</header>
+
+<div class="bar">
+  <button onclick="location.reload()">↻ רענן (טען תמונות חדשות)</button>
+  <span class="chip"><span class="dot" style="background:var(--ok)"></span> נוצרה</span>
+  <span class="chip"><span class="dot" style="background:var(--pending)"></span> ממתינה</span>
+  <span class="chip"><span class="dot" style="background:var(--regen)"></span> regen</span>
+  <span class="chip"><span class="dot" style="background:var(--multi)"></span> ריבוי תמונות</span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  תמונות ב-<code>scenes/</code> · מתעדכן ב-<kbd>↻ רענן</kbd> או <kbd>⌘R</kbd><br>
+  נוצר אוטומטית מ-<code>storyboard.json</code>
+</footer>
+
+<script>
+const DATA = {"subtitle": "רז — הדרך היחידה להפסיד זה לוותר", "scenes": [{"n": 1, "title": "ההורים של עדי — מצד אמא", "dur": 13, "chars": ["grandparents_adi"], "narr": "מערכה 0 — שורשים רב-דוריים. הסיפור מתחיל מהדור הקודם: אלו ההורים של עדי, הסבא והסבתא מצד אמא. הצגה חמה של הזוג…", "ref": "grandparents_adi.png", "shot": "MS", "regen": false, "multi": false}, {"n": 2, "title": "ההורים של עמוס — מצד אבא", "dur": 13, "chars": ["grandparents_amos"], "narr": "אלו ההורים של עמוס, הסבא והסבתא מצד אבא. הצגה חמה של הזוג השני. קריינות: 'ואלו ההורים של עמוס...'.", "ref": "grandparents_amos.png", "shot": "MS", "regen": false, "multi": false}, {"n": 3, "title": "עדי ועמוס נפגשו והתחתנו", "dur": 16, "chars": ["adi_amos_wedding"], "narr": "שני הקווים המשפחתיים נפגשים: עדי ועמוס מתאהבים ומתחתנים. רגע חתונה חם ושמח — תחילת המשפחה.", "ref": "adi_amos_wedding.png", "shot": "MS", "regen": false, "multi": false}, {"n": 4, "title": "כעבור מספר שנים — נולד רז", "dur": 15, "chars": ["raz_toddler", "mom_adi", "dad_amos"], "narr": "כעבור מספר שנים נולד רז — תינוק חמוד ומתוק. מעבר רך אל פתיחת הילדות (יוביל ישירות אל הפעוט עם המכוניות).", "ref": "2016-toddler-zoomz.jpg", "shot": "MCU", "regen": false, "multi": false}, {"n": 5, "title": "פתיחה — שלג בעפרה", "dur": 14, "chars": ["raz_toddler", "mom_adi"], "narr": "מערכה 1 — פתיחה נוסטלגית. רז נולד בקיץ בעפרה, ובחורף הראשון יורד שלג נדיר. פתיחה רכה ושמחה שפותחת את הסיפור.", "ref": "2016-toddler-zoomz.jpg", "shot": "EWS", "regen": false, "multi": false}, {"n": 6, "title": "הפעוט עם המכוניות", "dur": 16, "chars": ["raz_toddler"], "narr": "רז כפעוט מוקסם מכלי רכב — ישן עם כל המכוניות במיטה. רגע ילדות מתוק שמגדיר את אהבת התנועה שלו.", "ref": "2016-toddler-zoomz.jpg", "shot": "MCU", "regen": false, "multi": false}, {"n": 7, "title": "מעבר לבית גמליאל", "dur": 13, "chars": ["raz_toddler", "mom_adi"], "narr": "בגיל שנה המשפחה עוברת לבית גמליאל — הבית האמיתי של רז. מעבר שמח אל המקום שבו יגדל.", "ref": "2016-toddler-zoomz.jpg", "shot": "LS", "regen": false, "multi": false}, {"n": 8, "title": "הורים — עדי ועמוס", "dur": 15, "chars": ["mom_adi", "dad_amos"], "narr": "מערכה 2 — בית ומשפחה. הצגת ההורים: עדי הצלמת ועמוס הספורטיבי. שני העולמות שמהם נבנה רז.", "ref": "mom_adi.png", "shot": "MS", "regen": false, "multi": false}, {"n": 9, "title": "האחים — יאיר ותומר", "dur": 15, "chars": ["raz_child", "yair", "tomer"], "narr": "האחים: יאיר (11) הצמוד לרז, ותומר (6) שנולד בקורונה. הליבה של המשפחה והקשר החם בין האחים.", "ref": "2023-child-shkediot-33.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 10, "title": "מסורת — פנקייקים בימי ראשון", "dur": 14, "chars": ["raz_teen", "dad_amos", "tomer", "yair"], "narr": "מסורת משפחתית: פנקייקים בימי ראשון, ערב פיצות שאבא מכין, ורזי מטגן שניצלים בשישי. רגע מתוק של בית ואוכל.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 11, "title": "טאיה מגיעה הביתה", "dur": 18, "chars": ["raz_teen", "taya", "yair", "tomer"], "narr": "רגע רגשי משמעותי — היום שבו הביאו את טאיה הכלבה הביתה. שמחה גדולה והתרגשות אצל האחים.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MCU", "regen": false, "multi": false}, {"n": 12, "title": "סבא דוד בזום", "dur": 13, "chars": ["raz_child", "grandparents_amos"], "narr": "סבא דוד מלמד את רז אנגלית בזום — קשר משפחתי בין-דורי וחם. רז קשוב ורציני.", "ref": "2023-child-shkediot-33.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 13, "title": "ביקור אצל הסבים והסבתות", "dur": 15, "chars": ["raz_teen", "grandparents_adi"], "narr": "סצנה מאזנת לצד 'סבא דוד בזום': רז אוהב לבקר אצל הסבים והסבתות — רגע חם של ביקור וזמן איכות, חיבוקים וצחוק, לא…", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 14, "title": "בוקר ביזבזי — השעון מצלצל", "dur": 14, "chars": ["raz_teen"], "narr": "מערכה 3 — 'בוקר ביזבזי' הקומי. השעון מצלצל ב-6:30, רז קם רק ב-6:45. הכינוי 'ביזבזי' כי הוא מתארגן לאט.", "ref": "2026-teen-book-raz-10.jpg", "shot": "CU", "regen": false, "multi": false}, {"n": 15, "title": "המתיחות הארוכות", "dur": 15, "chars": ["raz_teen", "yair", "tomer"], "narr": "רז מתמתח דקות ארוכות בזמן שכל המשפחה מחכה לו — הבדיחה של 'ביזבזי'. גם רגע להראות את הגובה שלו.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MLS", "regen": false, "multi": false}, {"n": 16, "title": "טיול בוקר עם טאיה + קורנפלקס", "dur": 14, "chars": ["raz_teen", "taya"], "narr": "אחרי שסידר את המיטה, רז מטייל עם טאיה ואז מתיישב לקערת קורנפלקס גדושה. סגירת שגרת הבוקר.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 17, "title": "קראטה — המדים", "dur": 16, "chars": ["raz_teen"], "narr": "מערכה 4 — ספורט ונחישות. רז בקראטה מכיתה ו', במדים, ממוקד ורציני. תחילת הצגת הנחישות שלו.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 18, "title": "ריצות עם אבא", "dur": 16, "chars": ["raz_teen", "dad_amos"], "narr": "רז ואבא עמוס רצים יחד — אימון משותף וקשר חזק. הספורט כשפה משפחתית.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MLS", "regen": false, "multi": false}, {"n": 19, "title": "המשפט — 'הדרך היחידה להפסיד זה לוותר'", "dur": 17, "chars": ["raz_teen"], "narr": "רגע מפתח רגשי-נחוש. המשפט המוטיב של רז מופיע כטקסט חזותי על רקע רז העומד נחוש. ציר הסרטון.", "ref": "2026-teen-book-raz-10.jpg", "shot": "CU", "regen": false, "multi": false}, {"n": 20, "title": "סקייטבורד", "dur": 15, "chars": ["raz_teen"], "narr": "מערכה 5 — תנועה וחופש. רז על סקייטבורד, חופשי ושמח. המשך מוטיב התנועה (מכוניות → סקייט → אופניים).", "ref": "2026-teen-book-raz-10.jpg", "shot": "MLS", "regen": false, "multi": false}, {"n": 21, "title": "האופניים החדשים — חופש ומהירות", "dur": 20, "chars": ["raz_teen"], "narr": "האובייקט המרכזי: האופניים המקצועיים החדשים — החוויה הכי כיפית של השנה. חופש, מהירות והתבגרות.", "ref": "2026-teen-book-raz-10.jpg", "shot": "LS", "regen": false, "multi": false}, {"n": 22, "title": "סבא רפי — סקייטבורד ברמת ישי", "dur": 13, "chars": ["raz_teen", "grandparents_adi"], "narr": "רגע משפחתי-תנועתי: סבתא מיכל וסבא רפי ברמת ישי, סקייטבורד עם סבא רפי. חיבור בין-דורי דרך תנועה.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 23, "title": "סושי עם אמא", "dur": 14, "chars": ["raz_teen", "mom_adi"], "narr": "מערכה 6 — רגע רגשי וקשר. רגע אישי בין רז לאמא עדי — מכינים סושי יחד, קשר חם ושיתוף.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MCU", "regen": false, "multi": false}, {"n": 24, "title": "רגע שקט עם טאיה", "dur": 16, "chars": ["raz_teen", "taya"], "narr": "רגע רגשי שקט: רז יושב עם טאיה, מלטף אותה, רגוע. הליבה הרגשית של 'רזי של הבית'.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MCU", "regen": false, "multi": false}, {"n": 25, "title": "חלום — גיטרה ומוזיקה", "dur": 14, "chars": ["raz_teen"], "narr": "מערכה 7 — חלומות קדימה. רז מחזיק גיטרה, חולם לנגן (Maroon 5, Coldplay). תחילת רצף החלומות.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MS", "regen": false, "multi": false}, {"n": 26, "title": "חלום — גלישה בים", "dur": 15, "chars": ["raz_teen"], "narr": "רז חולם על קורס גלישה — גולש על גל בים בהיר. המשך מוטיב התנועה והחופש אל עבר חלומות.", "ref": "2026-teen-book-raz-10.jpg", "shot": "LS", "regen": false, "multi": false}, {"n": 27, "title": "חלום — ספורטאי מקצועי", "dur": 17, "chars": ["raz_teen"], "narr": "החלום הגדול: ספורטאי מקצועי (כדורגל/כדורסל), מעריץ את מסי. רז על מגרש, רגע גדול ושאפתני.", "ref": "2026-teen-book-raz-10.jpg", "shot": "LS", "regen": false, "multi": false}, {"n": 28, "title": "חלום — טלפורטציה לניו זילנד", "dur": 16, "chars": ["raz_teen"], "narr": "כוח-העל שהיה בוחר: טלפורטציה — ובאופק החלום, ניו זילנד. רגע דמיוני-קסום שמחבר חלום ויכולת.", "ref": "2026-teen-book-raz-10.jpg", "shot": "MLS", "regen": false, "multi": false}, {"n": 29, "title": "סיום — רז גדל אבל נשאר רזי של הבית", "dur": 18, "chars": ["raz_teen", "mom_adi", "dad_amos", "yair", "tomer", "taya"], "narr": "סגירה על המסר. רז הגבוה והנחוש עומד מול הבית עם כל המשפחה והכלבה, מחזיק בידו מכונית הצעצוע מהילדות. המוטיב נסג…", "ref": "2026-teen-book-raz-10.jpg", "shot": "LS", "regen": false, "multi": false}]};
+const SCENES_DIR = "scenes";
+
+const grid = document.getElementById('grid');
+
+DATA.scenes.forEach(s=>{
+  const card = document.createElement('div');
+  card.className='card';
+
+  const nn = String(s.n).padStart(2,'0');
+  const imgName = s.multi ? `s${nn}a.png` : `s${nn}.png`;
+  const src = `${SCENES_DIR}/${imgName}`;
+
+  const badges = [];
+  if(s.regen) badges.push('<span class="b regen">REGEN</span>');
+  if(s.multi) badges.push('<span class="b multi">×N</span>');
+
+  const chars = (s.chars||[]).map(c=>`<span class="cc">${c}</span>`).join('');
+
+  card.innerHTML = `
+    <div class="thumb">
+      <span class="num">S${nn}</span>
+      <div class="badges">${badges.join('')}</div>
+      <img src="${src}" alt="scene ${s.n}"
+           onload="const t=this.parentElement;t.querySelector('.ph')?.remove();t.querySelector('.badges').insertAdjacentHTML('afterbegin','<span class=\'b done\'>✓</span>')"
+           onerror="this.style.display='none'">
+      <div class="ph"><span class="big">🎞️</span>${s.dur}s · ${s.shot}<br>ממתינה ליצירה</div>
+    </div>
+    <div class="body">
+      <div class="title">${s.title}</div>
+      <div class="meta"><span class="t">${s.dur}s</span><span>${s.shot}</span>${s.ref!=='—'?`<span>📎 ${s.ref}</span>`:'<span>—</span>'}</div>
+      <div class="chars">${chars||'<span class="cc">— ללא דמות —</span>'}</div>
+      <div class="narr">${s.narr}</div>
+    </div>`;
+  grid.appendChild(card);
+});
+
+const total = DATA.scenes.reduce((a,s)=>a+(s.dur||0),0);
+const imgs = DATA.scenes.reduce((a,s)=>a+(s.multi?4:1),0);
+document.getElementById('subtitle').textContent = DATA.subtitle || '';
+document.getElementById('sceneCount').textContent = DATA.scenes.length;
+document.getElementById('totalDur').textContent = `${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}`;
+document.getElementById('imgCount').textContent = imgs;
+</script>
+</body>
+</html>

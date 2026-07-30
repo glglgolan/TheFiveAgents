@@ -11,7 +11,7 @@ description: Use when the user wants to turn raw story material into a structure
 
 ## מה הוא מייצר
 
-`storyboard.json` (לאוטומציה — ראובן עושה עליו לולאה) + `storyboard.md` (טבלה עברית קריאה לאישור אנושי). הסכמה המלאה ב-`schema.json`.
+`storyboard.json` (לאוטומציה — ראובן עושה עליו לולאה) + `storyboard.md` (טבלה עברית קריאה לאישור אנושי) + `storyboard_grid.html` (רשת חזותית חיה, ראה שלב 6). הסכמה המלאה ב-`schema.json`.
 
 ## פאזות
 
@@ -33,7 +33,13 @@ description: Use when the user wants to turn raw story material into a structure
      "bambi/outputs/<project>/<run>/storyboard.json"
    ```
    (כותב `storyboard.md` באותה תיקייה).
-6. **דיווח לאישור** — החזר לראובן את הטבלה. **לא** מפעילים סוכנים אחרים מכאן.
+6. **רשת חזותית חיה (grid)** — כתוב גם `storyboard_grid.html` — דשבורד HTML עצמאי, נפתח בדפדפן, ללא תלויות:
+   ```bash
+   python3 .claude/skills/storyboard-director/scripts/render_grid.py \
+     "bambi/outputs/<project>/<run>/storyboard.json"
+   ```
+   הרשת מציגה כרטיס לכל סצנה (מספר, משך, shot, דמויות, קטע קריינות/תיאור) ומזהה אוטומטית תמונות שכבר נוצרו ב-`scenes/` (או `scenes_v2/` וכו', לפי שם קובץ הסטוריבורד). **↻ רענן** בדפדפן טוען תמונות חדשות ברגע שנוצרות — לא צריך ליצור מחדש את ה-HTML בכל סבב. זו תוצרת קבועה של כל run, כמו `storyboard.md`.
+7. **דיווח לאישור** — החזר לראובן את הטבלה + קישור ל-grid. **לא** מפעילים סוכנים אחרים מכאן.
 
 ## כללי prompt-engineering
 
@@ -57,4 +63,8 @@ description: Use when the user wants to turn raw story material into a structure
 ## Requirements
 
 - `OPENAI_API_KEY` / `OPENROUTER_API_KEY` ב-`.env` — נדרשים רק לשלב התמונות/וידאו (לא לסטוריבורד עצמו).
-- `python3` (stdlib בלבד) ל-`render_md.py`.
+- `python3` (stdlib בלבד) ל-`render_md.py` ול-`render_grid.py`.
+
+## עדכון ה-grid באמצע production
+
+אם משתמשים משנים סצנות ב-`storyboard.json` (למשל עדכון קריינות v2), או כשמצטברות תמונות חדשות ב-`scenes/`, **הרץ מחדש** את `render_grid.py` — זה בונה מחדש את הרשימה, אך פתיחת אותו `storyboard_grid.html` בדפדפן ולחיצה על **↻ רענן** כבר תציג תמונות חדשות בלי להריץ שום דבר (הרשת קוראת קבצים מהדיסק ב-runtime, לא embedaded בזמן היצירה).

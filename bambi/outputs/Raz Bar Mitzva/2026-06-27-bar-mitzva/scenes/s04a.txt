@@ -1,0 +1,7 @@
+A tender overhead high-angle moment: baby Raz as a newborn infant — tiny, with chubby soft cheeks, dark curious eyes and soft dark brown hair — lying on a soft blanket. Mom Adi, dark wavy hair, dark complexion, big warm smile, dark eyes, and dad Amos, short dark hair, very wide bright smile, tanned skin, dark eyes, both lean over the baby from above looking down with pure loving wonder. Overhead selfie-style composition, parents' faces framing the baby from above. Modern clean semi-cartoon illustration style, bright fresh sky-blue and mint palette, smooth gradient shading, crisp outlines, clean soft daylight, tender joyful mood. Baby has soft dark brown hair.
+
+Reference: yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg
+Size: 1536x1024
+Model: gpt-image-1.5 (edits mode with reference)
+Scene: 4a — Raz Bar Mitzva storyboard (regenerated with real parents photo)
+Date: 2026-06-29

@@ -1,0 +1,7 @@
+PROMPT:
+Warm portrait of an elderly Jewish couple in their 60s standing close together and smiling: the grandmother wearing a colorful headscarf (mitpachat) and glasses with a gentle warm smile, the grandfather wearing a white sun hat and glasses with a kind friendly face and a white polo shirt. Only the two of them, clean bright outdoor background. Modern clean semi-cartoon illustration style, bright fresh sky-blue and coral palette, smooth gradient shading, crisp outlines, clean daylight, warm loving mood.
+
+REFERENCE: yuval/reference/Raz/_proxy/grandparents-amos-raz4-131.jpg
+SIZE: 1024x1024
+MODEL: gpt-image-1.5 (edits)
+NOTE: Original photo includes a costumed child in front — rendered only the elderly couple, no child.

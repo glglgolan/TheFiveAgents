@@ -1,0 +1,12 @@
+Scene 14 — "טוב עופו הביתה" (3:08–3:16)
+Engine: Grok | Style: Pixar 3D, deadpan comedy freeze-frame | Format: 1536x1024 (auto-mapped from 1920x1080)
+
+Concept: After scene 13 (Everyone Come Over — hospitality dinner), Hanan
+casually tells everyone "ok, fly home now" and the entire table freezes
+in stunned silence. The comedy is the contrast between his calm composure
+and everyone else's wide-eyed shock — a single comedic beat held in time.
+
+Prompt:
+Pixar-style 3D animated cinematic scene, deadpan comedy freeze-frame moment around a warm Israeli dinner table at night. The same HANAN from the reference image — dark curly hair, full beard with grey streaks, brown eyes — sitting at the head of a long wooden dining table, leaning back relaxed with one hand raised mid-gesture, calm and content expression as if he just said something completely normal. ALL the guests around the table FROZEN STILL in stunned awkward silence, every single one staring directly at Hanan with wide eyes and dropped jaws — one guest frozen mid-bite with fork halfway to mouth, another frozen mid-laugh, a third with wine glass halted halfway up, a fourth with mouth open mid-sentence. IDIT (the same blonde woman with brown-framed glasses from the reference) sits beside Hanan with a small embarrassed but amused smile, knowing exactly what just happened. The table is covered with half-eaten Israeli food — salads, bread, hummus, grilled meat, wine bottles, half-full glasses. Warm cozy interior lighting from a low hanging lamp above the table, string fairy lights in background, exposed brick wall, plants. Cinematic depth of field, 16:9 widescreen. The composition emphasizes the contrast between Hanan's calm and everyone else's frozen shock — the entire room visually held in a single comedic beat. Stylized Pixar/Disney 3D render, soft warm shading, expressive exaggerated frozen faces, dry comedic realism, awkward silence atmosphere, warm golden color palette.
+
+Generation: OpenAI gpt-image-1.5 edits | Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg

@@ -1,0 +1,7 @@
+Scene 22 — Coffee Stops (4:52–5:08)
+Engine: Kling | Style: Pixar 3D, indie-film roadtrip | Format: 1536x1024 (auto-mapped from 1920x1080)
+
+Prompt:
+Pixar-style 3D animated cinematic scene, warm indie-film roadtrip atmosphere at golden hour. The same couple from the reference image — keep their faces, hair, glasses identical. HANAN in faded olive-green hoodie over a grey t-shirt, dark jeans, casual relaxed travel clothes. IDIT in soft mustard-yellow knit sweater, light blue jeans, brown-framed glasses, hair tied loosely. They sit close together on the open tailgate of a parked car at a quiet rural rest stop, both holding takeaway paper coffee cups with steam rising. Their car is a warm-toned dusty Israeli SUV. Behind them, rolling open countryside fields, distant mountains, golden sunset sky with soft pink and orange clouds. Wildflowers, a worn road sign. Soft warm low-angle sunlight, lens flare, quiet intimate atmosphere. They share a calm content smile, looking at each other softly — the small wonder of a coffee stop together. Stylized Pixar/Disney 3D render, soft shading, expressive warm faces, cinematic depth of field, 16:9 widescreen composition, indie roadtrip film aesthetic, warm honey color palette.
+
+Generation: OpenAI gpt-image-1.5 edits | Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg

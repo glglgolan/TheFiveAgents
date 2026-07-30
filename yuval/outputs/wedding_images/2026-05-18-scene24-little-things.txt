@@ -1,0 +1,7 @@
+Scene 24 — The Little Things (5:24–5:42)
+Engine: Kling | Style: Pixar 3D, romantic wedding intimacy | Format: 1536x1024 (auto-mapped from 1920x1080)
+
+Prompt:
+Pixar-style 3D animated cinematic scene, intimate emotional backstage wedding moment. The same couple from the reference image — keep their faces, hair, glasses identical. HANAN in elegant dark navy wedding suit, white shirt, slim navy tie, neatly groomed beard, content emotional expression with a small tear of joy in one eye. IDIT in beautiful flowing white wedding dress with delicate lace top, hair styled in soft waves with a small white flower, brown-framed glasses, radiant emotional smile, eyes glistening. They stand close together in a quiet backstage hallway near the wedding hall, foreheads almost touching, holding both hands together between them. Warm soft window light from a tall arched window beside them, casting golden light. Background slightly out of focus: ornate wedding decor, soft warm flowers, a hint of guests in the distance, twinkling string lights. The moment between them is everything — quiet, present, deeply in love, the small private second before stepping out. Stylized Pixar/Disney 3D render, soft shading, expressive warm emotional faces, cinematic shallow depth of field, 16:9 widescreen composition, romantic wedding intimacy, warm golden color palette.
+
+Generation: OpenAI gpt-image-1.5 edits | Reference: yuval/reference/PHOTO-2026-02-27-07-08-36.jpg

@@ -9,6 +9,9 @@
 *.jpeg
 *.gif
 *.webp
+*.heic
+*.HEIC
+*.m4a
 *.ttf
 *.otf
 *.woff
@@ -19,3 +22,8 @@
 
 # obsidian local settings
 .obsidian/
+
+# transient tooling
+.playwright-mcp/
+scratchpad/
+/scratchpad

@@ -1,0 +1,4 @@
+Portrait of Adi, Raz's mother, a warm friendly woman in her early 40s, dark wavy shoulder-length hair, kind smiling eyes, warm big smile, casual modern style. Only her, clean bright background. Modern clean semi-cartoon illustration style, bright fresh sky-blue and mint palette, smooth gradient shading, crisp outlines, clean daylight, warm loving mood.
+
+[reference: yuval/reference/Raz/_proxy/2026-teen-whatsapp.jpg — cropped to Adi only, single woman]
+[model: gpt-image-1.5, edits, 1024x1024]
