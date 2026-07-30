@@ -88,6 +88,32 @@
   .tip{position:fixed;pointer-events:none;background:#000d;border:1px solid var(--chipline);border-radius:8px;
        padding:7px 10px;font-size:12px;max-width:240px;color:var(--text);opacity:0;transition:opacity .12s;z-index:50}
   .note{color:var(--muted);font-size:12.5px;margin-top:14px}
+
+  /* ---- Video pipeline ---- */
+  .pipeline{display:flex;flex-direction:column;gap:0;max-width:900px;margin:6px auto 0}
+  .stage{display:flex;gap:16px;position:relative;padding-bottom:26px}
+  .stage:last-child{padding-bottom:0}
+  .stage::before{content:"";position:absolute;left:23px;top:52px;bottom:0;width:2px;background:var(--line)}
+  .stage:last-child::before{display:none}
+  .stage .num{flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:var(--panel2);
+    border:2px solid var(--p3);display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:18px;color:var(--p3);z-index:1}
+  .stage.optional .num{border-style:dashed;color:var(--muted);border-color:var(--muted)}
+  .stage .body2{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .stage h3{margin:0 0 6px;font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .stage .who{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+  .stage .tag{font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px}
+  .stage .tag.agent{background:var(--custom);color:#0e1117}
+  .stage .tag.skill{background:var(--chip);border:1px solid var(--chipline);color:#c4d0de}
+  .stage .tag.opt{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+  .stage p{margin:4px 0;color:#cdd7e2;font-size:13px;line-height:1.55}
+  .stage .io{margin-top:8px;font-size:12px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .stage .io code{background:var(--chip);border:1px solid var(--chipline);border-radius:6px;padding:1px 7px;font-size:11.5px;color:#9fd0b6}
+  .gate{max-width:900px;margin:2px auto 18px;background:rgba(255,184,107,.1);border:1px dashed var(--p3);
+    border-radius:10px;padding:8px 16px;color:var(--p3);font-size:12.5px;font-weight:600;text-align:center}
+  .vidhead{max-width:900px;margin:0 auto 18px}
+  .vidhead h2{margin:0 0 4px;font-size:18px}
+  .vidhead p{color:var(--muted);font-size:13px;margin:0}
 </style>
 </head>
 <body>
@@ -99,6 +125,7 @@
     <div class="tabs">
       <button id="tabCat" class="on" onclick="show('cat')">📋 Catalog</button>
       <button id="tabRel" onclick="show('rel')">🕸️ Relations</button>
+      <button id="tabVid" onclick="show('vid')">🎬 Video Pipeline</button>
     </div>
     <input id="search" placeholder="Filter by name or description…" oninput="filter()">
     <div class="pchips" id="pchips"></div>
@@ -107,6 +134,7 @@
 
 <main>
   <section id="cat" class="view on"></section>
+  <section id="vid" class="view"></section>
   <section id="rel" class="view">
     <div id="graphwrap"></div>
     <div class="legend">
@@ -187,7 +215,7 @@ const PROJECTS = [
         abilities:["Receives the user request and decides who runs","Runs research→content→images flow","Swaps {{IMAGE_NEEDED}} placeholders with final images"],
         instr:["Defined in CLAUDE.md, not an agent file","Runs obsidian-vault-workflow at session start"],
         folders:["Content/","Output/"],usesSkill:"f-obsvault",
-        delegatesTo:["f-chen","f-yael","f-yuval","f-dana","f-video","f-fontdesigner"]},
+        delegatesTo:["f-chen","f-yael","f-yuval","f-dana","f-video","f-fontdesigner","f-bambi","f-presentation","f-spa"]},
       {id:"f-chen",name:"חן (Chen)",role:"web research",desc:"חוקרת הרשת — מוצאת מקורות איכותיים ומכינה אותם כקלט ליעל.",rtl:true,
         chips:["WebSearch","WebFetch","source filtering","quotes"],
         abilities:["Search the web & fetch best results","Filter for reliable primary sources","Extract accurate quotes (no hallucination)"],
@@ -198,33 +226,53 @@ const PROJECTS = [
         abilities:["Rewrite in the team's voice","Output both .md and styled .html","Mark image spots with {{IMAGE_NEEDED}}"],
         instr:["Reads yael/style-guide.md + yael/reference/ first","Mandatory credits block on every new article","Strips author links/CTAs; keeps in-story brands"],
         folders:["Content/","yael/","Output/"]},
-      {id:"f-yuval",name:"יובל (Yuval)",role:"image designer",desc:"מעצב התמונות — תמונות עקביות בסגנון מוגדר.",rtl:true,
-        chips:["prompt craft","visual consistency","gpt-image"],
-        abilities:["Scan references to extract style/palette","Craft detailed English prompts","Keep visual consistency across a project"],
-        instr:["Saves PNG + sibling .txt prompt in yuval/outputs/","Model names are owned by the skill — must not change them"],
-        folders:["yuval/reference/","yuval/outputs/"],usesSkill:"f-gptimg"},
+      {id:"f-yuval",name:"יובל (Yuval)",role:"image designer",desc:"מעצב התמונות — תמונות עקביות בסגנון מוגדר + דיוק פנים.",rtl:true,
+        chips:["prompt craft","visual consistency","gpt-image","face-fidelity"],
+        abilities:["Scan references to extract style/palette","Craft detailed English prompts","Keep visual consistency across a project","Multi-reference one-shot for multi-character scenes (up to 3)","Local face-swap from a real proxy photo for facial accuracy","Restyle pass after swap to remove photoreal-skin seam in illustrated styles"],
+        instr:["Saves PNG + sibling .txt prompt in yuval/outputs/","Model names are owned by the skill — must not change them","Always uses a REAL reference proxy (not a drawn anchor) for scene generation"],
+        folders:["yuval/reference/","yuval/outputs/","bambi/cast/"],usesSkill:["f-gptimg","f-facefid"]},
       {id:"f-dana",name:"דנה (Dana)",role:"usage analyst",desc:"אנליסטית שימוש — דוחות עלויות OpenAI ו-OpenRouter.",rtl:true,
         chips:["OpenAI costs","OpenRouter credits","reports"],
         abilities:["Fetch OpenAI usage + OpenRouter credits","Aggregate into a Hebrew Markdown report","Surface top model / balance warnings"],
         instr:["Needs OPENAI_ADMIN_KEY in .env for OpenAI data","Never prints key values, even on failure","Scripts touch .env — Dana only calls them"],
         folders:["dana/reports/","dana/Memory/"],usesSkill:"f-usage"},
-      {id:"f-video",name:"the-video-man",role:"video producer",desc:"מפיק הווידאו — קליפים ב-Kling / Seedance דרך OpenRouter.",
-        chips:["Kling","Seedance","image→video","OpenRouter"],
-        abilities:["Text→video or image→video clips","Auto-derive aspect ratio from a reference","Recommend a model per scene type"],
-        instr:["Always asks which model before running","Reference always copied through the-video-man/reference/<project>/","Logs jobs to jobs.md (Dana reads it)"],
-        folders:["the-video-man/outputs/<project>/","the-video-man/reference/<project>/"],usesSkill:"f-orvideo"},
+      {id:"f-video",name:"the-video-man",role:"video producer",desc:"מפיק הווידאו — קליפים ב-Kling / Seedance דרך OpenRouter או Kling MCP, + עריכה/הרכבה סופית.",
+        chips:["Kling","Seedance","image→video","OpenRouter","Kling MCP","ffmpeg edit"],
+        abilities:["Text→video or image→video clips","Auto-derive aspect ratio from a reference","Recommend a model per scene type","Direct Kling MCP path when connected (Reuven discovers, hands off tool name)","Assemble per-scene clips into a finished film: xfade transitions, fit-to-audio retiming, VO+music ducking, RTL captions"],
+        instr:["Always asks which model before running (and production method if both OpenRouter+Kling MCP available)","Reference always copied through the-video-man/reference/<project>/","Logs jobs to jobs.md (Dana reads it)","Before a Kling-MCP batch, test one job first — a listed model can still return \"not supported\"; substitute the nearest version and report it, never silently"],
+        folders:["the-video-man/outputs/<project>/","the-video-man/reference/<project>/"],usesSkill:["f-orvideo","f-videoeditor"]},
       {id:"f-fontdesigner",name:"the-font-designer",role:"font designer",desc:"מעצב הפונטים — פונטים עבריים נכונים כווריאציה מבסיס OFL.",
         chips:["Hebrew fonts","OFL variation","TTF"],
         abilities:["Derive a TTF variation from an OFL base","Round / slant / width / weight transforms","Handwriting preset (dana-yad)"],
         instr:["Never draws letters from scratch — always a real base","Always saves under a NEW family name (OFL rule)","Verifies Hebrew coverage before reporting"],
         folders:["fonts/outputs/","fonts/Memory/"],usesSkill:"f-font"},
+      {id:"f-bambi",name:"במבי (Bambi)",role:"director",desc:"הבמאי — הופך סיפור גולמי (או סטוריבורד מוכן) לסטוריבורד מובנה: סצנות + prompts לתמונה/וידאו.",rtl:true,
+        chips:["storyboard","scene breakdown","cast anchors","voiceover"],
+        abilities:["Detect raw story vs. ready-made storyboard and act accordingly","Define a shared visual_theme + a cast of character anchors for consistency","Break story into 6–18 scenes with image_prompt + video_prompt + reference","Fold voiceover/narration text into scenes 1:1 when a VO script is provided","Build a live tracking widget (storyboard_grid.html) that auto-detects images AND video as they're generated"],
+        instr:["Only plans — never renders images/video, never calls other agents","Multi-character scenes: prefer one-shot multi-reference (up to 3) over sequential face-swap","Logs every run to bambi/Memory/jobs.md"],
+        folders:["bambi/input/<project>/","bambi/cast/<project>/","bambi/outputs/<project>/<run>/","bambi/Memory/"],usesSkill:"f-storyboard"},
+      {id:"f-presentation",name:"presentation_builder",role:"presentation builder",desc:"בונה מצגות/פיצ'דקים מנושא + חומרי רקע — HTML / PPTX / Remotion MP4.",
+        chips:["slides","pitch deck","PPTX","Remotion"],
+        abilities:["Turn a topic + reference docs/images into an animation-rich deck","Output HTML, editable PPTX, or an animated Remotion MP4","Visual QA pass before handing back"],
+        instr:["Asks language (Hebrew RTL / English), style/branding, output format"],
+        folders:["output/"],usesSkill:"f-presentation-skill"},
+      {id:"f-spa",name:"spa-builder",role:"web app builder",desc:"בונה אפליקציות SPA / דפים אינטראקטיביים / דשבורדים / כלים מ-prompt.",
+        chips:["SPA","dashboard","single-file HTML","Vite+React"],
+        abilities:["Decide single self-contained HTML vs. scaffolded Vite+React+TS per request","Real-browser QA pass before handing back"],
+        instr:["Asks only when ambiguous (build mode, style, RTL/LTR)","Not for slide decks — that's presentation_builder"],
+        folders:["output/"],usesSkill:"f-spa-skill"},
     ],
     skills:[
       {id:"f-gptimg",name:"gpt-image-gen",custom:true,desc:"Generate/edit images via OpenAI gpt-image (OpenRouter fallback).",chips:["gpt-image-2","gpt-image-1.5","edits"],abilities:["Text→image (default gpt-image-2)","Image→image with reference for face consistency","Custom aspect ratios"],instr:["Auto-falls back to OpenRouter"],folders:[],ownerAgent:"f-yuval"},
+      {id:"f-facefid",name:"face-fidelity",custom:true,desc:"Local free face-swap — real reference face onto a generated/stylized image.",chips:["insightface","local","free","restyle pass"],abilities:["Swap a real proxy photo's face onto a generated scene, keeping art style/lighting","Restyle pass to remove photoreal-skin seam vs. flat illustration styles"],instr:["100% local via insightface (CPU) — no API, no token cost","--target-index is raw detection order, not left-to-right — probe bbox coords first"],folders:[],ownerAgent:"f-yuval"},
       {id:"f-orvideo",name:"openrouter-video-gen",custom:true,desc:"Async video via OpenRouter — Kling 3.0 / Seedance 2.0.",chips:["Kling 3.0","Seedance 2.0","async"],abilities:["Text→video or image→video","Auto aspect ratio from reference"],instr:["Async job polling"],folders:[],ownerAgent:"f-video"},
+      {id:"f-videoeditor",name:"video-editor",custom:true,desc:"Wraps ffmpeg to assemble per-scene clips into a finished film.",chips:["ffmpeg","xfade","ducking","RTL captions"],abilities:["Smooth transitions between clips (xfade: crossfade/dissolve/wipe)","fit_to_audio — retime clips to match a voiceover exactly","Mux narration + music with sidechain ducking + loudnorm","Hebrew RTL captions, fades, H.264 export"],instr:["Requires ffmpeg + ffprobe ≥4.3","Plan-driven: build_plan_from_storyboard.py → assemble.py → final.mp4"],folders:[],ownerAgent:"f-video"},
+      {id:"f-storyboard",name:"storyboard-director",custom:true,desc:"Turn raw story or a rough storyboard into a structured storyboard for a video clip.",chips:["scenes","cast anchors","schema.json","voiceover"],abilities:["Define visual_theme + cast so downstream images stay consistent","Emit storyboard.json + storyboard.md (incl. VO script) + storyboard_grid.html (live image+video tracking widget)"],instr:["Inspired by aicontentskills/ai-video-storyboard-skill (MIT), extended with real anchor-image consistency"],folders:["bambi/"],ownerAgent:"f-bambi"},
       {id:"f-font",name:"font-foundry",custom:true,desc:"Build a correct Hebrew font as a variation of an OFL base.",chips:["Heebo","Rubik","Assistant","Chaikin round"],abilities:["Pin a weight off the variable axis","Corner-rounding / slant / width transforms"],instr:["Letterforms stay correct — derived from a real font"],folders:[],ownerAgent:"f-fontdesigner"},
       {id:"f-usage",name:"usage-analytics",custom:true,desc:"Fetch OpenAI usage + OpenRouter credits → Hebrew report.",chips:["OpenAI Admin API","OpenRouter","aggregate"],abilities:["Three scripts: openai-usage, openrouter-usage, aggregate"],instr:["Requires Admin key for OpenAI data"],folders:[],ownerAgent:"f-dana"},
       {id:"f-obsvault",name:"obsidian-vault-workflow",custom:true,desc:"Maintain a wiki-linked vault — one MD note per file.",chips:["vault","wiki-links","session start"],abilities:["Scan new/changed files at session start","One MD note per file, cross-linked"],instr:["Runs at start of every session & command"],folders:["obsidian-vault/"],ownerAgent:"f-reuven"},
+      {id:"f-presentation-skill",name:"presentation-builder",custom:true,desc:"Turn a topic + reference docs/images into an animation-rich HTML/PPTX/Remotion deck.",chips:["HTML deck","PPTX","Remotion MP4"],abilities:["Read refs (pdf/docx/txt/md/links + images)","Three output formats"],instr:[],folders:[],ownerAgent:"f-presentation"},
+      {id:"f-spa-skill",name:"spa-builder",custom:true,desc:"Turn a prompt (+ optional refs) into a single-file HTML app or a Vite+React+TS scaffold.",chips:["single-file HTML","Vite+React+TS","browser QA"],abilities:["Picks build mode per request","Runs a real-browser QA pass"],instr:[],folders:[],ownerAgent:"f-spa"},
       // general "superpowers" skills (not bound to a specific agent)
       {id:"g1",name:"brainstorming",gen:true,desc:"Explore intent & design before any creative/build work.",chips:["intent","design"],abilities:[],instr:[],folders:[]},
       {id:"g2",name:"writing-plans",gen:true,desc:"Turn a spec into a multi-step implementation plan.",chips:["planning"],abilities:[],instr:[],folders:[]},
@@ -296,7 +344,10 @@ function entryCard(e,isSkill){
   if(e.folders&&e.folders.length)
     exp+=`<details class="exp folders"><summary>Related folders</summary><div>${e.folders.map(f=>`<code>${esc(f)}</code>`).join("")}</div></details>`;
   let uses="";
-  if(e.usesSkill)uses=`<div class="uses">uses skill → <b>${esc(skillName(e.usesSkill))}</b></div>`;
+  if(e.usesSkill){
+    const ids=Array.isArray(e.usesSkill)?e.usesSkill:[e.usesSkill];
+    uses=`<div class="uses">uses skill → <b>${ids.map(id=>esc(skillName(id))).join(", ")}</b></div>`;
+  }
   if(isSkill&&e.ownerAgent)uses=`<div class="uses">used by → <b>${esc(agentName(e.ownerAgent))}</b></div>`;
   const search=(e.name+" "+e.desc+" "+(e.chips||[]).join(" ")).toLowerCase();
   return `<div class="card ${isSkill?'skill':''}" data-s="${esc(search)}">
@@ -332,9 +383,12 @@ function filter(){
 function show(v){
   $("#cat").classList.toggle("on",v==="cat");
   $("#rel").classList.toggle("on",v==="rel");
+  $("#vid").classList.toggle("on",v==="vid");
   $("#tabCat").classList.toggle("on",v==="cat");
   $("#tabRel").classList.toggle("on",v==="rel");
+  $("#tabVid").classList.toggle("on",v==="vid");
   if(v==="rel")buildGraph();
+  if(v==="vid")buildVideoPipeline();
 }
 
 /* ============ Relations graph ============ */
@@ -375,11 +429,20 @@ function buildGraph(){
     if(!activeProjects.has(p.id))return;
     p.agents.forEach(a=>{
       (a.delegatesTo||[]).forEach(t=>{if(nodes[t])edges.push({from:a.id,to:t,type:"delegate"});});
-      if(a.usesSkill&&nodes[a.usesSkill])edges.push({from:a.id,to:a.usesSkill,type:"uses"});
+      (a.usesSkill?(Array.isArray(a.usesSkill)?a.usesSkill:[a.usesSkill]):[]).forEach(sid=>{
+        if(nodes[sid])edges.push({from:a.id,to:sid,type:"uses"});
+      });
     });
   });
-  // pipeline flow edges
-  const flows=[["f-chen","f-yael"],["f-yael","f-yuval"],["f-yuval","f-video"],["f-video","f-dana"]];
+  // pipeline flow edges — two pipelines share the yuval→video leg
+  const flows=[
+    // research → content → images
+    ["f-chen","f-yael"],["f-yael","f-yuval"],
+    // story → storyboard → cast/scene images → video → edit
+    ["f-bambi","f-yuval"],["f-yuval","f-video"],
+    // usage tracking reads jobs from any producer
+    ["f-video","f-dana"],
+  ];
   flows.forEach(([f,t])=>{if(nodes[f]&&nodes[t])edges.push({from:f,to:t,type:"flow"});});
 
   const H=Math.max(y,160), W=760;
@@ -453,6 +516,60 @@ function buildGraph(){
         const c=card.closest(".card");c.style.outline="2px solid "+n.color;setTimeout(()=>c.style.outline="",1600);}
     });
   });
+}
+
+/* ============ Video pipeline (story → storyboard → images → video → edit) ============ */
+const VIDEO_STAGES=[
+  {n:0,title:"קלט מהמשתמש",agent:null,skill:null,
+    desc:"בריף פרויקט: סיפור גולמי (או סטוריבורד מוכן), אורך יעד לסרט, וקריינות/voiceover מקור אם קיים (script / Google Doc).",
+    io:[["input","bambi/input/&lt;project&gt;/"]]},
+  {n:1,title:"סטוריבורד",agent:"במבי",skill:"storyboard-director",
+    desc:"מפרק לסצנות (6–18), מגדיר visual_theme משותף + cast של עוגני דמויות, וכותב image_prompt + video_prompt לכל סצנה. אם יש VO — משבץ אותו בשדה narration פר-סצנה בהתאמה 1:1 לביטים. בונה גם storyboard_grid.html — widget מעקב חי שנשאר פתוח לאורך כל שאר השלבים ומזהה אוטומטית תמונות וידאו שנוצרים.",
+    io:[["output","storyboard.json + storyboard.md + storyboard_grid.html"]]},
+  {n:"⏸",title:"אישור אנושי",agent:null,skill:null,gate:true,
+    desc:"עוצרים כאן. המשתמש מאשר (או מבקש תיקונים ל)סטוריבורד לפני שמייצרים תמונה או וידאו אחד."},
+  {n:2,title:"עוגני Cast",agent:"יובל",skill:"gpt-image-gen",
+    desc:"לכל דמות ב-cast עם anchor_ready:false — text-to-image מ-cast.description.",
+    io:[["output","bambi/cast/&lt;project&gt;/&lt;id&gt;.png"]]},
+  {n:3,title:"פריים ראשון פר סצנה",agent:"יובל",skill:"gpt-image-gen",
+    desc:"image-to-image עם --reference = פרוקסי אמיתי (לא עוגן מצויר!) — קריטי לדיוק פנים. סצנה רב-דמותית: one-shot מרובה-רפרנסים (עד 3) עדיף על פני swap חוזר.",
+    io:[["output","scenes/sNN.png"]]},
+  {n:"3.5",title:"דיוק פנים (fallback)",agent:"יובל",skill:"face-fidelity",optional:true,
+    desc:"רק אם ה-one-shot לא נעל פנים במדויק, או 4+ דמויות. Swap מקומי מהפרוקסי האמיתי (חינמי, ללא טוקנים) + מעבר restyle לתקן seam בסגנונות מצוירים חזקים.",
+    io:[["output","scenes/sNN_final.png"]]},
+  {n:4,title:"וידאו פר סצנה",agent:"the-video-man",skill:"openrouter-video-gen / Kling MCP",
+    desc:"image-to-video עם --reference = פריים הראשון. שואל תמיד מודל (Kling v3.0 Pro / Seedance 2.0 / Seedance 2.0 Fast) ושיטת ייצור (OpenRouter מול Kling MCP) אם שתיהן זמינות.",
+    io:[["output","videos/sNN.mp4"]]},
+  {n:5,title:"הרכבה סופית",agent:"the-video-man",skill:"video-editor",optional:true,
+    desc:"אופציונלי — לא רק קליפים בודדים אלא סרט מוגמר. מעברים חלקים (xfade), fit_to_audio מותח את הקליפים לאורך קובץ קריינות מוקלט, מיקס VO+מוזיקה עם ducking, כתוביות RTL, ייצוא H.264.",
+    io:[["output","&lt;run&gt;/final.mp4"]]},
+];
+
+function buildVideoPipeline(){
+  const stagesHtml=VIDEO_STAGES.map(s=>{
+    if(s.gate)return `<div class="gate">⏸ ${esc(s.desc)}</div>`;
+    const tags=[];
+    if(s.agent)tags.push(`<span class="tag agent">${esc(s.agent)}</span>`);
+    if(s.skill)tags.push(`<span class="tag skill">skill: ${esc(s.skill)}</span>`);
+    if(s.optional)tags.push(`<span class="tag opt">אופציונלי</span>`);
+    const io=(s.io||[]).map(([k,v])=>`<span>${esc(k)}: <code>${v}</code></span>`).join("");
+    return `<div class="stage ${s.optional?'optional':''}">
+      <div class="num">${s.n}</div>
+      <div class="body2">
+        <h3>${esc(s.title)}</h3>
+        <div class="who">${tags.join("")}</div>
+        <p>${esc(s.desc)}</p>
+        ${io?`<div class="io">${io}</div>`:""}
+      </div>
+    </div>`;
+  }).join("");
+
+  $("#vid").innerHTML=`
+    <div class="vidhead">
+      <h2>🎬 סיפור → סטוריבורד → תמונות → וידאו → הרכבה</h2>
+      <p>ה-flow המלא ליצירת קליפ וידאו, כפי שהוא רץ בפועל בפרויקטי Raz Bar Mitzva ו-shuki "אבא אדמה". storyboard_grid.html (משלב 1) נשאר פתוח כ-widget מעקב חי לאורך כל שאר השלבים.</p>
+    </div>
+    <div class="pipeline">${stagesHtml}</div>`;
 }
 
 /* init */

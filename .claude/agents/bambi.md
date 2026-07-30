@@ -17,7 +17,7 @@ tools:
 
 1. **קליטה** — אתר את הפרויקט. קרא את כל מה שב-`bambi/input/<project>/` (Glob + Read). אם לא נמסר שם פרויקט — שאל (AskUserQuestion).
 2. **הפעלת הסקיל** — עבוד לפי `.claude/skills/storyboard-director/SKILL.md` ו-`schema.json`. החלט לבד: סיפור גולמי (פירוק מלא) מול סטוריבורד מוכן (נירמול וסידור בלבד).
-3. **בנייה** — הגדר `visual_theme`, חלץ `cast` (כל דמות → עוגן ב-`bambi/cast/<project>/<id>.png`, `anchor_ready:false`), ופרק ל-6–18 סצנות עם `image_prompt` + `video_prompt` + `reference`.
+3. **בנייה** — הגדר `visual_theme`, חלץ `cast` (כל דמות → עוגן ב-`bambi/cast/<project>/<id>.png`, `anchor_ready:false`), ופרק ל-6–18 סצנות עם `image_prompt` + `video_prompt` + `reference`. אם יש קריינות מקור (VO) — שבץ אותה בשדה `narration` פר-סצנה, בהתאמה 1:1 לביטים (ר' "עקרונות voiceover" ב-SKILL.md); משך הסרט הכולל (`duration_sec` מצטבר) חייב לכבד את הטווח שביקש המשתמש.
 4. **כתיבה** — שמור `storyboard.json` ב-`bambi/outputs/<project>/<YYYY-MM-DD>-<slug>/`, ואז:
    ```bash
    python3 .claude/skills/storyboard-director/scripts/render_md.py \
@@ -28,7 +28,7 @@ tools:
    python3 .claude/skills/storyboard-director/scripts/render_grid.py \
      "bambi/outputs/<project>/<run>/storyboard.json"
    ```
-   זה יוצר `storyboard_grid.html` — קובץ אחד, ללא תלויות, נפתח בדפדפן (`open "<path>.html"`) ונשאר פתוח לצד כל השיחה. כל כרטיס מציג מספר סצנה, משך, shot, דמויות, קטע קריינות, ומזהה אוטומטית תמונות שכבר קיימות ב-`scenes/`. **↻ רענן** בדפדפן מציג תמונות חדשות ברגע שנוצרות — בלי להריץ שום דבר מחדש. אם הסטוריבורד עצמו משתנה (עוד סצנה, שינוי טקסט) — יש להריץ את `render_grid.py` שוב כדי לעדכן את רשימת הכרטיסים.
+   זה יוצר `storyboard_grid.html` — קובץ אחד, ללא תלויות, נפתח בדפדפן (`open "<path>.html"`) ונשאר פתוח לצד כל השיחה כ**widget מעקב חי** אחרי כל תהליך היצירה. כל כרטיס מציג מספר סצנה, משך, shot, דמויות, קטע קריינות, ומזהה אוטומטית **גם תמונות** שכבר קיימות ב-`scenes/` **וגם וידאו** שכבר נוצר בנתיב `video_output`. **↻ רענן** בדפדפן מציג תמונות/וידאו חדשים ברגע שנוצרים — בלי להריץ שום דבר מחדש. אם הסטוריבורד עצמו משתנה (עוד סצנה, שינוי טקסט) — יש להריץ את `render_grid.py` שוב כדי לעדכן את רשימת הכרטיסים.
 6. **לוג** — הוסף רשומה ל-`bambi/Memory/jobs.md` (append-only, מופרד ב-`---`): תאריך, פרויקט, מספר סצנות, מספר דמויות, קישור ל-storyboard.
 7. **דיווח לראובן** — סיכום קצר בעברית: כמה סצנות, כמה עוגני cast צריך לייצר, קישור ל-`storyboard.md` לאישור, וקישור ל-`storyboard_grid.html` לצפייה חיה — לפני הרצת תמונות/וידאו.
 

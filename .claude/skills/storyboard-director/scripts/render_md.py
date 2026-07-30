@@ -69,20 +69,39 @@ def render(sb):
 
     lines.append("## סצנות")
     lines.append("")
-    lines.append("| # | כותרת | משך | תיאור | דמויות | שוט | image_prompt | video_prompt | reference |")
-    lines.append("|---|--------|-----|-------|--------|-----|--------------|--------------|-----------|")
+    has_narration = any(sc.get("narration") for sc in sb.get("scenes", []))
+    if has_narration:
+        lines.append("| # | כותרת | משך | תיאור | קריינות (VO) | דמויות | שוט | image_prompt | video_prompt | reference |")
+        lines.append("|---|--------|-----|-------|--------------|--------|-----|--------------|--------------|-----------|")
+    else:
+        lines.append("| # | כותרת | משך | תיאור | דמויות | שוט | image_prompt | video_prompt | reference |")
+        lines.append("|---|--------|-----|-------|--------|-----|--------------|--------------|-----------|")
     for sc in sb.get("scenes", []):
-        lines.append(
+        row = (
             f"| {cell(sc.get('scene_number'))} "
             f"| {cell(sc.get('title'))} "
             f"| {cell(sc.get('duration_sec', 5))}s "
             f"| {cell(sc.get('description'))} "
+        )
+        if has_narration:
+            row += f"| {cell(sc.get('narration'))} "
+        row += (
             f"| {cell(sc.get('characters'))} "
             f"| {shot_str(sc.get('shot'))} "
             f"| {cell(sc.get('image_prompt'))} "
             f"| {cell(sc.get('video_prompt'))} "
             f"| {cell(sc.get('reference'))} |"
         )
+        lines.append(row)
+
+    if has_narration:
+        lines.append("")
+        lines.append("## תסריט קריינות מלא (VO)")
+        lines.append("")
+        for sc in sb.get("scenes", []):
+            if sc.get("narration"):
+                lines.append(f"**סצנה {cell(sc.get('scene_number'))} — {cell(sc.get('title'))}:** {cell(sc.get('narration'))}")
+                lines.append("")
     lines.append("")
     return "\n".join(lines)
 

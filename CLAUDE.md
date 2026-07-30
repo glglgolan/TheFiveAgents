@@ -177,7 +177,7 @@ Output/        # תוצרים סופיים (.md + .html)
 
 כשמקבלים חומר גלם (סיפור/סטוריבורד) ורוצים קליפ וידאו:
 
-1. **שלב סטוריבורד** — ראובן מפעיל את **במבי** על `bambi/input/<project>/`. במבי מחזיר `storyboard.json` + `storyboard.md` ב-`bambi/outputs/<project>/<run>/`. **עוצרים לאישור אנושי** של הטבלה.
+1. **שלב סטוריבורד** — ראובן מפעיל את **במבי** על `bambi/input/<project>/` (כולל קריינות מקור אם קיימת — נכנסת לשדה `narration` פר-סצנה, בהתאמה 1:1 לביטים). במבי מחזיר `storyboard.json` + `storyboard.md` (כולל תסריט VO אם רלוונטי) + **`storyboard_grid.html`** — widget מעקב חי שנשאר פתוח לאורך כל הפרויקט ומזהה אוטומטית תמונות **וגם וידאו** שנוצרים — ב-`bambi/outputs/<project>/<run>/`. **עוצרים לאישור אנושי** של הטבלה.
 2. **שלב עוגני cast** — לכל דמות ב-`cast` עם `anchor_ready:false`, ראובן מפעיל את **יובל** (text-to-image) על `cast.description` → `bambi/cast/<project>/<id>.png`:
    ```bash
    bash .claude/skills/gpt-image-gen/scripts/generate.sh "<cast.description>" "bambi/cast/<project>/<id>.png"
@@ -194,9 +194,10 @@ Output/        # תוצרים סופיים (.md + .html)
    ```
    דלג לסצנות ללא פנים אנושיות ספציפיות (נופים, אובייקטים). לסצנה רב-דמותית — הרץ פעמיים עם `--target-index` שונה.
    **בסגנונות מצוירים חזקים (קומיקס/cel-shading) — שלב restyle נוסף:** ה-swap משתיל טקסטורת עור פוטוריאליסטית שיוצרת תפר ניכר מול קווי המתאר השטוחים. תקן ע"י מעבר נוסף דרך `gpt-image-gen` עם ה-swap כ-`--reference` ופרומפט "redraw in the same illustration style, keep exact face" (ראה `.claude/skills/face-fidelity/SKILL.md` § שלב 3). השווה עם/בלי restyle לפני בחירה.
-4. **שלב וידאו פר סצנה** — לכל סצנה, ראובן מפעיל את **the-video-man** עם `video_prompt` ו-`--reference` = `image_output` (first frame) → `video_output`. the-video-man שואל מודל כרגיל (וגם שיטת ייצור — OpenRouter מול Kling MCP — אם שתיהן זמינות).
+4. **שלב וידאו פר סצנה** — לכל סצנה, ראובן מפעיל את **the-video-man** עם `video_prompt` ו-`--reference` = `image_output` (first frame) → `video_output`. the-video-man שואל מודל כרגיל (וגם שיטת ייצור — OpenRouter מול Kling MCP — אם שתיהן זמינות). לאורך כל השלב — `storyboard_grid.html` (משלב 1) נשאר פתוח כ-widget מעקב; **↻ רענן** בדפדפן מציג כל תמונה/וידאו חדשים בלי להריץ שום דבר.
+5. **שלב הרכבה סופית (אופציונלי)** — אם המשתמש רוצה סרט מוגמר (לא רק קליפים בודדים): ראובן מפעיל את **the-video-man** עם skill `video-editor`. אם יש `narration` בסטוריבורד — מרכיבים קודם קובץ קריינות מוקלט (הקלטה אנושית או TTS חיצוני, מחוץ לצוות הסוכנים) ומזינים אותו כ-`--voiceover` עם `--fit-to-audio` (מותח את הקליפים כך שאורך הסרט = אורך הקריינות). פלט: `<run>/final.mp4`.
 
-**מקרה קצה:** אם ה-input כבר סטוריבורד מוכן, במבי רק מנרמל אותו לסכמה (שלב 1 מתקצר); השלבים 2–4 זהים.
+**מקרה קצה:** אם ה-input כבר סטוריבורד מוכן, במבי רק מנרמל אותו לסכמה (שלב 1 מתקצר); השלבים 2–5 זהים.
 
 ---
 

@@ -47,6 +47,7 @@
           "title": { "type": "string" },
           "duration_sec": { "type": "integer", "default": 5 },
           "description": { "type": "string", "description": "מה קורה בסצנה — עברית" },
+          "narration": { "type": "string", "description": "קטע קריינות/voiceover לסצנה (עברית) — כשיש VO מקור. משמש כטקסט ל-TTS/הקלטה ומוצג ב-grid; סכום הקטעים לפי סדר הסצנות = תסריט הקריינות המלא" },
           "characters": {
             "type": "array",
             "items": { "type": "string" },

@@ -67,6 +67,9 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
   .b{font-size:10px;font-weight:700;border-radius:5px;padding:2px 6px;color:#fff}
   .b.regen{background:var(--regen)} .b.multi{background:var(--multi)}
   .b.done{background:var(--ok)} .b.draft{background:var(--draft)}
+  .vid{display:flex;align-items:center;gap:5px;font-size:11px}
+  .vid .dot{width:7px;height:7px;border-radius:50%;background:var(--pending)}
+  .vid.ready .dot{background:var(--ok)}
   .thumb img.isdraft{filter:saturate(.82) brightness(.94)}
   .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:7px;flex:1}
   .title{font-size:13.5px;font-weight:600;line-height:1.35}
@@ -89,6 +92,7 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
     <span><b id="sceneCount">–</b> סצנות</span>
     <span><b id="totalDur">–</b></span>
     <span><b id="imgCount">–</b> תמונות</span>
+    <span><b id="vidCount">–</b> וידאו</span>
   </div>
 </header>
 
@@ -99,6 +103,7 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
   <span class="chip"><span class="dot" style="background:var(--pending)"></span> ממתינה</span>
   <span class="chip"><span class="dot" style="background:var(--regen)"></span> regen</span>
   <span class="chip"><span class="dot" style="background:var(--multi)"></span> ריבוי תמונות</span>
+  <span class="chip"><span class="dot" style="background:var(--ok)"></span> וידאו קיים</span>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -114,7 +119,7 @@ const SCENES_DIR = __SCENES_DIR_JSON__;
 
 const grid = document.getElementById('grid');
 
-let draftCount = 0, doneCount = 0;
+let draftCount = 0, doneCount = 0, vidDoneCount = 0;
 
 DATA.scenes.forEach(s=>{
   const card = document.createElement('div');
@@ -143,7 +148,22 @@ DATA.scenes.forEach(s=>{
       <div class="meta"><span class="t">${s.dur}s</span><span>${s.shot}</span>${s.ref!=='—'?`<span>📎 ${s.ref}</span>`:'<span>—</span>'}</div>
       <div class="chars">${chars||'<span class="cc">— ללא דמות —</span>'}</div>
       <div class="narr">${s.narr}</div>
+      <div class="vid" id="vid-${s.n}"><span class="dot"></span><span class="lbl">וידאו: ממתין</span></div>
     </div>`;
+
+  if(s.video){
+    const probe = document.createElement('video');
+    probe.preload = 'metadata';
+    probe.onloadedmetadata = ()=>{
+      const row = card.querySelector(`#vid-${s.n}`);
+      row.classList.add('ready');
+      row.querySelector('.lbl').textContent = 'וידאו: ✓ נוצר';
+      vidDoneCount++;
+      document.getElementById('vidCount').textContent = `${vidDoneCount}✓ / ${DATA.scenes.length}`;
+    };
+    probe.onerror = ()=>{};
+    probe.src = s.video;
+  }
 
   const img = card.querySelector('img');
   const thumb = img.parentElement;
@@ -178,6 +198,7 @@ document.getElementById('subtitle').textContent = DATA.subtitle || '';
 document.getElementById('sceneCount').textContent = DATA.scenes.length;
 document.getElementById('totalDur').textContent = `${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}`;
 document.getElementById('imgCount').textContent = '…';
+document.getElementById('vidCount').textContent = `0 / ${DATA.scenes.length}`;
 </script>
 </body>
 </html>
@@ -197,7 +218,19 @@ def excerpt(text, n=110):
     return text if len(text) <= n else text[:n].rstrip() + "…"
 
 
-def build_scene_row(s):
+def video_rel_path(video_output, run_dir):
+    """video_output is typically repo-root-relative (e.g. bambi/outputs/<project>/<run>/videos/s01.mp4).
+    Compute it relative to run_dir so the grid HTML (which lives in run_dir) can load it directly."""
+    if not video_output:
+        return None
+    try:
+        rel = os.path.relpath(video_output, run_dir)
+    except ValueError:
+        return None
+    return rel if not rel.startswith("..") else None
+
+
+def build_scene_row(s, run_dir):
     shot = s.get("shot") or {}
     shot_str = shot.get("type", "—") if isinstance(shot, dict) else "—"
     ref = s.get("reference") or ""
@@ -213,6 +246,7 @@ def build_scene_row(s):
         "shot": shot_str,
         "regen": bool(s.get("regenerate", False)),
         "multi": "image_prompts" in s,
+        "video": video_rel_path(s.get("video_output"), run_dir),
     }
 
 
@@ -241,8 +275,9 @@ def main():
         sb = json.load(f)
 
     scenes_dir = scenes_dir_override or infer_scenes_dir(sb_path)
+    run_dir = os.path.dirname(os.path.abspath(sb_path))
 
-    rows = [build_scene_row(s) for s in sb.get("scenes", [])]
+    rows = [build_scene_row(s, run_dir) for s in sb.get("scenes", [])]
     total = sum(r["dur"] for r in rows)
     data = {
         "subtitle": sb.get("title", sb.get("project", "")),
