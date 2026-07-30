@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raz Bar Mitzva v3 — Coverage</title>
+<style>
+:root{
+  --bg:#0f1115; --card:#1a1d24; --card2:#20242d; --line:#2c313c;
+  --ink:#e8eaed; --dim:#9aa0aa; --accent:#f0a63c;
+  --ok:#3fb950; --bad:#e0574b; --draft:#d9822b; --pending:#6b7280;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","Heebo",Arial,sans-serif;padding:20px}
+header{display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+h1{font-size:20px;margin:0}
+.stats{margin-inline-start:auto;display:flex;gap:18px;font-size:13px;color:var(--dim);flex-wrap:wrap}
+.stats b{color:var(--ink);font-size:15px}
+.filters{display:flex;gap:8px;margin-bottom:14px}
+.filters button{background:var(--card2);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit}
+.filters button.active{border-color:var(--accent);color:var(--accent)}
+table{width:100%;border-collapse:collapse}
+.row{background:var(--card);border-bottom:6px solid var(--bg)}
+.row td{padding:10px;vertical-align:top;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.row.boundary{background:#241a2e}
+.row.boundary td:first-child{border-inline-start:3px solid #8b5cf6}
+.sid{font-family:ui-monospace,monospace;font-weight:700;font-size:13px;white-space:nowrap}
+.thumb{width:150px}
+.thumb img{width:140px;border-radius:6px;display:block}
+.ph{width:140px;height:93px;background:var(--card2);border:1px dashed var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:11px;text-align:center}
+.ph.small{width:60px;height:60px;font-size:9px}
+.pair{display:flex;align-items:center;gap:4px;margin-top:6px}
+.pair img{width:60px;border-radius:4px}
+.arrow{color:var(--dim);font-size:12px}
+.narr{max-width:280px}
+.scene-title{font-weight:600;font-size:13px;margin-bottom:4px}
+.excerpt{font-size:12px;color:var(--dim);margin-bottom:6px;line-height:1.4}
+.chars{font-size:11px;color:var(--accent)}
+.status{min-width:160px;font-size:12px}
+.lbl{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+.lbl:first-child{margin-top:0}
+.badge{border-radius:6px;padding:4px 8px;margin-bottom:2px}
+.badge.ok{background:rgba(63,185,80,.12);color:var(--ok)}
+.badge.missing{background:rgba(224,87,75,.12);color:var(--bad)}
+.badge.regen{background:rgba(217,130,45,.15);color:var(--draft)}
+.badge .dim{color:var(--dim);font-weight:400}
+.note{font-size:10px;color:var(--dim);margin-top:2px}
+.chip{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;color:#0f1115;font-weight:700;margin-top:6px}
+.type{font-size:12px;white-space:nowrap}
+.ref{font-size:11px;color:var(--dim);max-width:130px;word-break:break-all}
+.chk{width:26px;text-align:center}
+.chk input{width:17px;height:17px;cursor:pointer}
+.vidchk:disabled{cursor:not-allowed}
+.vprompt-cell{max-width:260px;font-size:11.5px;line-height:1.45}
+.vprompt{color:var(--ink)}
+.vprompt.dim{color:var(--dim);font-style:italic}
+.vnote{margin-top:6px;color:var(--accent);font-size:11px;background:rgba(240,166,60,.1);border-radius:6px;padding:4px 6px}
+.approvebar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:14px}
+.approvebar b{color:var(--accent)}
+.approvebar button{background:var(--accent);color:#1a1206;border:none;border-radius:7px;padding:8px 16px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit}
+.approvebar button:disabled{opacity:.4;cursor:not-allowed}
+.approvebar .ghost{background:transparent;color:var(--dim);border:1px solid var(--line);font-weight:400}
+#approveOut{display:none;margin-bottom:14px;background:var(--card);border:1px solid var(--accent);border-radius:10px;padding:12px 14px}
+#approveOut textarea{width:100%;min-height:90px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px;font-family:ui-monospace,monospace;font-size:12px}
+#approveOut .copied{color:var(--ok);font-size:12px;margin-inline-start:8px}
+</style>
+</head>
+<body>
+<header>
+  <h1>רז בר מצווה — Storyboard v3 · Coverage</h1>
+  <div class="stats">
+    <div>שוטים <b>69</b></div>
+    <div>תמונות קיימות <b>69</b> / חסרות <b>0</b></div>
+    <div>קליפים קיימים <b>64</b> / חסרים <b>5</b></div>
+    <div>first/tail <b>12</b></div>
+    <div>שניות מכוסות <b>382</b> / 452</div>
+    <div>הערכת קרדיטים לחסר <b>~260</b> / 1779 זמינים</div>
+  </div>
+</header>
+<div class="filters">
+  <button class="active" onclick="filt('all',this)">הכל (69)</button>
+  <button onclick="filt('missing',this)">רק חסר (5)</button>
+  <button onclick="filt('existing',this)">רק קיים (64)</button>
+  <button onclick="filt('type:first_tail',this)">רק first/tail (12)</button>
+</div>
+<div class="approvebar">
+  <label><input type="checkbox" id="selAll" onchange="toggleAll(this)"> בחר הכל (שטרם יוצר להם וידאו)</label>
+  <span>נבחרו: <b id="selCount">0</b></span>
+  <button id="btnApprove" onclick="buildApproval()" disabled>✅ אשר יצירת וידאו לנבחרים</button>
+  <button class="ghost" onclick="clearAll()">נקה בחירה</button>
+</div>
+<div id="approveOut">
+  <div>העתק את הטקסט הזה ושלח לי בצ'אט כדי שאתחיל לייצר את הסצנות שנבחרו במקביל:</div>
+  <textarea id="approveText" readonly onclick="this.select()"></textarea>
+  <button onclick="copyApproval()">העתק ללוח</button>
+  <span id="copiedMsg" class="copied" style="display:none">✓ הועתק</span>
+</div>
+<table>
+<thead><tr>
+  <th></th><th>Shot</th><th>תמונה</th><th>סצנה / קריינות</th><th>סטטוס</th><th>סוג</th><th>Video prompt</th><th>Reference</th>
+</tr></thead>
+<tbody>
+
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s00.5</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s00_5.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">אינטרו — רז תמיד בתנועה</div>
+        <div class="excerpt">רז תמיד בתנועה — עוד לפני שהסיפור מתחיל.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s00_5.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s00_5.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow aerial drone push forward over sunlit summer Ofra, hills and rooftops passing below, the camera drifting toward a small figure running through the golden fields at the edge of town — motion before the story even begins. Establishes: he never stops moving.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s01.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s01.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">פתיחה — רז נולד בתנועה (שלג בעפרה)</div>
+        <div class="excerpt">מערכה 1 — פתיחה. שלג נדיר מכסה את עפרה בחורף הראשון של רז — הטבע מסמן את הדרך למי שעומד לרוץ מהר מכולם.</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s01.png<br><span class="dim">1764x1176</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s01 ofra.mp4<br><span class="dim">1764x1176 · 10.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow cinematic aerial drift over Ofra's snow-dusted flat-roofed houses and dry hillside, snowflakes floating gently past the lens, the camera easing toward one warm glowing window among the rooftops. Calm, magical, expectant winter-morning atmosphere — a story about to begin. Soft light, gentle motion, no characters.</div></td>
+      <td class="ref">ofra.webp</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s01.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s01_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">פתיחה — רז נולד בתנועה (שלג בעפרה)</div>
+        <div class="excerpt">מערכה 1 — פתיחה. שלג נדיר מכסה את עפרה בחורף הראשון של רז — הטבע מסמן את הדרך למי שעומד לרוץ מהר מכולם.</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s01_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s01_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow cinematic aerial drift over Ofra's snow-dusted flat-roofed houses and dry hillside, snowflakes floating gently past the lens, the camera easing toward one warm glowing window among the rooftops. Calm, magical, expectant winter-morning atmosphere</div></td>
+      <td class="ref">ofra.webp</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t01-02 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t01-02_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t01-02_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t01-02_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: פתיחה — רז נולד בתנועה (שלג בעפרה) → סצנה 2</div>
+        <div class="excerpt">שלג יורד ונמס לתוך אור הגן החם — כל פתית נוצץ כמו אבק כוכבים לרגע לפני שהוא נמס</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t01-02_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t01-02.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: שלג יורד ונמס לתוך אור הגן החם — כל פתית נוצץ כמו אבק כוכבים לרגע לפני שהוא נמס</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s02.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s02.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">השורשים — סבתא רות וסבא דוד</div>
+        <div class="excerpt">מערכה 1 — שורשים. ההורים של עמוס: רות ודוד. חום, ערכים ונתינה.</div>
+        <div class="chars">grandparents_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s02.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s02.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow gentle push-in on a loving older couple standing close in a sunny garden, she adjusts her colorful headscarf and smiles softly, he tips his white hat with a warm grin. Leaves flicker in a light breeze. Warm, dignified, heartwarming family-album feeling.</div></td>
+      <td class="ref">grandparents-amos-raz4-131.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s02.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s02_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">השורשים — סבתא רות וסבא דוד</div>
+        <div class="excerpt">מערכה 1 — שורשים. ההורים של עמוס: רות ודוד. חום, ערכים ונתינה.</div>
+        <div class="chars">grandparents_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s02_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s02_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow gentle push-in on a loving older couple standing close in a sunny garden, she adjusts her colorful headscarf and smiles softly, he tips his white hat with a warm grin. Leaves flicker in a light breeze. Warm, dignified, heartwarming family-album</div></td>
+      <td class="ref">grandparents-amos-raz4-131.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t02-03 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t02-03_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t02-03_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t02-03_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: השורשים — סבתא רות וסבא דוד → סצנה 3</div>
+        <div class="excerpt">המצלמה נעה הצידה מהגן של רות ודוד אל הגן של מיכל ורפי — הזוג השני של המשפחה</div>
+        <div class="chars">grandparents_amos · grandparents_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t02-03_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t02-03.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: המצלמה נעה הצידה מהגן של רות ודוד אל הגן של מיכל ורפי — הזוג השני של המשפחה</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s03.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s03.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">השורשים — סבתא מיכל וסבא רפי</div>
+        <div class="excerpt">מערכה 1 — שורשים. ההורים של עדי: מיכל ורפי. הבתים שתמיד אפשר לחזור אליהם.</div>
+        <div class="chars">grandparents_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s03.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s03.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow push-in on a joyful older couple in a sunny garden — she laughs brightly, her curly reddish-brown hair catching the light; he pulls her close with a warm smile. Sun flares softly through the trees. Heartwarming, welcoming, full of home.</div></td>
+      <td class="ref">grandparents-adi-kisim-228.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s03.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s03_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">השורשים — סבתא מיכל וסבא רפי</div>
+        <div class="excerpt">מערכה 1 — שורשים. ההורים של עדי: מיכל ורפי. הבתים שתמיד אפשר לחזור אליהם.</div>
+        <div class="chars">grandparents_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s03_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s03_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow push-in on a joyful older couple in a sunny garden — she laughs brightly, her curly reddish-brown hair catching the light; he pulls her close with a warm smile. Sun flares softly through the trees. Heartwarming, welcoming, full of home.</div></td>
+      <td class="ref">grandparents-adi-kisim-228.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s04.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s04_v2_faceswap.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">עדי ועמוס — חתונה</div>
+        <div class="excerpt">מערכה 1 — ההתחלה. עדי ועמוס בוחרים ללכת יחד בדרך משותפת ומקימים בית מלא אהבה ועשייה.</div>
+        <div class="chars">adi_amos_wedding</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s04_v2_faceswap.png<br><span class="dim">1620x1080</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s04.mp4<br><span class="dim">1620x1080 · 5.2s</span></div>
+        <span class="chip" style="background:var(--draft)">Tier B · לא-תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">A radiant wedding moment — the couple holds hands and laughs, petals drift through golden light, the camera cranes slowly upward revealing the bright open sky above them. Celebratory, romantic, full of beginnings. Gentle slow motion on the falling petals.</div></td>
+      <td class="ref">wedding-mg-8869.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s04.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s04_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">עדי ועמוס — חתונה</div>
+        <div class="excerpt">מערכה 1 — ההתחלה. עדי ועמוס בוחרים ללכת יחד בדרך משותפת ומקימים בית מלא אהבה ועשייה.</div>
+        <div class="chars">adi_amos_wedding</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s04_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s04_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] A radiant wedding moment — the couple holds hands and laughs, petals drift through golden light, the camera cranes slowly upward revealing the bright open sky above them. Celebratory, romantic, full of beginnings. Gentle slow motion on the falling pe</div></td>
+      <td class="ref">wedding-mg-8869.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s04.5</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s04_5_final.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">עדי בהיריון — ציפייה לרז</div>
+        <div class="excerpt">שנה אחרי החתונה, עדי ועמוס מצפים לרז — רגע שקט של אהבה וציפייה, ממש לפני שהחיים הופכים לתנועה מתמדת.</div>
+        <div class="chars">mom_adi · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s04_5_final.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s04_5.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Gentle, quiet moment: dad Amos softly kisses mom Adi's cheek as she looks down and smiles at her pregnant belly, a light breeze moves the tall grass around them, warm golden-hour light. Tender, calm, full of anticipation — the quiet before everything changes.</div></td>
+      <td class="ref">_MG_9039.JPG (real photo — mom Adi + dad Amos likeness, exact pose reference)</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t04-05 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t04-05_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t04-05_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t04-05_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: עדי ועמוס — חתונה → סצנה 5</div>
+        <div class="excerpt">עלי הכותרת של החתונה יורדים ונוצצים באור השמש כמו אבק כוכבים לפני שהם הופכים לשמיכת התינוק</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t04-05_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t04-05.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: עלי הכותרת של החתונה יורדים ונוצצים באור השמש כמו אבק כוכבים לפני שהם הופכים לשמיכת התינוק</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s05.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s05.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">שנה אחרי החתונה — נולד רז</div>
+        <div class="excerpt">מערכה 1 — הלידה. שנה אחרי החתונה נולד רז, ומהרגע הראשון ברור שהוא לא עומד במקום.</div>
+        <div class="chars">raz_toddler · mom_adi · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s05.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s05.mp4<br><span class="dim">1176x784 · 10.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow overhead descend toward a newborn cradled in his parents' arms, both parents looking down with wonder, the baby's tiny hand curling around a finger — then a playful little kick of his legs, already in motion. Tender, warm, softly lit. Something precious just arrived.</div></td>
+      <td class="ref">2026-parents-kisim-109.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s05.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s05_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">שנה אחרי החתונה — נולד רז</div>
+        <div class="excerpt">מערכה 1 — הלידה. שנה אחרי החתונה נולד רז, ומהרגע הראשון ברור שהוא לא עומד במקום.</div>
+        <div class="chars">raz_toddler · mom_adi · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s05_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s05_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow overhead descend toward a newborn cradled in his parents' arms, both parents looking down with wonder, the baby's tiny hand curling around a finger — then a playful little kick of his legs, already in motion. Tender, warm, softly lit. Something</div></td>
+      <td class="ref">2026-parents-kisim-109.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t05-06 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t05-06_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t05-06_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t05-06_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: שנה אחרי החתונה — נולד רז → סצנה 6</div>
+        <div class="excerpt">יד התינוק הפתוחה נסגרת סביב מכונית צעצוע</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t05-06_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t05-06.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: יד התינוק הפתוחה נסגרת סביב מכונית צעצוע</div><div class="vnote">📝 ברינדור בפועל נעשה שימוש בפרומפט גנרי placeholder במקום הטקסט המדויק (התנועה עדיין מונעת נכון מהתמונה) — אפשר לשקול רינדור חוזר עם הפרומפט המדויק אם רוצים.</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s06.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s06.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">האהבה הראשונה — מכוניות (ישן עם כולן)</div>
+        <div class="excerpt">מערכה 2 — ילדות מוקדמת. עוד לפני כיתה א' — מכוניות. לא עם אחת, עם כולן.</div>
+        <div class="chars">raz_toddler</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s06.png<br><span class="dim">1620x1080</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s06.mp4<br><span class="dim">1620x1080 · 5.2s</span></div>
+        <span class="chip" style="background:var(--draft)">Tier B · לא-תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Gentle push-in on a toddler asleep in bed surrounded by dozens of toy cars under the blanket, hugging one to his chest; he stirs, smiles in his sleep, and a little toy car rolls off the blanket. Cozy, warm, adorable — even his dreams are in motion.</div></td>
+      <td class="ref">2016-toddler-zoomz.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s06.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s06_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">האהבה הראשונה — מכוניות (ישן עם כולן)</div>
+        <div class="excerpt">מערכה 2 — ילדות מוקדמת. עוד לפני כיתה א' — מכוניות. לא עם אחת, עם כולן.</div>
+        <div class="chars">raz_toddler</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s06_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s06_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Gentle push-in on a toddler asleep in bed surrounded by dozens of toy cars under the blanket, hugging one to his chest; he stirs, smiles in his sleep, and a little toy car rolls off the blanket. Cozy, warm, adorable — even his dreams are in motion.</div></td>
+      <td class="ref">2016-toddler-zoomz.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s07.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s07.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">בגיל שנה — בית גמליאל</div>
+        <div class="excerpt">מערכה 2 — הבית. המעבר לבית גמליאל, הבית עד היום.</div>
+        <div class="chars">raz_toddler · mom_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s07.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s07.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Tracking shot following a toddler's wobbly excited steps toward the open golden doorway of a new village home, his mother's hand reaching lovingly behind him, boxes by the door. Warm, hopeful, the beginning of home. Gentle handheld warmth.</div></td>
+      <td class="ref">2016-toddler-zoomz.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s07.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s07_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">בגיל שנה — בית גמליאל</div>
+        <div class="excerpt">בגיל שנה הוא הגיע לבית גמליאל — וכבר טיפס על הכל.</div>
+        <div class="chars">raz_toddler</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s07_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s07_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The toddler clambers determinedly up a stack of moving boxes alone in the sunlit living room, wobbles, grins triumphantly at the top. Playful, independent, already in motion.</div></td>
+      <td class="ref">2016-toddler-zoomz.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s07.5</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s07_5.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">יאיר מצטרף — הצמד הבלתי נפרד</div>
+        <div class="excerpt">אל הבית במושב הצטרף יאיר, ומאז הם צמד: אחים שהם החברים הכי טובים, משלימים זה את זה.</div>
+        <div class="chars">raz_child · yair</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s07_5.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s07_5.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Toddler Yair snuggles back against young Raz as he holds the bike steady, both boys smiling, a light breeze moves the leaves behind them — a quiet, warm brotherly moment.</div></td>
+      <td class="ref">raz_yair_atzmaut-5.jpg (real photo — young Raz + toddler Yair likeness)</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s08.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s08_1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">האחים — צמד שהפך לשלישייה מנצחת</div>
+        <div class="excerpt">מערכה 2 — האחים. יאיר מצטרף כצמד בלתי נפרד, תומר משלים שלישייה. בית מלא צחוק, משחקים ואהבה.</div>
+        <div class="chars">raz_child · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s08_1.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ kling_20260726_VIDEO_the_young__907_0.mp4<br><span class="dim">1176x780 · 6.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow tracking shot alongside three brothers walking hand-in-hand through a golden sunlit field, swaying grass, laughter carried on the breeze — the middle brother swings the toddler's arm playfully. Warm, joyful, unhurried. A winning trio.</div></td>
+      <td class="ref">2021-likrat-hachoref-29.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s08.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s08_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">האחים — צמד שהפך לשלישייה מנצחת</div>
+        <div class="excerpt">מערכה 2 — האחים. יאיר מצטרף כצמד בלתי נפרד, תומר משלים שלישייה. בית מלא צחוק, משחקים ואהבה.</div>
+        <div class="chars">raz_child · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s08_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s08_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow tracking shot alongside three brothers walking hand-in-hand through a golden sunlit field, swaying grass, laughter carried on the breeze — the middle brother swings the toddler's arm playfully. Warm, joyful, unhurried. A winning trio.</div></td>
+      <td class="ref">2021-likrat-hachoref-29.jpg</td>
+    </tr>
+    <tr class="row missing" data-status="missing" data-type="missing">
+      <td class="chk"><input type="checkbox" class="vidchk" data-sid="s08.3" onchange="onChk()"></td>
+      <td class="sid">s08.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s08_3.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">האחים — משחקים בלגו בסלון</div>
+        <div class="excerpt">מערכה 2 — האחים. יאיר מצטרף כצמד בלתי נפרד, תומר משלים שלישייה. בית מלא צחוק, משחקים ואהבה.</div>
+        <div class="chars">raz_child · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s08_3.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge missing">⬜ לייצר</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">⬜ חסר<div class="note">kling-video-v2_6 · 🔇 no audio (וידאו ממתין)</div></td>
+      <td class="vprompt-cell"><div class="vprompt">The three brothers build a Lego structure together on the living room floor, passing pieces back and forth, Tomer stacks a few blocks and giggles, warm cozy afternoon light — quiet togetherness.</div></td>
+      <td class="ref">tomer_galia2-14.jpg (real family photo — all three brothers likeness reference)</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s09.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s09_1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">אבא עמוס רץ — כולם מנסים לעקוב</div>
+        <div class="excerpt">מערכה 2 — ההורים. עמוס רץ קדימה בביטחון; כל המשפחה (עדי, רז ואחיו) רצה מאחוריו מותשת ומתנשפת — חוץ מרז, שקרוב אליו יחסית ומתעקש להדביק את הקצב.</div>
+        <div class="chars">dad_amos · mom_adi · raz_teen · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s09_1.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s09.mp4<br><span class="dim">1280x720 · 10.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Dynamic side-tracking shot: dad Amos runs ahead with easy confident strides; the camera pulls back to reveal the rest of the family straggling behind, out of breath and laughing at themselves; teen Raz pushes hard to close the gap, determined. Comic, warm, full of family energy — everyone trying (and failing) to keep up with dad.</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row first_tail" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s10.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s10_1_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s10_1_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s10_1_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">השילוב הנדיר — גובה מאמא, לב ענק</div>
+        <div class="excerpt">רז הוא ילד של אנשים, של עשייה ושל נחישות — פיקח, אכפתי, בוגר, נחוש, ועם ידיים טובות. רזי שלנו הוא שילוב נדיר של גובה (הגנים מאמא!) עם לב ענק. שוט של שני פריימים: רז קטן וקומתו מגיעה בקושי לכתף אמא ← רז נער שגדל וגבוה ממנה בהרבה — אותה קומפוזיציה בדיוק, כדי שהמעבר יבליט את השינוי בגובה.</div>
+        <div class="chars">raz_teen · mom_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s10_1_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s10_1.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Smooth growth-transition, same room and camera position throughout: starting on a child barely reaching his mom's shoulder, morphing seamlessly frame by frame as he grows taller until he towers well above her as a teen. Warm, funny, full of love — years of growth in one continuous breath.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg (teen face+glasses)</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s10.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s10_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רז הוא ילד של אנשים ועשייה — ידיים טובות</div>
+        <div class="excerpt">רז הוא ילד של אנשים, של עשייה ושל נחישות. הוא פיקח, אכפתי, בוגר, נחוש, ועם ידיים טובות.</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s10_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s10_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The hands carefully turn a small wooden wheel into place and give the toy car a gentle spin-test, satisfied and focused, warm daylight. Quiet, capable, determined — a small moment that says everything about him without needing to see his face.</div></td>
+      <td class="ref">none — generic no-face close-up shot, no character likeness needed</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s10.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s10_3.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">נחוש — קושר שרוכים בנחישות</div>
+        <div class="excerpt">רז הוא ילד של אנשים, של עשייה ושל נחישות. הוא פיקח, אכפתי, בוגר, נחוש, ועם ידיים טובות.</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s10_3.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s10_3.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The hands pull the laces tight, cross them, and finish a firm double-knot, then give the shoe a quick determined tap on the ground before standing up out of frame — ready to run, warm morning light.</div></td>
+      <td class="ref">none — generic no-face close-up shot, no character likeness needed</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s11.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s11_1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">מסורות — פנקייקים, פיצות, והשניצלים שרזי מטגן — פנקייקים</div>
+        <div class="excerpt">פנקייקים של ימי ראשון.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s11_1.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s11_1.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The teen cuts into a tall stack of syrup-drizzled pancakes at the sunny breakfast table, takes a happy bite, morning light streaming in. Warm, cozy, a simple Sunday ritual.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s11.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s11_2_final.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">מסורות — פנקייקים, פיצות, והשניצלים שרזי מטגן — פיצה</div>
+        <div class="excerpt">ערב פיצות מעשה ידי אבא.</div>
+        <div class="chars">raz_teen · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s11_2_final.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s11_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Dad slides a fresh homemade pizza out of the oven, the teen leans in eagerly, steam rising, both grinning at the first slice. Warm, proud, a father-son tradition.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s11.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s11_3.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">מסורות — פנקייקים, פיצות, והשניצלים שרזי מטגן — שניצלים</div>
+        <div class="excerpt">והשניצלים של שישי, שרזי מטגן בעצמו.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s11_3.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s11_3.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The teen flips a golden schnitzel in the pan like a pro, plates it with a proud grin, steam and warm light filling the kitchen. Confident, capable, a Friday ritual he owns.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s12.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s12.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">טאיה — כולם מפחדים מכלבים, חוץ מרז</div>
+        <div class="excerpt">מערכה 2 — טאיה. מגיעה לבית שכולם בו מפחדים מכלבים — חוץ מרז — וכובשת את כולם.</div>
+        <div class="chars">raz_teen · taya · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s12.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s12.mp4<br><span class="dim">1176x784 · 6.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">An energetic puppy bounds across the living room straight into the kneeling teen's open arms, tail wagging wildly, licking his cheek — while the family peeks from behind the couch, then slowly melts into smiles. Funny, sweet, irresistible. She conquers them all.</div><div class="vnote">📝 רז ביקש: s12.2 יצא טוב יותר — לשקול ליצור משני התמונות שני קטעי וידאו (או קטע ארוך אחד מ-s12.2 בלבד).</div></td>
+      <td class="ref">2024-teen-raz-tomer-19.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s12.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s12_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">טאיה — כולם מפחדים מכלבים, חוץ מרז</div>
+        <div class="excerpt">מערכה 2 — טאיה. מגיעה לבית שכולם בו מפחדים מכלבים — חוץ מרז — וכובשת את כולם.</div>
+        <div class="chars">raz_teen · taya · yair · tomer</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s12_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s12_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] An energetic puppy bounds across the living room straight into the kneeling teen's open arms, tail wagging wildly, licking his cheek — while the family peeks from behind the couch, then slowly melts into smiles. Funny, sweet, irresistible. She conque</div><div class="vnote">📝 רז ביקש: התמונה הזו יצאה טוב יותר מ-s12.1 — להשתמש בה ליצירת וידאו (שני קטעים או קטע ארוך).</div></td>
+      <td class="ref">2024-teen-raz-tomer-19.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t12-13 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t12-13_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t12-13_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t12-13_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: טאיה — כולם מפחדים מכלבים, חוץ מרז → סצנה 13</div>
+        <div class="excerpt">התנועה האנרגטית של טאיה מתייצבת לשקט מול המחשב הנייד</div>
+        <div class="chars">taya · raz_child</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t12-13_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t12-13.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: התנועה האנרגטית של טאיה מתייצבת לשקט מול המחשב הנייד</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s13.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s13.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — זום אנגלית עם סבא דוד</div>
+        <div class="excerpt">מערכה 2 — רגעים שקטים. זמן איכות עם סבא דוד בזום ללימוד אנגלית.</div>
+        <div class="chars">raz_child · grandparents_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s13.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s13.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Over-shoulder push-in on a boy at a bright desk waving back at his grandfather on the laptop screen; the grandfather holds up a flashcard, both laugh. Distance means nothing between people who love each other. Warm, quiet, connected.</div></td>
+      <td class="ref">2023-child-shkediot-33.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s13.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s13_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — זום אנגלית עם סבא דוד</div>
+        <div class="excerpt">מערכה 2 — רגעים שקטים. זמן איכות עם סבא דוד בזום ללימוד אנגלית.</div>
+        <div class="chars">raz_child · grandparents_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s13_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s13_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Over-shoulder push-in on a boy at a bright desk waving back at his grandfather on the laptop screen; the grandfather holds up a flashcard, both laugh. Distance means nothing between people who love each other. Warm, quiet, connected.</div></td>
+      <td class="ref">2023-child-shkediot-33.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s14.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s14.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">הביקורים ברמת ישי — עוגות וחיבוקים</div>
+        <div class="excerpt">מערכה 2 — רגעים שקטים. הביקורים אצל סבתא מיכל וסבא רפי ברמת ישי — העוגות הכי שוות, החיבוקים הכי גדולים.</div>
+        <div class="chars">raz_teen · grandparents_adi</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s14.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s14.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The tall teen wraps both grandparents in one big hug at the doorway, grandma reaches up to touch his cheek, grandpa pats his shoulder laughing; on the table behind, fresh cakes wait. Warm golden light. It is always good to be together.</div></td>
+      <td class="ref">grandparents-adi-kisim-228.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s14.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s14_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">הביקורים ברמת ישי — עוגות וחיבוקים</div>
+        <div class="excerpt">עם העוגות הכי שוות.</div>
+        <div class="chars">—</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s14_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s14_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow push-in across a table overflowing with fresh homemade cakes and cookies, warm afternoon light catching the icing and crumbs. Warm, abundant, inviting — grandma's table.</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s15.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s15.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">ביזבז — עוד דקה של מתיחות</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. רז לוקח דקה ועוד דקה בדיוק כשצריך לצאת — לכן קוראים לו ביזבז.</div>
+        <div class="chars">raz_teen · dad_amos · yair</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s15.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s15.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">A teen boy stretches luxuriously by the front door while his dad taps his watch and his younger brother waits with crossed arms; gentle comedic beat, bright morning light, playful family energy.</div></td>
+      <td class="ref">shavuot-2025-148.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s15.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s15_2_final.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">ביזבז — עוד דקה של מתיחות</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. רז לוקח דקה ועוד דקה בדיוק כשצריך לצאת — לכן קוראים לו ביזבז.</div>
+        <div class="chars">raz_teen · dad_amos · yair</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s15_2_final.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s15_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] A teen boy stretches luxuriously by the front door while his dad taps his watch and his younger brother waits with crossed arms; gentle comedic beat, bright morning light, playful family energy.</div></td>
+      <td class="ref">shavuot-2025-148.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s16.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s16.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">בוקר — 6:30 מצלצל, 6:45 קם</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. השעון ב-6:30, רז ב-6:45. מסדר מיטה, מצחצח שיניים.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s16.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s16.mp4<br><span class="dim">1176x784 · 9.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Comic morning montage: the alarm rattles at 6:30 — a hand pats it quiet; at 6:45 the teen sits up with a yawn, smooths the blanket into a perfectly made bed, brushes his teeth with sleepy determination. Warm sunrise light, gentle humor, the day begins.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="missing" data-type="i2v">
+      <td class="chk"><input type="checkbox" class="vidchk" data-sid="s16.2" onchange="onChk()"></td>
+      <td class="sid">s16.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s16_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">בוקר — 6:30 מצלצל, 6:45 קם</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. השעון ב-6:30, רז ב-6:45. מסדר מיטה, מצחצח שיניים.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s16_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge missing">⬜ לייצר</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v<div class="note">kling-video-v2_5 · 🔇 no audio (וידאו ממתין)</div></td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Comic morning montage: the alarm rattles at 6:30 — a hand pats it quiet; at 6:45 the teen sits up with a yawn, smooths the blanket into a perfectly made bed, brushes his teeth with sleepy determination. Warm sunrise light, gentle humor, the day begin</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s17.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s17.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">טיול עם טאיה + קורנפלקס</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. טיול הבוקר עם טאיה, קערת קורנפלקס גדושה — וקדימה לעולם.</div>
+        <div class="chars">raz_teen · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s17.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s17.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Tracking alongside the teen and his speckled dog on a sunny village path — she trots proudly, he grins down at her; quick cut feeling of a huge overflowing cornflakes bowl, then out the gate with momentum. Fresh, bright, forward motion into the day.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s17.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s17_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">טיול עם טאיה + קורנפלקס</div>
+        <div class="excerpt">מערכה 3 — יום בחיים. טיול הבוקר עם טאיה, קערת קורנפלקס גדושה — וקדימה לעולם.</div>
+        <div class="chars">raz_teen · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s17_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s17_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Tracking alongside the teen and his speckled dog on a sunny village path — she trots proudly, he grins down at her; quick cut feeling of a huge overflowing cornflakes bowl, then out the gate with momentum. Fresh, bright, forward motion into the day.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t17-18 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t17-18_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t17-18_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t17-18_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: טיול עם טאיה + קורנפלקס → סצנה 18</div>
+        <div class="excerpt">רז זורק כדור לטאיה, והיא עפה באוויר לתפוס אותו בשדה פתוח</div>
+        <div class="chars">raz_teen · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t17-18_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t17-18.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: רז זורק כדור לטאיה, והיא עפה באוויר לתפוס אותו בשדה פתוח</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s18.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s18.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">סקייטבורד — חורש את הרחובות</div>
+        <div class="excerpt">מערכה 3 — תנועה. רז על הסקייטבורד, חורש את הרחובות.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s18.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ kling_20260725_VIDEO_Low_fast_t_580_0.mp4<br><span class="dim">1176x784 · 9.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Low fast tracking beside a skateboarder carving through sunny streets — quick weight shifts, wheels humming, a confident kick-push accelerating past the camera with a grin. Free, fast, alive. Energy without stopping.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s19.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s19.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">קראטה — המשמעת העצמית המפורסמת</div>
+        <div class="excerpt">מערכה 3 — תנועה. אימוני הקראטה שבהם רז מביא לידי ביטוי את המשמעת העצמית שלו.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s19.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s19.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Low-angle push-in as the teen snaps a sharp clean karate strike then settles into a steady stance, gi cracking with the motion, eyes locked in calm focus. Bright dojo light, floating dust motes. Discipline as an art form.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s19.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s19_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">קראטה — המשמעת העצמית המפורסמת</div>
+        <div class="excerpt">מערכה 3 — תנועה. אימוני הקראטה שבהם רז מביא לידי ביטוי את המשמעת העצמית שלו.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s19_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s19_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Low-angle push-in as the teen snaps a sharp clean karate strike then settles into a steady stance, gi cracking with the motion, eyes locked in calm focus. Bright dojo light, floating dust motes. Discipline as an art form.</div><div class="vnote">📝 רז ביקש: בעת יצירת הוידאו, לוודא שנכנס חבר אימון נוסף לסצנה ומבצע תרגיל קראטה יחד עם רז.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s20.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s20.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">ריצות עם אבא</div>
+        <div class="excerpt">מערכה 3 — תנועה. ריצה עם אבא — כל פעם בדרך אחרת, תמיד עם אותה נחישות.</div>
+        <div class="chars">raz_teen · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s20.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s20.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Side tracking with father and son running in matched rhythm on a golden country road — a playful glance, a slight race-surge, both grinning. Effort and joy in the same breath. Golden hour light, open fields, forward momentum.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t20-21 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t20-21_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t20-21_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t20-21_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: ריצות עם אבא → סצנה 21</div>
+        <div class="excerpt">קצב הריצה נדחף לתוך תקריב נחוש</div>
+        <div class="chars">raz_teen · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t20-21_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t20-21.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: קצב הריצה נדחף לתוך תקריב נחוש</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s21.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s21.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">לא מוותר — לימודים, ספורט, שחמט</div>
+        <div class="excerpt">מערכה 3 — נחישות. מצטיין בלימודים, בספורט ובשחמט — תמיד מחפש להשתפר.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s21.png<br><span class="dim">1764x1176</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s21-22.mp4<br><span class="dim">1764x1176 · 7.5s</span></div><div class="note">חולק את s21-22.mp4 (15.0s) עם סצנה 22</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow push-in on the teen at his desk — a glance at the open notebook, then eyes narrowing at the chessboard; he lifts a knight, holds it thinking, places it with quiet confidence. One more step, one more challenge. Focused, calm, determined.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s21.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s21_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">לא מוותר — לימודים, ספורט, שחמט</div>
+        <div class="excerpt">מערכה 3 — נחישות. מצטיין בלימודים, בספורט ובשחמט — תמיד מחפש להשתפר.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s21_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s21_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow push-in on the teen at his desk — a glance at the open notebook, then eyes narrowing at the chessboard; he lifts a knight, holds it thinking, places it with quiet confidence. One more step, one more challenge. Focused, calm, determined.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row first_tail" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s22.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s22_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s22_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s22_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">חלום — ספורטאי מקצועי (כדורגל / כדורסל)</div>
+        <div class="excerpt">מערכה 4 — חלומות. החלום הגדול: ספורטאי מקצועי בכדורגל או בכדורסל.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s22_A.png<br><span class="dim">1764x1176</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s21-22.mp4<br><span class="dim">1764x1176 · 7.5s</span></div><div class="note">חולק את s21-22.mp4 עם סצנה 21</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Dream-lit stadium: the teen strikes a soccer ball in slow motion, the shot morphs into him rising for a basketball layup, stadium lights blooming, crowd a soft glowing blur. Epic but hopeful — a dream taking shape. Uplifting cinematic energy.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s22.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s22_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלום — ספורטאי מקצועי (כדורגל / כדורסל)</div>
+        <div class="excerpt">מערכה 4 — חלומות. החלום הגדול: ספורטאי מקצועי בכדורגל או בכדורסל.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s22_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s22_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Dream-lit stadium: the teen strikes a soccer ball in slow motion, the shot morphs into him rising for a basketball layup, stadium lights blooming, crowd a soft glowing blur. Epic but hopeful — a dream taking shape. Uplifting cinematic energy.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s23.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s23.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלום — גיטרה</div>
+        <div class="excerpt">מערכה 4 — חלומות. ללמוד גיטרה.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s23.png<br><span class="dim">1176x784</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s23.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow orbit around the teen strumming an acoustic guitar, glowing notes drifting off the strings and floating around the room like fireflies. He closes his eyes and smiles. Dreamy, warm, full of possibility.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s23.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s23_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלום — גיטרה</div>
+        <div class="excerpt">מערכה 4 — חלומות. ללמוד גיטרה.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s23_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s23_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow orbit around the teen strumming an acoustic guitar, glowing notes drifting off the strings and floating around the room like fireflies. He closes his eyes and smiles. Dreamy, warm, full of possibility.</div><div class="vnote">📝 רז ביקש: התמונה הזו יצאה טוב יותר מ-s23.1 — להשתמש בה ליצירת קליפ ארוך.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row first_tail" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s24.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s24_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s24_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s24_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">חלום — צלילה וגלישה</div>
+        <div class="excerpt">מערכה 4 — חלומות. לצלוח קורס צלילה וגלישה.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s24_A.png<br><span class="dim">1764x1176</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s24.mp4<br><span class="dim">1764x1176 · 14.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Dynamic tracking along a bright turquoise wave as the teen carves across its glassy face, spray catching sunlight like glitter; a quick dreamy dip beneath the surface into blue silence with fish, then back up into the sun. Thrilling, clean, joyful.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s25.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s25_1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלומות — ברבר, ניו זילנד, טלפורטציה — ברבר</div>
+        <div class="excerpt">ללמוד לספר חברים.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s25_1.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s25_1.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">The teen snips a friend's hair with a confident barber flourish, spins the clippers, winks at camera. Playful, comic, self-assured.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s25.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s25_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלומות — ברבר, ניו זילנד, טלפורטציה — ניו זילנד</div>
+        <div class="excerpt">ואולי יום אחד, גם להגיע לניו זילנד הרחוקה.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s25_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s25_2.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Sweeping reveal across New Zealand's green fjords and mountains, sunlit mist drifting through the valley like scattered stardust, the teen turns to camera with an adventurous grin, wind moving his hair. Epic, hopeful, wide open world — a shot that pulls both kids and adults into the dream.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s25.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s25_3.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">חלומות — ברבר, ניו זילנד, טלפורטציה — טלפורטציה</div>
+        <div class="excerpt">ואם הוא היה יכול לקבל כוח-על? הוא היה מבקש טלפורטציה, כדי להיות בכל מקום בבת אחת.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s25_3.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s25_3.mp4<br><span class="dim">1176x784 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">A glowing portal tears open in a burst of swirling stardust; the teen steps through, grinning back at the camera, glittering light particles trailing behind him as the portal swallows him in a flash. Fun, magical, limitless — the film's clearest "wow" beat, built to catch both a kid's imagination and an adult's nostalgia.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t25-26 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t25-26_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t25-26_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t25-26_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: חלומות — ברבר, ניו זילנד, טלפורטציה → סצנה 26</div>
+        <div class="excerpt">ניצוצות הפורטל מתפזרים כמו אבק כוכבים ונוחתים בעדינות על דפי הספר הפתוח בפינת הקריאה</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t25-26_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t25-26.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: ניצוצות הפורטל מתפזרים כמו אבק כוכבים ונוחתים בעדינות על דפי הספר הפתוח בפינת הקריאה</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s26.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s26a.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן</div>
+        <div class="excerpt">מערכה 4 — הרגעים השקטים. סצנה ארוכה עם 4 תמונות מתחלפות: ספר טוב · מארון 5 וקולדפליי · צחוקים עם חברים · פלייסטיישן ספיידרמן.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s26a.png<br><span class="dim">1024x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s26.mp4<br><span class="dim">1280x720 · 6.0s</span></div>
+        <span class="chip" style="background:var(--draft)">Tier B · לא-תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow cross-dissolve montage of four quiet moments: lost in a book with dreamy wisps rising from the pages; headphones on, eyes closed, floating in music; laughing freely with friends in golden afternoon light; leaning into a PlayStation game as a web-swinging superhero glows on the TV. Calm, curious, imaginative — the quiet side of the same fire.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s26.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s26_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן</div>
+        <div class="excerpt">מערכה 4 — הרגעים השקטים. סצנה ארוכה עם 4 תמונות מתחלפות: ספר טוב · מארון 5 וקולדפליי · צחוקים עם חברים · פלייסטיישן ספיידרמן.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s26_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s26_2.mp4<br><span class="dim">1764x1176 · 5.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">[Additional coverage] Slow cross-dissolve montage of four quiet moments: lost in a book with dreamy wisps rising from the pages; headphones on, eyes closed, floating in music; laughing freely with friends in golden afternoon light; leaning into a PlayStation game with focused excitement.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="missing" data-type="i2v">
+      <td class="chk"><input type="checkbox" class="vidchk" data-sid="s26.3" onchange="onChk()"></td>
+      <td class="sid">s26.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s26_3.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן</div>
+        <div class="excerpt">מערכה 4 — הרגעים השקטים. סצנה ארוכה עם 4 תמונות מתחלפות: ספר טוב · מארון 5 וקולדפליי · צחוקים עם חברים · פלייסטיישן ספיידרמן.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s26_3.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge missing">⬜ לייצר</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v<div class="note">kling-video-v2_5 · 🔇 no audio (וידאו ממתין)</div></td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow cross-dissolve montage of four quiet moments: lost in a book with dreamy wisps rising from the pages; headphones on, eyes closed, floating in music; laughing freely with friends in golden afternoon light; leaning into a PlayStation game as a web</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="missing" data-type="i2v">
+      <td class="chk"><input type="checkbox" class="vidchk" data-sid="s26.4" onchange="onChk()"></td>
+      <td class="sid">s26.4</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s26_4.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן</div>
+        <div class="excerpt">מערכה 4 — הרגעים השקטים. סצנה ארוכה עם 4 תמונות מתחלפות: ספר טוב · מארון 5 וקולדפליי · צחוקים עם חברים · פלייסטיישן ספיידרמן.</div>
+        <div class="chars">raz_teen</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s26_4.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge missing">⬜ לייצר</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v<div class="note">kling-video-v2_5 · 🔇 no audio (וידאו ממתין)</div></td>
+      <td class="vprompt-cell"><div class="vprompt">[NEW SHOT] Slow cross-dissolve montage of four quiet moments: lost in a book with dreamy wisps rising from the pages; headphones on, eyes closed, floating in music; laughing freely with friends in golden afternoon light; leaning into a PlayStation game as a web</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row first_tail boundary" data-status="existing" data-type="first_tail">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">t26-27 🔗</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t26-27_A.png" loading="lazy"><div class="pair"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t26-27_A.png" title="frame A"><span class="arrow">→</span><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/t26-27_B.png" title="frame B"></div></td>
+      <td class="narr">
+        <div class="scene-title">מעבר: רגעים שקטים — ספר, מוזיקה, חברים, פלייסטיישן → סצנה 27</div>
+        <div class="excerpt">זוהר מסך הפלייסטיישן מתרך ומתמוסס לענני אבק אור חמים שמתמזגים לתמונת המשפחה — כמו כוכבים חוזרים הביתה</div>
+        <div class="chars">raz_teen · mom_adi · dad_amos</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ t26-27_A.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ t26-27.mp4<br><span class="dim">1764x1176 · 5.1s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">🎞️ first/tail</td>
+      <td class="vprompt-cell"><div class="vprompt">Kling first/tail interpolation: זוהר מסך הפלייסטיישן מתרך ומתמוסס לענני אבק אור חמים שמתמזגים לתמונת המשפחה — כמו כוכבים חוזרים הביתה</div></td>
+      <td class="ref">—</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s27.1</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s27_1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">סיום — רז שלנו, היום אתה חוגג בר מצווה</div>
+        <div class="excerpt">מערכה 5 — סיום. פנייה ישירה לרז: הנער הגבוה שעדיין רואים בו את הילד עם המכונית. המשפט מהווצאפ. מנוחה היא לא ויתור. חתימת המשפחה.</div>
+        <div class="chars">raz_teen · mom_adi · dad_amos · yair · tomer · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s27_1.png<br><span class="dim">1024x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s27.mp4<br><span class="dim">1764x1176 · 15.0s</span></div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">Slow pull-back and gentle crane: the family gathers around the tall proud teen at golden hour, arms around each other, the dog at his feet; a soft glowing memory of a sleeping toddler with a toy car fades in the warm sky behind them. The camera rises as they laugh together. Emotional, proud, full of love — the next chapter begins.</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="missing" data-type="i2v">
+      <td class="chk"><input type="checkbox" class="vidchk" data-sid="s27.2" onchange="onChk()"></td>
+      <td class="sid">s27.2</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-07-26-v3/scenes/s27_2.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">סיום — רז שלנו, היום אתה חוגג בר מצווה — זיכרון הפעוט</div>
+        <div class="excerpt">ואנחנו עדיין רואים בך, גם את הילד הקטן שלנו, שנרדם עם מכונית ביד.</div>
+        <div class="chars">raz_teen · mom_adi · dad_amos · yair · tomer · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s27_2.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge missing">⬜ לייצר</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        <span class="chip" style="background:#5aa9e6">👓 עם משקפיים</span>
+      </td>
+      <td class="type">▶️ i2v<div class="note">kling-video-v3_0_turbo · 🔇 no audio (וידאו ממתין)</div></td>
+      <td class="vprompt-cell"><div class="vprompt">The family group softens at the edges as a warm glowing memory rises behind them — the sleeping toddler with his toy car — fine golden stardust drifting through the light, bridging past and present in one breath. Tender, cinematic, the emotional hinge of the film.</div></td>
+      <td class="ref">2026-teen-book-raz-22.jpg</td>
+    </tr>
+    <tr class="row i2v" data-status="existing" data-type="i2v">
+      <td class="chk"><span class="dim" title="קליפ כבר קיים">✅</span></td>
+      <td class="sid">s27.3</td>
+      <td class="thumb"><img src="file:///Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz%20Bar%20Mitzva/2026-06-27-bar-mitzva/scenes_v2/s27_sw1.png" loading="lazy"></td>
+      <td class="narr">
+        <div class="scene-title">סיום — רז שלנו, היום אתה חוגג בר מצווה — חתימת המשפחה</div>
+        <div class="excerpt">אוהבים אותך המון — אמא, אבא, יאיר ותומר.</div>
+        <div class="chars">raz_teen · mom_adi · dad_amos · yair · tomer · taya</div>
+      </td>
+      <td class="status">
+        <div class="lbl">IMAGE</div><div class="badge ok">✅ s27_sw1.png<br><span class="dim">1536x1024</span></div>
+        <div class="lbl">CLIP</div><div class="badge ok">✅ s27.mp4<br><span class="dim">1764x1176 · 15.0s</span></div><div class="note">חולק את s27.mp4 עם s27.1 — לא נדרש רינדור וידאו נוסף</div>
+        <span class="chip" style="background:var(--ok)">Tier A · תקני</span>
+        
+      </td>
+      <td class="type">▶️ i2v</td>
+      <td class="vprompt-cell"><div class="vprompt">מכוסה ע"י s27.mp4 הקיים (משותף עם s27.1) — אין צורך בקליפ נפרד</div></td>
+      <td class="ref">2026-teen-book-raz-10.jpg</td>
+    </tr>
+</tbody>
+</table>
+<script>
+function filt(mode, btn){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('tbody tr').forEach(r=>{
+    if(mode==='all'){ r.style.display=''; return; }
+    if(mode==='missing'){ r.style.display = r.dataset.status==='missing' ? '' : 'none'; return; }
+    if(mode==='existing'){ r.style.display = r.dataset.status==='existing' ? '' : 'none'; return; }
+    if(mode.startsWith('type:')){ const t=mode.split(':')[1]; r.style.display = r.dataset.type===t ? '' : 'none'; return; }
+  });
+}
+function onChk(){
+  const n = document.querySelectorAll('.vidchk:checked').length;
+  document.getElementById('selCount').textContent = n;
+  document.getElementById('btnApprove').disabled = n === 0;
+  document.getElementById('approveOut').style.display = 'none';
+}
+function toggleAll(cb){
+  document.querySelectorAll('.vidchk').forEach(c => { if(c.closest('tr').style.display !== 'none') c.checked = cb.checked; });
+  onChk();
+}
+function clearAll(){
+  document.querySelectorAll('.vidchk').forEach(c => c.checked = false);
+  document.getElementById('selAll').checked = false;
+  onChk();
+}
+function buildApproval(){
+  const ids = Array.from(document.querySelectorAll('.vidchk:checked')).map(c => c.dataset.sid);
+  const text = 'אישור ליצירת וידאו (Kling) לסצנות הבאות, במקביל: ' + ids.join(', ');
+  document.getElementById('approveText').value = text;
+  document.getElementById('approveOut').style.display = 'block';
+  document.getElementById('copiedMsg').style.display = 'none';
+}
+function copyApproval(){
+  const ta = document.getElementById('approveText');
+  ta.select();
+  navigator.clipboard && navigator.clipboard.writeText(ta.value).catch(()=>{});
+  document.getElementById('copiedMsg').style.display = 'inline';
+}
+</script>
+</body>
+</html>

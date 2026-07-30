@@ -1,0 +1,188 @@
+[
+  {
+    "job_id": "s00.5",
+    "shot_id": "s00.5",
+    "prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Wide aerial drone shot over the town of Ofra in bright summer daylight — dry golden hills, white flat-roofed houses, green trees, clear blue sky (deliberate contrast with the winter snow of the film's opening scene) — a small distant figure of Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes visible far below, running through open sunlit fields at the edge of town, caught mid-stride. Keep the exact town layout and geography from the reference image; the running figure is small and distant. Teen Raz wears his round black-framed glasses in this shot (updated direction: every newly generated or regenerated shot featuring teen Raz shows him with glasses).",
+    "references": [
+      "yuval/reference/Raz/ofra.webp",
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/s00_5.png"
+  },
+  {
+    "job_id": "t01-02.A",
+    "shot_id": "t01-02",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Extreme close-up on a single snowflake in Ofra melting on a windowsill, catching the light like a grain of drifting stardust, soft winter morning light, no people.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t01-02_A.png"
+  },
+  {
+    "job_id": "t01-02.B",
+    "shot_id": "t01-02",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Warm golden sunlight pours into a bright sunny garden, the last melting snowflake dissolving into the light, no people — establishes the cut to the grandparents' garden.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t01-02_B.png"
+  },
+  {
+    "job_id": "t02-03.A",
+    "shot_id": "t02-03",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Ruti, colorful headscarf (mitpachat) and glasses, gentle smile; David, white sun hat, glasses, white polo shirt, standing together in a bright sunny garden, waving warmly as if the camera is about to pan away from them. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/grandparents-amos-raz4-131.jpg",
+      "yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t02-03_A.png"
+  },
+  {
+    "job_id": "t02-03.B",
+    "shot_id": "t02-03",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Rafi, short greying hair, light blue striped shirt; Michal, curly reddish-brown shoulder-length hair, warm bright smile, standing together in their own bright sunny garden, smiling warmly as the camera arrives on them. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/grandparents-amos-raz4-131.jpg",
+      "yuval/reference/Raz/_proxy/grandparents-adi-kisim-228.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t02-03_B.png"
+  },
+  {
+    "job_id": "t04-05.A",
+    "shot_id": "t04-05",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Wedding petals drifting through bright golden-hour light, catching the light like scattered stardust, no people, close-up macro shot.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t04-05_A.png"
+  },
+  {
+    "job_id": "t04-05.B",
+    "shot_id": "t04-05",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); The drifting petals dissolve into the soft folds of a baby blanket, warm nursery light, no people — establishes the cut to the newborn scene.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t04-05_B.png"
+  },
+  {
+    "job_id": "t05-06.A",
+    "shot_id": "t05-06",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); A newborn baby's small open hand reaching out in soft warm nursery light, close-up, plain blanket with no pattern or text, no other people visible.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t05-06_A.png"
+  },
+  {
+    "job_id": "t05-06.B",
+    "shot_id": "t05-06",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); The baby's small fist closing gently around a single blue toy car, close-up, same plain blanket, warm light — establishes the cut to the toddler-with-cars scene.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t05-06_B.png"
+  },
+  {
+    "job_id": "s07.2",
+    "shot_id": "s07.2",
+    "prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Toddler Raz, soft dark brown curly hair, big dark brown eyes, round chubby cheeks, alone, playfully climbing up a stack of plain unmarked cardboard moving boxes inside the new village home's living room, determined delighted expression, warm afternoon light through a window, no other people in frame. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/2016-toddler-zoomz.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/s07_2.png"
+  },
+  {
+    "job_id": "t12-13.A",
+    "shot_id": "t12-13",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Taya — an Australian Cattle Dog / blue heeler DOG (not a person), grey-and-white speckled mottled coat, black pointed ears, tan facial markings, four legs, a dog's body, bounding and leaping energetically across a bright living room floor, tail a blur of motion, joyful puppy energy. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/taya-11-24.jpg",
+      "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t12-13_A.png"
+  },
+  {
+    "job_id": "t12-13.B",
+    "shot_id": "t12-13",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Child Raz around 9, slim, short straight dark brown hair, warm deep brown eyes, sitting calmly and quietly at a desk in front of a laptop for a video call, Taya — an Australian Cattle Dog / blue heeler DOG (not a person), grey-and-white speckled mottled coat, black pointed ears, tan facial markings, four legs, a dog's body now lying settled and quiet at his feet. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/taya-11-24.jpg",
+      "yuval/reference/Raz/_proxy/2023-child-shkediot-33.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t12-13_B.png"
+  },
+  {
+    "job_id": "s14.2",
+    "shot_id": "s14.2",
+    "prompt": "clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Close-up food-styling shot: a wooden table absolutely full of an abundant spread of fresh homemade cakes and cookies — layered cakes, cookies, pastries — steam and warm afternoon light catching the icing and crumbs, no people in frame, inviting and delicious.",
+    "references": [],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/s14_2.png"
+  },
+  {
+    "job_id": "t17-18.A",
+    "shot_id": "t17-18",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes, standing in an open sunlit field, winding up to throw a bright tennis ball, Taya — an Australian Cattle Dog / blue heeler DOG (not a person), grey-and-white speckled mottled coat, black pointed ears, tan facial markings, four legs, a dog's body crouched and alert beside him ready to run. Keep the exact face, hair and appearance from the reference image. Taya is a dog on four legs, not a person.",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/taya-11-24.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t17-18_A.png"
+  },
+  {
+    "job_id": "t17-18.B",
+    "shot_id": "t17-18",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Taya — an Australian Cattle Dog / blue heeler DOG (not a person), grey-and-white speckled mottled coat, black pointed ears, tan facial markings, four legs, a dog's body leaping joyfully through the air mid-flight over the open field to catch the ball, ears flying, pure motion and energy; Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes watching and laughing in the background. Keep the exact face, hair and appearance from the reference image. Taya is a dog on four legs, not a person. [הנחיה מעודכנת: בכל שוט חדש/מחודש עם רז הנער — הוא עונד את המשקפיים העגולות שלו.]",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/taya-11-24.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t17-18_B.png"
+  },
+  {
+    "job_id": "t20-21.A",
+    "shot_id": "t20-21",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes and dad Amos, athletic build, short dark hair, big white smile, tanned skin, running side by side on a bright golden-hour country road, open green fields on both sides, matching strides. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t20-21_A.png"
+  },
+  {
+    "job_id": "t20-21.B",
+    "shot_id": "t20-21",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Close-up on Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes's determined face mid-run, same golden-hour country road and green fields softly blurred behind him, focused resolute expression, wind in his hair. Keep the exact face, hair and appearance from the reference image. [הנחיה מעודכנת: בכל שוט חדש/מחודש עם רז הנער — הוא עונד את המשקפיים העגולות שלו.]",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t20-21_B.png"
+  },
+  {
+    "job_id": "t25-26.A",
+    "shot_id": "t25-26",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes stepping through a glowing teleportation portal made of swirling stardust and light particles, trails of glitter curling around him. Keep the exact face, hair and appearance from the reference image.",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t25-26_A.png"
+  },
+  {
+    "job_id": "t25-26.B",
+    "shot_id": "t25-26",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); A book lies open on a cozy reading-nook cushion, the last sparkles of stardust from the portal drifting down and settling gently onto its pages, warm soft light, no people. [הנחיה מעודכנת: בכל שוט חדש/מחודש עם רז הנער — הוא עונד את המשקפיים העגולות שלו.]",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t25-26_B.png"
+  },
+  {
+    "job_id": "t26-27.A",
+    "shot_id": "t26-27",
+    "prompt": "[BOUNDARY TRANSITION — first frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); Close-up on a glowing TV/PlayStation screen in a dim cozy room, soft blue-white light and gentle light particles drifting off the screen, no people visible.",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t26-27_A.png"
+  },
+  {
+    "job_id": "t26-27.B",
+    "shot_id": "t26-27",
+    "prompt": "[last frame] clean modern comic-book / graphic-novel illustration style, crisp precise linework, smooth cel shading, natural realistic proportions, warm tanned natural skin tones, detailed modern casual clothing, bright even lighting, vibrant true-to-life colors, high detail — NOT painterly, NO visible brushwork, NOT photorealistic — absolutely no readable text, writing, letters, numbers, logos, or gibberish signage anywhere in the image (clothing, floors, rugs, walls, packaging must be plain/blank); The screen's glow softens into warm golden dust motes that drift and settle over Teen Raz, 13, tall lean-athletic build, short dark hair buzzed on the sides, warm deep brown eyes gathered warmly with mom Adi, dark wavy hair, warm big smile, dark eyes and dad Amos, athletic build, short dark hair, big white smile, tanned skin at golden-hour, like starlight coming home. Keep the exact face, hair and appearance from the reference image. [הנחיה מעודכנת: בכל שוט חדש/מחודש עם רז הנער — הוא עונד את המשקפיים העגולות שלו.]",
+    "references": [
+      "yuval/reference/Raz/_proxy/2026-teen-book-raz-22.jpg",
+      "yuval/reference/Raz/_proxy/2026-parents-kisim-109.jpg"
+    ],
+    "output": "/Users/lirazgolan/claude_projects/TheFiveAgents/bambi/outputs/Raz Bar Mitzva/2026-07-26-v3/scenes/t26-27_B.png"
+  }
+]
