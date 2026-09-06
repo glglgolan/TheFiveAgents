@@ -392,13 +392,17 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
             print(f"  ligatures: {[b[2] for b in built]}")
 
     set_name(font, family, style, f"{family} {style}", f"{family}-{style}")
+    # Keep head.macStyle and OS/2.fsSelection consistent (macOS/OTS check this).
+    # These are standalone named styles (Regular/Bold), not an italic pair — the
+    # slant is baked into the outlines, so we do NOT flag the font italic.
+    is_bold = int(w) >= 600 or style.lower() in ("bold", "black", "heavy")
     if "OS/2" in font:
         font["OS/2"].usWeightClass = int(w)
+        fs = font["OS/2"].fsSelection & ~(0x01 | 0x20 | 0x40)   # clear italic/bold/regular
+        fs |= 0x20 if is_bold else 0x40                          # BOLD or REGULAR
+        font["OS/2"].fsSelection = fs
     if "head" in font:
-        mac = 0
-        if w >= 600: mac |= 0x01
-        if slant > 0.5: mac |= 0x02
-        font["head"].macStyle = mac
+        font["head"].macStyle = 0x01 if is_bold else 0x00
 
     fix_maxp_for_glyf(font)        # ensure a valid, installable TTF
 
@@ -408,14 +412,19 @@ def build(base, weight, round_iters, slant, width, contrast, liga,
 
 
 def fix_maxp_for_glyf(font):
-    """A glyf-based TTF needs maxp v1.0 with all fields populated. Bases that
-    were converted from CFF keep maxp v0.5, which macOS rejects ('contains no
-    fonts which can be installed'). Upgrade + populate here.
+    """Make a glyf-based font a valid, installable TrueType.
+
+    Two things macOS is strict about (and rejects with 'contains no fonts
+    which can be installed') when a base was converted from CFF/OTF:
+      1. sfntVersion must be the TrueType tag (0x00010000), not 'OTTO' (CFF).
+      2. maxp must be v1.0 with all fields populated (not the CFF v0.5).
 
     All our glyphs are decomposed (simple, no components), so composite maxima
     are 0 and we can compute point/contour maxima directly from coordinates."""
     if "glyf" not in font or "maxp" not in font:
         return
+    # 1. TrueType flavor (a glyf font must NOT be flagged as OTTO/CFF)
+    font.sfntVersion = "\x00\x01\x00\x00"
     glyf = font["glyf"]
     maxPoints = maxContours = 0
     for name in glyf.keys():

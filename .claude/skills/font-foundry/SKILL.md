@@ -68,8 +68,53 @@ After building, load it back to confirm Hebrew is present:
 python3 -c "from fontTools.ttLib import TTFont; cm=TTFont('OUT.ttf').getBestCmap(); print('alef',0x05D0 in cm,'tav',0x05EA in cm)"
 ```
 
+## Mode B — image-to-font (the user draws the letters)
+
+Instead of restyling a base font, build a font from the user's **own drawn
+letters** on a template sheet. The letterforms are 100% the user's; we only
+trace and assemble them.
+
+### 1. Give the user the template
+`template/font-template.png` (screen / A4 print) or `template/font-template.pdf`
+— a 7×7 grid, one labelled cell per glyph (27 Hebrew + finals, 0–9, punctuation),
+with baseline + cap/x-height/descender guides and 4 corner fiducials.
+
+Rules the user follows:
+- Draw each glyph **in dark ink / black**, sitting on the solid blue **baseline**.
+- Guides and labels are light (blue / gray) — they're ignored automatically.
+- Keep the 4 black corner squares visible (they let a phone photo be
+  auto-straightened).
+- Regenerate the sheet any time with
+  `bash scripts/make-template.sh --out template/font-template.png --spec template/template_spec.json`.
+
+### 2. Build from the returned sheet
+```bash
+bash .claude/skills/font-foundry/scripts/build-from-template.sh \
+  --image <filled_sheet.png|jpg> \
+  --spec  .claude/skills/font-foundry/template/template_spec.json \
+  --name  "MyHand" \
+  --out-dir fonts/outputs/<date>-<slug>
+```
+Produces `<name>-Regular.ttf` (traced as drawn) and `<name>-Bold.ttf`
+(traced + emboldening). Empty cells are skipped; `space` gets a fixed advance.
+Tracing = OpenCV `findContours` (RETR_CCOMP keeps letter counters) → simplify →
+Chaikin smooth → mapped to the em square on the cell's baseline.
+
+Report back: how many cells were traced (e.g. `47/49`) and which were blank,
+so the user can fill the gaps and re-send.
+
+## Installable TTF (both modes)
+
+`fix_maxp_for_glyf()` guarantees every output is a valid, installable TrueType:
+it forces the **TrueType `sfntVersion` flavor** (`0x00010000`, not CFF `OTTO`)
+and a **maxp v1.0** table, and keeps `head.macStyle`/`OS-2.fsSelection`
+consistent. This is what macOS Font Book checks — skipping it yields the
+"contains no fonts which can be installed" error (hit originally with the
+CFF-derived dana-yad base).
+
 ## License
 
 Heebo, Rubik and Assistant are all SIL OFL — derivative fonts are permitted.
 Keep the output under a new family name (don't reuse the base name verbatim
-as the public name) per OFL reserved-name rules.
+as the public name) per OFL reserved-name rules. In image-to-font mode the
+letterforms are the user's own, so no base-font licence applies.
