@@ -1,6 +1,6 @@
 ---
 file_path: .env.example
-last_updated: 2026-05-13
+last_updated: 2026-09-18
 owner: project
 ---
 
@@ -14,7 +14,9 @@ owner: project
 | משתנה | תיאור | חובה |
 |--------|--------|------|
 | `ANTHROPIC_API_KEY` | מפתח ה-API של Anthropic | כן |
+| `OPENAI_API_KEY` | מפתח OpenAI ל-[[gpt-image-gen]] | לא |
 | `OPENROUTER_API_KEY` | מפתח OpenRouter לגישה למודלים נוספים | לא |
+| `GEMINI_API_KEY` | מפתח Gemini API ל-[[lyria-music-gen]] (חינמי דרך Google AI Studio) | לא |
 | `CLAUDE_MODEL` | מזהה מודל Claude לשימוש (ברירת מחדל: `claude-sonnet-4-6`) | לא |
 | `MAX_TOKENS` | מגבלת טוקנים לבקשה (ברירת מחדל: 8096) | לא |
 
