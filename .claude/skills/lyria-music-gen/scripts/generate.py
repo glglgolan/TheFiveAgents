@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Generate instrumental music/SFX beds via Google Lyria RealTime (Gemini API).
+"""Generate instrumental music/SFX beds via Google Lyria RealTime (Gemini API),
+falling back to local Meta MusicGen (transformers) when Lyria is unavailable.
 
 Usage:
   python3 generate.py "<prompt>" <duration-seconds> "<output-path>.wav" [options]
@@ -12,11 +13,18 @@ Options:
   --brightness <0.0-1.0>  Tonal brightness
   --guidance <0.0-6.0>    How strictly the model follows the prompts (default 4.0)
   --seed <int>            Deterministic seed, when supported
+  --engine auto|lyria|local
+                          auto (default): Lyria if GEMINI_API_KEY is set and the
+                          call succeeds, else local MusicGen. lyria/local force one.
+  --local-model <hf-id>   MusicGen checkpoint for the fallback
+                          (default facebook/musicgen-small)
 
 Reads GEMINI_API_KEY from the project .env file.
 
 Model: models/lyria-realtime-exp — instrumental only, no vocals/lyrics.
-Output: 48kHz, 16-bit PCM, stereo WAV.
+Fallback: MusicGen — CC-BY-NC 4.0 weights, NON-COMMERCIAL outputs only; writes
+<stem>.NONCOMMERCIAL.txt next to the WAV.
+Output: 48kHz, 16-bit PCM, stereo WAV (both engines).
 """
 import argparse
 import asyncio
@@ -54,7 +62,8 @@ def ensure_sdk():
     except ImportError:
         print("Installing google-genai SDK...", file=sys.stderr)
         subprocess.run(
-            [sys.executable, "-m", "pip", "install", "-q", "google-genai"],
+            # wheels only: avoids source builds (e.g. cryptography via Rust) on older Macs
+            [sys.executable, "-m", "pip", "install", "-q", "--only-binary=:all:", "google-genai"],
             check=True,
         )
         return importlib.import_module("google.genai")
@@ -72,6 +81,8 @@ def parse_args():
     p.add_argument("--brightness", type=float, default=None)
     p.add_argument("--guidance", type=float, default=4.0)
     p.add_argument("--seed", type=int, default=None)
+    p.add_argument("--engine", choices=("auto", "lyria", "local"), default="auto")
+    p.add_argument("--local-model", default=None)
     return p.parse_args()
 
 
@@ -127,29 +138,61 @@ def write_wav(pcm: bytes, output: Path) -> None:
         wf.writeframes(pcm)
 
 
-def main() -> int:
-    args = parse_args()
-    load_env()
-
+def try_lyria(args, output: Path) -> bool:
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
-        print("ERROR: GEMINI_API_KEY not set in .env", file=sys.stderr)
-        return 1
-
-    genai = ensure_sdk()
-    genai_types = importlib.import_module("google.genai.types")
-    client = genai.Client(api_key=api_key)
-
-    output = Path(args.output)
+        print("GEMINI_API_KEY not set in .env", file=sys.stderr)
+        return False
     try:
+        genai = ensure_sdk()
+        genai_types = importlib.import_module("google.genai.types")
+        client = genai.Client(api_key=api_key)
         pcm = asyncio.run(record(genai_types, client, args))
     except Exception as exc:  # noqa: BLE001 - surface any SDK/connection failure to the caller
         print(f"ERROR: Lyria generation failed: {exc}", file=sys.stderr)
-        return 1
-
+        return False
+    if not pcm:
+        print("ERROR: Lyria returned no audio", file=sys.stderr)
+        return False
     write_wav(pcm, output)
     print(f"OK via Lyria RealTime ({MODEL}) -> {output}")
-    return 0
+    return True
+
+
+def run_local(args, output: Path) -> bool:
+    import local_musicgen
+
+    try:
+        pcm, model_id = local_musicgen.generate(args)
+    except Exception as exc:  # noqa: BLE001
+        print(f"ERROR: local MusicGen generation failed: {exc}", file=sys.stderr)
+        return False
+    write_wav(pcm, output)
+    output.with_name(output.stem + ".NONCOMMERCIAL.txt").write_text(
+        f"engine: MusicGen (local fallback)\n"
+        f"model: {model_id}\n"
+        f"license: {local_musicgen.LICENSE} — NON-COMMERCIAL USE ONLY.\n"
+        f"Do not use this file in paid/client work. Regenerate via Lyria for commercial use.\n"
+        f"prompt: {args.prompt}\n"
+        f"duration: {args.duration}\n"
+    )
+    print(f"OK via MusicGen (local, {model_id}, {local_musicgen.LICENSE} — NON-COMMERCIAL) -> {output}")
+    return True
+
+
+def main() -> int:
+    args = parse_args()
+    load_env()
+    output = Path(args.output)
+
+    if args.engine in ("auto", "lyria"):
+        if try_lyria(args, output):
+            return 0
+        if args.engine == "lyria":
+            return 1
+        print("Falling back to local MusicGen...", file=sys.stderr)
+
+    return 0 if run_local(args, output) else 1
 
 
 if __name__ == "__main__":
