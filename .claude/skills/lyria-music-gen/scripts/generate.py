@@ -28,7 +28,7 @@ import wave
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parents[2]
+PROJECT_ROOT = SCRIPT_DIR.parents[3]  # scripts -> lyria-music-gen -> skills -> .claude -> repo root
 
 MODEL = "models/lyria-realtime-exp"
 SAMPLE_RATE = 48000
