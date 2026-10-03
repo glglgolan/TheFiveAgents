@@ -17,7 +17,7 @@
 | **יעל** | כותבת התוכן — שכתוב, עריכה, תרגום, סיכום מאמרים |
 | **יובל** | מעצב התמונות — יצירת תמונות עקביות בסגנון מוגדר |
 | **חן** | חוקרת הרשת — חיפוש מקורות, מחקר, איסוף מאמרים עדכניים |
-| **נועה** | מלחינת הפסקול — מוזיקה ו-SFX מתוזמנים לפי תסריט סרט (דקות/שניות), באמצעות Google Lyria |
+| **המלחין** | מלחין הפסקול — מוזיקה ו-SFX מתוזמנים לפי תסריט סרט (דקות/שניות), באמצעות Google Lyria |
 
 ---
 
@@ -25,7 +25,7 @@
 
 ```
 .claude/
-├── agents/    # yael.md, yuval.md, chen.md, noa.md (הגדרות הסוכנים)
+├── agents/    # yael.md, yuval.md, chen.md, composer.md (הגדרות הסוכנים)
 ├── skills/    # gpt-image-gen, lyria-music-gen + סקילס מותאמים
 └── commands/  # פקודות מותאמות
 
@@ -36,13 +36,13 @@ yael/          # workspace של יעל (style-guide, references)
 yuval/         # workspace של יובל
   ├── reference/   # תמונות השראה לסגנון
   └── outputs/     # תמונות מוגמרות (.png + .txt)
-noa/           # workspace של נועה
+composer/      # workspace של המלחין
   ├── reference/   # cues/סגנונות קודמים להשראה
   ├── outputs/     # קבצי מוזיקה/SFX מוגמרים (.wav + .txt)
   └── Memory/
       └── scoring-log.md   # זיכרון מוטיבים/עקביות מוזיקלית בין סצנות
 Content/       # מאמרי גלם (מקור: ידני או מחן — input ליעל)
-Scripts/       # תסריטי סרטים עם ציוני זמן (input לנועה)
+Scripts/       # תסריטי סרטים עם ציוני זמן (input למלחין)
 Output/        # תוצרים סופיים (.md + .html)
 ```
 
@@ -70,13 +70,13 @@ Output/        # תוצרים סופיים (.md + .html)
 **Output:** `Content/<YYYY-MM-DD>-<slug>.md` + entry ב-`chen/Memory/searches.md`
 **Memory:** `chen/Memory/searches.md` — נבדק לפני כל חיפוש (Grep)
 
-### נועה — מלחינת הפסקול
+### המלחין — מלחין הפסקול
 **Triggers (עברית):** מוזיקה לסרט, פסקול, סאונדטרק, מוזיקה לסצנה, אפקט קול, מוזיקת רקע
 **Triggers (English):** score, soundtrack, background music, music for the movie/scene, sound effect, sfx, underscore
 **Input:** תסריט מ-`Scripts/` עם ציוני זמן `[MM:SS–MM:SS] MUSIC/SFX: <תיאור>`
-**Output:** `noa/outputs/<YYYY-MM-DD>-<slug>-scene-<NN>.wav` + sibling `.txt` (prompt + פרמטרים + טווח זמן מקורי)
+**Output:** `composer/outputs/<YYYY-MM-DD>-<slug>-scene-<NN>.wav` + sibling `.txt` (prompt + פרמטרים + טווח זמן מקורי)
 **Skill:** `lyria-music-gen` (Google Lyria RealTime, Gemini API)
-**Memory:** `noa/Memory/scoring-log.md` — נבדק לפני כל תסריט, לשמירה על עקביות מוטיבים בין סצנות
+**Memory:** `composer/Memory/scoring-log.md` — נבדק לפני כל תסריט, לשמירה על עקביות מוטיבים בין סצנות
 
 ---
 
@@ -101,11 +101,11 @@ Output/        # תוצרים סופיים (.md + .html)
 כשמקבלים בקשה ליצור פסקול/מוזיקה/SFX לסרט לפי תסריט:
 
 1. ראובן מוודא שקיים קובץ תסריט ב-`Scripts/` עם ציוני זמן (אם לא — מבקש מהמשתמש להעלות אחד, או מפעיל את **חן** אם נדרש מחקר/רפרנס סגנוני קודם).
-2. ראובן מפעיל את **נועה** עם נתיב התסריט. נועה מפרקת אותו ל-cues, מלחינה כל cue דרך `lyria-music-gen`, ושומרת ב-`noa/outputs/`.
-3. נועה מדווחת לראובן טבלת cues ← קבצים, כולל הערות עקביות מוטיבים.
+2. ראובן מפעיל את **המלחין** עם נתיב התסריט. המלחין מפרק אותו ל-cues, מלחין כל cue דרך `lyria-music-gen`, ושומר ב-`composer/outputs/`.
+3. המלחין מדווח לראובן טבלת cues ← קבצים, כולל הערות עקביות מוטיבים.
 4. ראובן מציג למשתמש את רשימת הקבצים (ואם רלוונטי, מציע לשלב אותם עם תוצרי יובל/יעל בפרויקט הסרט).
 
-**מקרה קצה:** אם התסריט ארוך/מורכב במיוחד, נועה מפצלת cues ל-segments של עד 4 דקות ומדווחת על הפיצול.
+**מקרה קצה:** אם התסריט ארוך/מורכב במיוחד, המלחין מפצל cues ל-segments של עד 4 דקות ומדווח על הפיצול.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 file_path: .claude/skills/lyria-music-gen/SKILL.md
-last_updated: 2026-09-18
-owner: נועה
+last_updated: 2026-10-03
+owner: המלחין
 ---
 
 # lyria-music-gen
@@ -12,7 +12,7 @@ owner: נועה
 
 ## שייך ל
 
-[[נועה-מלחינה]] — הסקיל היחיד שהיא קוראת ליצירת מוזיקה בפועל.
+[[המלחין]] — הסקיל היחיד שהוא קורא ליצירת מוזיקה בפועל.
 
 ## שימוש
 
@@ -22,7 +22,7 @@ bash .claude/skills/lyria-music-gen/scripts/generate.sh "<prompt>" <duration_sec
 
 ## קבצים קשורים
 
-- [[נועה-מלחינה]] — הסוכנת שמפעילה את הסקיל
+- [[המלחין]] — הסוכן שמפעיל את הסקיל
 - [[gpt-image-gen]] — סקיל מקביל (תמונות) באותו דפוס: script + .env + fallback
 
 ## מגבלות ידועות

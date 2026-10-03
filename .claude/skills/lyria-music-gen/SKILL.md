@@ -36,7 +36,7 @@ bash .claude/skills/lyria-music-gen/scripts/generate.sh \
 bash .claude/skills/lyria-music-gen/scripts/generate.sh \
   "tense minimal strings, low drone, suspenseful, slow build, cinematic underscore" \
   27 \
-  "noa/outputs/2026-09-18-scene-03-tension.wav" \
+  "composer/outputs/2026-09-18-scene-03-tension.wav" \
   --negative "vocals, lyrics, drums, upbeat" \
   --bpm 70 \
   --density 0.3 \
@@ -57,7 +57,7 @@ bash .claude/skills/lyria-music-gen/scripts/generate.sh \
 3. **guidance** (0.0–6.0, ברירת מחדל 4.0) — קובע כמה "חזק" המודל נצמד לפרומפט. ערך גבוה = נאמנות לפרומפט, ערך נמוך = חופש יצירתי/אורגני יותר.
 4. **bpm ו-scale** דורשים איפוס הקשר (context reset) כדי להיכנס לתוקף — הסקריפט מטפל בזה כי כל קריאה פותחת session חדש.
 5. **density/brightness** משפיעים על צפיפות התווים ובהירות הטונים — טובים לכיוונון עדין של אנרגיית הסצנה.
-6. **עקביות מוטיבים** — כדי לשמור על שפה מוזיקלית עקבית לאורך סרט, השתמשי באותם מונחי סגנון/כלים/scale בין cues של אותה דמות/סצנה חוזרת (ראי `noa/Memory/scoring-log.md`).
+6. **עקביות מוטיבים** — כדי לשמור על שפה מוזיקלית עקבית לאורך סרט, השתמשו באותם מונחי סגנון/כלים/scale בין cues של אותה דמות/סצנה חוזרת (ראו `composer/Memory/scoring-log.md`).
 
 ## מגבלות
 
