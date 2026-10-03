@@ -36,7 +36,7 @@ description: Generate instrumental music beds and SFX-style atmospheres via Goog
 
 - **סביבה:** `generate.sh` יוצר venv פרטי ב-`.claude/skills/lyria-music-gen/.venv` (ב-gitignore) — אף חבילה לא מותקנת ב-Python הגלובלי. בהרצה הראשונה של ה-fallback מותקנים torch/transformers/scipy (~1 GB) ומורדות משקולות המודל (~1 GB, ל-`~/.cache/huggingface`). התקנה בגלגלים בלבד (`--only-binary`).
 - **Mac עם Intel:** torch תקוע ב-2.2.2 (גלגל x86_64 אחרון) → הסקריפט נועל אוטומטית `numpy<2` ו-`transformers<4.50`.
-- **מהירות:** איטי. על ה-Intel i9 של הפרויקט: ~1–2 דקות לכל 8 שניות אודיו (MPS על GPU AMD); cue של 30+ שניות = 10+ דקות. ב-Apple Silicon מהיר משמעותית.
+- **מהירות:** איטי מאוד. נמדד על ה-Intel i9 של הפרויקט (MPS על GPU AMD): cue של 36 שניות = **~18 דקות** (~30 שניות עבודה לכל שנייה אודיו). מתאים ל-cues קצרים/stingers, לא לפסקול מלא. ב-Apple Silicon מהיר משמעותית.
 - **cues מעל 30 שניות:** MusicGen אומן על 30 שניות — הסקריפט ממשיך בחלונות, כל אחד מותנה ב-10 השניות האחרונות (continuation), כך שאין תפר קשיח.
 - **פרמטרים:** `--bpm`/`--scale`/`--density`/`--brightness` מתורגמים לטקסט בפרומפט (אין להם שליטה ישירה ב-MusicGen). `--negative` לא נתמך ומתעלמים ממנו. `--guidance` ממופה ל-`guidance_scale` (×0.75). `--seed` עובד.
 - פלט זהה ל-Lyria: WAV 48kHz/16-bit/סטריאו, משך מדויק (MusicGen מייצר 32kHz מונו — עובר resample ושכפול ערוצים).
