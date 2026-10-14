@@ -1,0 +1,23 @@
+{
+  "slug": "headphones",
+  "brand": "Hush",
+  "product": "premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo",
+  "product_short": "the graphite HUSH headphones",
+  "product_he": "האוזניות",
+  "website": "a minimal audio-brand website in graphite and olive: a product photo of the headphones, the logo 'HUSH', thin sound-wave graphics, and the giant editorial headline 'HEAR'",
+  "hero_word": "HEAR",
+  "letter_material": "brushed aluminium with softly bevelled edges",
+  "emergence": "the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk",
+  "transformation": "visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still",
+  "transformation_he": "גלי הקול הופכים לסרטי משי שזורמים סביב החדר ודרך האותיות, אותיות האלומיניום פועמות עם הבס — ואז שקט מוחלט",
+  "particles": "olive silk ribbons, fine dust in light beams",
+  "accent_color": "deep olive and graphite",
+  "accent_hex": "#6B7A4B",
+  "text_hex": "#23262B",
+  "hero_shot": "the headphones resting on a minimal walnut stand on the oak table, a single olive silk ribbon draped softly beside it, calm still light",
+  "tagline": "SILENCE THE WORLD",
+  "image_route": "gpt",
+  "typography_mode": "hybrid",
+  "look": "hyperreal",
+  "drawn_mode": "none"
+}

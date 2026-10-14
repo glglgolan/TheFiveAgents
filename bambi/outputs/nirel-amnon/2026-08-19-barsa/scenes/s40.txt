@@ -1,0 +1,11 @@
+Scene 40: האולם הריק
+
+PROMPT:
+A magnificent empty wedding hall moments before the guests arrive, seen in a wide cinematic frame down the length of the aisle. Elegant white flower arrangements, candlelit tables, strings of fairy lights, a floral arch at the far end, subtle blue and yellow accents in the styling. Two converging lines of candlelight reflect on the polished floor and meet in a soft, natural V-shaped highlight down the centre of the aisle. At the very end of the aisle, tiny in the frame, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle sits alone, proud and still. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 15390 total (13408 in / 1982 out)

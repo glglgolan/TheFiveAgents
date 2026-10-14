@@ -1,0 +1,9 @@
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+References: bambi/reference/Nirel-Amnon_ Wedding/ref images/batata1.jpeg (re-encoded to plain RGB JPEG — original was MPO/iPhone stereo format, rejected by OpenAI as "invalid_image_file"; fixed copy used from scratchpad), bambi/reference/Nirel-Amnon_ Wedding/ref images/batata2.jpeg
+Size: 1024x1024
+Tokens: 14699 total (13304 in / 1395 out)
+
+Prompt:
+BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic. Female. Sweet, goofy and lovable — Barsa's warm chaotic counterbalance, a beloved dog from Ofakim. Studio-quality character portrait, warm southern Israeli light, neutral elegant background, full body visible, square 1:1 crop. Face must match the reference photograph exactly — same coat colour, same shaggy texture, same proportions.
+
+Note: batata1.jpeg is MPO format (iPhone Live/stereo JPEG). OpenAI's edits endpoint rejected it directly; converted to standard RGB JPEG via PIL before sending. Future runs against this file should reuse the fixed copy or re-convert.

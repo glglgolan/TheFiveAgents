@@ -1,0 +1,11 @@
+Scene 11: למה בארסה?
+
+PROMPT:
+BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands at the exact centre circle of a spectacular football stadium at night, wearing an elegant knitted scarf in deep blue and burgundy draped around her neck, one paw resting lightly on a football. Towering floodlight banks blaze above her, lens flares raking across frame, dense crowd silhouettes and thousands of tiny phone lights in the stands, perfectly striped mown grass, drifting atmospheric haze. Low heroic angle. No real team logos, no crests, no readable text anywhere. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 15393 total (13480 in / 1913 out)

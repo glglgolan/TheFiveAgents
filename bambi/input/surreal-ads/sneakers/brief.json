@@ -1,0 +1,23 @@
+{
+  "slug": "sneakers",
+  "brand": "Nimbo",
+  "product": "a lightweight white running sneaker with a thick cloud-like foam midsole, sky-blue knit accents, and a small 'NIMBO' logo on the heel",
+  "product_short": "the white NIMBO running sneaker",
+  "product_he": "נעל הריצה",
+  "website": "a bright minimal running-shoe website in white and sky blue: a floating product photo of the sneaker, the logo 'NIMBO', and the giant editorial headline 'LIGHT'",
+  "hero_word": "LIGHT",
+  "letter_material": "soft inflated white foam, like puffy balloons with a satin sheen",
+  "emergence": "the sneaker steps out of the screen as if walking through a doorway, landing softly on the oak table with a tiny puff of cloud",
+  "transformation": "the foam midsole bursts into soft white clouds that lift the shoe into weightless slow motion, it bounces gently from letter to letter as the letters float upward",
+  "transformation_he": "סוליית הקצף מתפרצת לעננים רכים, הנעל מרחפת וקופצת בעדינות מאות לאות בזמן שהאותיות צפות למעלה",
+  "particles": "wisps of white cloud, tiny foam beads",
+  "accent_color": "sky blue",
+  "accent_hex": "#5AA9E6",
+  "text_hex": "#1E2A36",
+  "hero_shot": "the sneaker floating just above a small soft cloud resting on the oak table, its soft shadow below, perfectly lit in profile",
+  "tagline": "RUN ON AIR",
+  "image_route": "gpt",
+  "typography_mode": "hybrid",
+  "look": "hyperreal",
+  "drawn_mode": "annotations"
+}

@@ -1,0 +1,11 @@
+Scene 42: אמנון מתכונן
+
+PROMPT:
+A cinematic groom preparation room. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands in an elegant dark wedding suit with a subtle blue accent in the tie and pocket square, head down, adjusting a cufflink with careful concentration. Warm golden light from a tall window rims his shoulder and beard. Humorously placed in the softly blurred background: a scuffed football resting on an armchair and a small desk globe on a side table. Sophisticated wedding film, restrained emotion, shallow depth of field. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 13098 total (11169 in / 1929 out)

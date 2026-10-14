@@ -1,0 +1,13 @@
+Henna keepsake labels — Nirel & Amnon (3x5 = 15 labels, 6x5 cm, edge-to-edge on A4)
+Design ID: DAHUIr4zTEY
+Edit:  https://www.canva.com/d/jrYwhmAIZ5IndVF   (was https://www.canva.com/d/pb-008CaiH1Fyvr)
+View:  https://www.canva.com/d/fowyvZKuGRkbGe5
+
+Cell text (all 15): subtitle "מזכרת מהחינה של" + title "ניראל ואמנון" + henna illustration (asset MAHQ-nIiqSA, flipped) + grey-stroke frame.
+
+History:
+- v1: built 15-up label grid from copy of user's henna reference DAHQ5mmssGQ.
+- user manually redesigned cell 1 (top-right, RTL first) in Canva: script font YADknh6Cry0, subtitle+title+illustration, removed stars.
+- v2 (this pass): deleted 28 old stars + 14 old single-line texts; rebuilt the other 14 cells as exact copies of cell 1 (offsets 708.66px x / 590.55px y). Cell 1 untouched. 15 frames untouched.
+- Font: the 14 rebuilt cells use the doc default font (API cannot set font family). Reuven to swap the 28 new text elements to YADknh6Cry0 via browser.
+- Empty page 2 (PBFZJS9tlQDR2L6g) still present — pending explicit deletion confirmation.

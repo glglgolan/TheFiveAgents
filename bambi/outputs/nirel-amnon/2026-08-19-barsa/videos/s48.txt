@@ -1,0 +1,18 @@
+Scene: 48 — התפוצצות המסיבה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (image_to_video)
+Duration: 12s
+Resolution: 720p
+First frame: scenes/s48.png (REGENERATED — Nirel in white wedding gown, Amnon in
+formal dark suit (loosened for dancing), guests in colourful festive attire; Barsa/
+Batata unchanged; face-swapped from d16.jpg for accuracy)
+Fix: user requested Nirel/Amnon look like actual bride/groom and guests in colourful
+festive clothing, not generic casual attire.
+Credits consumed: 96
+generationId: AQwe7TpOstrg82ViRTFqDN3py7Ab1qVbHDsww78L99PdwFbm4ut58-D5SaYA2DF11ZdvZyt7
+Old version preserved: scenes/s48_v1.png
+
+Prompt: (unchanged from original — only first frame changed)
+The wedding party explodes into motion. Lights pulse and strobe, guests jump as one, Nirel throws her head back laughing, Amnon leaps with both fists up, Batata bounces joyfully through the forest of legs. Confetti rises and falls. The camera performs one fast sweeping move across the packed dance floor and rises to end on Barsa, sitting composed on her high ledge above it all. High energy, no text.
+
+Generated: 2026-08-20

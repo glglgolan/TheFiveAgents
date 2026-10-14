@@ -1,0 +1,7 @@
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+Reference: yuval/reference/nirel-amnon/_proxy/d16.jpg
+Size: 1024x1024
+Tokens: 8069 total (6719 in / 1350 out)
+
+Prompt:
+NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent. Creative, colourful, playful and naturally funny; an artist, baker and performer. Studio-quality character portrait, warm even light, neutral elegant background, head-and-shoulders to medium framing, square 1:1 crop, no wedding attire — this is a general character anchor used across many scenes, not just the wedding. Face must match the reference photograph exactly.

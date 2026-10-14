@@ -1,0 +1,12 @@
+Scene 34: קובה סלק
+
+PROMPT:
+A cinematic food close-up: a beautiful deep-red bowl of beetroot kubbeh on a warm wooden family table, glossy crimson broth, pale semolina dumplings, chopped celery leaves, gentle steam curling upward through a shaft of warm light. A spoon rests against the rim. Just at the edge of frame, slightly out of focus, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle has her chin on the table edge, staring at the bowl with intense hope. Premium food cinematography, rich colour, extreme shallow depth of field. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19676 total (17766 in / 1910 out)

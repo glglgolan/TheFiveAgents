@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>קשת של דאגה — לוחות יוד</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#1a1d24; --line:#2c313c;
+    --ink:#e8eaed; --dim:#9aa0aa; --accent:#f0a63c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"Segoe UI","Heebo",Arial,sans-serif;padding:20px}
+  header{margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:14px}
+  h1{font-size:20px;margin:0 0 6px;font-weight:700}
+  .sub{color:var(--dim);font-size:13px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;display:flex;flex-direction:column}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  .cap{padding:10px 12px;font-size:14px;font-weight:600;text-align:center;color:var(--accent)}
+  footer{margin-top:20px;color:var(--dim);font-size:11px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>🍶 קשת של דאגה — לוחות יוד (מוטיב צבעוני)</h1>
+  <span class="sub">5 תמונות נלוות, לצד עמודי הסיפור 8–12 — לא מחליפות אותם</span>
+</header>
+<div class="grid">
+  <div class="card"><img src="bottles/bottle_yellow.png" alt="צהוב"><div class="cap">צהוב — עמוד 8</div></div>
+  <div class="card"><img src="bottles/bottle_brown.png" alt="חום"><div class="cap">חום — עמוד 9</div></div>
+  <div class="card"><img src="bottles/bottle_green.png" alt="ירוק"><div class="cap">ירוק — עמוד 10</div></div>
+  <div class="card"><img src="bottles/bottle_blue.png" alt="כחול"><div class="cap">כחול — עמוד 11</div></div>
+  <div class="card"><img src="bottles/bottle_white.png" alt="לבן"><div class="cap">לבן — עמוד 12</div></div>
+</div>
+<footer>נוצר עם gpt-image-1.5 (איור) + PIL/Miri (תווית עברית)</footer>
+</body>
+</html>

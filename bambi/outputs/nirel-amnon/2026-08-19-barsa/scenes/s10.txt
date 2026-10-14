@@ -1,0 +1,12 @@
+Scene 10: הכניסה הגדולה של ברסה
+
+PROMPT:
+BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands heroically in the middle of a doorway, backlit by a wide beam of warm golden light that rims every hair of her short striped coat and turns her whiskers into filaments of light. Dramatic LOW camera angle from floor level, looking slightly up at her. A soft cinematic breeze lifts the fur on her chest; glowing dust particles float through the beam. Confident, regal expression, ears forward, her green-gold eyes catching the light with the subtle inward drift of the right eye clearly present. Elegant home interior falling into warm darkness behind her. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d15.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19749 total (17829 in / 1920 out)

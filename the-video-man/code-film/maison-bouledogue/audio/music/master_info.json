@@ -1,0 +1,9 @@
+{
+  "lufs": -15.95,
+  "true_peak_dbtp": -1.8,
+  "samples": 2880000,
+  "sr": 48000,
+  "seconds": 60.0,
+  "max_gain_reduction_comp_db": 7.82,
+  "max_limiter_gr_db": 4.61
+}

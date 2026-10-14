@@ -1,0 +1,9 @@
+Scene 29 — נכנסת בטטה — FIXED after overnight-batch failure
+Original failure: batata1.jpeg is an iPhone MPO file, rejected by OpenAI edits endpoint
+(HTTP 400 invalid_image_file) — same root cause hit earlier when creating the batata.png
+cast anchor. Fixed by reusing the already-re-encoded standard JPEG from that earlier fix
+(/private/tmp/.../scratchpad/refs/batata1_fixed.jpg) instead of the raw MPO file.
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+References: batata1_fixed.jpg (re-encoded), bambi/cast/nirel-amnon/batata.png
+Tokens: 13147 total (11219 in / 1928 out)
+Prompt: see storyboard.json scene_number=29 image_prompt (unchanged from original).

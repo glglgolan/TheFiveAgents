@@ -1,0 +1,23 @@
+amnon_child — REGENERATED 2026-08-19 (jersey redesign)
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Little.jpeg
+Size: 1024x1024
+Tokens: 8144 total (6770 in / 1374 out)
+
+Change from v1: jersey now shows a blurred/soft football-club crest silhouette + "BARCA" text,
+per user request, tying to the Character Bible ("Loves Messi and Barcelona"). v1 had hallucinated
+gibberish brand text ("TRACIOKA") which is now replaced.
+
+Prompt:
+LITTLE AMNON — an Israeli boy about 8-10 years old, short cropped dark hair, thick eyebrows, a
+cheeky grin, wearing a yellow football jersey. On the chest, a blurred, softly out-of-focus
+silhouette of a classic football club crest (indistinct heraldic shield shape, not sharply
+legible, purely decorative and abstract), and beneath it the word 'BARCA' printed in bold sporty
+athletic lettering, clearly readable. Scruffy and slightly dirty, chaotic, sweaty, endlessly
+enthusiastic. Studio-quality character portrait, warm nostalgic afternoon light, neutral elegant
+background, head-and-shoulders to medium framing, square 1:1 crop. The reference photo is
+low-resolution and blurry — do your best to preserve what is clear: face structure, hair, and the
+yellow jersey. Face must match the reference photograph as closely as possible.
+
+Note: reference "Amnon Little.jpeg" is low-res/blurry — generation quality of the face is a
+best-effort approximation, not a precise lock.

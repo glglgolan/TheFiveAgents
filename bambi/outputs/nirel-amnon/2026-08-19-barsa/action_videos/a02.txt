@@ -1,0 +1,11 @@
+insert_id: A2
+model: bytedance/seedance-2.0-mini
+price_per_sec: $0.0305
+duration: 5s
+actual_cost: $0.1525
+reference: action_scenes/a02.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: Z5QdtMXxxDufEz7E5COg
+status: OK
+prompt:
+Floor-level wide-angle action-camera shot inside an elegant home. Barsa explodes into a sprint straight at the lens; the camera immediately retreats backward at the same speed, skimming the floor so the boards streak past underneath in heavy motion blur. She veers hard around a chair leg and the camera swings with her in a fast arcing move, the chair wiping across the foreground. She launches onto a low decorated table; white flowers and ribbons wobble and a small decorative object is knocked loose and tumbles directly past the lens in extreme close foreground, briefly filling the frame. Barsa leaps down without breaking stride and keeps charging at camera, gaining until her face nearly fills the frame. At the fastest moment the camera executes a violent horizontal whip pan, smearing the room into golden streaks. Her expression stays completely serious throughout, as if on an urgent mission — no cartoon exaggeration, realistic feline gait and muscle motion, realistic short striped fur. Cinematic 16:9, no humans, no text, no logos.

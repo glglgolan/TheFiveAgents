@@ -1,0 +1,17 @@
+Scene: 43 — המבט של ברסה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s43.png (unchanged; POV shot, only barsa in characters list)
+Fix: previous video's silhouette couple at the end of the aisle resolved as two
+women instead of Nirel+Amnon. Bound both real Elements (Nirel <<<319175997618831>>>,
+Amnon <<<319176002326089>>>) so the resolved silhouettes are the correct identities.
+Credits consumed: 60
+generationId: Ad8UNzK0WHTEuxYjDwTxayf5fah8nligU4GetGra9J_XP8Qaj6qzZYK2mj8e57r9GythMkwQ
+
+Prompt:
+POV from Barsa at floor level. The camera moves slowly and smoothly forward down the wedding aisle, the tips of her ears bobbing gently at the bottom of frame. Guests turn their heads toward the entrance. Candle flames flicker as she passes. The atmosphere thickens with emotion. At the end of the aisle the wedding couple — <<<319175997618831>>> in her white gown and <<<319176002326089>>> in his dark suit — resolves out of the golden haze as soft silhouettes. Low tracking move.
+
+Generated: 2026-08-20

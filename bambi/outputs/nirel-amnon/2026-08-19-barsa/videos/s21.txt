@@ -1,0 +1,17 @@
+Scene: 21
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 12s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s21.png (unchanged; image_prompt explicitly states "no humans in frame")
+Fix: previous video generated two generic people instead of Nirel/Amnon since the
+first-frame image has zero human presence by design. Bound both real Elements
+(Nirel <<<319175997618831>>>, Amnon <<<319176002326089>>>).
+Credits consumed: 72
+generationId: AboGIOMBZ9F9BFdm9-3q2oGt-J2Q9HN0CGqSYLta3UJw9EWIaZ1JqFrlLGi7PvTmF5hMuxHv
+
+Prompt:
+<<<319176002326089>>> eases the curtain aside and peeks out. His eyes go wide. The sky is full of an enormous fireworks display; the whole room floods with pulsing colour. <<<319175997618831>>> joins him at the window; they stare in silence. One burst leaves a faint V-shaped trail. Then they realise what they just did and collapse into relieved helpless laughter, sliding down to sit on the floor. Camera pulls back from the window.
+
+Generated: 2026-08-20

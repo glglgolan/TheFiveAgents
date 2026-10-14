@@ -1,0 +1,12 @@
+Scene 39: הכנות אחרונות
+
+PROMPT:
+A breathtaking cinematic wedding preparation room: banks of white flowers, hundreds of candles being lit, elegant place settings, the wedding dress on a stand, two rings on a velvet tray, stacks of invitations, all bathed in soft warm light. In the centre of it all sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, upright and still like a director overseeing the whole set, surveying the room. A few steps behind her stands BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic with a satin ribbon in her mouth, waiting for instructions. Premium wedding cinematography, deep layered composition. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/batata.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19864 total (17883 in / 1981 out)

@@ -1,0 +1,27 @@
+{
+  "slug": "chocolate",
+  "brand": "MELT",
+  "product": "a thick dark chocolate bar half-wrapped in matte cocoa-brown paper with a gold foil inner wrapper and an embossed 'MELT' label",
+  "product_short": "the MELT dark chocolate bar",
+  "product_he": "חטיף השוקולד",
+  "website": "an artisan chocolatier website in cocoa brown and gold: the serif logo 'MELT' at the top, a large photo of the broken chocolate bar, and the giant editorial headline 'MELT'",
+  "hero_word": "MELT",
+  "letter_material": "glossy tempered dark chocolate with a mirror-like surface",
+  "emergence": "the chocolate bar breaks out through the screen with a crisp snap, the screen glass cracking like a chocolate shell as the bar lands on the oak table",
+  "transformation": "the bar melts into a silky river of liquid chocolate that flows through and around the glossy letters, cocoa pods and nibs bloom out of the stream like flowers",
+  "transformation_he": "החטיף נמס לנהר שוקולד משיי שזורם דרך האותיות, ותרמילי קקאו וגרגרי קקאו פורחים מתוך הזרם",
+  "particles": "cocoa nibs, cocoa powder dust, glossy chocolate droplets",
+  "accent_color": "cocoa brown and gold foil",
+  "accent_hex": "#7A4A2A",
+  "text_hex": "#2B1810",
+  "hero_shot": "the broken chocolate bar on its gold-foil wrapper with a single glossy drip of melted chocolate, a split cocoa pod beside it, warm soft light",
+  "tagline": "MADE TO MELT",
+  "image_route": "gpt",
+  "typography_mode": "hybrid",
+  "look": "hyperreal",
+  "drawn_mode": "annotations",
+  "tagline_y": 0.095,
+  "macro_beat": {
+    "shot": "a bitten thick dark chocolate bar with large embossed gold letters 'MELT' on its surface, a glossy melted center where it was bitten, a dusting of cocoa powder, resting on dark wood"
+  }
+}

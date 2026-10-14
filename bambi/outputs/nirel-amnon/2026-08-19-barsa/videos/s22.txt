@@ -1,0 +1,12 @@
+Scene: 22
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP)
+Duration submitted: 10s
+Resolution: 720p
+Audio: on (default, no toggle used)
+Recovered 2026-08-19: the generating agent stalled after submission but before
+downloading/saving results. Task had already completed successfully on Kling's
+servers and was billed; recovered by querying mcp__klingai__query_tasks with the
+generationId found in the stalled agent's transcript, then matched to this scene
+by duration + visual comparison of the first frame against scenes/s22.png.
+

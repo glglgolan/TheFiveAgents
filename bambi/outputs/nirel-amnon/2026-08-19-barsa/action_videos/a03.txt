@@ -1,0 +1,11 @@
+insert_id: A3
+model: minimax/hailuo-3 (retry — original attempt on black-forest-labs/flux-3-video failed: that provider integration does not support image input references at all on OpenRouter)
+price_per_sec: 0.13 USD (matched expected rate exactly)
+duration: 8s
+actual_cost: 1.0400 USD
+reference: action_scenes/a03.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: WEMG1tQpoG6KHaT8jn8d
+status: OK
+prompt:
+Forward-facing on-ride POV mounted on the nose of an invisible roller-coaster cart. The shot holds still for a beat, then launches forward with brutal acceleration, the track rails streaking beneath the lens. The track crests and plunges into a steep downward dive, the camera falling with it, floating fragments of colour rushing past on both sides as strong parallax. A football flies diagonally across frame right in front of the lens. The cart punches through a billowing cloud of coloured paint and pigment that momentarily washes the frame in saturated colour. The track twists into a full barrel roll and the entire world rotates 360 degrees around the lens with heavy motion blur. It shoots through a long tunnel of warm glowing string lights that streak into radial light trails. Then a dramatic deceleration: speed ramps down hard, the world snaps back into focus, motion blur resolves, and the camera comes to a smooth stop on a bright, calm, colourful shopfront-like plane of light. Physically coherent ride dynamics, believable G-force camera shake, cinematic 16:9, no humans, no text, no logos.

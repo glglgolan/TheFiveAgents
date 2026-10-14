@@ -1,0 +1,40 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration_sec": 15,
+  "grain": {
+    "amount": 0.12,
+    "size": 0.9
+  },
+  "plate": "final.mp4",
+  "matte": "matte/fg",
+  "background": "#EFE6DA",
+  "fonts": [
+    "Playfair Display"
+  ],
+  "layers": [
+    {
+      "id": "tagline",
+      "text": "BUILT FOR THE LAST LAP",
+      "split": "letter",
+      "font": {
+        "family": "Playfair Display",
+        "weight": 600,
+        "size": 92,
+        "tracking": 0.08
+      },
+      "color": "#1B1B1B",
+      "material": "shadow",
+      "plane": "front",
+      "from": 11.2,
+      "to": 15,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.16
+      },
+      "max_width": 0.86,
+      "preset": "assemble-tagline"
+    }
+  ]
+}

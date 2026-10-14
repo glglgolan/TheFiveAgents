@@ -1,0 +1,1357 @@
+{
+  "project": "nirel-amnon",
+  "title": "ניראל ואמנון — סרט החתונה, מנקודת המבט של בארסה",
+  "logline": "בארסה, החתולה שמאמינה שהיא הבמאית והמפיקה של סיפור האהבה של ניראל ואמנון, מספרת בעצמה איך שני יקומים מנוגדים — צבעים מול כדורגל — התחברו לחתונה אחת. ובעיקר: מי באמת ארגן אותה.",
+  "language": "he",
+  "aspect_ratio": "16:9",
+  "visual_theme": {
+    "palette": "warm golden wedding gold and candlelight amber, cream and white florals, deep espresso wood; Nirel = saturated colour with a dominant yellow, Amnon = deep blue, Barsa = warm golden-brown tabby, Batata = blonde-caramel southern warmth",
+    "lighting": "warm golden cinematic lighting, volumetric light shafts, candlelit practicals, soft rim/backlight on animals, subtle lens bloom and gentle anamorphic flare",
+    "film_look": "cinematic wedding film crossed with premium animated-feature quality; photorealistic detailed animal fur and expressive but believable animal faces; full-frame lens, shallow depth of field, rich golden bokeh, elegant production design, 16:9",
+    "motion": "smooth physically believable motion, sophisticated camera movement — slow push-ins for emotion, tracking and crane moves for reveals, whip pans and match cuts inside montages; no exaggerated cartoon physics",
+    "mood": "cinematic wedding film + mockumentary + romantic comedy, with occasional spy/sports-film parody; comedy comes from timing, acting and camera language, never slapstick distortion; warmth always under the sarcasm"
+  },
+  "cast": [
+    {
+      "id": "barsa",
+      "name": "בארסה",
+      "description": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. Female. Intelligent, confident, dryly sarcastic, never cartoonish — she carries herself like a serious documentary presenter who believes the humans are lovable but fundamentally incompetent. Studio-quality character portrait, warm golden key light, neutral elegant background, full body visible, 16:9.",
+      "anchor_image": "bambi/cast/nirel-amnon/barsa.png",
+      "anchor_ready": true
+    },
+    {
+      "id": "batata",
+      "name": "בטטה",
+      "description": "BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic. Female. Sweet, goofy and lovable — Barsa's warm chaotic counterbalance, a beloved dog from Ofakim. Studio-quality character portrait, warm southern Israeli light, neutral elegant background, full body visible, 16:9.",
+      "anchor_image": "bambi/cast/nirel-amnon/batata.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "nirel",
+      "name": "ניראל",
+      "description": "NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent. Creative, colourful, playful and naturally funny; an artist, baker and performer. Studio-quality character portrait, warm even light, neutral background, 16:9. Face must match the reference photograph exactly.",
+      "anchor_image": "bambi/cast/nirel-amnon/nirel.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "amnon",
+      "name": "אמנון",
+      "description": "AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent. Football and geopolitics enthusiast, warm and very funny. Studio-quality character portrait, warm even light, neutral background, 16:9. Face must match the reference photograph exactly.",
+      "anchor_image": "bambi/cast/nirel-amnon/amnon.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "nirel_child",
+      "name": "ניראל הקטנה",
+      "description": "LITTLE NIREL — an Israeli girl about 6-7, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent. Mischievous, energetic, theatrical; loves water, stages and colour. Studio-quality character portrait, warm nostalgic golden light, neutral background, 16:9.",
+      "anchor_image": "bambi/cast/nirel-amnon/nirel_child.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "amnon_child",
+      "name": "אמנון הקטן",
+      "description": "LITTLE AMNON — an Israeli boy about 8-10, short cropped dark hair, thick eyebrows, a cheeky grin, a yellow football jersey, scruffy and slightly dirty. Chaotic, sweaty, endlessly enthusiastic; a football under one arm and a globe in the other. Studio-quality character portrait, warm nostalgic afternoon light, neutral background, 16:9.",
+      "anchor_image": "bambi/cast/nirel-amnon/amnon_child.png",
+      "anchor_ready": false
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "המרדף — פתיחה",
+      "duration_sec": 15,
+      "description": "ברסה רודפת אחרי עכבר אפרפר קטן דרך אולם חתונות מהודר, ובדרך אוספת עליה בטעות פנינים, תחרה, הינומה, טיארה וזר כלה — עד שהיא נעצרת ומגלה שהיא לבושה ככלה.",
+      "narration": "זה היה סיפור אהבה מיוחד מהרגע הראשון- היא אמרה מיאו, הוא אמר מיאו והשאר היסטוריה. תקראו לזה גורל או אהבה ממבט ראשון. ואני? אני מאמינה שאם משהו חשוב באמת… צריך לרדוף אחריו",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "Cinematic opening-hook frame from a premium wedding film: a fast but graceful CHASE across the polished dance floor of an opulent wedding hall. 16:9 wide frame, dramatic LOW camera angle close to the floor looking down the length of the hall. THE CAT — BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. HER ACTION — she is RUNNING AT FULL SPRINT, not crouching, not pouncing: full gallop stride, body stretched long and low, front legs reaching far forward, hind legs driving off behind her, tail streaming straight out; her paws skid on the glossy lacquered parquet; light motion blur on legs and tail while her head and eyes stay sharp and locked forward. She moves along a clear diagonal from the far background toward the lower foreground. THE MOUSE — a small grey field mouse ahead of her, clearly RUNNING AWAY mid-stride, legs extended, tail whipping, twisting its head back over its shoulder to glance at her with cheeky playful confidence. SETTING: a lavish wedding hall — dark glossy parquet mirroring the lights, tall white rose arrangements and garlands, clusters of lit pillar candles, strings of warm fairy lights and a crystal chandelier glowing out of focus in the deep background. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa sprints after the tiny grey mouse across the wedding hall, paws sliding on the polished parquet. She squeezes under a decorated table; the cloth ripples. She leaps onto a swinging decorative lamp, swings through frame and lands wearing a strand of pearls. A veil and a tiny tiara catch on her as she runs. She skids to a stop mid-hall, realises she is dressed as a bride, looks into camera and winks slowly. No humans, no text.",
+      "reference": "bambi/cast/nirel-amnon/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s01.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s01.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 1
+    },
+    {
+      "scene_number": 2,
+      "title": "העכבר נמלט",
+      "duration_sec": 8,
+      "description": "ברסה, עדיין עטופה בתחרה ובהינומה, צועדת בגאווה לעבר המעבר — ומזהה את העכבר מציץ מאחורי סידור פרחים. מצב ציד.",
+      "narration": "רגע רגע, אבל לפני שמגיעים לחתונה… רציתי לקחת את העניינים לכפות ולספר לכם איך הכל התחיל…",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands proudly at the head of a magnificent wedding aisle, still wearing delicate white lace, a strand of pearls, a soft veil and a small elegant tiara from the previous chase — the accessories sit naturally on her short striped coat. Far in the soft background, near the aisle, the tiny grey mouse peeks out from behind a white floral arrangement, teasing her. Warm candlelight, white flowers, fairy lights, deep cinematic perspective down the aisle. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa walks proudly toward the wedding aisle in her accidental bridal outfit. She notices the tiny grey mouse peeking from behind a floral arrangement; the mouse wiggles its nose and vanishes behind the flowers. Barsa's proud bridal expression snaps into focused hunter mode. She takes one step forward, stops, and turns her head directly to camera as if to say: this is personal. Slow push-in. No humans.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s02.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s02.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 2
+    },
+    {
+      "scene_number": 3,
+      "title": "ניראל הקטנה",
+      "duration_sec": 10,
+      "description": "ניראל הקטנה משתוללת בחצר צבעונית, מתאזנת על שפת בריכת הדגים של סבא ניסים — ונופלת פנימה בשלוליית מים ענקית. יוצאת רטובה, המומה לרגע, ואז פורצת בצחוק.",
+      "narration": "ניראל היתה ילדה שובבה. תמיד אהבה משחק ובמה. אהבה לצחוק, ליצור, לערבב צבעים ולשחות… אולי בגלל זה היא עמדה קרוב מדי לבריכת הדגים של סבא ניסים. נראה טעים…",
+      "characters": [
+        "nirel_child"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "LITTLE NIREL — an Israeli girl about 6-7, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent. A playful cinematic childhood scene: she stands beside a small family fish pond in a warm sunlit backyard, arms out for balance on the low stone rim, curious and full of energy. Around her: colourful toys, paint pots, brushes and craft materials scattered on the grass, orange goldfish flickering in the green water. Golden nostalgic late-afternoon sunlight, dappled shade from a fig tree, warm family-film atmosphere. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Little Nirel runs through the colourful backyard, jumps between her toys and art materials, then climbs onto the rim of the fish pond and tries to balance. She wobbles, flails her arms dramatically and falls in with a huge splash. Fish scatter. She surfaces soaking wet, freezes in shock for a beat, then bursts into delighted laughter. Charming and affectionate, never humiliating. Handheld tracking, warm golden light.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s03.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 4
+    },
+    {
+      "scene_number": 4,
+      "title": "ניראל על הבמה",
+      "duration_sec": 8,
+      "description": "ניראל הקטנה מופיעה על במה קטנה — מסתובבת, רוקדת ומקפיאה בפוזה דרמטית מוגזמת. הזרקור עוקב אחריה.",
+      "narration": "לכולם היה ברור: איתה לא הולך להיות משעמם…",
+      "characters": [
+        "nirel_child"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "LITTLE NIREL — an Israeli girl about 6-7, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent. A whimsical cinematic childhood stage scene: she stands confidently centre-stage on a small theatrical stage in a bright colourful costume with a yellow accent, one arm raised in a theatrical pose, playful triumphant expression. Deep red velvet curtains behind her, a warm follow-spot beam full of dust motes, soft silhouettes of a small audience in the dark foreground, painted wooden stage boards. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Little Nirel performs energetically on the small stage: she spins, dances, throws her arms wide and strikes an exaggerated dramatic pose. The spotlight follows her smoothly. She is completely at home. At the end she gives a tiny confident bow as the red velvet curtain begins to close behind her. Slow push-in, warm theatrical light, floating dust motes in the beam.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s04.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s04.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 5
+    },
+    {
+      "scene_number": 5,
+      "title": "אמנון הקטן",
+      "duration_sec": 10,
+      "description": "אמנון הקטן פורץ הביתה אחרי כדורגל — מזיע ומלוכלך, זורק את הכדור, מסובב גלובוס ומצביע על מדינה כמו מרצה לגיאופוליטיקה. ואז בועט מרגלו כפכף שעף לכיוון המטבח.",
+      "narration": "אמנון כילד קטן היה מבריק, ספורטאי מצטיין, מזיע וכבר אז היו לו שתי אהבות גדולות: כדורגל וגיאוגרפיה.",
+      "characters": [
+        "amnon_child"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pan"
+      },
+      "image_prompt": "LITTLE AMNON — an Israeli boy about 8-10, short cropped dark hair, thick eyebrows, a cheeky grin, a yellow football jersey, scruffy and slightly dirty. A humorous cinematic 1990s-Israeli childhood scene: he stands just inside a family living room, sweaty and dusty from the street, a scuffed football tucked under one arm, one flip-flop half off his foot. Beside him a large colourful wall map of the world and a spinning desk globe on a side table. Warm nostalgic afternoon light through shutters, tiled floor, lived-in family home, cinematic comedy framing. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Young Amnon bursts into the house after football, sweaty and messy. He drops the ball, grabs the globe and spins it rapidly, then jabs a finger at a country with the total seriousness of a geopolitical lecturer. He hears his family calling from the kitchen, gets distracted, and flicks one flip-flop off his foot; it launches into the air toward the kitchen. Camera pans with the flying flip-flop. Warm comedy timing.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Little.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s05.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s05.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 6
+    },
+    {
+      "scene_number": 6,
+      "title": "תקרית החומוס",
+      "duration_sec": 8,
+      "description": "הכפכף מסתובב באוויר בהילוך איטי כמו טיל מונחה — ונוחת בול במרכז צלחת החומוס. שקט. מבטים המומים. אמנון מסתכל למצלמה בתמימות מוחלטת.",
+      "narration": "והיו רגעים קוסמיים שבהם התנופה של הכדורגל והדיוק שבגיאוגרפיה התחברו בהרמוניה אל תוך צלחת חומוס",
+      "characters": [
+        "amnon_child"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "A humorous cinematic kitchen scene, dramatic slow-motion suspense: a plate of perfectly smoothed hummus with a pool of olive oil, paprika and chickpeas sits in the centre of a warm family dining table, surrounded by pita, salad bowls and mismatched glasses. A child's worn rubber flip-flop is frozen dramatically in mid-air, spinning on its axis, on a direct collision course with the hummus, only centimetres away. Extreme shallow depth of field, warm kitchen light, exaggerated cinematic tension, tiny particles of dust caught in the beam. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Dramatic slow-motion comedy. The flip-flop spins through the air like a precision missile, rotating slowly. Cut to the hummus plate waiting in perfect stillness. The flip-flop lands dead centre in the hummus with a soft splat; oil ripples outward. Hold the beat. Then young Amnon turns to camera with the completely innocent expression of a child who has no idea how this happened. Comedic timing, no slapstick distortion.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Little.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s06.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s06.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 7
+    },
+    {
+      "scene_number": 7,
+      "title": "יקומים מקבילים",
+      "duration_sec": 10,
+      "description": "מסך מפוצל: מצד אחד עולמה הצבעוני של ניראל — צבעים, אפייה, במה, צהוב. מצד שני עולמו של אמנון — כדורגל, כחול, מפות וגלובוס. שני היקומים מתחילים לנוע זה לעבר זה.",
+      "narration": "וכמובן, לשניהם היה מזל גדול כי הם לא היו צריכים לצאת מהקופסה, המקום האהוב עליי…",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A cinematic split-world composition, one continuous frame divided by a glowing vertical seam of light. LEFT HALF: NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent — surrounded by open paint tubes, wet canvases, baking bowls and piped icing, theatrical stage lights, yellow flowers and bright fabric; saturated warm colour, yellow dominant. RIGHT HALF: AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent — surrounded by footballs, a spinning globe, pinned world maps, geopolitics books and stadium floodlights; cool blue-dominant light. The two halves are lit in opposing colour temperatures and meet at a soft glowing line down the centre. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A dynamic parallel-world montage. On the left Nirel paints, pipes icing, spins fabric and dances; match cut to the right where Amnon kicks a football, spins a globe and traces a route across a map. Her side grows more saturated and yellow; his side grows deeper blue. Both halves slowly slide toward the glowing centre seam as if two universes are about to collide. Whip-pan match cuts, energetic rhythm.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s07.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s07.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 8
+    },
+    {
+      "scene_number": 8,
+      "title": "ניראל והחתולים",
+      "duration_sec": 10,
+      "description": "מונטאז' קומי: ניראל מתעטשת ליד חתול — ומיד אחר כך מחבקת חתול אחר, מאכילה, מציירת וישנה עם חתולים. הסתירה גלויה ומקסימה.",
+      "narration": "אה, פרט חשוב! ניראל כמובן אלרגית לחתולים. ולכן, כחלק מהמשימה שלנו לחתוליזציה עולמית אנחנו כל הזמן מאמצים אותה.",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent. A whimsical cinematic home portrait: she sits cross-legged on a cosy sofa in a colourful creative living room, laughing, with several cats around her — one curled in her lap, one on the sofa back, one on the windowsill. BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle — Barsa herself sits closest to her, front and centre, with her almond green-gold eyes and the subtle inward drift of her right eye clearly visible. A crumpled tissue in Nirel's hand hints playfully at her allergy. Warm afternoon home light, plants, paintings, colourful throws. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A comedic montage: Nirel sneezes lightly near a cat, then immediately scoops up another cat and cuddles it. She pours food into a bowl, sketches a cat on paper, then dozes on the sofa with cats draped over her. The contradiction is visually obvious and charming. End on Nirel surrounded by cats, completely happy, Barsa closest of all, looking at camera. Warm home light, quick affectionate cuts.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d44.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s08.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s08.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 10
+    },
+    {
+      "scene_number": 9,
+      "title": "אמנון לא אוהב חתולים",
+      "duration_sec": 8,
+      "description": "אמנון יושב על הספה, סקפטי. ברסה מתקרבת, מתיישבת לידו ונועצת בו מבט. הוא מנסה להתעלם. היא מניחה כף על זרועו — והוא נמס.",
+      "narration": "אמנון, לעומת זאת, לא אהב חתולים. עד שהוא פגש אותי.",
+      "characters": [
+        "amnon",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent — he sits back on a sofa in a warm home living room, arms crossed, wearing an expression of mild amused scepticism, looking across the room. BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical — she sits upright on the far end of the same sofa, side-on to him, studying him with a flatly unimpressed stare, tail curled around her paws. The composition puts clear negative space between them. Soft window light, shallow depth of field, warm domestic tones. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon sits on the sofa looking unconvinced while Barsa slowly walks toward him along the cushions. He tries to ignore her. She sits down beside him and stares directly into his eyes. He tries to stay serious. She gently places one paw on his forearm. His expression melts into a helpless smile. Barsa turns her head to camera as if she knew this would happen. Slow push-in, warm light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d41.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s09.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s09.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 11
+    },
+    {
+      "scene_number": 10,
+      "title": "הכניסה הגדולה של ברסה",
+      "duration_sec": 10,
+      "description": "כניסה של גיבורת ספורט: ברסה נכנסת דרך פתח דלת לתוך קרן אור זהובה, הפרווה שלה זזה ברוח. אמנון מסתובב ורואה אותה — הסקפטיות שלו נמסה.",
+      "narration": "אני בארסה. כן. בארסה.",
+      "characters": [
+        "barsa",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands heroically in the middle of a doorway, backlit by a wide beam of warm golden light that rims every hair of her short striped coat and turns her whiskers into filaments of light. Dramatic LOW camera angle from floor level, looking slightly up at her. A soft cinematic breeze lifts the fur on her chest; glowing dust particles float through the beam. Confident, regal expression, ears forward, her green-gold eyes catching the light with the subtle inward drift of the right eye clearly present. Elegant home interior falling into warm darkness behind her. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Treat this like the arrival of a legendary sports hero. Barsa walks slowly through the doorway into the golden backlight, fur lifting in the breeze, glowing particles drifting around her. Amnon turns and sees her; his sceptical expression shifts into instant affection. Barsa stops, holds his gaze, then slowly turns her head to camera with the calm expression of someone who already knows she has won. Slow heroic push-in.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d15.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s10.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s10.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 12
+    },
+    {
+      "scene_number": 11,
+      "title": "למה בארסה?",
+      "duration_sec": 10,
+      "description": "אצטדיון כדורגל בלילה: ברסה עומדת במרכז המגרש עם צעיף בצבעי כחול-בורדו, האורות נדלקים אחד אחד, כדור מתגלגל אליה והיא עוצרת אותו בכף אחת.",
+      "narration": "אמנון מכנה אותי בארסה, בגלל הקבוצה. אני מרשה לו רק כי יש לו שם של דג וזה האוכל האהוב עליי.",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "crane"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands at the exact centre circle of a spectacular football stadium at night, wearing an elegant knitted scarf in deep blue and burgundy draped around her neck, one paw resting lightly on a football. Towering floodlight banks blaze above her, lens flares raking across frame, dense crowd silhouettes and thousands of tiny phone lights in the stands, perfectly striped mown grass, drifting atmospheric haze. Low heroic angle. No real team logos, no crests, no readable text anywhere. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Dramatic stadium sequence. Barsa walks onto the pitch as the floodlight banks ignite one bank at a time, the light sweeping across her striped coat. A football rolls slowly toward her; she stops it dead with one paw without breaking stride. The crowd erupts in the background. She looks up at the lights, then turns to camera with regal confidence. Slow crane rise. Playful, no real-world logos, no text.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s11.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s11.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 13
+    },
+    {
+      "scene_number": 12,
+      "title": "המפגש",
+      "duration_sec": 10,
+      "description": "ניראל ואמנון מתקרבים זה לזה משני צדי הפריים, וכל אחד גורר איתו את עולמו — צבעים מול כחול. כשהם נפגשים שני העולמות מתמזגים לאור זהוב אחד.",
+      "narration": "ואז... הם נפגשו.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A cinematic romantic first-meeting frame. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent approaches from the left, trailing colourful artistic details — drifting yellow petals, a flicker of stage light, bright pigment in the air. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent approaches from the right, trailing cool blue details — faint map contour lines and stadium-blue light. They are still several steps apart, half-lit, both beginning to smile. Between them the two colour worlds are just starting to bleed into one warm golden pool of light, golden particles suspended in the air. Elegant sophisticated romantic-comedy mood. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Romantic-comedy first meeting. Nirel and Amnon walk toward each other from opposite sides of frame; their worlds follow them — colourful artistic particles around her, cool blue map and football light around him. As the distance closes the two palettes bleed together into one warm golden atmosphere and the background dissolves into bokeh. They stop, look at each other and exchange a real smile. Slow lateral tracking, no text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s12.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s12.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 22
+    },
+    {
+      "scene_number": 13,
+      "title": "צ'יק צ'ק",
+      "duration_sec": 8,
+      "description": "מונטאז' מהיר: צוחקים, הולכים, חולקים אוכל, מצטלמים סלפי מטופש, מסתובבים — ומסיימים יושבים יחד וצוחקים.",
+      "narration": "מתי הם הבינו שזה זה? ניראל אמרה: צ'יק צ'ק.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pan"
+      },
+      "image_prompt": "A fast romantic-montage frame. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent walk side by side down a sunlit street, mid-laugh, heads tilted toward each other, one of them holding a shared paper cup and a pastry. Warm late afternoon light flaring between buildings, colourful shopfronts blurred behind, natural unposed body language, genuine expressions. Premium wedding-film colour, motion energy frozen mid-step. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Fast romantic montage stitched with whip pans and match cuts: they laugh, walk together, exchange playful looks, share food off one plate, pull a silly face into a phone camera, spin once while walking, and finally drop onto a bench together still laughing. Each beat is short. Time should feel like it is accelerating. Warm natural light, handheld energy, sincere performances.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s13.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s13.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 23
+    },
+    {
+      "scene_number": 14,
+      "title": "מבצע מקסטוק",
+      "duration_sec": 10,
+      "description": "מחוץ לחנות עודפים צבעונית: ניראל נלהבת ומושכת את אמנון פנימה, הוא מותש. הוא עוצם עיניים בכניעה והמצלמה נכנסת לפניו.",
+      "narration": "גם אמנון ידע ברגע אחד בלתי נשכח. דמיינו את התפאורה הציורית: שניהם עומדים במקס סטוק, ניראל משווה ובוחרת נצנצים בהתלהבות",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A cinematic comedy frame outside a colourful discount craft-and-homeware store. The shopfront overflows with glitter, plastic flowers, ribbons, party decorations and bright household items stacked in bins. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent stands in the doorway, lit up with excitement, pointing inside and pulling AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent by the wrist. He stands half a step behind her with the face of a man who knows exactly how long this is going to take. Bright warm daylight, dynamic slightly wide framing. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel points enthusiastically toward the glittering store and keeps talking, tugging Amnon forward by the wrist. He resists for exactly one beat, then follows. She is already listing everything she needs. Amnon closes his eyes in total surrender. The camera slowly pushes into his face as the noise and colour of the street fade out around him and the light softens toward a dream. Warm daylight, comedic timing.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s14.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s14.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 25
+    },
+    {
+      "scene_number": 15,
+      "title": "הבת העתידית",
+      "duration_sec": 12,
+      "description": "בחלל חלומי אמנון רואה ילדה קטנה עם הרוח של ניראל רצה אליו עם נצנצים וצבעים. היא מחבקת אותו, ואז מצביעה על חנות ומושכת אותו פנימה. הוא צוחק בחוסר אונים.",
+      "narration": "אמנון עצם את העיניים ודמיין ילדה קטנה שמאוד דומה לניראל שבנחישות שאי אפשר לעמוד בפניה מבקשת לקנות עוד ועוד נצנצים וצבעים והוא כמובן קונה לה הכל כי מולה הוא הופך לשלולית.",
+      "characters": [
+        "amnon",
+        "nirel_child"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A magical cinematic vision, soft dreamlike space with no hard walls — everything dissolving into warm golden haze and floating glitter. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands in the centre, eyes just opening, dressed as in the previous scene. Running toward him from the glow is a little girl of about six with Nirel's playful creative spirit — curly brown hair, a bright yellow dress, both fists full of coloured glitter and ribbons, mid-run, radiantly joyful. Colourful sparkles hang in the air around her. Warm golden light, emotional fantasy, extreme shallow depth of field. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon closes his eyes and the world transforms into a warm golden dream. A little girl with Nirel's creative spirit runs toward him through floating glitter, arms full of colour, and hugs him hard. He laughs, then his smile turns emotional. She immediately points off-frame at a colourful store and pulls him toward it. He laughs helplessly. The dream dissolves back into daylight. Sweet, funny, emotionally grounded.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s15.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s15.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 26
+    },
+    {
+      "scene_number": 16,
+      "title": "הריב של יום האהבה",
+      "duration_sec": 10,
+      "description": "לילה, חדר שינה. ניראל ואמנון בשני צדי המיטה אחרי ריב קטן, מעמידים פנים שהם כועסים. שניהם, בלי שהשני יודע, מתחילים לכתוב.",
+      "narration": "ביום האהבה הראשון שלהם... היו ביניהם אי הסכמות.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "A cinematic romantic-comedy bedroom at night. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent sit on opposite edges of a cosy double bed, backs turned slightly away from each other, both staring at nothing, both performing being annoyed. Two warm bedside lamps carve them out of the dark; a rumpled duvet between them reads as a small mountain range. Soft shadows, intimate atmosphere, symmetrical composition split down the middle. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "They sit on opposite sides of the bed after a small argument, both pretending to be annoyed. The room goes quiet. They lie down facing opposite directions. After a long beat Nirel's hand reaches quietly to the nightstand for paper and a pen; on the other side Amnon does exactly the same thing. Neither notices the other. Locked-off symmetrical frame, warm lamplight, comic and tender.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s16.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s16.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 27
+    },
+    {
+      "scene_number": 17,
+      "title": "מכתבי האהבה",
+      "duration_sec": 12,
+      "description": "בוקר. כל אחד מגלה בנפרד מכתב מוסתר. הם קוראים בשקט, הפנים מתרככות — ומבינים ששניהם כתבו באותו לילה.",
+      "narration": "ובלילה, כשכל אחד חשב שהשני כבר ישן... כל אחד כתב מכתב אהבה. והחביא אותו בבית. בבוקר... שניהם גילו.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A warm cinematic morning inside a cosy colourful home. Low golden sunlight rakes through a window across a living room. Two handwritten letters on cream paper are hidden in two different places in the same frame — one tucked into the handle of a coffee mug on the counter, one slipped behind a framed photo on a shelf. Dust motes float in the light beam. Soft romantic atmosphere, shallow depth of field, elegant wedding-film visual language, no readable text on the letters. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A charming morning discovery sequence. Nirel walks into the room, reaches for her mug and finds a folded letter. At the same moment, elsewhere in the house, Amnon lifts a photo frame and finds the other. Each opens their letter and reads silently; their faces soften. They lower the pages, look up, and realise across the room that they both did the same thing that night. They move toward each other. Warm morning light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s17.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s17.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 28
+    },
+    {
+      "scene_number": 18,
+      "title": "V^ — הולדת הסימן",
+      "duration_sec": 8,
+      "description": "שני המכתבים נפגשים על השולחן. ידיהם נכנסות משני הצדדים ונוגעות, האצבעות יוצרות צורת V עדינה — והאור יוצר השתקפות בצורת V^. לידת המוטיב.",
+      "narration": "הם עברו יחד תקופות מגוונות- כסטודנטים, במיאוווו-לואים, כמפונים אבל אין ספק, שאין כמו בבית. אחרי התקופה המאתגרת הזאת, הם הכי אהבו לשבת סביבי על הספה, עייפים אך מרוצים. עצלים מדי בכדי לבשל, לזוז ואפילו להגיד ״אהבת חיי״ שהפך ל״ואתחה״ (v^)",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "overhead",
+        "camera_move": "crane"
+      },
+      "image_prompt": "A poetic cinematic overhead close-up. Two folded handwritten letters lie side by side on a warm wooden table. Two hands — a woman's and a man's — enter the frame from opposite edges and meet above the letters, fingers just touching so that the negative space between them forms a soft, unmistakable V shape. A low warm light source casts a delicate V-shaped highlight across the table surface beside them. Minimal, romantic, intimate; the V reads as an accident of light and gesture, never as a graphic overlay. No text, no drawn symbol. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "The two letters slide gently together on the table. The camera cranes slowly down over them. Nirel's and Amnon's hands enter from opposite sides and their fingertips meet; the gap between their fingers forms a subtle V. The warm light shifts and a delicate V-shaped reflection blooms across the wood beside their hands, then softens. Intimate and meaningful, never graphic or artificial. No text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s18.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s18.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 29
+    },
+    {
+      "scene_number": 19,
+      "title": "הודו",
+      "duration_sec": 10,
+      "description": "לילה בהודו. ניראל ואמנון מתארגנים לישון בחדר אירוח חמים אחרי יום נסיעות. הם מכבים את האור — ואז פיצוץ רחוק מרעיד את החדר.",
+      "narration": "ואז הגיעה הודו. וכזוג שחי בסרט הודי, גם הצעת הנישואין הייתה חייבת להתאים… פתאום קול יריות צורם חצה את האוויר ואת אווירת השאנטי-באנטי החליפו הלחץ והחרדה המוכרים לתושבי העוטף.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "A cinematic night scene inside a cosy Indian guesthouse room. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent are settling in for the night — open backpacks on the floor, a mosquito net gathered above the bed, patterned textiles, a small warm bedside lamp, an old ceiling fan turning slowly. Through the open window: warm night air, distant string-lights and rooftops. Nirel wears a colourful patterned travel dress; both look tired and content. Peaceful, softly lit, subtle romantic-comedy calm before something happens. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel and Amnon settle into bed after a long day of travel, exchanging tired smiles. She reaches over and switches off the lamp; the room drops to blue moonlight and the fan keeps turning. Everything goes quiet and peaceful for a long beat. Then a sudden loud distant explosion thumps through the walls — the window rattles, the net sways. Both freeze wide-eyed in the dark. Locked-off frame.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d69.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s19.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s19.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 34
+    },
+    {
+      "scene_number": 20,
+      "title": "\"יורים עלינו!\"",
+      "duration_sec": 10,
+      "description": "עוד פיצוץ. ניראל מזדקפת בבהלה. אמנון, בגבורה מוגזמת, זוחל לעבר החלון. ניראל מסמנת לו נואשות לעצור. המתח עולה.",
+      "narration": "ניראל הצהירה ״יורים עלינו!״. אמנון, בגבורה ובנחישות של הלוחם הגיבור שהוא, זחל לחלון וניראל צועקת לו מאחור ״תיזהר! אל תלך!״",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A cinematic suspense-comedy bedroom at night in an Indian guesthouse. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent sits bolt upright in bed, duvet clutched to her chest, eyes wide with alarm, one arm outstretched toward him. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent is halfway out of bed on all fours on the floor, mid-crawl toward the window with absurdly serious commando determination. The curtains breathe inward from the distant noise outside; cool blue moonlight cuts across the room in slats. Moody but safe cinematic lighting, low angle from floor level. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A suspenseful, ultimately comedic sequence. Another burst cracks outside. Nirel jolts upright in panic. Amnon's face goes deadly serious and he begins crawling across the floor toward the window with exaggerated bravery. Nirel gestures urgently at him to stop, whisper-shouting. He keeps crawling. Tension builds as his hand reaches slowly up toward the edge of the curtain. Low tracking camera, blue moonlight.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d69.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s20.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s20.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 35
+    },
+    {
+      "scene_number": 21,
+      "title": "גילוי הזיקוקים",
+      "duration_sec": 12,
+      "description": "אמנון מזיז את הווילון — ומגלה מופע זיקוקים ענק. החדר מתמלא בצבעים. ניראל מצטרפת אליו. שקט — ואז פרץ צחוק משחרר. אחד הפיצוצים משאיר בשמיים עקבת V^ רגעית.",
+      "narration": "אתם לא מבינים מה הלך שם! ממש חתולה-נובלה! אמנון מסית את הוילון ומופע זיקוקים מטורף נגלה לנגד עיניהם!",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "pull-out"
+      },
+      "image_prompt": "A spectacular Indian night sky exploding with an enormous fireworks display, seen from inside a dark cosy guesthouse room through an open window. Huge blooms of gold, magenta and green fill the sky above silhouetted rooftops and temple spires; one high burst leaves a faint chevron-like V-shaped trail of sparks. The room is washed in flickering colour; the curtain is pulled half aside. Reflections of the fireworks in the window glass and in the polished floor. Romantic and humorous atmosphere, cinematic scale. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon eases the curtain aside and peeks out. His eyes go wide. The sky is full of an enormous fireworks display; the whole room floods with pulsing colour. Nirel joins him at the window; they stare in silence. One burst leaves a faint V-shaped trail. Then they realise what they just did and collapse into relieved helpless laughter, sliding down to sit on the floor. Camera pulls back from the window.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d69.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s21.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s21.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 36
+    },
+    {
+      "scene_number": 22,
+      "title": "תדריך המבצע",
+      "duration_sec": 10,
+      "description": "חדר בקרה בסגנון סרטי ריגול — למעשה מטה תכנון החתונה. ברסה סוקרת תוכניות דרך זכוכית מגדלת, מסמנת צ'קליסט, ולבסוף חובטת בכף על השולחן: המבצע יוצא לדרך.",
+      "narration": "ואם חשבתם שזו הייתה דרמה- רק עכשיו מתחיל כל הכיף- החתונה! או כמו שאני קוראת לזה- מבצע בארסה!",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. A cinematic spy-movie control room reimagined as an elegant wedding-planning headquarters: she sits upright at the head of a huge dark table covered with hand-drawn venue layouts, floor plans, fabric swatches, flower samples, a professional camera body, DJ headphones, printed menus and a long checklist. A brass magnifying glass rests under one paw. A single dramatic overhead lamp pools warm light on the table while the room falls into shadow behind her; corkboards and pinned photographs glow faintly in the dark. Sophisticated comedy, serious composition. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa presides over the wedding-planning command centre. She studies a floor plan through the magnifying glass, taps a line on the checklist with one claw, turns her head to the camera body, then to the dress sketch, then to the DJ headphones, weighing each one. Finally she slams one paw flat on the table like a general launching an operation. Papers flutter up around her. Slow dramatic push-in. No humans.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s22.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s22.mp4",
+      "style_note": "🕵️ פרודיית ריגול — Mission Briefing: חדר בקרה של סוכן חשאי, שולחן תכנון חתונה כמפת מבצע, תאורה דרמטית",
+      "order": 38
+    },
+    {
+      "scene_number": 23,
+      "title": "בוחרים צלם",
+      "duration_sec": 10,
+      "description": "ברסה חוקרת מצלמות מקצועיות כמו סוכנת חשאית — בוחנת עדשה, מתחבאת מאחורי גוף מצלמה, מציצה בעינית ולוחצת על ההדק. פלאש. היא בוחנת את התוצאה ומהנהנת באישור.",
+      "narration": "אז הייתי צריכה לבחור הכל, החל מצלם שיודע לתפוס רגעים של אושר",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "low",
+        "camera_move": "static"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. A cinematic spy-thriller composition: she stands among several professional wedding cameras and prime lenses laid out on a dark table like weapons in an armoury, peering intently into a huge front lens element that reflects her striped face and mismatched gaze. A tiny elegant detective accessory — a small magnifying glass on a chain — rests beside her. Printed photographs, contact sheets and wedding mood boards are pinned on the wall behind, lit by a single hard warm lamp. Dramatic chiaroscuro lighting. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa investigates the cameras like a secret agent. She inspects a lens through the magnifying glass, ducks behind a camera body, then rises to peer through the viewfinder with one eye. Suddenly she presses the shutter with her paw — a bright flash fills the room. She pads over to the printed result, studies it for a long beat, and nods once with grave professional approval. No humans.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s23.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s23.mp4",
+      "style_note": "🕵️ פרודיית ריגול/בלשית — Barsa כבלשית, אביזר בלשי זעיר, תאורה דרמטית, מצלמות/עדשות כראיות",
+      "order": 40
+    },
+    {
+      "scene_number": 24,
+      "title": "השמלה",
+      "duration_sec": 12,
+      "description": "מסלול תצוגה בבוטיק כלות. ניראל צועדת בשמלה לבנה מרהיבה ומסתובבת. ברסה יושבת בשורה הראשונה כשופטת אופנה חמורת סבר — ולבסוף מהנהנת באישור זעיר.",
+      "narration": "ושמלה מנצנצת וקסומה שנתפרה בעיצובה של ניראל ונראית כמו חלום",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A glamorous runway inside an elegant bridal boutique. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent stands mid-runway in a beautiful sophisticated white wedding dress, caught mid-turn with the fabric flaring. Tall mirrors, white peonies, champagne-toned lighting and racks of gowns fading into soft focus behind her. In the front row, on a velvet chair at the runway's edge, sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle — bolt upright, paws together, wearing the expression of an extremely serious fashion critic, her green-gold eyes narrowed with the subtle inward drift of the right eye visible. Couture atmosphere, premium cinematic style. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel walks the boutique runway in the wedding dress and turns slowly; the fabric flows and catches the light. Barsa watches from the front row with an intensely critical stare, following her with only her eyes. Nirel tries another turn, glancing at the cat for a verdict. Barsa raises one paw, holds it — then gives a tiny, decisive approving nod. Nirel laughs. Elegant lateral tracking, champagne light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s24.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s24.mp4",
+      "style_note": "👗 פרודיית מסלול אופנה — bridal boutique כ-runway, Barsa כשופטת אופנה רצינית, תאורת שמפניה רכה",
+      "order": 41
+    },
+    {
+      "scene_number": 25,
+      "title": "מלכת המאפים",
+      "duration_sec": 10,
+      "description": "מטבח קונדיטוריה: ניראל מקציפה, הופכת קרפים, מקשטת פאי לימון — ולבסוף חושפת עוגה אמנותית בצורת מספריים גוזרות חוגר. ברסה צופה משרפרף.",
+      "narration": "אצל ניראל- כשהאפייה והאמנות מתחברים יוצאות יצירות אומנות טעימות במיוחד- היא אפילו הכינה עוגה בצורת מספריים שגוזרות חוגר- וואט??",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pan"
+      },
+      "image_prompt": "A whimsical cinematic pastry kitchen glowing with warm light: marble counters loaded with a lemon meringue pie, a tall cheesecake, stacked crepes, piping bags and bowls of coloured icing. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; dressed as a professional pastry chef — a crisp white chef's apron over her clothes, a small white baker's toque or a folded bandana holding her hair back, flour dusted lightly on her forearms and apron — stands proudly in the centre, presenting a spectacular sculpted cake made for an Israeli soldier's end-of-military-service celebration (שחרור): the cake is shaped like a pair of giant scissors mid-cut through a red ribbon, and resting beside the cut ribbon is a small credit-card-sized military ID card rendered entirely in fondant and icing, with a tiny oval photo-portrait shape and fine piped decorative border lines (no legible text). On a wooden stool at the counter edge sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, watching the cake with total fascination, whiskers forward. Premium food cinematography, golden light, steam and flour dust in the air. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel moves rapidly around the pastry kitchen: she whisks batter, flips a crepe in the pan, pipes a swirl onto the lemon pie, spins the cheesecake stand — and finally lifts a cloche to reveal the sculpted scissors-and-belt cake. Barsa watches from her stool, head tracking every movement. Nirel presents the cake proudly. Barsa slowly raises one paw as if delivering a verdict. Warm pan, energetic cutting.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s25.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s25.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 31
+    },
+    {
+      "scene_number": 26,
+      "title": "המקלובה",
+      "duration_sec": 10,
+      "description": "אמנון מסדר תפוחי אדמה בתחתית הסיר בדיוק כמו שניראל לימדה אותו, מוסיף אורז ומרכיבים בריכוז מוחלט — והופך את הסיר על המגש. המקלובה נוחתת מושלם.",
+      "narration": "וכמובן- כמו תמיד, הכל אצלם בשיתוף פעולה אז ניראל לימדה אותו להכין מקלובה!",
+      "characters": [
+        "amnon",
+        "nirel"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "high",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A cinematic Middle Eastern home kitchen. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a casual heather-grey crewneck t-shirt with sleeves pushed up and a plain apron tied loosely at the waist, a relaxed at-home look, stands over a wide cooking pot at the stove, concentrating hard as he lays golden fried potato slices in a careful overlapping ring at the bottom of the pot. Beside him NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing a casual cream linen wrap top and rolled denim, hair loosely tied back, an easy at-home look, leans in, arms folded, smiling and quietly supervising. Bowls of rice, cauliflower, toasted almonds and spices crowd the counter; steam rises. Warm home lighting, delicious food cinematography, elegant lived-in family atmosphere. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon arranges the potatoes at the bottom of the pot exactly as Nirel taught him, then layers in rice and ingredients with fierce concentration, checking her face after each move. Nirel gives one tiny approving nod. He clamps a serving platter over the pot, takes a breath, and flips the whole thing over in one dramatic motion. He lifts the pot: the maklouba stands perfectly. They both erupt in celebration.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s26.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s26.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 33
+    },
+    {
+      "scene_number": 27,
+      "title": "ה-DJ",
+      "duration_sec": 12,
+      "description": "עמדת DJ שהופכת לפסטיבל: ברסה מטפסת אל הקונסולה עם אוזניות גדולות מדי, לוחצת כפתור — והאולם מתפוצץ באורות. היא מזיזה סליידר, הביט מתגבר, והרחבה מתפוצצת.",
+      "narration": "גם הייתי צריכה לבחור DJ, כי אני מכירה את אמנון- אם ניתן לו לבחור את המוסיקה…",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "low",
+        "camera_move": "crane"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands behind a spectacular wedding DJ console wearing elegant black headphones that are comically slightly too large for her head, one paw resting on a channel fader. The booth is framed by white flowers and glowing wedding lights; behind her, beams of moving-head lights, lasers and haze fan out over a packed golden dance floor rendered as soft silhouettes and bokeh. Premium music-video cinematography, dramatic low angle looking up at her. No readable text on the console. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa climbs onto the DJ booth and studies the mixing console with professional suspicion. She taps a single button — the entire hall erupts in light. She drags a fader up with one paw and the beat swells; she starts bobbing her head with total confidence. The room behind her explodes into a spectacular wedding dance party. She turns to camera, deeply satisfied. Crane rise, pulsing lights.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s27.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s27.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 43
+    },
+    {
+      "scene_number": 28,
+      "title": "בעיית הכדורגל",
+      "duration_sec": 10,
+      "description": "רחבת ריקודים אלגנטית שנחטפה לטובת חגיגת כדורגל. כדור מתגלגל על הרחבה, אמנון חוגג כאילו קבוצתו הבקיעה. ברסה מסתובבת למצלמה בחוסר אמון ועוצרת את הכדור בכף.",
+      "narration": "אמרתי לכם… בעיה….",
+      "characters": [
+        "barsa",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "pan"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands in the sharp foreground at the edge of a glamorous wedding dance floor, turned toward camera with an expression of pure disbelief, one paw lifted. A football rolls across the polished floor toward her between candles and fallen white petals. In the blurred background AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent is mid-celebration, arms thrown up, roaring as if his team just scored, surrounded by guests as soft silhouettes. Wedding lights, flowers, cinematic comedy framing, deep foreground/background separation. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A beautiful wedding dance floor suddenly turns into a football celebration. A football rolls onto the polished floor. Amnon reacts with enormous excitement, arms up, roaring as though his team just scored, and guests join in. In the foreground Barsa slowly turns her head toward camera in flat disbelief. She reaches out one paw and stops the rolling football dead. Comic timing, slow pan, warm party lights.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s28.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s28.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 45
+    },
+    {
+      "scene_number": 29,
+      "title": "נכנסת בטטה",
+      "duration_sec": 12,
+      "description": "היכרות עם בטטה — כלבה פרועה בלונדינית-קרמל מאופקים. היא נכנסת לפריים בצעדים קטנים ובטוחים, סוקרת את החתונה, ומזהה את ברסה. הזנב מתנופף.",
+      "narration": "אם כבר אנחנו מדברים על חיות המחמד שלי- תכירו את בטטה, החברה שלי מאופקים. מזכירה לכם מישהו?",
+      "characters": [
+        "batata"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic. A charming cinematic portrait: she stands proudly in the middle of an elegant wedding setting, head slightly tilted, her shaggy blonde-caramel coat lifting in a warm breeze, one ear flopped. Behind her, subtle hints of the Israeli south: hard warm southern light, a simple neighbourhood wall and a lovingly decorated home porch, dissolving into the polished wedding hall. Low camera angle at her eye level. Premium cinematic animal photography, every strand of her messy coat rendered. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Introduce Batata like a beloved supporting character. She trots into frame with confident little steps, her long shaggy coat bouncing and swinging, hair flopping over her eyes. She stops, looks around the elegant wedding setup, sniffs a flower arrangement — then spots Barsa off-frame. The two look at each other. Batata's whole back end wags. Barsa pretends to be unimpressed but secretly softens. Warm push-in.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/batata1.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s29.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s29.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 14
+    },
+    {
+      "scene_number": 30,
+      "title": "ברסה ובטטה",
+      "duration_sec": 12,
+      "description": "ברסה ובטטה עובדות יחד על הכנות החתונה. ברסה בודקת צ'קליסט, בטטה מביאה סרט — ומסתבכת בו. ברסה משחררת אותה בשלווה, ושתיהן מחליפות מבט של גאווה.",
+      "narration": "אז בשורה התחתונה- אני אחראית על האסטרטגיה ובטטה… על האנרגיה",
+      "characters": [
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. Beside her on the same wedding-planning sofa sits BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic. They sit together like two unlikely best friends — the cat upright, precise and composed, one paw resting on a printed checklist; the dog sprawled happily beside her with a length of satin ribbon in her mouth. Around them: white flowers, fabric samples, spools of ribbon, place cards and wedding accessories spread across the cushions. Warm golden light through a window, charming comedy, both animals clearly individual. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa and Batata work on the wedding preparations together. Barsa scans a checklist and taps an item, then points a paw toward the table; Batata bounds over to it and drags back a ribbon. Batata immediately gets tangled, spinning in place. Barsa watches for a beat, then calmly steps in and unwinds her. They exchange a proud look as if they just completed a major operation. Locked frame, warm light.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s30.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s30.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 47
+    },
+    {
+      "scene_number": 31,
+      "title": "בטטה גונבת את ההצגה",
+      "duration_sec": 10,
+      "description": "בטטה צועדת במרכז המעבר של החתונה כאילו היא הכוכבת, עוצרת ומחייכת למצלמה. ברסה צופה מהצד, מבינה שגנבו לה את הסצנה, מגלגלת עיניים והולכת.",
+      "narration": "לפעמים היא קצת מגזימה. אבל היא חברה.",
+      "characters": [
+        "batata",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic — she stands dead centre on an elegant candlelit wedding aisle as if she is the star of the entire wedding, chest out, shaggy blonde coat catching a warm spotlight from above, hair over her eyes, tail high. White flowers line the aisle, candles flicker, rows of chairs recede into golden bokeh. At the left edge of frame, in the shadows just off the aisle, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle sits watching her with a distinctly unimpressed, faintly jealous expression. Playful premium animation, cinematic spotlight. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Batata walks confidently down the wedding aisle, her shaggy coat bouncing with every step, straight into the warm spotlight. She stops in the centre, turns toward camera and gives an adorable proud open-mouthed smile. From the side Barsa watches, realising the scene has been stolen from her. Barsa rolls her eyes, flicks her tail once and walks out of frame. Comic timing, slow lateral track.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/batata1.jpeg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s31.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s31.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 48
+    },
+    {
+      "scene_number": 32,
+      "title": "צבעים",
+      "duration_sec": 10,
+      "description": "סטודיו יצירה קסום: ניראל מציירת, מסובבת בד צבעוני, משרטטת ואופה, נעה בין תחנות יצירה. הצהוב שולט. היא מסיימת במבט שובב למצלמה.",
+      "narration": "וכמו כל דבר, גם פה הם מצאו איך להכניס את הטאצ׳ האישי שלהם",
+      "characters": [
+        "nirel"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "crane"
+      },
+      "image_prompt": "A magical cinematic creative studio bursting with bright paints, half-finished canvases, hanging fabrics, flowers, baking tools and theatrical props. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing white paint-splattered overalls over a fitted black tank top, sleeves rolled, hair up in a loose messy bun with a small yellow bandana tied at the front, an artist's working look, stands in the centre mid-motion, a loaded brush in one hand and a swirl of yellow fabric arcing around her, laughing. Colour is everywhere but one warm YELLOW accent dominates — yellow paint, yellow flowers, yellow cloth. Soft golden light through a high window, floating pigment particles, artistic premium wedding-film aesthetic. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "A joyful artistic montage. Nirel paints a broad stroke, spins a length of coloured fabric around herself, sketches fast, dusts flour, and moves between creative stations without stopping. Yellow, blue and bright colours flow around her in the air. She ends by turning to camera with a playful smile while coloured paint particles drift and settle around her. Crane move, warm golden light, buoyant rhythm.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s32.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s32.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 49
+    },
+    {
+      "scene_number": 32.5,
+      "title": "עוד יצירה",
+      "duration_sec": 6,
+      "description": "המשך לסטודיו של ניראל: היא מציירת דיוקן של חתול (בהשראת ברסה) על כדור בסקטבול צהוב, מחברת סקיצות פתוחה לצידה, עציצים צבועים ביד על השולחן. עוד דוגמה לכך שהיא הופכת כל דבר ליצירה.",
+      "narration": "בהתמדה ובנחישות ניראל ציירה ויצרה מכל אחד מכדורי הסל שפינצ׳רתי את העציצים המהממים שאתם רואים במרכז השולחן.",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "MANUALLY CREATED BY USER — see scenes/s32.5.png. Nirel, laughing, hand-painting a cat portrait (inspired by Barsa) onto a yellow basketball in her creative studio, an open sketchbook of teapot/object doodles beside her, a hand-painted flower planter on the table, warm golden studio light, paint-splattered overalls.",
+      "video_prompt": "Nirel adds a few more careful brush strokes to the cat portrait on the basketball, glances up with a playful laugh, then looks back down and keeps painting. Gentle handheld-feel push-in, warm golden light, soft floating dust/pigment in the air.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s32.5.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s32.5.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "note": "סצנה חדשה שנוספה 2026-08-19 ע\"י המשתמש (לא מהתסריט המקורי) — התמונה נוצרה/סופקה ידנית (s32_v3.jpeg). title/description/narration/video_prompt הם ניסוח שלי בהשראת התמונה — טרם אושרו במפורש ע\"י המשתמש, לבדוק.",
+      "order": 50
+    },
+    {
+      "scene_number": 33,
+      "title": "דוקו מדעי",
+      "duration_sec": 10,
+      "description": "סלון שהפך לדוקומנטרי פרהיסטורי: ניראל צופה מרותקת בדינוזאורים ובשכבות סלע. ברסה יושבת לידה, משתעממת בהדרגה — ונרדמת.",
+      "narration": "בסוף יום ארוך ניראל אוהבת לצפות בדוקו מדעי. תנו לה דינוזאורים, שכבות סלע והיא מסודרת.",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A cosy cinematic living room at night, lit almost entirely by the glow of a huge screen showing a scientifically accurate dinosaur walking through a prehistoric landscape. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent sits curled on the sofa, knees up, utterly absorbed, her face lit blue-green by the screen with childlike fascination. Beside her on the cushion sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, already visibly bored, eyes half-closed. Fossils, rocks and geology books on the coffee table. Warm lamp behind, cool screen light in front. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel sits completely absorbed in the dinosaur documentary; the screen light shifts across her face as majestic dinosaurs move through the prehistoric landscape, then dissolve into colourful banded geological rock layers. She smiles with childlike wonder. Beside her Barsa's eyes droop lower and lower until she slumps sideways, fast asleep, while Nirel remains transfixed. Slow push-in, cool screen light against warm lamplight.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s33.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s33.mp4",
+      "style_note": "🦕 פרודיית דוקו טבע — מסך ענק בסלון הופך לדוקומנטרי פרהיסטורי, דינוזאורים וסלעים, אור ביתי חמים",
+      "order": 16
+    },
+    {
+      "scene_number": 34,
+      "title": "קובה סלק",
+      "duration_sec": 8,
+      "description": "קלוז-אפ אוכל: קערת קובה סלק אדומה ומהבילה. ניראל נכנסת לפריים, מריחה, מחייכת ולוקחת ביס ראשון. ברסה מביטה בתקווה — ולא מקבלת.",
+      "narration": "האוכל האהוב עליה הוא קובה סלק. ולא, בארסה לא מקבלת.",
+      "characters": [
+        "nirel",
+        "barsa"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "A cinematic food close-up: a beautiful deep-red bowl of beetroot kubbeh on a warm wooden family table, glossy crimson broth, pale semolina dumplings, chopped celery leaves, gentle steam curling upward through a shaft of warm light. A spoon rests against the rim. Just at the edge of frame, slightly out of focus, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle has her chin on the table edge, staring at the bowl with intense hope. Premium food cinematography, rich colour, extreme shallow depth of field. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Steam curls from the bowl of beetroot kubbeh. Nirel enters frame, leans over it, closes her eyes and inhales with complete satisfaction, then takes the first spoonful. At the table edge Barsa creeps closer, eyes locked on the bowl, hope rising. Without even looking, Nirel slides the bowl a few centimetres away and gives the cat a playful little smile. Locked frame, warm light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s34.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s34.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 17
+    },
+    {
+      "scene_number": 35,
+      "title": "כדורגל",
+      "duration_sec": 10,
+      "description": "מגרש כדורגל בשקיעה: אמנון בועט כדור לאוויר, תופס אותו, מסובב אותו על אצבע ומביט אל האצטדיון. המצלמה מקיפה אותו וקווי מפה נרמזים בדשא.",
+      "narration": "אצל אמנון... העולם מחולק לשני סוגים של אנשים. אלה שאוהבים כדורגל. ואלה שעוד לא הבינו.",
+      "characters": [
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A cinematic football pitch at golden-hour sunset. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands at the centre circle with a football tucked under one arm, in elegant casual clothes with a subtle blue accent, backlit by a low orange sun that rims his shoulders and beard. Behind him a large stadium stand with floodlights just beginning to glow. Faint map contour lines are subtly integrated into the mown stripes of the grass, readable only as texture. Long shadows, drifting dust in the low light, premium sports-film cinematography. No real team logos, no text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon walks onto the sunset pitch, flicks the football up with his foot, catches it and spins it on one finger. He looks up toward the stadium as the floodlights climb to full. The camera arcs slowly around him while faint map contour lines shimmer as reflections in the grass. He ends looking off-frame with a proud private smile. Golden-hour backlight, slow orbital track, no logos or text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s35.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s35.mp4",
+      "style_note": "⚽ פרודיית סרט ספורט — Amnon במגרש כדורגל בשקיעה, תאורת אצטדיון, cinematography בסגנון סרטי ספורט",
+      "order": 18
+    },
+    {
+      "scene_number": 36,
+      "title": "ערי הבירה",
+      "duration_sec": 10,
+      "description": "אמנון במרכז חדר מלא מפות עולם וגלובוסים זוהרים, מסובב גלובוס ומצביע על מדינה אחרי מדינה כמו מתמודד גאון בשעשועון. ניראל נכנסת ומביטה בו בחוסר אמון משועשע.",
+      "narration": "הוא גם יודע את כל ערי הבירה בעולם. תנסו אותו. באמת.",
+      "characters": [
+        "amnon",
+        "nirel"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A spectacular cinematic room filled with floating translucent world maps, glowing globes and luminous geographic routes arcing through the air. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands in the centre like a genius game-show contestant, one arm extended, confidently pointing at a country on a suspended map, lit from below. Elegant deep blue lighting mixed with warm gold rim light, glowing continents, drifting particles. No readable place names or text anywhere. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon spins a globe hard. Countries and cities ignite one after another as it turns. He points confidently, answering before the question lands, and the pace accelerates like a game show — point, light, point, light. Nirel walks into frame and watches him with amused disbelief, arms crossed. Without missing a beat he points at another country. Push-in, blue-and-gold light, floating maps.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s36.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s36.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 20
+    },
+    {
+      "scene_number": 37,
+      "title": "הסוד הקטן של ניראל",
+      "duration_sec": 8,
+      "description": "ניראל רוקדת בביטחון מוחלט ואמנון מנסה לחקות אותה — בהתלהבות, בלי קואורדינציה. היא מדגימה שוב, הוא משתפר קצת, ושניהם מסיימים בצחוק.",
+      "narration": "ד״א, לכבוד החתונה הוא גם עבד על יכולות הריקוד שלו, אז פרגנו לו בפעם הבאה שאתם על רחבת הריקודים!",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing a flowy patterned wrap dress in warm terracotta and mustard tones, barefoot, hair loose and swinging, dances with effortless confidence in the middle of an elegant warmly lit living room, mid-move, hips turned, arms fluid, completely in her element. Half a step behind her AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a casual untucked linen shirt with sleeves rolled, sock feet, a relaxed at-home outfit, is caught attempting the exact same move and getting it visibly wrong — limbs at the wrong angles, enormous enthusiasm, total lack of coordination. Warm lamplight, rug pushed aside, romantic-comedy mood, both faces clearly readable and joyful. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel dances with effortless rhythm. Amnon tries to copy her behind her shoulder, enthusiastic and hopelessly off-beat. She turns, sees him, laughs, and demonstrates the move again slowly. He tries once more and improves very slightly. She applauds ironically. They end up laughing together and giving up on the choreography entirely. Locked frame, warm lamplight, natural comic performance.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s37.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s37.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 46
+    },
+    {
+      "scene_number": 38,
+      "title": "האנגלית שלה",
+      "duration_sec": 8,
+      "description": "ניראל משדרת ביטחון מוחלט ללא מילים — מחווה בטוחה, חיוך סגור — עד שהיא קולטת שמכרים מסתכלים עליה. הביטחון מתאדה מיד. אמנון מנסה לא לצחוק.",
+      "narration": "ניראל גם מדברת אנגלית מצוין. כל עוד... אף אחד שהיא מכירה לא מסתכל עליה.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing a chic fitted blazer over a simple white top, statement earrings, a polished confident look, stands in a beautiful warmly lit room mid-gesture, as if mid-story, one hand raised in an animated expressive gesture, mouth closed in a confident closed-lip smile, radiating easy self-assurance without speaking. Her eyes have just flicked sideways — she has noticed people she knows watching her from the soft background, and the first flicker of self-consciousness is arriving on her face. In the blurred background AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a casual open-collar shirt with sleeves rolled, watches her, biting back a grin. Warm lighting, expressive acting, comedy caught mid-turn. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel stands mid-conversation, radiating easy confidence, gesturing expressively with her hands as if mid-story, her expression open and self-assured, mouth closed in a confident smile rather than talking. Then she notices familiar faces watching from the background. She freezes, her gesture stopping mid-air. Her confidence visibly drains; she looks away, fiddles with her sleeve, her smile turning sheepish and awkward. Amnon watches from behind, shaking with suppressed laughter. She shoots him a playful, murderous look. Slow push-in, warm light, precise comic timing. Her mouth stays closed or barely moves throughout the entire shot — the comedy is told entirely through her eyes, hands and posture, never through visible speech or lip movement.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s38.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s38.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 21
+    },
+    {
+      "scene_number": 39,
+      "title": "הכנות אחרונות",
+      "duration_sec": 10,
+      "description": "מונטאז' הכנות מהיר: פרחים מסודרים, נרות נדלקים, טבעות מונחות, שמלה מיושרת, ציוד DJ נדלק. ברסה עוברת בחדר ובודקת כל פרט, בטטה עוקבת אחריה עם סרט.",
+      "narration": "וסוף סוף הגענו לרגע הגדול! הטבעות שניראל ואמנון עיצבו בעצמם מוכנות, השמלה מנצנצת",
+      "characters": [
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A breathtaking cinematic wedding preparation room: banks of white flowers, hundreds of candles being lit, elegant place settings, the wedding dress on a stand, two rings on a velvet tray, stacks of invitations, all bathed in soft warm light. In the centre of it all sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, upright and still like a director overseeing the whole set, surveying the room. A few steps behind her stands BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic with a satin ribbon in her mouth, waiting for instructions. Premium wedding cinematography, deep layered composition. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Fast cinematic preparation montage: flowers are placed, candle wicks catch one after another, rings settle onto velvet, a dress hem is smoothed, glassware is aligned, DJ equipment powers up with a glow. Barsa moves deliberately through the room inspecting each detail, nose to each object; Batata trots after her carrying the ribbon. Barsa stops, surveys everything, and finally looks satisfied. Smooth tracking, warm light.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s39.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s39.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 52
+    },
+    {
+      "scene_number": 40,
+      "title": "האולם הריק",
+      "duration_sec": 10,
+      "description": "חשיפה איטית של אולם החתונה הריק רגע לפני הכניסה. המצלמה גולשת במעבר, עוברת את חופת הפרחים — ומגלה את ברסה יושבת לבדה בקצה, גאה. אור הנרות יוצר על הרצפה השתקפות עדינה בצורת V^.",
+      "narration": "עשיתי את זה! הכל מוכן!",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "EWS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A magnificent empty wedding hall moments before the guests arrive, seen in a wide cinematic frame down the length of the aisle. Elegant white flower arrangements, candlelit tables, strings of fairy lights, a floral arch at the far end, subtle blue and yellow accents in the styling. Two converging lines of candlelight reflect on the polished floor and meet in a soft, natural V-shaped highlight down the centre of the aisle. At the very end of the aisle, tiny in the frame, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle sits alone, proud and still. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Slow cinematic reveal of the empty wedding hall. The camera glides steadily down the aisle. Candle flames flicker, flowers sway gently, fairy lights breathe. Reflected candlelight on the floor converges into a subtle V-shaped highlight ahead of the lens. The camera passes beneath the floral arch and finally settles on Barsa, sitting alone at the end of the aisle, looking proud. No humans, no text.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s40.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s40.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 54
+    },
+    {
+      "scene_number": 41,
+      "title": "ניראל מתכוננת",
+      "duration_sec": 10,
+      "description": "ניראל מתלבשת: ההינומה מונחת, היא מביטה במראה. הבעתה עוברת מציפייה שובבה להבנה רגשית. היא לוקחת נשימה ומחייכת.",
+      "narration": "נירלול, הילדה הקטנה שהסתקרנה לראות מה יש בתוך בריכת הדגים של סבא, הילדה על הבמה, עם הנצנצים- מתחתנת!",
+      "characters": [
+        "nirel"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "crane"
+      },
+      "image_prompt": "A cinematic bridal preparation scene. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent is seen mostly from behind and in elegant three-quarter profile, wearing a beautiful white wedding dress with delicate detailing, a long veil being settled over her hair. She stands before a tall mirror in a room flooded with soft golden window light; her reflection is soft and partial. Flowers, jewellery and a hairbrush on a dressing table, sheer curtains glowing. Intimate, restrained, deeply emotional. Premium wedding cinematography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "The veil is lifted and settled gently over Nirel's hair. She turns slowly to the mirror and looks at herself. Her expression moves from playful anticipation to a quiet emotional realisation; her eyes gloss. She takes one breath and smiles softly. The camera arcs gently around her as warm window light fills the room and the sheer curtains lift. Sincere, unhurried, no text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s41.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s41.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 55
+    },
+    {
+      "scene_number": 42,
+      "title": "אמנון מתכונן",
+      "duration_sec": 10,
+      "description": "אמנון מסדר את החליפה והחפתים, רציני ומרוגש. הוא מבחין בכדורגל בפינה ומחייך, ואז בגלובוס — צוחק קלות — ולבסוף מביט לעבר הדלת.",
+      "narration": "ואמנון, הילד עם הכדורגל, שולף הכפכפים מהמערב, שחקר את כל ערי הבירה בעולם- מצא את הבית שלו!",
+      "characters": [
+        "amnon"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A cinematic groom preparation room. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands in an elegant dark wedding suit with a subtle blue accent in the tie and pocket square, head down, adjusting a cufflink with careful concentration. Warm golden light from a tall window rims his shoulder and beard. Humorously placed in the softly blurred background: a scuffed football resting on an armchair and a small desk globe on a side table. Sophisticated wedding film, restrained emotion, shallow depth of field. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Amnon straightens his jacket and fastens a cufflink, serious and quietly emotional. He catches sight of the football in the corner, smiles to himself and gives it a gentle touch with two fingers. Then he notices the globe, laughs softly under his breath and shakes his head. Finally he turns toward the door and holds, waiting for Nirel. Slow push-in, warm window light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s42.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s42.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 56
+    },
+    {
+      "scene_number": 43,
+      "title": "המבט של ברסה",
+      "duration_sec": 8,
+      "description": "שוט POV מנקודת מבטה של ברסה: המצלמה נעה קדימה במעבר, אורחים מסתובבים לעבר הכניסה, נרות מרצדים — ובסוף המעבר מופיעים הזוג כצלליות רכות.",
+      "narration": "וכמובן- אני. שהייתי שם מהרגע הראשון.",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "LS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A cinematic point-of-view shot from Barsa's perspective, camera height only 25 centimetres above the floor, looking down the length of a magnificent wedding aisle. Warm candlelight, white flowers lining the aisle, guests seated on either side rendered as soft out-of-focus silhouettes, an elegant floral arch glowing at the far end. At the very bottom edge of frame, slightly out of focus, the tips of two large upright pointed brown-tabby ears are just visible, framing the shot. Premium wedding film. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "POV from Barsa at floor level. The camera moves slowly and smoothly forward down the wedding aisle, the tips of her ears bobbing gently at the bottom of frame. Guests turn their heads toward the entrance. Candle flames flicker as she passes. The atmosphere thickens with emotion. At the end of the aisle the wedding couple resolves out of the golden haze as soft silhouettes. Low tracking move.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s43.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s43.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 57
+    },
+    {
+      "scene_number": 44,
+      "title": "ניראל צועדת",
+      "duration_sec": 10,
+      "description": "ניראל צועדת לאט במעבר לעבר אמנון, ההינומה נעה מאחוריה. אמנון ממתין בקצה, נרגש ומחייך. השוט מתחלף בין רחב, תגובה שלו ומעקב לצידה.",
+      "narration": "אז כמו שסיפרתי לכם- הוא אמר מיאו, היא אמרה מיאו, והשאר היסטוריה.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A breathtaking cinematic wedding aisle. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent walks toward camera down the aisle in an elegant white wedding dress with a long flowing veil, holding a white bouquet, surrounded by hundreds of candles and white flowers, her face lit warm and open. At the far end of the aisle, small and soft in the background, AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent waits in his dark suit, visibly emotional. Guests as warm silhouettes on both sides, golden bokeh, premium cinematic wedding photography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel walks slowly down the aisle; her veil drifts behind her and the candlelight moves across the dress. The camera alternates between a wide cinematic view of the aisle, a close reaction on Amnon whose smile cracks into emotion, and a graceful tracking shot moving beside Nirel at her pace. Keep the mood sincere and beautiful, no comedy here. Warm candlelight, gentle steadicam.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s44.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s44.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 59
+    },
+    {
+      "scene_number": 45,
+      "title": "המבט",
+      "duration_sec": 8,
+      "description": "קלוז-אפ אינטימי: ניראל ואמנון מביטים זה בזה בשקט מתחת לחופה. ההבעות מתרככות, חיוך, צחוק קטן ששובר את המתח — והם אוחזים ידיים.",
+      "narration": "ואלה אמנון וניראל- הצחוקים, השטויות, הבלגאן וכמובן האהבה.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "An intimate cinematic close two-shot of NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent facing each other during their wedding ceremony, foreheads almost touching, framed tightly. Warm candlelight reflected as tiny flames in both their eyes, her veil catching the light, white flowers blurred into golden bokeh behind them. Genuine unposed emotion — she is on the edge of tears and laughter at the same time; he is holding it together and failing. Elegant shallow depth of field, premium wedding film. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel and Amnon look at each other in silence. Their expressions soften; a smile spreads across both faces at the same moment. A tiny involuntary laugh breaks the tension and she wipes one eye. They reach down and take each other's hands without looking. The camera pushes in slowly and the background melts entirely into warm golden bokeh. Sincere, no comedy, no text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s45.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s45.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 60
+    },
+    {
+      "scene_number": 46,
+      "title": "V^ חוזר",
+      "duration_sec": 8,
+      "description": "קלוז-אפ פואטי על ידיהם הנוגעות ליד טבעות הנישואין. אור נרות חם יוצר על עור ידיהם השתקפות עדינה בצורת V^ — הסימן חוזר, עכשיו בטקס עצמו.",
+      "narration": "אהבת חיי. ואתחה. V^.",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "overhead",
+        "camera_move": "crane"
+      },
+      "image_prompt": "A poetic wedding macro close-up: Nirel's and Amnon's hands gently touching, wearing their real wedding rings exactly as shown in the second reference image — the woman's hand (Nirel) wears the delicate engraved band with the fine floral leaf-and-sun pattern (the ring shown on the right in the reference box), the man's hand (Amnon) wears the smooth plain polished gold band (the ring shown on the left in the reference box) — the rings catching the candlelight. The negative space between their fingers forms a soft, natural V shape, and warm light throws a delicate matching V-shaped highlight across the skin of their hands and the surface below. White flowers and candle flames dissolve into golden bokeh behind. Elegant, emotional, entirely photographic — the V exists only as light and gesture, never as a drawn graphic or text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Their hands come together and settle. The rings catch and throw warm candlelight. The camera cranes slowly around and above their hands. As the angle changes, a subtle V-shaped reflection appears naturally in the light across their skin, grows for a moment, then softly dissolves into golden bokeh as the camera drifts away. Intimate, unhurried, no graphics, no text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s46.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s46.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 61
+    },
+    {
+      "scene_number": 47,
+      "title": "הריקוד הראשון",
+      "duration_sec": 10,
+      "description": "ריקוד ראשון: ניראל ואמנון רוקדים מתחת לגופי תאורה חמים, מוקפים במעגל מטושטש של אורחים. היא מסתובבת, הוא תופס אותה, שניהם צוחקים.",
+      "narration": "ועכשיו- חגיגה!!!!",
+      "characters": [
+        "nirel",
+        "amnon"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "crane"
+      },
+      "image_prompt": "A spectacular romantic wedding first dance. NIREL — an Israeli woman in her early 30s, brown hair worn naturally loose in soft waves with teal-dyed lower strands clearly visible, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing an elegant flowing white wedding gown and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a formal dark tailored suit with a white shirt, no tie, top button open, dance together in the centre of a darkened hall beneath a canopy of warm hanging Edison lights, her gown caught mid-turn, his hand at her back, both looking at each other. Around them a soft blurred circle of wedding guests in colourful festive party attire — bright jewel-tone dresses and shirts, some holding sparklers and phones — candles and white flowers on the tables beyond. Cinematic golden atmosphere, elegant slow-motion feeling, heavy bokeh. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel and Amnon begin their first dance, moving naturally and a little imperfectly, lost in each other. The camera circles slowly around them as the hanging lights brighten. Nirel spins out and Amnon catches her; they both laugh out loud. The shot widens and cranes up to reveal the whole glowing wedding hall and the ring of guests around them. Warm golden light, graceful motion.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s47.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s47.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 62
+    },
+    {
+      "scene_number": 48,
+      "title": "התפוצצות המסיבה",
+      "duration_sec": 12,
+      "description": "הרחבה מתפוצצת: אורות פועמים, אורחים רוקדים, ניראל צוחקת, אמנון קופץ, בטטה מקפצת בין הרגליים וברסה צופה מגובה בטוח. קונפטי עולה באוויר.",
+      "narration": "הצלחתי!",
+      "characters": [
+        "nirel",
+        "amnon",
+        "batata",
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "high",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "A spectacular high-energy wedding dance floor at full blast: guests in colourful festive party attire — bright jewel-tone dresses and shirts, dressed up and jumping, arms in the air, beams of moving light cutting through haze, gold confetti suspended mid-fall, warm golden lights with subtle blue and yellow accents, the DJ booth glowing at the back, flowers and candles on the surrounding tables. NIREL — an Israeli woman in her early 30s, brown hair worn naturally loose in soft waves with teal-dyed lower strands clearly visible, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing her white wedding gown, hem lifted as she dances and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing his formal dark suit, jacket open, sleeves loose, tie gone, top buttons open from dancing are at the centre of the crowd, mid-celebration. Low in the frame BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic bounds happily between the dancers. On a high ledge at the right edge, above the chaos, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle watches calmly. Premium music-video cinematography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "The wedding party explodes into motion. Lights pulse and strobe, guests jump as one, Nirel throws her head back laughing, Amnon leaps with both fists up, Batata bounces joyfully through the forest of legs. Confetti rises and falls. The camera performs one fast sweeping move across the packed dance floor and rises to end on Barsa, sitting composed on her high ledge above it all. High energy, no text.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s48.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s48.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 63
+    },
+    {
+      "scene_number": 49,
+      "title": "שקט אחרי המסיבה",
+      "duration_sec": 10,
+      "description": "האולם הריק אחרי החגיגה. נרות דועכים, קונפטי על הרצפה. המצלמה מתקרבת לברסה היושבת לבדה. היא סוקרת את החדר ומביטה לעבר המעבר — ההבעה שלה מתרככת.",
+      "narration": "ובסוף הערב, כשכולנו נחזור הביתה עייפים את מרוצים- נשארים רק הם, ואני.",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "A quiet cinematic wedding hall late at night, long after the celebration. A few candles still burn low on abandoned tables, wilting white flowers, gold confetti scattered across the empty dance floor, one overturned chair. Warm dim golden light, deep peaceful shadows, faint haze still hanging in the air. In the middle of the empty floor sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, alone and small in the wide frame, tail curled around her paws, looking toward the aisle. Elegant emotional cinematography. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "The empty wedding hall after the party. Candle flames gutter softly; a stray piece of confetti drifts down. The camera moves slowly across the floor toward Barsa sitting alone. She looks around the quiet room, at the empty chairs and the fallen confetti, then turns her head toward the wedding aisle. Her expression becomes unexpectedly tender. Slow push-in, warm dim light, near silence.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s49.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s49.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 65
+    },
+    {
+      "scene_number": 50,
+      "title": "ברסה מהרהרת",
+      "duration_sec": 10,
+      "description": "פורטרט פואטי: ברסה יושבת ליד חלון מואר בלילה, אורות העיר יוצרים בוקה מאחוריה. היא מסתובבת לאט למצלמה, ממצמצת מצמוץ מרוצה ומכרבלת את הזנב.",
+      "narration": "הם לימדו אותי שאהבה לא חייבת להיות הגיונית",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. A poetic cinematic portrait: she sits on a wide windowsill at night, in profile turning toward camera, her short striped coat glowing warm from a lamp inside the room while cool distant city lights bloom into beautiful bokeh through the glass behind her. Her whiskers catch the rim light. Thoughtful, affectionate, utterly composed expression, her green-gold eyes catching both light sources with the subtle inward drift of the right eye gently present. Premium animated-film realism. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa sits quietly on the windowsill watching the distant city lights. A car light drifts across the bokeh. She slowly turns her head toward camera; her expression is warm and sincere, without a trace of sarcasm. She gives one slow contented blink and curls her long ringed tail neatly around her paws, settling. Very slow push-in, warm interior light against cool city bokeh.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s50.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s50.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 66
+    },
+    {
+      "scene_number": 51,
+      "title": "ניראל ואמנון",
+      "duration_sec": 10,
+      "description": "פורטרט רומנטי אחרי החתונה: ניראל ואמנון עומדים יחד באורות זהובים, מביטים זה בזה וצוחקים בשקט. המצלמה נסוגה וחושפת את האולם הזוהר — וברסה ובטטה נראות ברקע.",
+      "narration": "הוא כחול, היא בכל צבעי הקשת. הוא בועט, היא רוקדת. הוא טנזייה, היא קובה סלק. וביחד, הם פשוט מיאווו-שלמים!",
+      "characters": [
+        "nirel",
+        "amnon",
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pull-out"
+      },
+      "image_prompt": "A cinematic romantic portrait of NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; wearing a modern relaxed white shirt, sleeves loosely rolled, effortlessly elegant, and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a modern white shirt, collar open, no jacket, sleeves rolled, relaxed and elegant, standing close together outside after their wedding, both relaxed and glowing. Warm golden festoon lights and white flowers behind them, soft evening blue in the sky beyond. Genuine unposed smiles, intimate body language, her hand on his chest. Far behind them, small and softly out of focus, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle and BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic sit side by side watching. Elegant premium wedding-film aesthetic. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel and Amnon stand together after the wedding. They look at each other, laugh softly at something unheard, and lean their heads together. The camera pulls slowly backward, revealing the glowing wedding venue behind them, the festoon lights and empty tables — and, in the foreground going out of focus, Barsa and Batata sitting side by side as a quiet visual callback. Warm evening light.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s51.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s51.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 67
+    },
+    {
+      "scene_number": 52,
+      "title": "הסוד",
+      "duration_sec": 8,
+      "description": "קלוז-אפ קומי: ברסה יושבת מאחורי שולחן התכנון בשעת לילה מאוחרת. היא מוודאת שאיש לא מסתכל, נשענת לעבר המצלמה עם הבעה קונספירטיבית ומקישה בכף על תוכנית החתונה.",
+      "narration": "ובסוף, שעות העבודה שהשקעתי בערב הזה הם כדי לאפשר לכולנו לחגוג את האהבה הגדולה הזאת",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. A cinematic comedic close-up: she sits upright behind a wedding-planning desk late at night, surrounded by stacked papers, floor plans, a vase of white flowers, a velvet ring box and scribbled planning notes. One paw rests deliberately on top of the master wedding plan. She looks directly into the camera lens with a confident, secretive, faintly conspiratorial expression, leaning very slightly forward. A single warm desk lamp lights her from the side, the rest of the room in shadow. Sophisticated mockumentary style. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa sits behind the wedding-planning desk. She glances deliberately left, then right, confirming nobody is watching. Then she leans slowly toward the camera; her expression turns conspiratorial and her ears tip forward. She taps the wedding plan twice with one paw and gives the smallest possible smile. Slow push-in, warm desk lamp, comic stillness. No humans, no text.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s52.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s52.mp4",
+      "style_note": "🤫 מוקומנטרי קונספירטיבי — קלוז-אפ לילי, Barsa פונה למצלמה במבט קושר-סוד, תאורה זהובה חמה",
+      "order": 68
+    },
+    {
+      "scene_number": 53,
+      "title": "מי באמת תכנן?",
+      "duration_sec": 8,
+      "description": "חשיפה: ברסה ניהלה את כל מבצע החתונה. היא מושכת אליה צ'קליסט אחרון, מסמנת את הפריט האחרון, חותמת בכף — ומביטה בבטטה, שמכשכשת בזנב.",
+      "narration": "טוב נו, גם בטטה…",
+      "characters": [
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "pull-out"
+      },
+      "image_prompt": "A humorous cinematic wide shot of a wedding-planning command room. BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle sits proudly dead centre on a large desk, chest out, one paw on a final checklist. Behind her, arranged like a mission wall: organised planning boards, pinned photographs, flower samples, a professional camera, DJ headphones, dress sketches and colour swatches. Standing beside the desk like a loyal assistant is BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic, alert and eager. Warm dramatic side light, deep shadows, mock-serious composition. No readable text on the boards. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Reveal that Barsa has secretly been running the entire wedding operation. She hooks the final checklist and drags it toward herself, scans it, and marks the last item, then presses her paw flat onto it like a stamp of approval. She turns her head to Batata, who wags her whole body with delight. Barsa gives one satisfied nod. Camera pulls back to reveal the full mission wall.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s53.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s53.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 69
+    },
+    {
+      "scene_number": 54,
+      "title": "בארסה מאשרת",
+      "duration_sec": 10,
+      "description": "פורטרט סיום: ברסה צועדת למרכז מעבר החתונה ומתיישבת ליד בטטה. שתיהן מביטות ישר למצלמה. ברסה קורצת, בטטה מכשכשת. המצלמה נסוגה וחושפת את האולם הזוהר.",
+      "narration": "ניראל ואמנון. אני מאשרת. אבל שלא תתבלבלו... אני הייתי פה קודם.",
+      "characters": [
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "pull-out"
+      },
+      "image_prompt": "A beautiful cinematic final portrait. BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical sits dead centre on a candlelit wedding aisle, upright and regal, looking directly into the camera. Beside her, shoulder to shoulder, sits BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic, also looking straight down the lens with an open happy expression. Around them: warm candlelight, white flower arrangements lining the aisle, strings of fairy lights and deep golden bokeh receding to the arch behind. Elegant, emotional and funny at once, both animals sharply rendered and clearly individual. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Barsa walks slowly to the centre of the wedding aisle and sits down beside Batata; they settle shoulder to shoulder. Both look directly into the camera. Barsa gives one confident, tiny wink. Batata's tail sweeps the floor happily. The camera pulls slowly backward down the aisle, revealing the magnificent glowing wedding hall around and behind them. Warm candlelight, no humans, no text.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s54.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s54.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 70
+    },
+    {
+      "scene_number": 55,
+      "title": "הזוג האחרון / V^",
+      "duration_sec": 12,
+      "description": "פורטרט חתונה מסכם: ניראל ואמנון מתחת לחופת הפרחים, מביטים זה בזה. ברסה ובטטה נראות בעדינות בקדמת הפריים. המצלמה נסוגה דרך האולם הזוהר, ובאור נוצרת השתקפות V^ אחרונה וגדולה — שיא המוטיב.",
+      "narration": "אהבת חיי, ואתחה. ועכשיו- הם בונים בית יחד! ואנחנו כאן מתרגשים, מזילים דמעה ומתפעלים מאמנון חתיך בחליפה וניראל כלה קסומה",
+      "characters": [
+        "nirel",
+        "amnon",
+        "barsa",
+        "batata"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "pull-out"
+      },
+      "image_prompt": "A breathtaking cinematic final wedding portrait. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings, her hair worn naturally loose in soft waves with the teal-dyed lower strands clearly visible, styled true to her real look in the reference photo rather than a formal updo; wearing an elegant flowing white wedding gown, and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; wearing a formal dark tailored suit with a white shirt, no tie, top button open, stand together beneath a beautiful white floral arch, turned toward each other, foreheads close, both smiling. Warm golden lights, hundreds of candles, white flowers, subtle blue and yellow accents in the styling. Two converging beams of warm light cross behind them and lay a soft, unmistakable V-shaped highlight across the floor at their feet — the largest and warmest appearance of the motif, produced entirely by light. In the soft foreground, out of focus, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle and BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic sit watching them. No graphics, no text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "Nirel and Amnon stand beneath the arch, look at each other and smile. Barsa and Batata drift into the soft foreground. The camera pulls slowly backward through the glowing wedding hall, revealing candles, flowers and fairy lights layer by layer. The converging light beams behind the couple resolve into a warm V-shaped reflection across the floor. The final frame settles into a golden tableau. Hold for a beat.",
+      "reference": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s55.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s55.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 71
+    },
+    {
+      "scene_number": 56,
+      "title": "הפאנץ' האחרון",
+      "duration_sec": 8,
+      "description": "כמעט חושך. ברסה מופיעה מתוך האפלה חובשת את ההינומה מסצנה 01, מביטה ישר למצלמה וקורצת לאט. ואז מסתובבת ויוצאת מהפריים בזמן שאורות החתונה זוהרים מאחוריה.",
+      "narration": "אה... וכמעט שכחתי. אני בארסה. איזה כיף שבאתם לחגוג איתנו את החתונה.",
+      "characters": [
+        "barsa"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. A playful cinematic close-up: she sits facing camera wearing the same delicate bridal veil from the opening chase, draped over her head and one ear, with a strand of pearls at her neck. She looks directly into the lens with an extremely confident, faintly smug expression. Behind her, almost total darkness broken only by warm out-of-focus wedding lights blooming into large soft golden bokeh circles. A single soft key light picks out her striped face and green-gold eyes. Elegant, funny, sophisticated. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.",
+      "video_prompt": "The screen is almost dark. Barsa emerges slowly out of the darkness into a soft pool of light, wearing the tiny bridal veil. She settles, looks directly into camera, and gives one slow, confident wink. Then she turns unhurriedly and walks out of frame, tail up, as the warm wedding lights bloom and glow behind her. The frame holds on the empty golden bokeh. No humans, no text.",
+      "reference": "bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png",
+      "image_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s56.png",
+      "video_output": "bambi/outputs/nirel-amnon/2026-08-19-barsa/videos/s56.mp4",
+      "style_note": "לוק בסיסי — cinematic wedding film, warm golden lighting, photorealistic detailed fur/faces, shallow depth of field",
+      "order": 72
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Scene: 28 — בעיית הכדורגל
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (image_to_video)
+Duration: 10s
+Resolution: 720p
+First frame: scenes/s28.png (unchanged)
+Fix: previous video (v2_6) showed Amnon apparently dropped/collapsed to the floor
+mid-celebration. Likely cause: ambiguous prompt phrasing ("arms up, roaring...
+guests join in") interpreted as a fall/collapse motion. Rewrote with explicit
+stability constraints (feet planted, never falling/collapsing) and upgraded from
+v2_6 to v3_0_turbo for cleaner motion physics. Verified fixed via 5 sampled frames
+across the clip — Amnon stays upright and balanced throughout.
+Credits consumed: 80
+generationId: AZkd0Ky41qZtY1a8srGg3Nc25crOx1pqCi9NiMouDxA2ug1BTcamFmmnJbfM3v6uGEbgt8ge
+Old version preserved: (previous s28.mp4 was overwritten; generationId of original
+run is AWtmG_IMa6l2Asn9J5F9mq9bZnjQH5Rftg2ohLjLJyP2w92Ib1W0xHt-1jAUPgawkIH5Tdi3 if
+re-download is ever needed — Kling URLs expire after 24h though)
+
+Prompt:
+A beautiful wedding dance floor suddenly turns into a football celebration. A football rolls onto the polished floor. Amnon reacts with enormous excitement — both feet planted firmly on the ground the entire time, arms thrown up, roaring as though his team just scored, chest forward, fully balanced and in control, standing upright throughout, never falling, never stumbling, never dropping or collapsing to the floor. Guests behind him cheer and clap in place without surging forward. In the foreground Barsa slowly turns her head toward camera in flat disbelief. She reaches out one paw and stops the rolling football dead. Comic timing, slow pan, warm party lights.
+
+Generated: 2026-08-20

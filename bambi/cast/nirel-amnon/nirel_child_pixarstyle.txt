@@ -1,0 +1,8 @@
+STYLE TEST — pixarstyle variant (alternative to photorealistic cast anchor)
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg
+Size: 1024x1024
+Tokens: 8165 total (6766 in / 1399 out)
+
+Prompt:
+LITTLE NIREL — an Israeli girl about 6-7 years old, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent (a yellow swimsuit or casual yellow outfit for a portrait setting). Mischievous, energetic, theatrical; loves water, stages and colour. Character portrait, head-and-shoulders to medium framing, square 1:1 crop. STYLE: realistic Pixar/Disney-style premium 3D animated feature look — illustrative realism around 90%, not fully photographic; soft stylized skin shading with subtle painterly texture, large expressive eyes slightly enlarged in the animated-feature convention, warm cinematic lighting, shallow depth of field, rich color grading, full-frame lens quality, ultra-detailed but clearly an animated-feature render rather than a photograph. No text, no subtitles, no logos, no watermark. Face must match the reference photograph exactly — same face shape, same curly hair, same playful expression, translated into the animated-feature style.

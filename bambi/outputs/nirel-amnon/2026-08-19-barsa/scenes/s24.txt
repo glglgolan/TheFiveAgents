@@ -1,0 +1,12 @@
+Scene 24: השמלה
+
+PROMPT:
+A glamorous runway inside an elegant bridal boutique. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent stands mid-runway in a beautiful sophisticated white wedding dress, caught mid-turn with the fabric flaring. Tall mirrors, white peonies, champagne-toned lighting and racks of gowns fading into soft focus behind her. In the front row, on a velvet chair at the runway's edge, sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle — bolt upright, paws together, wearing the expression of an extremely serious fashion critic, her green-gold eyes narrowed with the subtle inward drift of the right eye visible. Couture atmosphere, premium cinematic style. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19831 total (17826 in / 2005 out)

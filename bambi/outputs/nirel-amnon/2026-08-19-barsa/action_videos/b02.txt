@@ -1,0 +1,11 @@
+insert_id: B2
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.0305 USD
+duration: 5s
+actual_cost: 0.1525 USD
+reference: action_scenes/b02.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: HZNpnkZVmJpCTP63mmjj
+status: OK
+prompt:
+Counter-level shot in a warm kitchen. The scene erupts into a precisely choreographed chain reaction: a rolling pin rolls and knocks a bowl, an egg is flicked spinning into the air, a puff of flour bursts upward and hangs in the light, lemons launch one after another in graceful arcs, a spatula flips end over end, a ball of dough drops and bounces off the marble. The camera tracks rapidly through the middle of it all, threading between the flying objects at high speed, each one passing close to the lens with strong parallax and motion blur, flour dust streaming past. The chain accelerates toward the final beat, when a single lemon flies directly toward the lens, spinning, filling the frame — hard cut on impact. Realistic object physics and weight, no cartoon exaggeration, cinematic 16:9, no humans, no text, no logos.

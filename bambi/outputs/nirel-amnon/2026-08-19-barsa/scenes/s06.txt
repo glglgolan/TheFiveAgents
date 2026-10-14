@@ -1,0 +1,9 @@
+Scene 06 — "תקרית החומוס"
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Little.jpeg
+Tokens: 8736 total (6777 in / 1959 out)
+
+Prompt:
+A humorous cinematic kitchen scene, dramatic slow-motion suspense: a plate of perfectly smoothed hummus with a pool of olive oil, paprika and chickpeas sits in the centre of a warm family dining table, surrounded by pita, salad bowls and mismatched glasses. A child's worn rubber flip-flop is frozen dramatically in mid-air, spinning on its axis, on a direct collision course with the hummus, only centimetres away. Extreme shallow depth of field, warm kitchen light, exaggerated cinematic tension, tiny particles of dust caught in the beam. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+Note: image_prompt from storyboard.json has no human/child figure in frame (kitchen suspense shot only) — Amnon's reveal happens in the video_prompt, not this still frame. Reference supplied per JSON but not visually needed for this particular still.

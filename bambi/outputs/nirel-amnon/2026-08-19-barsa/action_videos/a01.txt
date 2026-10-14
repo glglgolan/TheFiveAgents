@@ -1,0 +1,12 @@
+insert_id: A1
+model: bytedance/seedance-2.0-mini
+price_per_sec: $0.03045 (60% discount had expired; user approved proceeding at this rate)
+duration: 6s
+actual_cost: $0.1827
+reference: action_scenes/a01.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: sKBmZmhW3TUw3z0dLufJ
+status: OK
+notes: First submission attempt (job sebSLkmclweHhuFfChgL) accidentally omitted --reference and ran as text-to-video; discarded, not used. This is the corrected image-to-video run.
+prompt:
+Extreme high-altitude FPV drone shot over a golden-hour neighbourhood. The shot begins almost static and serene, hovering very high. After roughly one second the drone suddenly accelerates straight downward in a powerful vertical dive, camera pitching forward, rooftops rushing up toward the lens with strong motion blur and rising wind pressure. The drone drops into the narrow gap between two buildings, banks sharply right with a visible camera roll, and races low over garden walls and treetops toward the elegant wedding house, leaves and white petals whipping past the lens as foreground parallax. It skims a hand's breadth above the roof tiles, pitches down over the eaves, and threads cleanly through an open upstairs window, the window frame wiping the frame edge to edge. Inside, the camera keeps flying forward through a warm sunlit interior — a curtain billowing past the lens, dust motes in a light shaft. Speed ramps up in the final beat as a wall approaches, then a rapid horizontal whip pan smears the room into streaks of warm light and ends the shot on a full motion-blur wipe. Photorealistic, physically coherent aerial motion, cinematic 16:9, no humans, no text, no logos.

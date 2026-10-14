@@ -1,0 +1,15 @@
+Scene: 50 — ברסה מהרהרת
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s50.png
+Credits consumed: 30
+generationId: AQSYPRCltrxbqjm5SHcBpDet0wlO6R6_ocQe9arLDk7oVwP8h_f0ilXZxEeBmEolRJThgxgU
+
+Prompt:
+Barsa sits quietly on the windowsill watching the distant city lights. A car light drifts across the bokeh. She slowly turns her head toward camera; her expression is warm and sincere, without a trace of sarcasm. She gives one slow contented blink and curls her long ringed tail neatly around her paws, settling. Very slow push-in, warm interior light against cool city bokeh.
+
+Generated: 2026-08-20

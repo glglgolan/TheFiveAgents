@@ -1,0 +1,4 @@
+Reverted 2026-08-19 per user: "not good" on the face-swapped versions. Final = s55_v1.png
+content (the original pre-swap generation from the first update round), no face-swap applied.
+History kept: s55_v2.png (16:9 fix, pre-swap) · s55_v2_swapped.png (d16-sourced swap) ·
+s55_v3_profileswap.png (profile-photo-sourced swap, rejected).

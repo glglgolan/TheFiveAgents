@@ -1,0 +1,40 @@
+Scene 01 — The Chase / Opening Hook   (15s, 1 clip)
+REGENERATED 2026-08-19 — 3 fixes: strabismus + real running + mouse fleeing
+provider: OpenAI | model: gpt-image-1.5 (edits) | 1536x1024 | quality medium +input_fidelity | 2 refs
+refs: [1] bambi/cast/nirel-amnon/barsa.png (NEW anchor, with strabismus)
+      [2] bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png (real photo)
+tokens: 15,718 (13,759 in / 1,959 out)
+
+Adapted from the master script's Scene 01 opening image prompt, with the
+"fluffy cream-colored cat" description replaced by the REAL Barsa
+(brown mackerel tabby, short coat) per user decision.
+
+WHAT CHANGED vs. v1:
+1. STRABISMUS — Barsa's slight convergent squint (right eye / viewer's left drifts
+   inward toward the nose) was missing in v1; eyes were too symmetrical and aligned.
+   Now explicitly specified. Subtle, never cross-eyed. Must persist in all her renders.
+2. REAL RUNNING — v1 read as crouching/pouncing/stalking. Now an explicit full-gallop
+   stride: body stretched long and low, front legs reaching, hind legs driving,
+   clear diagonal path, paws skidding on the lacquered parquet, motion blur on
+   legs/tail, head and eyes sharp.
+3. MOUSE FLEEING — v1 had it standing still facing camera. Now mid-stride in full
+   flight away from camera, twisting its head back over its shoulder with playful
+   confidence, motion blur on its feet.
+
+VO (Barsa): "יש הרבה סיפורים על אהבה. יש כאלה שמאמינים באהבה ממבט ראשון.
+יש כאלה שמאמינים בגורל. ואני? אני מאמינה שאם משהו חשוב באמת... צריך לרדוף אחריו."
+
+--- PROMPT SENT ---
+Cinematic opening-hook frame from a premium wedding film: a fast but graceful CHASE across the polished dance floor of an opulent wedding hall. 16:9 wide frame, dramatic LOW camera angle close to the floor looking down the length of the hall.
+
+THE CAT — Barsa (must match the reference exactly): a short-haired brown mackerel tabby, dense short close-lying fur (NOT fluffy, NOT long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and tail, distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, long banded tapering tail streaming out behind her.
+
+HER EYES — CRITICAL DEFINING TRAIT: almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose, so the two pupils are not perfectly parallel. Gentle, natural, endearing; clearly present but never exaggerated, never cross-eyed or comical.
+
+HER ACTION — SHE IS RUNNING AT FULL SPRINT, NOT crouching, NOT pouncing, NOT stalking. Full gallop stride: body stretched long and low in a true running extension, front legs reaching far forward, hind legs driving off behind her, spine elongated, tail streaming straight out for balance. Her paws SKID and slip on the glossy lacquered parquet, kicking tiny highlights; one paw slightly sliding. She moves along a clear DIAGONAL through the frame from the far background toward the lower foreground. Light motion blur on her legs and tail and a subtle directional blur streak behind her convey real speed; her head and eyes stay sharp and locked forward on her target. Focused, determined, playful-predator energy.
+
+THE MOUSE — a small grey field mouse, AHEAD of the cat and clearly RUNNING AWAY, not standing still. Its body is mid-stride in full flight, legs extended, moving away from the camera along the same diagonal, tail whipping behind it — while it TWISTS ITS HEAD BACK OVER ITS SHOULDER to glance at the pursuing cat with cheeky, playful confidence, a mischievous glint in its eye. Motion blur on its tiny feet.
+
+SETTING: a lavish wedding hall — dark glossy parquet dance floor mirroring the lights, tall white rose arrangements and garlands, clusters of lit pillar candles and floating candles, strings of warm fairy lights and a crystal chandelier glowing out of focus in the deep background.
+
+STYLE: cinematic wedding-film look, photorealistic highly detailed animal fur, premium animated-feature quality. Warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light shafts, subtle lens bloom, slight anamorphic flare on the candle highlights. Absolutely NO humans, NO people, NO text, NO logos, NO watermark.

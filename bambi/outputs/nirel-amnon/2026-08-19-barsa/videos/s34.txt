@@ -1,0 +1,16 @@
+Scene: 34 — קובה סלק
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s34.png (unchanged)
+Fix: previous video generated a generic woman instead of Nirel, since only the bowl
+and Barsa are visible in the first frame. Bound the real Nirel Element (<<<319175997618831>>>).
+Credits consumed: 60
+generationId: ARYs42BuMe5b4WpWKaqMG3mtgLUU4dNU8KJcJDGzN5mZtBT988FAPLkH8nZNhPlLnCvDJCZv
+
+Prompt:
+Steam curls from the bowl of beetroot kubbeh. <<<319175997618831>>> enters frame, leans over it, closes her eyes and inhales with complete satisfaction, then takes the first spoonful. At the table edge Barsa creeps closer, eyes locked on the bowl, hope rising. Without even looking, Nirel slides the bowl a few centimetres away and gives the cat a playful little smile. Locked frame, warm light.
+
+Generated: 2026-08-20

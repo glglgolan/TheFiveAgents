@@ -1,0 +1,15 @@
+Scene: 39 — הכנות אחרונות
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s39.png
+Credits consumed: 80
+generationId: AXeHpOnmjuBG2LaVyKVMy2svdtOMXZW83L_sVD7n5UzvgQBtlRxk6YTTW5hERso9EhHgQ49c
+
+Prompt:
+Fast cinematic preparation montage: flowers are placed, candle wicks catch one after another, rings settle onto velvet, a dress hem is smoothed, glassware is aligned, DJ equipment powers up with a glow. Barsa moves deliberately through the room inspecting each detail, nose to each object; Batata trots after her carrying the ribbon. Barsa stops, surveys everything, and finally looks satisfied. Smooth tracking, warm light.
+
+Generated: 2026-08-20

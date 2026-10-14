@@ -1,0 +1,7 @@
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg
+Size: 1024x1024
+Tokens: 8063 total (6679 in / 1384 out)
+
+Prompt:
+LITTLE NIREL — an Israeli girl about 6-7 years old, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent (a yellow swimsuit or casual yellow outfit for a portrait setting). Mischievous, energetic, theatrical; loves water, stages and colour. Studio-quality character portrait, warm nostalgic golden light, neutral elegant background, head-and-shoulders to medium framing, square 1:1 crop. Face must match the reference photograph exactly — same face shape, same curly hair, same playful expression.

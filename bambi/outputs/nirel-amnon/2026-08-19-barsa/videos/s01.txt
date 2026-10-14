@@ -1,0 +1,13 @@
+Scene: 01 — המרדף — פתיחה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP)
+Duration: 15s
+Resolution: 1080p
+Aspect ratio: derived from first frame
+Reference (first frame): bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s01.png
+
+Prompt:
+Barsa sprints after the tiny grey mouse across the wedding hall, paws sliding on the polished parquet. She squeezes under a decorated table; the cloth ripples. She leaps onto a swinging decorative lamp, swings through frame and lands wearing a strand of pearls. A veil and a tiny tiara catch on her as she runs. She skids to a stop mid-hall, realises she is dressed as a bride, looks into camera and winks slowly. No humans, no text.
+
+Generated: 2026-08-19
+Credits consumed: 150

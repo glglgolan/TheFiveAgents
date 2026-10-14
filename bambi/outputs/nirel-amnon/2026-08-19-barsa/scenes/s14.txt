@@ -1,0 +1,12 @@
+Scene 14: מבצע מקסטוק
+
+PROMPT:
+A cinematic comedy frame outside a colourful discount craft-and-homeware store. The shopfront overflows with glitter, plastic flowers, ribbons, party decorations and bright household items stacked in bins. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent stands in the doorway, lit up with excitement, pointing inside and pulling AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent by the wrist. He stands half a step behind her with the face of a man who knows exactly how long this is going to take. Bright warm daylight, dynamic slightly wide framing. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17574 total (15586 in / 1988 out)

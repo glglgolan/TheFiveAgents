@@ -1,0 +1,11 @@
+insert_id: A11
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.03045 USD
+duration: 6s
+actual_cost: 0.1827 USD
+reference: action_scenes/a11.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: inDIgABlsLFxxqKSTSqN
+status: OK
+prompt:
+Cat-height point-of-view, 25 centimetres above the floor of a candlelit wedding hall, the tips of two upright striped tabby ears just visible at the bottom of frame. The shot holds for a beat, then bursts into a fast forward run: the polished floor streaks beneath the lens, the camera bobbing subtly with each stride. Flower arrangements and candle stands rush past on both sides in close parallax, guests' shoes and hems blurring by. The camera weaves left then right around obstacles with quick believable animal agility. A loose decorative ribbon flutters directly across the lens in extreme foreground. The point of view leaps over a small object on the floor — a short airborne beat with the ears bouncing — and lands cleanly, still running forward. At the end of the aisle the camera rises rapidly upward in a smooth crane-like ascent, the whole ceremony space opening out below: rows of candles, the floral arch, the full hall revealed in warm golden light. The move decelerates and settles looking down the aisle, where a distant figure in white is just beginning to appear at the far end, small and soft in the background. The insert ends before any emotional entrance begins. Cinematic 16:9, no recognisable faces, no text, no logos.

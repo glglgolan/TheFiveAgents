@@ -1,0 +1,513 @@
+{
+  "project": "rosh-hashana",
+  "title": "טיפה אחת — שנה טובה ומתוקה",
+  "logline": "טיפת דבש אחת בורחת מהצנצנת ויוצאת למסע דרך הכוורת, המטע והשדה — עד שהיא מוצאת את התפוח. כל שנה מתוקה מתחילה בטיפה אחת.",
+  "language": "he",
+  "aspect_ratio": "9:16",
+  "concept": {
+    "big_idea": "הדבש מחפש את התפוח. הקליפ הוא מסע של טיפת דבש אחת — פותח בפיצוץ (הטיפה משתחררת), עולה בקצב דרך שלוש מערכות (התחדשות → שפע → מתיקות), ונוחת ברגע אנושי אחד: יד טובלת תפוח בדבש, האישה טועמת, 'שנה טובה ומתוקה'.",
+    "structure": [
+      "ACT 0 — הבריחה (0–9s): hook. splash ב-2 השניות הראשונות, צנצנת נשפכת, הדבש זורם על האבן ויוצא לדרך.",
+      "ACT 1 — התחדשות (9–26s): מאיפה הדבש מגיע — חלת דבש, דבורה ממריאה, המטע, שדה הפרחים, הרוח בשיער של האישה. הקצב מאיץ.",
+      "ACT 2 — שפע (26–38s): DROP. רימון מתפוצץ, תאנה, natura morta, והטיפה נוחתת על התפוח.",
+      "ACT 3 — מתיקות (38–57s): נחיתה רגשית. ידיים טובלות תפוח בדבש, האישה טועמת, פריים סיום עם הברכה."
+    ],
+    "hook": "0.0s — התזת דבש מתפוצצת לפריים על ביט ראשון, טקסט 'השנה...' — ואז cut קשה לצנצנת שמתהפכת."
+  },
+  "visual_theme": {
+    "palette": "translucent golden honey amber, deep pomegranate red, crimson fig flesh, glossy candy-apple red, warm sandstone beige, cream-white blossoms, olive green accents, pale desert-blue sky",
+    "lighting": "hard direct desert sunlight from camera-left, high contrast, sharp specular highlights and sun-star flares through honey and glass, warm bounce off sandstone, no fill",
+    "film_look": "luxury macro still-life photography, 100mm macro lens, shallow depth of field, tack-sharp subject with creamy bokeh, high micro-contrast, subtle fine grain, colors slightly warmed and saturated, editorial food/perfume campaign look (Midjourney set)",
+    "motion": "aggressive macro motion — slow-motion liquid pours and splashes, sharp speed-ramps, macro dolly push-ins, rack focus, wind through petals and hair; every shot has one clear physical action; cuts land on the beat",
+    "mood": "hypnotic, opulent, kinetic, sun-drenched; sweetness as something alive and moving, ending in warmth and calm"
+  },
+  "cast": [
+    {
+      "id": "honey",
+      "name": "הדבש (הגיבור)",
+      "description": "Translucent golden-amber honey, thick and glossy, catching hard desert sunlight with sun-star specular highlights, pouring and splashing in slow motion, macro photography, warm sandstone background",
+      "anchor_image": "bambi/cast/rosh-hashana/honey.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "apple",
+      "name": "התפוח (היעד)",
+      "description": "Single glossy candy-red apple with a small stem, mirror-like skin reflecting hard sunlight, nested in cream-white blossoms, macro photography",
+      "anchor_image": "bambi/cast/rosh-hashana/apple.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "pomegranate",
+      "name": "הרימון",
+      "description": "Split-open pomegranate with glowing ruby arils, translucent seeds lit from behind by hard sun, surrounded by white blossoms, macro photography",
+      "anchor_image": "bambi/cast/rosh-hashana/pomegranate.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "bee",
+      "name": "הדבורה (השליחה)",
+      "description": "Single honeybee with translucent golden backlit wings, fuzzy amber thorax, standing on a white blossom or on a honey surface, extreme macro",
+      "anchor_image": "bambi/cast/rosh-hashana/bee.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "the-woman",
+      "name": "האישה (השנה החדשה)",
+      "description": "Young woman with long wet-looking golden-blonde curly hair, sun-kissed skin, wearing a sheer translucent champagne-colored fabric, hard desert sunlight, warm sandstone background, editorial beauty macro photography",
+      "anchor_image": "bambi/cast/rosh-hashana/the-woman.png",
+      "anchor_ready": false
+    }
+  ],
+  "edit_notes": {
+    "music": "Cinematic organic trap / Middle-Eastern percussion hybrid — darbuka + hand claps + deep 808, oud or qanun melody line, 124 BPM. ACT 0: percussion-only pulse with a sharp impact hit on frame 0. ACT 1: melody enters, riser builds over s07–s10. ACT 2 (s11): full DROP — bass + choir stab. ACT 3: drop out to warm pad + solo oud, soft piano/strings under the blessing; final hit on 'שנה טובה ומתוקה'. Reference feel: 'Sahara' style luxury-brand campaign edits / ZHU 'Faded' tempo.",
+    "cut_rate": "Fast: 2–4s per scene in ACTs 0–2 (cuts on every 2nd beat, occasionally on every beat inside s01/s02), slowing to 4–5s in ACT 3. 57s total. Never let a shot sit past its single action — cut the moment the action peaks.",
+    "transitions": "Hard cuts on the beat by default. Whip/light-leak flash cuts (sun-star flare) between ACT boundaries (s03→s04, s10→s11, s14→s15). Match-cut s14→s15: honey drop lands on the apple → the same apple is lifted by the hand into honey. s16→s17: dip-to-white then reveal the full still life. Speed-ramp inside s01, s11, s14 (slow-mo → 2x → slow-mo).",
+    "on_screen_text": [
+      {
+        "scene": 1,
+        "text": "השנה...",
+        "style": "big white serif (e.g. Frank Ruhl / David Libre bold), center, 1 frame pop on impact"
+      },
+      {
+        "scene": 3,
+        "text": "...מתחילה בטיפה אחת",
+        "style": "same serif, lower third, tracks with the flowing honey"
+      },
+      {
+        "scene": 7,
+        "text": "התחדשות",
+        "style": "single word, upper third, fades in with the bee take-off"
+      },
+      {
+        "scene": 11,
+        "text": "שפע",
+        "style": "single word, slams in on the DROP with the pomegranate burst"
+      },
+      {
+        "scene": 14,
+        "text": "מתיקות",
+        "style": "single word, appears when the drop lands on the apple"
+      },
+      {
+        "scene": 17,
+        "text": "שנה טובה ומתוקה",
+        "style": "hero blessing, large serif, center, gold-tinted, 2 lines; hold 3s"
+      },
+      {
+        "scene": 17,
+        "text": "תשפ\"ז",
+        "style": "small, under the blessing, optional (also space for sender's logo)"
+      }
+    ],
+    "drop_moment": "s11 (~26s) — pomegranate bursts open on the first beat of the drop, text 'שפע' slams in. Second, softer 'landing' at s14 (~35s) when the honey drop finally touches the apple.",
+    "clips_as_is": "4 existing clips are used untouched (no regeneration); trim per use_range. Upscale the three 480×854 MOVs to 1080×1920 in the edit (Topaz or ffmpeg lanczos + light grain) so they match the Kling outputs.",
+    "sound_design": "Layer foley: thick liquid glug on s02/s04, sharp glass 'tink' on s02, bee-wing buzz rising on s06–s07, wind gust on s09–s10, wet 'crack' on s11, soft crunch/bite implied on s16. All under the music, ducked."
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "HOOK — הפיצוץ",
+      "duration_sec": 2,
+      "description": "פריים 0: התזת דבש זהוב מתפוצצת לאוויר מול המצלמה. הטיפה משתחררת. טקסט 'השנה...' קופץ על ההיט הראשון של המוזיקה. cut קשה.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3210.JPG"
+      },
+      "image_prompt": "Extreme close-up of translucent golden honey exploding mid-air in a violent splash, thick amber liquid tendrils and hundreds of glossy droplets frozen against a blurred warm sandstone and red-pomegranate background, hard desert sunlight from camera-left creating sharp specular highlights and sun-star flares, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "The frozen honey splash violently continues to explode outward toward the lens in ultra slow motion, thick amber tendrils stretching and tearing apart into glittering droplets, sunlight refracting through every strand as sun-star flares bloom and flicker. Halfway through, sharp speed-ramp to double speed as droplets whip past the camera, then snap back to slow motion. Camera locked, subtle micro-shake on impact. Keep colors, lighting and framing exactly as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s01.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s01.mp4"
+    },
+    {
+      "scene_number": 2,
+      "title": "הצנצנת נשפכת",
+      "duration_sec": 3,
+      "description": "צנצנת הזכוכית על האבן מתהפכת ומטה את הדבש החוצה — הגיבור שלנו יוצא לדרך. שמיים כחולים ברקע.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3222.JPG"
+      },
+      "image_prompt": "Low-angle close-up of a thick-walled glass honey jar tipped on its side on a rough sandstone block, golden amber honey with dark crystallized chunks pouring over the rim and down the rock face, pale desert-blue sky behind, hard sunlight from camera-left with specular highlights on glass and honey, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "The tipped glass jar rocks slightly and a thick sheet of golden honey surges out over its rim in slow motion, sliding heavily down the sandstone face in glossy ropes, dark amber chunks tumbling with it. Slow macro dolly push-in toward the pouring lip while sunlight flares through the glass edge. Honey stretches, drips and catches the light, viscous and heavy. Camera steady, lighting and colors unchanged.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s02.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s02.mp4"
+    },
+    {
+      "scene_number": 3,
+      "title": "הזרימה על האבן",
+      "duration_sec": 4,
+      "description": "קליפ מוכן: הדבש זורם על האבן והזכוכית, ספקל שמש בוער בתוכו. הטיפה יוצאת למסע. טקסט '...מתחילה בטיפה אחת'. use_range מומלץ: 0–4s (הקטע הכי קינטי בשפיכה; אם צריך אפשר 4–8s לתנועה איטית יותר).",
+      "narration": "כל שנה מתוקה מתחילה בטיפה אחת.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "high",
+        "camera_move": "static"
+      },
+      "source": {
+        "kind": "clip",
+        "file": "bambi/input/rosh hashana/2026-09-11 07:13:35.MP4",
+        "use_range": "0-4s"
+      },
+      "image_prompt": "High-angle close-up of golden honey flowing across a rough sandstone slab past a tipped glass vessel, a blazing sun-star reflection burning inside the liquid, scattered round honey droplets beading on the stone, hard desert sunlight, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "Existing clip — use as-is, trim to the recommended range. Honey slides across the stone toward the bottom of frame, sun-star flare travels inside the liquid, droplets bead and gleam. No regeneration.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s03.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s03.mp4"
+    },
+    {
+      "scene_number": 4,
+      "title": "המקור — חלת הדבש",
+      "duration_sec": 3,
+      "description": "ACT 1 — התחדשות. פלאשבק למקור: דבש נשפך מלמעלה על חלת דבש, כוכב אור מתפוצץ בתחתית הפריים. מעבר flash-cut מ-s03.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "tilt"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3219.JPG"
+      },
+      "image_prompt": "Extreme close-up of a thick golden honey stream pouring from above onto a chunk of raw honeycomb resting on sandstone, the stream twisting like glass, a bright sun-star flare bursting at the bottom of frame where honey pools, hard desert sunlight, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "The honey stream pours continuously from above in slow motion, twisting and folding as it hits the honeycomb, honey oozing out of the wax cells and pooling below while the sun-star flare pulses and blooms with each ripple. Slow camera tilt-down following the stream from the top of frame to the pooling flare. Rich viscous motion, bright specular glints. Keep composition, colors and lighting as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s04.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s04.mp4"
+    },
+    {
+      "scene_number": 5,
+      "title": "קריסטל אדום-זהוב",
+      "duration_sec": 3,
+      "description": "ECU של דבש קריסטלי כהה — rack focus חד, נצנוצים רצים על פני השטח. הקצב מתחיל לעלות.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3209.JPG"
+      },
+      "image_prompt": "Extreme close-up of dark red-gold crystallized honey and honeycomb shards, glassy translucent facets glowing like stained glass in hard desert sunlight, a bright specular sun-star at the lower left, white blossom petals softly out of focus behind, sandstone below, 100mm macro, very shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "Fast rack focus snaps from the blurred white blossoms in the background to the razor-sharp ruby-gold crystal facets, then the camera tracks slowly laterally right across the honey surface as sunlight sweeps through the translucent shards, specular sparkles flickering and traveling across facets. A slow glossy drip of liquid honey slides down one facet. Macro, hypnotic, jewel-like. Keep colors and lighting exactly as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s05.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s05.mp4"
+    },
+    {
+      "scene_number": 6,
+      "title": "הדבורה על הדבש",
+      "duration_sec": 4,
+      "description": "קליפ מוכן: דבורה ECU עומדת על משטח דבש זהוב, כנפיים מרצדות. השליחה נכנסת לסיפור. use_range מומלץ: 2–6s (אחרי שהדבורה מתייצבת בפריים).",
+      "characters": [
+        "bee",
+        "honey"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "source": {
+        "kind": "clip",
+        "file": "bambi/input/rosh hashana/copy_FC32EE09-1A8C-4434-B47D-576B2A048645.MOV",
+        "use_range": "2-6s"
+      },
+      "image_prompt": "Extreme close-up of a honeybee standing on a glossy golden honey surface, translucent backlit wings, amber liquid and glass shards glinting around it, hard desert sunlight, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "Existing clip — use as-is, trim to the recommended range. Bee shifts its legs and flicks its wings on the honey surface, light glinting on the amber around it. No regeneration.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s06.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s06.mov"
+    },
+    {
+      "scene_number": 7,
+      "title": "ההמראה",
+      "duration_sec": 3,
+      "description": "הדבורה על הפרח הלבן ממריאה — הכנפיים הזהובות מתפוצצות לתנועה, עלי הכותרת נרעדים. טקסט 'התחדשות'. הרייזר במוזיקה מתחיל.",
+      "characters": [
+        "bee"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "pull-out"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3212.JPG"
+      },
+      "image_prompt": "Extreme close-up of a honeybee perched on the edge of a large cream-white blossom, its translucent wings lit golden by hard backlight, fuzzy amber thorax, blurred red pomegranate and more blossoms in the background, hard desert sunlight, 100mm macro, very shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "The bee's wings blur into a golden shimmer and it lifts off the petal in slow motion, rising up and out of frame toward the top right, the blossom springing back and trembling as the weight leaves it. Tiny pollen grains drift in the backlight. Camera slowly pulls out a few centimeters as the bee departs, background bokeh breathing. Keep lighting, colors and composition as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s07.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s07.mp4"
+    },
+    {
+      "scene_number": 8,
+      "title": "המטע",
+      "duration_sec": 4,
+      "description": "קליפ מוכן: EWS — מטע רימונים על גבעות מדבריות בשקיעה, פרחי לבן בשדה. הנשימה היחידה בקליפ — הרחבת עולם לפני שהקצב מאיץ שוב. use_range מומלץ: 0–4s.",
+      "characters": [
+        "pomegranate"
+      ],
+      "shot": {
+        "type": "EWS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "source": {
+        "kind": "clip",
+        "file": "bambi/input/rosh hashana/copy_11566C7D-CCCC-479B-8DE7-A602629310D2.MOV",
+        "use_range": "0-4s"
+      },
+      "image_prompt": "Extreme wide shot of a pomegranate orchard on rocky desert hills at golden hour, small trees heavy with red fruit, white wildflowers and dry grass in the foreground, distant sunlit ridges, warm haze, 9:16 vertical",
+      "video_prompt": "Existing clip — use as-is, trim to the recommended range. Gentle forward drift through the orchard, grass and blossoms swaying, warm haze on the hills. No regeneration.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s08.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s08.mov"
+    },
+    {
+      "scene_number": 9,
+      "title": "רוח בשדה הפרחים",
+      "duration_sec": 3,
+      "description": "שדה פרחי לבן צפוף — משב רוח חזק עובר דרך עלי הכותרת, מצלמה צוללת קדימה לתוך הפרחים. הרייזר עולה.",
+      "characters": [],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3216.JPG"
+      },
+      "image_prompt": "Close-up of a dense field of large cream-white ruffled blossoms filling the frame, soft bokeh depth, hard desert sunlight from camera-left with bright petal edges and warm shadows, a hint of sandstone and blue sky at the very top, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "A strong gust of warm wind sweeps through the blossoms from left to right, petals rippling, flexing and fluttering in slow motion, a few loose petals tearing free and tumbling toward the lens. Camera pushes forward aggressively into the flower mass, the foreground blossoms blurring past as focus rides deeper. Sunlight flickers through moving petals. Keep colors, lighting and framing as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s09.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s09.mp4"
+    },
+    {
+      "scene_number": 10,
+      "title": "האישה — הרוח בשיער",
+      "duration_sec": 3,
+      "description": "אותה רוח מ-s09 מגיעה לאישה: גב, שיער בלונדיני מתולתל ומוזהב מתעופף, הבד השקוף מתנפנף. היא מתחילה להסתובב — אבל אנחנו חותכים לפני שרואים פנים. סוף ACT 1, flash-cut ל-drop.",
+      "characters": [
+        "the-woman"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3217.JPG"
+      },
+      "image_prompt": "Medium close-up from behind of a young woman with long wet-looking golden-blonde curly hair over sun-kissed shoulders, a sheer translucent champagne fabric draped across her back catching hard desert sunlight, warm sandstone-colored background, editorial beauty macro photography, shallow depth of field, 9:16 vertical",
+      "video_prompt": "A gust of wind lifts her golden curls and sends them flying across the frame in slow motion, the sheer fabric billowing and rippling with glossy highlights. She slowly begins to turn her head toward the camera over her right shoulder, hair sweeping across her back, but the turn is not completed. Sunlight glints through the moving strands. Camera locked, subtle handheld breath. Keep colors, lighting and framing as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s10.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s10.mp4"
+    },
+    {
+      "scene_number": 11,
+      "title": "DROP — הרימון מתפוצץ",
+      "duration_sec": 3,
+      "description": "ACT 2 — שפע. ה-DROP: הרימון נפתח ומתפוצץ, גרגרים זוהרים עפים לאוויר. טקסט 'שפע' נכנס בסלאם. speed-ramp.",
+      "characters": [
+        "pomegranate"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3213.JPG"
+      },
+      "image_prompt": "Extreme close-up of a split-open pomegranate, clusters of glowing translucent ruby arils lit from behind by hard desert sunlight, glossy juice droplets, cream-white blossoms and a pomegranate shell wedge around it, warm sandstone tones, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "The pomegranate cracks further open with a burst, dozens of glowing ruby arils spraying up and outward toward the lens in slow motion, juice droplets flying and catching the sun as tiny red sparks. Sharp speed-ramp: slow-mo burst, then snap to double speed as seeds scatter, then back to slow. Camera punches in with a fast macro push-in on the burst. Blossoms tremble from the impact. Keep colors and lighting as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s11.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s11.mp4"
+    },
+    {
+      "scene_number": 12,
+      "title": "התאנה",
+      "duration_sec": 3,
+      "description": "קליפ מוכן: תאנה חצויה בין פרחי לבן ועלים ירוקים — הפנים האדומות נוצצות. use_range מומלץ: 0–3s.",
+      "characters": [],
+      "shot": {
+        "type": "CU",
+        "angle": "high",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "clip",
+        "file": "bambi/input/rosh hashana/copy_4005B6F6-9DDF-4673-A7DB-B8A75E3133F8.MOV",
+        "use_range": "0-3s"
+      },
+      "image_prompt": "Close-up of a halved fresh fig with glistening crimson flesh, nestled among cream-white blossoms and dark green leaves, hard desert sunlight, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "Existing clip — use as-is, trim to the recommended range. Slow drift toward the fig, petals and leaves shifting gently, highlights sparkling on the flesh. No regeneration.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s12.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s12.mov"
+    },
+    {
+      "scene_number": 13,
+      "title": "השולחן תחת השמיים",
+      "duration_sec": 4,
+      "description": "החלפה: ג'אג דבש מתגלגל/זורם על מדרון אבן במדבר — פלג דבש קטן, ארנבון-סלע (שפן סלע) עומד דרוך, קוץ נודד (tumbleweed) מתגלגל, שועל מציץ ומתחבא ברקע. גשר בין המטע לרגע ה-DROP.",
+      "characters": [
+        "honey"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/s13.png",
+        "origin": "midjourney"
+      },
+      "image_prompt": "Luxury macro/landscape hybrid photography, 9:16 vertical. Low wide-angle shot along sunlit desert sandstone rocks at golden hour: a thick stream of translucent golden honey flows and pools down a rocky ledge like a small waterfall, an open thick-walled glass honey jar tipped and rolling on the stone just above the stream; a small alert rock hyrax perched on a nearby boulder in the middle ground, a dry tumbleweed caught mid-roll across the foreground, a fox's face peeking out from behind a rock in the soft blurred background, a few cream-white blossoms tucked into rock crevices, hard desert sunlight from camera-left with sharp specular highlights on the honey, warm sandstone and amber palette, 100mm lens, shallow depth of field, high micro-contrast, subtle fine grain, photorealistic, editorial campaign look, in the exact style of the Midjourney reference set",
+      "video_prompt": "A torrent of golden honey suddenly surges and cascades down the rocky ledge with real force, splashing and churning over the stones in fast motion. The camera whips into a fast, low, high-speed tracking move racing alongside the flowing honey, chasing it down the slope, sunlight strobing across the moving liquid. The tumbleweed is blasted forward by a gust and bounces hard across the foreground. The rock hyrax bolts and darts off the boulder in a quick startled motion. The fox flashes into view for a split second and vanishes behind the rock. Fast, kinetic, dynamic energy throughout — no slow moments. Keep the color palette, lighting and overall composition consistent with the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s13.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s13.mp4"
+    },
+    {
+      "scene_number": 14,
+      "title": "הטיפה מוצאת את התפוח",
+      "duration_sec": 3,
+      "description": "רגע המפגש: התפוח האדום המבריק בערמת הפרחים — טיפת דבש אחת נופלת מלמעלה ונוחתת על הקליפה, מתפשטת בזוהר. טקסט 'מתיקות'. speed-ramp ואז slow-mo. match-cut ל-s15.",
+      "characters": [
+        "apple",
+        "honey"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "high",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3215.JPG"
+      },
+      "image_prompt": "High-angle close-up of a single glossy candy-red apple with a short stem nestled in a mound of cream-white blossoms and dark green leaves, mirror-like skin reflecting hard desert sunlight with a bright specular highlight, warm sandstone tones, 100mm macro, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "A single thick drop of golden honey falls from above in ultra slow motion and lands on the apple's glossy red shoulder with a soft splash, spreading into a glowing amber sheen that slowly runs down the curve of the skin. Speed-ramp: fast fall, slow-motion impact. Camera pushes in tight on the drop's landing point as sunlight flares through the honey. Blossoms shiver from the impact. Keep colors and lighting as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s14.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s14.mp4"
+    },
+    {
+      "scene_number": 15,
+      "title": "הטבילה",
+      "duration_sec": 4,
+      "description": "ACT 3 — מתיקות. ידיים של אישה (שיער מוזהב ברקע) טובלות פלח תפוח אדום בדבש בתוך קערת זכוכית על האבן, ומרימות — הדבש נמתח בחוט זהוב. הנחיתה הרגשית מתחילה, המוזיקה מתרככת.",
+      "characters": [
+        "the-woman",
+        "apple",
+        "honey"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "high",
+        "camera_move": "tilt"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/s16.png",
+        "origin": "midjourney"
+      },
+      "image_prompt": "High-angle macro close-up of a woman's sun-kissed hand dipping a red apple slice into a shallow glass bowl of translucent golden honey on sandstone, a thick honey stream pouring into the bowl from above, cream-white blossoms and a split pomegranate around, golden curls at the top of frame, hard desert sunlight, 100mm macro, 9:16 vertical",
+      "video_prompt": "The thick honey stream keeps pouring from above into the glass bowl in slow motion, rippling the surface and coating the apple slice as the hand slowly pushes it deeper and then begins to lift it, a glossy golden thread stretching from the slice. Sunlight flares through the pouring honey and the glass rim. Blossoms tremble faintly. Camera locked with a gentle tilt following the stream. Keep colors, lighting and composition exactly as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s15.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s15.mp4"
+    },
+    {
+      "scene_number": 16,
+      "title": "הטעימה",
+      "duration_sec": 4,
+      "description": "האישה מ-3217, CU מהצד: עיניים עצומות, חיוך, נוגסת בפלח תפוח מצופה דבש — חוט דבש נוטף מהפלח. אור שמש קשה, שיער מוזהב רטוב. הרגע הרגשי. dip-to-white בסוף.",
+      "characters": [
+        "the-woman",
+        "apple",
+        "honey"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/s15.png",
+        "origin": "midjourney"
+      },
+      "image_prompt": "Close-up profile of a young woman with wet golden-blonde curly hair and sun-kissed glowing skin, eyes closed, smiling as she bites into a glossy red apple slice coated in translucent golden honey, a long honey drip hanging from the slice, sheer champagne fabric, hard desert sunlight, warm sandstone background, 100mm lens, 9:16 vertical",
+      "video_prompt": "She slowly bites down into the honey-coated apple slice in slow motion, her smile widening with eyes still closed, the long honey drip stretching and finally falling from the slice, a tiny glossy drop rolling down her chin. Golden wet curls stir faintly in a warm breeze, sunlight flaring on her cheekbone and the honey. Gentle macro push-in toward her lips. No dialogue. Keep face, colors, lighting and framing exactly as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s16.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s16.mp4"
+    },
+    {
+      "scene_number": 17,
+      "title": "שנה טובה ומתוקה",
+      "duration_sec": 5,
+      "description": "פריים סיום: ה-natura morta המלאה — רימונים, תפוחים זהובים, תאנה, פרחי לבן, דבש נוטף על האבן. pull-out איטי, הדבורה חוזרת ונוחתת בפינה. טקסט הברכה 'שנה טובה ומתוקה' + 'תשפ\"ז' / לוגו. hold 3s על הטקסט.",
+      "narration": "שנה טובה ומתוקה.",
+      "characters": [
+        "honey",
+        "pomegranate",
+        "apple",
+        "bee"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pull-out"
+      },
+      "source": {
+        "kind": "still",
+        "file": "bambi/input/rosh hashana/IMG_3208.JPG"
+      },
+      "image_prompt": "Medium shot of an opulent Rosh Hashanah still life on sandstone: whole and split pomegranates with spilled ruby arils, golden apples, a fresh fig, clusters of cream-white blossoms and honeycomb, translucent golden honey dripping and pooling over the stone in the foreground, hard desert sunlight from camera-left with sharp specular highlights, warm amber-and-red palette, 100mm lens, shallow depth of field, luxury still-life campaign look, 9:16 vertical",
+      "video_prompt": "Slow, smooth macro pull-out revealing the full still life, honey in the foreground creeping and dripping down the stone in glossy ropes, a few pomegranate arils rolling loose, blossoms trembling in a faint breeze. A single honeybee flies in from the right and lands softly on a blossom near the honey. Sunlight flares gently across the fruit. Calm, warm, settling motion. Keep colors, lighting and arrangement exactly as in the frame.",
+      "reference": "",
+      "image_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/scenes/s17.jpg",
+      "video_output": "bambi/outputs/rosh-hashana/2026-09-11-shana-tova/videos/s17.mp4"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+insert_id: A4
+model: bytedance/seedance-2.0-mini
+price_per_sec: $0.0305
+duration: 5s
+actual_cost: $0.1525
+reference: scenes/s18.png (reuses main storyboard scene 18's first-frame image)
+aspect_ratio: 16:9 (derived from reference)
+job_id: CS1UzyOv7NidaEOOYOjX
+status: OK
+prompt:
+Begin locked on the overhead close-up of the two hands meeting above the handwritten letters, the negative space between the fingers forming a clean V and a soft V-shaped highlight of light on the table beside them. Everything is still and intimate for a beat. Then the camera accelerates into a fast push-in straight toward the V, the table surface widening past the frame edges. As it reaches the symbol the camera begins a continuous 360-degree roll around its own axis; the table, letters and warm light stretch into a circular radial motion blur, the V holding steady at the centre while everything around it smears into concentric light. The V's highlight brightens and opens into a luminous elegant aperture — a sophisticated optical effect, not magic, not sparkles. The camera flies straight through it and emerges into a wide high-altitude aerial over the Indian landscape at dusk: rivers, terracotta rooftops, palm canopies and warm haze. The roll settles level and the camera immediately begins a smooth accelerating descent toward the land below. Photorealistic, elegant and restrained, cinematic 16:9, no humans in frame, no text, no logos, no graphic overlays.

@@ -1,0 +1,1 @@
+New scene added 2026-08-19 per user request, inserted after scene 32. Image manually created/supplied by the user (s32_v3.jpeg, converted to PNG). Title/narration/video_prompt were drafted by me to match the image content — NOT yet explicitly approved by the user, please confirm or edit.

@@ -1,0 +1,14 @@
+Scene: 11 - למה בארסה?
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 10s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s11.png (first_image)
+Credits consumed: 80
+
+Prompt:
+Dramatic stadium sequence. Barsa walks onto the pitch as the floodlight banks ignite one bank at a time, the light sweeping across her striped coat. A football rolls slowly toward her; she stops it dead with one paw without breaking stride. The crowd erupts in the background. She looks up at the lights, then turns to camera with regal confidence. Slow crane rise. Playful, no real-world logos, no text.
+
+Generated: 2026-08-19

@@ -1,0 +1,15 @@
+Scene: 26 — המקלובה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s26.png
+Credits consumed: 80
+generationId: AVeAnH6ypsqwXB__4fK6arIX8N51gpzwbNJf6cDF8fPChohzLMZgCAw_Kq5j0fRsqIVOrfL1
+
+Prompt:
+Amnon arranges the potatoes at the bottom of the pot exactly as Nirel taught him, then layers in rice and ingredients with fierce concentration, checking her face after each move. Nirel gives one tiny approving nod. He clamps a serving platter over the pot, takes a breath, and flips the whole thing over in one dramatic motion. He lifts the pot: the maklouba stands perfectly. They both erupt in celebration.
+
+Generated: 2026-08-20

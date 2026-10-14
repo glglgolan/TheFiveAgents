@@ -1,0 +1,15 @@
+Scene: 37 — הסוד הקטן של ניראל
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s (rounded from storyboard 8s: v2_6 only supports 5s or 10s)
+Duration in storyboard: 8s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s37.png
+Credits consumed: 30
+generationId: AeSBh0FOOfr-eXjYeRQKsmLOzyhmAIiDL-OVSfHSBJFrOOaFNKLPzZxE7aXrc1Tvvn4jpkCl
+
+Prompt:
+Nirel dances with effortless rhythm. Amnon tries to copy her behind her shoulder, enthusiastic and hopelessly off-beat. She turns, sees him, laughs, and demonstrates the move again slowly. He tries once more and improves very slightly. She applauds ironically. They end up laughing together and giving up on the choreography entirely. Locked frame, warm lamplight, natural comic performance.
+
+Generated: 2026-08-20

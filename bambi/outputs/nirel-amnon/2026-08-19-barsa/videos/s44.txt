@@ -1,0 +1,15 @@
+Scene: 44 — ניראל צועדת
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s44.png
+Credits consumed: 80
+generationId: AdOSA2TDAPXfhuxUC50yIVNS5ZaJrP5UB_dZYUK06Ysigm4q1_C3T-aLqeghaDdD0vQt6kXB
+
+Prompt:
+Nirel walks slowly down the aisle; her veil drifts behind her and the candlelight moves across the dress. The camera alternates between a wide cinematic view of the aisle, a close reaction on Amnon whose smile cracks into emotion, and a graceful tracking shot moving beside Nirel at her pace. Keep the mood sincere and beautiful, no comedy here. Warm candlelight, gentle steadicam.
+
+Generated: 2026-08-20

@@ -1,0 +1,11 @@
+insert_id: A6
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.03045 USD
+duration: 6s
+actual_cost: 0.1827 USD
+reference: action_scenes/a06.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: thv75jNZ1MhpzqOxsJXZ
+status: OK
+prompt:
+Locked top-down overhead shot of the wedding-planning table. Everything is completely still for a beat. Then, all at once, the table comes alive: sheets of paper slide across the wood as if pulled by an unseen draft, an invitation spins flat on its centre, a fabric swatch lifts and billows upward toward the lens, a bouquet of white flowers rotates in place, a football rolls rapidly across the full width of frame scattering notes in its wake. A single striped cat paw suddenly darts in from the frame edge and swats a planning card clean off the table. The camera breaks its lock and pushes forward fast and low across the table surface, passing between and under the moving objects, papers fluttering up on either side. In the last beat a single sheet of paper peels up and flies directly into the lens, filling the frame and blacking it out. Only the cat's paw and foreleg are visible — never her whole body, never a human. Realistic paper and fabric physics, cinematic 16:9, no text, no logos.

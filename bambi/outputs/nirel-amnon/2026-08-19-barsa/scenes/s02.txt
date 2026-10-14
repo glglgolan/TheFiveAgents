@@ -1,0 +1,9 @@
+Scene 02 — "העכבר נמלט"
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+References (in order):
+  1. bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  2. bambi/cast/nirel-amnon/barsa.png
+Tokens: 15432 total (13473 in / 1959 out)
+
+Prompt:
+BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands proudly at the head of a magnificent wedding aisle, still wearing delicate white lace, a strand of pearls, a soft veil and a small elegant tiara from the previous chase — the accessories sit naturally on her short striped coat. Far in the soft background, near the aisle, the tiny grey mouse peeks out from behind a white floral arrangement, teasing her. Warm candlelight, white flowers, fairy lights, deep cinematic perspective down the aisle. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

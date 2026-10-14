@@ -1,0 +1,14 @@
+Scene: 09 - אמנון לא אוהב חתולים
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 8s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s09.png (first_image)
+Credits consumed: 64
+
+Prompt:
+Amnon sits on the sofa looking unconvinced while Barsa slowly walks toward him along the cushions. He tries to ignore her. She sits down beside him and stares directly into his eyes. He tries to stay serious. She gently places one paw on his forearm. His expression melts into a helpless smile. Barsa turns her head to camera as if she knew this would happen. Slow push-in, warm light.
+
+Generated: 2026-08-19

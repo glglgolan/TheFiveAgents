@@ -1,0 +1,15 @@
+Scene: 49 — שקט אחרי המסיבה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s49.png
+Credits consumed: 30
+generationId: AUPmbbcvza7Lh4bD10FwZGEjzBufnwyBO9b378ARWNh034D-JJlHfMhGOzvo0FPeLG_VJEAj
+
+Prompt:
+The empty wedding hall after the party. Candle flames gutter softly; a stray piece of confetti drifts down. The camera moves slowly across the floor toward Barsa sitting alone. She looks around the quiet room, at the empty chairs and the fallen confetti, then turns her head toward the wedding aisle. Her expression becomes unexpectedly tender. Slow push-in, warm dim light, near silence.
+
+Generated: 2026-08-20

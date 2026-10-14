@@ -1,0 +1,213 @@
+{
+ "vo": "maya60",
+ "pre": 0.8,
+ "gap": 0.9,
+ "total": 62.198,
+ "lines": [
+  {
+   "id": "s0",
+   "stage": "hook",
+   "start": 0.8,
+   "end": 6.791
+  },
+  {
+   "id": "s1",
+   "stage": "storyboard",
+   "start": 7.691,
+   "end": 15.209
+  },
+  {
+   "id": "s2",
+   "stage": "images",
+   "start": 16.109,
+   "end": 27.524
+  },
+  {
+   "id": "s3",
+   "stage": "video",
+   "start": 28.424,
+   "end": 39.718
+  },
+  {
+   "id": "s4",
+   "stage": "sound",
+   "start": 40.618,
+   "end": 50.844
+  },
+  {
+   "id": "s5",
+   "stage": "finale",
+   "start": 51.744,
+   "end": 60.598
+  }
+ ],
+ "events": [
+  {
+   "type": "sew",
+   "t": 0.25,
+   "dur": 1.2,
+   "stage": 0
+  },
+  {
+   "type": "pull",
+   "t": 6.541,
+   "stage": 0
+  },
+  {
+   "type": "tear",
+   "t": 6.841,
+   "stage": 0
+  },
+  {
+   "type": "light",
+   "t": 6.941,
+   "stage": 0
+  },
+  {
+   "type": "whoosh",
+   "t": 7.041,
+   "stage": 0
+  },
+  {
+   "type": "land",
+   "t": 7.541,
+   "stage": 1
+  },
+  {
+   "type": "sew",
+   "t": 7.741,
+   "dur": 1.5,
+   "stage": 1
+  },
+  {
+   "type": "pull",
+   "t": 14.959,
+   "stage": 1
+  },
+  {
+   "type": "tear",
+   "t": 15.259,
+   "stage": 1
+  },
+  {
+   "type": "light",
+   "t": 15.359,
+   "stage": 1
+  },
+  {
+   "type": "whoosh",
+   "t": 15.459,
+   "stage": 1
+  },
+  {
+   "type": "land",
+   "t": 15.959,
+   "stage": 2
+  },
+  {
+   "type": "sew",
+   "t": 16.159,
+   "dur": 1.5,
+   "stage": 2
+  },
+  {
+   "type": "pull",
+   "t": 27.274,
+   "stage": 2
+  },
+  {
+   "type": "tear",
+   "t": 27.574,
+   "stage": 2
+  },
+  {
+   "type": "light",
+   "t": 27.674,
+   "stage": 2
+  },
+  {
+   "type": "whoosh",
+   "t": 27.774,
+   "stage": 2
+  },
+  {
+   "type": "land",
+   "t": 28.274,
+   "stage": 3
+  },
+  {
+   "type": "sew",
+   "t": 28.474,
+   "dur": 1.5,
+   "stage": 3
+  },
+  {
+   "type": "pull",
+   "t": 39.468,
+   "stage": 3
+  },
+  {
+   "type": "tear",
+   "t": 39.768,
+   "stage": 3
+  },
+  {
+   "type": "light",
+   "t": 39.868,
+   "stage": 3
+  },
+  {
+   "type": "whoosh",
+   "t": 39.968,
+   "stage": 3
+  },
+  {
+   "type": "land",
+   "t": 40.468,
+   "stage": 4
+  },
+  {
+   "type": "sew",
+   "t": 40.668,
+   "dur": 1.5,
+   "stage": 4
+  },
+  {
+   "type": "pull",
+   "t": 50.594,
+   "stage": 4
+  },
+  {
+   "type": "tear",
+   "t": 50.894,
+   "stage": 4
+  },
+  {
+   "type": "light",
+   "t": 50.994,
+   "stage": 4
+  },
+  {
+   "type": "whoosh",
+   "t": 51.094,
+   "stage": 4
+  },
+  {
+   "type": "land",
+   "t": 51.594,
+   "stage": 5
+  },
+  {
+   "type": "sew",
+   "t": 51.794,
+   "dur": 1.5,
+   "stage": 5
+  },
+  {
+   "type": "final",
+   "t": 60.748
+  }
+ ],
+ "s4_reentry": 1.659,
+ "mix_peak_dbfs": -1.0
+}

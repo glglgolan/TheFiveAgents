@@ -1,0 +1,15 @@
+Scene: 32.5 — עוד יצירה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 5s (rounded from storyboard 6s: v2_6 only supports 5s or 10s)
+Duration in storyboard: 6s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s32.5.png
+Credits consumed: 15
+generationId: ASjIwj-ttzCocoo6ZvccfjBemsJjUpHJCodkjDinue4ag7lSVXKrHUyR3r5Ej7QazSc2YCYG
+
+Prompt:
+Nirel adds a few more careful brush strokes to the cat portrait on the basketball, glances up with a playful laugh, then looks back down and keeps painting. Gentle handheld-feel push-in, warm golden light, soft floating dust/pigment in the air.
+
+Generated: 2026-08-20

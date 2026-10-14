@@ -1,0 +1,13 @@
+Scene: 03 — ניראל הקטנה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP)
+Duration: 10s
+Resolution: 1080p
+Aspect ratio: derived from first frame
+Reference (first frame): bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03.png
+
+Prompt:
+Little Nirel runs through the colourful backyard, jumps between her toys and art materials, then climbs onto the rim of the fish pond and tries to balance. She wobbles, flails her arms dramatically and falls in with a huge splash. Fish scatter. She surfaces soaking wet, freezes in shock for a beat, then bursts into delighted laughter. Charming and affectionate, never humiliating. Handheld tracking, warm golden light.
+
+Generated: 2026-08-19
+Credits consumed: 100

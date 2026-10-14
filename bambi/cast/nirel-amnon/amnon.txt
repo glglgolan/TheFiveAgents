@@ -1,0 +1,7 @@
+Provider: OpenAI (gpt-image-1.5, quality=medium, +input_fidelity)
+Reference: yuval/reference/nirel-amnon/_proxy/d16.jpg
+Size: 1024x1024
+Tokens: 8068 total (6707 in / 1361 out)
+
+Prompt:
+AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent. Football and geopolitics enthusiast, warm and very funny. Studio-quality character portrait, warm even light, neutral elegant background, head-and-shoulders to medium framing, square 1:1 crop, no wedding attire — this is a general character anchor used across many scenes, not just the wedding. Face must match the reference photograph exactly.

@@ -1,0 +1,390 @@
+{
+  "project": "niral-amnon",
+  "series_note": "Original six-friend ensemble comedy in the visual language of a 1990s New York multi-cam sitcom. Scene: the friends discuss the upcoming wedding of Nir'al and Amnon.",
+  "format": "Cinematic live-action 1990s American ensemble sitcom",
+  "aspect_ratio": "16:9",
+  "model": "minimax/hailuo-3",
+  "default_duration": 5,
+  "look": {
+    "preset": "90s NY ensemble sitcom (live action)",
+    "prompt_string": "Cinematic live-action 1990s American ensemble sitcom, shot on 35mm film with medium focal length lenses, warm practical lighting from table lamps and string lights, soft high-key fill with gentle shadows, natural skin texture and real pores, fine film grain, cinematic shallow depth of field, nostalgic warm palette of rust red, ochre, olive green and walnut brown, photographic and slightly faded rather than glossy.",
+    "prompt_string_short": "Cinematic live-action 1990s American ensemble sitcom shot on 35mm, warm practical lamp light, natural skin texture, fine film grain, shallow depth of field, nostalgic warm rust-and-ochre palette, photographic not glossy."
+  },
+  "audio_bed": {
+    "ambience": "gentle coffee-shop ambience with low background chatter, an espresso machine hissing softly and cups settling on saucers",
+    "laugh": "very subtle warm studio audience laughter, low in the mix",
+    "music": "no music over the dialogue"
+  },
+  "avoid": [
+    "extra characters or background people walking through frame",
+    "changing hairstyles, hair color, facial features or wardrobe",
+    "distorted or extra hands and fingers",
+    "unnatural or out-of-sync mouth movement",
+    "exaggerated cartoonish acting or mugging to camera",
+    "modern glossy commercial lighting and heavy color grading",
+    "TikTok-style fast cuts, whip pans or handheld shake",
+    "on-screen text, subtitles, captions or logos",
+    "surreal artifacts, morphing faces or warped furniture",
+    "characters speaking at the same time"
+  ],
+  "cast": [
+    {
+      "id": "ross",
+      "name": "ROSS",
+      "description": "man in his early thirties, short dark brown hair neatly parted on the side, narrow thoughtful face, dark eyes, clean-shaven",
+      "wardrobe": "olive corduroy blazer over a thin brown-and-cream striped shirt",
+      "voice": "measured and analytical",
+      "anchor_image": "bible/cast/ross.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the man seated at the far camera-LEFT end of the couch",
+      "frame_position": "the man seated at the far camera-LEFT end of the couch"
+    },
+    {
+      "id": "rachel",
+      "name": "RACHEL",
+      "description": "woman in her late twenties, honey-blonde layered hair falling just past the shoulders, warm hazel eyes, bright open smile",
+      "wardrobe": "cream ribbed cardigan over a white tee, denim skirt",
+      "voice": "bright and emotionally enthusiastic",
+      "anchor_image": "bible/cast/rachel.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the woman seated second from camera-left on the couch",
+      "frame_position": "the woman seated second from camera-left on the couch"
+    },
+    {
+      "id": "monica",
+      "name": "MONICA",
+      "description": "woman in her early thirties, dark brown shoulder-length hair with a center part tucked behind her ears, alert dark eyes, trim build, precise posture",
+      "wardrobe": "fitted black long-sleeve top, dark blue jeans",
+      "voice": "crisp, focused and slightly clipped",
+      "anchor_image": "bible/cast/monica.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the woman seated at the CENTRE of the couch holding the folded handwritten checklist",
+      "frame_position": "the woman seated at the CENTRE of the couch holding the folded handwritten checklist"
+    },
+    {
+      "id": "chandler",
+      "name": "CHANDLER",
+      "description": "man in his early thirties, short light-brown hair combed forward, narrow face with arched eyebrows and a permanently amused expression",
+      "wardrobe": "grey knit vest over a pale blue button-down shirt, khaki trousers",
+      "voice": "dry, flat and deadpan",
+      "anchor_image": "bible/cast/chandler.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the man seated fourth from camera-left on the couch",
+      "frame_position": "the man seated fourth from camera-left on the couch"
+    },
+    {
+      "id": "joey",
+      "name": "JOEY",
+      "description": "man in his early thirties, thick dark hair swept back, broad open jaw, dark friendly eyes, relaxed heavy build",
+      "wardrobe": "brown leather jacket over a plain white t-shirt, dark jeans",
+      "voice": "warm, earnest and completely sincere",
+      "anchor_image": "bible/cast/joey.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the man sitting alone in the olive armchair at the far camera-right",
+      "frame_position": "the man sitting alone in the olive armchair at the far camera-right"
+    },
+    {
+      "id": "phoebe",
+      "name": "PHOEBE",
+      "description": "woman in her late twenties, long straight ash-blonde hair parted in the middle, pale blue eyes, soft dreamy features",
+      "wardrobe": "floral-print blouse under a lilac cardigan, long patterned skirt",
+      "voice": "warm, unhurried and quietly sincere",
+      "anchor_image": "bible/cast/phoebe.png",
+      "anchor_ready": false,
+      "source": "original archetype",
+      "short": "the woman seated at the camera-RIGHT end of the couch",
+      "frame_position": "the woman seated at the camera-RIGHT end of the couch"
+    }
+  ],
+  "sets": [
+    {
+      "id": "cafe",
+      "name": "The coffee shop",
+      "description": "a cozy 1990s New York coffee shop on a weekday afternoon, exposed brick and warm ochre walls, a large rust-red couch facing the open fourth wall, a low walnut coffee table carrying ceramic mugs and a plate of pastries, a mismatched olive armchair at camera-right, a chalkboard menu and espresso bar softly out of focus in the background, warm afternoon light falling through a large street window at camera-left, table lamps and string lights glowing",
+      "line_of_action": "Couch faces the fourth wall, camera-left to camera-right: Ross, Rachel, Monica (checklist), Chandler, Phoebe. Joey sits alone in the olive armchair at the far camera-right. These positions never change.",
+      "plate_image": "bible/sets/cafe_ensemble.png",
+      "description_short": "a cozy 1990s New York coffee shop in the afternoon, exposed brick and ochre walls, a large rust-red couch facing the fourth wall, a low walnut table with mugs and a plate of pastries, an olive armchair at camera-right, warm window light from camera-left"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "set": "cafe",
+      "characters": [
+        "ross",
+        "rachel",
+        "monica",
+        "chandler",
+        "joey",
+        "phoebe"
+      ],
+      "duration": 5,
+      "beat": "establishing",
+      "shot": {
+        "type": "LS",
+        "angle": "eye level",
+        "camera_tag": "[Push in]"
+      },
+      "framing": "Wide group shot of all six friends around the coffee table, the full couch and the armchair in frame",
+      "performance": "A close group of lifelong friends mid-conversation about an upcoming wedding — overlapping warm energy, small gestures, natural eye contact between them, nobody addressing the camera",
+      "image_prompt": "Wide eye-level group shot of six friends around a low walnut coffee table in a cozy 1990s New York coffee shop, afternoon light from a street window camera-left, all six mid-conversation, Monica holding a folded paper checklist, a plate of pastries on the table.",
+      "timeline": [
+        "0-2s the group talks animatedly, Rachel gestures with excitement and Ross nods along",
+        "2-4s the camera drifts slowly toward the table, Joey glances down at the plate of pastries, Chandler smirks, Phoebe smiles and settles back in the armchair",
+        "4-5s the chatter settles and Monica lifts her checklist and draws breath, about to speak"
+      ],
+      "dialogue": [],
+      "sfx": "a mug set down on the wooden table",
+      "constraints": "all six faces, hair and wardrobe exactly as in the reference frame; seating order and the checklist and pastries on the table unchanged",
+      "avoid": [
+        "any character speaking a clear line of dialogue",
+        "anyone standing up or leaving frame"
+      ],
+      "reference": "frames/s01.png",
+      "image_output": "frames/s01.png",
+      "video_output": "videos/s01.mp4"
+    },
+    {
+      "id": "s02",
+      "set": "cafe",
+      "characters": [
+        "monica"
+      ],
+      "duration": 7,
+      "beat": "setup",
+      "shot": {
+        "type": "MCU",
+        "angle": "eye level",
+        "camera_tag": "[Push in]"
+      },
+      "framing": "Medium close-up on Monica seated at the center of the couch, holding a detailed handwritten wedding checklist, the other friends soft and out of focus behind her",
+      "performance": "Monica treats organizing this wedding as a military operation — utterly focused, satisfied with her own competence. Natural and comedic, never exaggerated",
+      "image_prompt": "Medium close-up of Monica seated center couch holding a handwritten checklist, focused expression, the other five friends softly out of focus behind her, warm afternoon light.",
+      "timeline": [
+        "0-1s Monica scans the checklist, lips moving slightly",
+        "1-6s she looks up and speaks the line evenly, glancing back down at the list on the last word",
+        "6-7s she ticks another item with a pen and gives a small satisfied nod"
+      ],
+      "dialogue": [
+        {
+          "who": "monica",
+          "delivery": "crisp, brisk and completely certain",
+          "line": "Okay, flowers, invitations, seating plan, music... everything is under control."
+        }
+      ],
+      "sfx": "the scratch of a pen ticking a box on paper",
+      "constraints": "Monica's face, center-parted dark hair and black top exactly as in the reference frame; same handwritten checklist; friends stay seated behind her",
+      "reference": "frames/s02.png",
+      "image_output": "frames/s02.png",
+      "video_output": "videos/s02.mp4"
+    },
+    {
+      "id": "s03",
+      "set": "cafe",
+      "characters": [
+        "joey",
+        "chandler",
+        "monica"
+      ],
+      "duration": 5,
+      "beat": "setup",
+      "shot": {
+        "type": "CU",
+        "angle": "eye level",
+        "camera_tag": "[Pull out]"
+      },
+      "framing": "Starts as a close-up on Joey at the camera-right end of the couch, then widens to include Chandler beside him and Monica beyond, all in frame by the end",
+      "performance": "Joey is lovable and completely sincere — he genuinely believes this is the most important question in the room. Never stupid or cartoonish. The others react with flat disbelief",
+      "image_prompt": "Close-up of Joey at the camera-right end of the couch, leaning slightly forward, suddenly serious, warm afternoon light, coffee shop softly out of focus behind him.",
+      "timeline": [
+        "0-1s Joey's expression turns abruptly serious and he leans forward",
+        "1-3s he asks the question with total sincerity",
+        "3-5s a beat of silence as the camera widens to reveal Chandler and Monica staring at him in flat disbelief"
+      ],
+      "dialogue": [
+        {
+          "who": "joey",
+          "delivery": "earnest, urgent and completely sincere",
+          "line": "Wait. What about the food?"
+        }
+      ],
+      "sfx": "a small pause in the room chatter",
+      "constraints": "Joey's face, swept-back hair and leather jacket exactly as in the reference frame; he stays at the camera-right end of the couch, Chandler to his left",
+      "reference": "frames/s03.png",
+      "image_output": "frames/s03.png",
+      "video_output": "videos/s03.mp4"
+    },
+    {
+      "id": "s04",
+      "set": "cafe",
+      "characters": [
+        "chandler",
+        "joey",
+        "monica",
+        "rachel"
+      ],
+      "duration": 6,
+      "beat": "punchline",
+      "shot": {
+        "type": "MCU",
+        "angle": "eye level",
+        "camera_tag": "[Pull out]"
+      },
+      "framing": "Starts on Chandler's face beside Joey, then gently widens into a medium group shot taking in Joey, Monica and Rachel reacting",
+      "performance": "The humor is entirely in Chandler's deadpan — no smile, no wink. Joey misses the sarcasm completely and takes it as a compliment",
+      "image_prompt": "Medium close-up of Chandler seated between Monica and Joey on the couch, dry unimpressed expression turned toward Joey off-frame right, warm afternoon light.",
+      "timeline": [
+        "0-1s Chandler turns his head to Joey with a completely flat look",
+        "1-3s he delivers the line without a flicker of expression",
+        "3-4s a beat; Joey smiles proudly, taking it as agreement",
+        "4-6s the camera widens as Monica and Rachel start laughing"
+      ],
+      "dialogue": [
+        {
+          "who": "chandler",
+          "delivery": "completely dry and deadpan, no smile",
+          "line": "Of course. The important things first."
+        }
+      ],
+      "sfx": "warm genuine laughter from the friends",
+      "constraints": "Chandler's face, forward-combed hair and grey knit vest exactly as in the reference frame; seating order unchanged, Joey at his camera-right",
+      "reference": "frames/s04.png",
+      "image_output": "frames/s04.png",
+      "video_output": "videos/s04.mp4"
+    },
+    {
+      "id": "s05a",
+      "set": "cafe",
+      "characters": [
+        "phoebe"
+      ],
+      "duration": 5,
+      "beat": "emotional",
+      "shot": {
+        "type": "MCU",
+        "angle": "eye level",
+        "camera_tag": "[Push in]"
+      },
+      "framing": "Medium close-up on Phoebe in the olive armchair at camera-right, the couch soft and out of focus behind her, slowly pushing in",
+      "performance": "The room quiets. Phoebe becomes genuinely sincere — warm, unhurried, a little quirky. This is a real emotional moment, not a joke, and it is not played for laughs",
+      "image_prompt": "Medium close-up of Phoebe seated in the olive armchair at camera-right, looking around at her friends with a gentle sincere smile, warm afternoon light, couch softly out of focus behind her.",
+      "timeline": [
+        "0-1s the laughter fades and Phoebe looks slowly around the table",
+        "1-4s she speaks the line warmly and unhurriedly as the camera pushes in",
+        "4-5s she holds a gentle smile toward her friends"
+      ],
+      "dialogue": [
+        {
+          "who": "phoebe",
+          "delivery": "warm, gentle and completely sincere, unhurried",
+          "line": "You know... maybe weddings aren't really about everything being perfect."
+        }
+      ],
+      "sfx": "the room chatter drops noticeably lower",
+      "constraints": "Phoebe's face, long ash-blonde hair, floral blouse and lilac cardigan exactly as in the reference frame; she stays in the olive armchair at camera-right",
+      "avoid": [
+        "audience laughter",
+        "any comedic beat or smirk"
+      ],
+      "reference": "frames/s05a.png",
+      "image_output": "frames/s05a.png",
+      "video_output": "videos/s05a.mp4"
+    },
+    {
+      "id": "s05b",
+      "set": "cafe",
+      "characters": [
+        "phoebe"
+      ],
+      "duration": 5,
+      "beat": "emotional",
+      "shot": {
+        "type": "CU",
+        "angle": "eye level",
+        "camera_tag": "[Static shot]"
+      },
+      "framing": "Close-up on Phoebe in the same armchair, matching the end framing of the previous shot exactly, the friends visible soft and out of focus behind her",
+      "performance": "A seamless continuation of the same breath — same warmth, same rhythm, no reset. The friends listen quietly and the beat holds",
+      "image_prompt": "Close-up of Phoebe in the olive armchair finishing a heartfelt sentence, gentle sincere expression, the friends soft and out of focus behind her listening, warm afternoon light.",
+      "timeline": [
+        "0-4s Phoebe finishes her thought without pausing, holding eye contact around the table",
+        "4-5s a warm silence: behind her Rachel smiles emotionally, Monica softens, Ross nods slowly, Joey looks genuinely touched and Chandler briefly loses his sarcastic expression"
+      ],
+      "dialogue": [
+        {
+          "who": "phoebe",
+          "delivery": "warm, sincere, continuing the same breath as before",
+          "line": "Maybe they're just about finding the person who makes all the chaos feel worth it."
+        }
+      ],
+      "sfx": "quiet room tone, almost no chatter",
+      "constraints": "framing, face, hair, wardrobe and lighting identical to the previous Phoebe shot so the two cut together invisibly; same armchair at camera-right",
+      "avoid": [
+        "audience laughter",
+        "any comedic beat",
+        "a visible change in framing or lighting from the previous shot"
+      ],
+      "reference": "frames/s05b.png",
+      "image_output": "frames/s05b.png",
+      "video_output": "videos/s05b.mp4"
+    },
+    {
+      "id": "s06",
+      "set": "cafe",
+      "characters": [
+        "ross",
+        "rachel",
+        "monica",
+        "chandler",
+        "joey",
+        "phoebe"
+      ],
+      "duration": 7,
+      "beat": "punchline",
+      "shot": {
+        "type": "MS",
+        "angle": "eye level",
+        "camera_tag": "[Pull out]"
+      },
+      "framing": "Medium group shot of the couch and armchair, slowly pulling back to a warm wide shot of all six friends",
+      "performance": "Warm emotional silence, everyone smiling — then Chandler punctures it, deadpan. Joey's food reflex is instant and sincere. The laughter is genuine, not performed",
+      "image_prompt": "Medium group shot of the six friends around the coffee table in warm emotional silence, everyone smiling gently, Chandler seated between Monica and Joey, plate of pastries on the table, warm afternoon light.",
+      "timeline": [
+        "0-2s the group sits in a warm smiling silence after Phoebe's words",
+        "2-4s Chandler glances around the table and delivers the line completely deadpan",
+        "4-5s a beat; Joey's head snaps toward the pastries",
+        "5-7s the group bursts into laughter as the camera pulls back to a warm wide shot"
+      ],
+      "dialogue": [
+        {
+          "who": "chandler",
+          "delivery": "completely deadpan, breaking the silence",
+          "line": "Great. Now I'm hungry."
+        }
+      ],
+      "sfx": "a burst of warm genuine laughter from all six friends",
+      "constraints": "all six faces, hair and wardrobe exactly as established; seating order unchanged; the plate of pastries stays on the table",
+      "reference": "frames/s06.png",
+      "image_output": "frames/s06.png",
+      "video_output": "videos/s06.mp4"
+    }
+  ],
+  "avoid_short": [
+    "extra characters",
+    "changed faces, hair or wardrobe",
+    "distorted hands",
+    "out-of-sync lips",
+    "overacting",
+    "glossy commercial look",
+    "handheld shake",
+    "on-screen text",
+    "warped artifacts",
+    "overlapping speech"
+  ],
+  "cast_note": "Appearance is defined solely by frames/s01.png. Prompts refer to people by seat position, never by physical description — describing the six by hair/wardrobe triggers output-stage moderation."
+}

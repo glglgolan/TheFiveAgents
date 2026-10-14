@@ -1,0 +1,19 @@
+Scene: 10 - הכניסה הגדולה של ברסה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Method: Kling (MCP)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s10.png (unchanged)
+Fix: previous video (v3_0_turbo) generated a generic man instead of Amnon, because
+the first-frame image has no visible Amnon (Barsa in doorway only). Bound the real
+Amnon photo as a Kling Element (<<<319176002326089>>>) and referenced it in the
+prompt instead of regenerating the image.
+Credits consumed: 60
+generationId: Aal7vjtMl9T9MBfgbrb1ZmZQBHzwMVdktIEbRecXr8y0N6gnfOSM-90efRu96mfBXwPPfQKe
+
+Prompt:
+Treat this like the arrival of a legendary sports hero. Barsa walks slowly through the doorway into the golden backlight, fur lifting in the breeze, glowing particles drifting around her. <<<319176002326089>>> turns and sees her; his sceptical expression shifts into instant affection. Barsa stops, holds his gaze, then slowly turns her head to camera with the calm expression of someone who already knows she has won. Slow heroic push-in.
+
+Generated: 2026-08-20

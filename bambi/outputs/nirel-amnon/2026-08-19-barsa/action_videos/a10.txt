@@ -1,0 +1,11 @@
+insert_id: A10
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.0304 USD
+duration: 7s
+actual_cost: 0.2129 USD
+reference: action_scenes/a10.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: Isn8FJb7PccitVtDxt8A
+status: OK
+prompt:
+Begin extremely high above the wedding venue at golden hour, wide and majestic, barely drifting. The drone pitches over and dives toward the building, accelerating continuously — the roof and gardens rushing up, trees whipping past at the frame edges. It levels out just above the roof tiles, skims the ridge, then drops steeply toward the entrance, banking around a flower installation so petals and pergola lights streak past the lens in tight foreground parallax. At full speed it races straight through the open entrance doors, the doorframe wiping the frame, and continues flying through the empty hall: candlelit tables, hanging light strands and white flower arrangements streaming past on both sides, the polished floor reflecting golden light beneath. Then a dramatic deceleration — the speed bleeds off fast and smoothly until the camera is almost motionless, floating mid-hall, motion blur resolving into perfect crisp stillness, candle flames settling, dust hanging in the air. Photorealistic, physically coherent flight, huge kinetic move answered by silence, cinematic 16:9, no humans, no text, no logos.

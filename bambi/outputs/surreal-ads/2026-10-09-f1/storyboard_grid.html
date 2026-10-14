@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velocità — BUILT FOR THE LAST LAP</title>
+<style>
+  :root{--bg:#0f1115;--card:#1a1d24;--card2:#20242d;--line:#2c313c;--ink:#e8eaed;--dim:#9aa0aa;
+    --accent:#f0a63c;--ok:#3fb950;--pending:#6b7280;--back:#8b5cf6;--front:#22d3ee;--s1:#5aa9e6;--s2:#e0574b;--s3:#3fb950}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","Heebo",Arial,sans-serif;padding:20px;max-width:1500px;margin-inline:auto}
+  header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+  h1{font-size:20px;margin:0}
+  h2{font-size:14px;color:var(--dim);font-weight:600;margin:22px 0 10px;letter-spacing:.02em}
+  .sub{color:var(--dim);font-size:13px}
+  .pills{margin-inline-start:auto;display:flex;gap:8px;flex-wrap:wrap}
+  .pill{font-size:11px;border:1px solid var(--line);border-radius:20px;padding:3px 10px;color:var(--dim)}
+  .pill b{color:var(--ink)}
+  .bar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0;align-items:center;font-size:12px;color:var(--dim)}
+  button,a.btn{background:var(--card2);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit;text-decoration:none}
+  button:hover,a.btn:hover{border-color:var(--accent)}
+  button.copied{border-color:var(--ok);color:var(--ok)}
+  .slot{position:relative;aspect-ratio:9/16;background:var(--card2);border:1px dashed var(--line);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .slot.has{border-style:solid;border-color:#3a4150}
+  .slot img,.slot video{width:100%;height:100%;object-fit:cover;display:block}
+  .slot .lbl{position:absolute;top:6px;inset-inline-start:6px;background:rgba(0,0,0,.72);color:#fff;font-size:11px;font-weight:700;border-radius:5px;padding:2px 7px;z-index:2}
+  .slot .ok{position:absolute;top:6px;inset-inline-end:6px;background:var(--ok);color:#fff;font-size:10px;font-weight:700;border-radius:5px;padding:2px 6px;z-index:2;display:none}
+  .slot.has .ok{display:block}
+  .slot .ph{color:var(--pending);font-size:11px;text-align:center;padding:8px;line-height:1.5}
+  .slot .ph code{font-size:10px;color:var(--dim);direction:ltr;display:block;margin-top:4px;word-break:break-all}
+  .top{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+  .stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--sc)}
+  .stage .hd{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .stage .num{background:var(--sc);color:#0b0d10;font-weight:800;font-size:12px;border-radius:6px;padding:2px 8px}
+  .stage .t{font-weight:700;font-size:14px}
+  .stage .meta{font-size:11px;color:var(--dim);margin-inline-start:auto}
+  .frames{display:grid;grid-template-columns:1fr 18px 1fr 1fr;gap:6px;align-items:center}
+  .arrow{color:var(--dim);text-align:center;font-size:16px}
+  .desc{font-size:12px;color:var(--dim);line-height:1.55;border-inline-start:2px solid var(--line);padding-inline-start:8px}
+  .acts{display:flex;gap:6px;flex-wrap:wrap}
+  details{font-size:11px;color:var(--dim)}
+  details pre{white-space:pre-wrap;direction:ltr;text-align:left;background:var(--card2);padding:8px;border-radius:8px;font-size:11px;line-height:1.5;color:#cfd3da}
+  /* typography track */
+  .track{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+  .ruler{position:relative;height:22px;border-bottom:1px solid var(--line);margin-bottom:8px;direction:ltr}
+  .seg{position:absolute;top:0;height:16px;border-radius:4px;font-size:10px;color:#0b0d10;font-weight:700;padding:1px 6px;overflow:hidden;white-space:nowrap}
+  .lane{position:relative;height:30px;margin:4px 0;direction:ltr}
+  .layer{position:absolute;top:2px;height:26px;border-radius:6px;font-size:11px;padding:4px 8px;overflow:hidden;white-space:nowrap;border:1px solid}
+  .layer.back{background:rgba(139,92,246,.18);border-color:var(--back)}
+  .layer.front{background:rgba(34,211,238,.15);border-color:var(--front)}
+  .tick{position:absolute;top:0;bottom:-6px;width:1px;background:var(--line)}
+  .legend{display:flex;gap:14px;font-size:11px;color:var(--dim);margin-top:8px;flex-wrap:wrap}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-inline-end:4px;vertical-align:middle}
+  .finals{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,260px));gap:14px}
+  footer{margin-top:24px;color:var(--dim);font-size:11px;text-align:center;line-height:1.7}
+  @media (max-width:520px){.stages{grid-template-columns:1fr}.frames{grid-template-columns:1fr 14px 1fr}.frames .vslot{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎬 Velocità — BUILT FOR THE LAST LAP</h1>
+  <span class="sub" id="sub"></span>
+  <div class="pills" id="pills"></div>
+</header>
+<div class="bar">
+  <button onclick="location.reload()">↻ רענן (טען תמונות/וידאו חדשים)</button>
+  <a class="btn" href="production.md">production.md</a>
+  <a class="btn" href="midjourney_prompts.md">midjourney_prompts.md</a>
+  <a class="btn" href="master_prompt.txt">master_prompt.txt</a>
+  <a class="btn" href="text_layers.json">text_layers.json</a>
+  <button onclick="copy(this, DATA.master)">📋 העתק master prompt</button>
+</div>
+
+<h2>עוגן מוצר + Keyframes</h2>
+<div class="top" id="top"></div>
+
+<h2>שלבים — פריים ראשון → פריים אחרון → וידאו</h2>
+<div class="stages" id="stages"></div>
+
+<h2>מסלול טיפוגרפיה (text_layers.json)</h2>
+<div class="track" id="track"></div>
+
+<h2>תוצר סופי</h2>
+<div class="finals" id="finals"></div>
+
+<footer>הקבצים נטענים מהדיסק בזמן פתיחה — שמור/גרור קובץ ולחץ <b>↻</b>. נוצר מ-<code>storyboard.json</code></footer>
+
+<script>
+const DATA = {"subtitle": "סדרה: surreal-product-ad v2 · f1", "pills": [["יחס", "9:16"], ["משך", "15s"], ["תמונות", "gpt"], ["טיפוגרפיה", "hybrid"], ["שכבות טקסט", "1"]], "anchor": "../../../cast/surreal-ads/f1-product.png", "anchorHint": "bambi/cast/surreal-ads/f1-product.png", "keyframes": [{"id": "k0", "src": "keyframes/k0.png", "hint": "keyframes/k0.png"}, {"id": "k1", "src": "keyframes/k1.png", "hint": "keyframes/k1.png"}, {"id": "k2", "src": "keyframes/k2.png", "hint": "keyframes/k2.png"}, {"id": "k3", "src": "keyframes/k3.png", "hint": "keyframes/k3.png"}], "stages": [{"n": 1, "title": "Digital → Physical · דיגיטלי → פיזי", "short": "digital-to-physical", "t0": 0, "t1": 4, "shot": "MS · push-in", "desc": "האתר נראה רגיל לגמרי — כבר בשנייה הראשונה מכונית הפורמולה 1 מתחיל לפרוץ את זכוכית המסך ויוצא לעולם הפיזי.", "from": "k0", "to": "k1", "firstSrc": "keyframes/k0.png", "firstHint": "keyframes/k0.png", "lastSrc": "keyframes/k1.png", "lastHint": "keyframes/k1.png", "video": "videos/s01.mp4", "videoHint": "videos/s01.mp4", "video_prompt": "Vertical 9:16, one continuous shot. Hyperrealistic live-action look, real physics, real optics. The website on the laptop looks completely normal, then within the first second the red VELOCITÀ Formula 1 car begins to physically push out through the screen glass — the nose wing of the car pierces through the screen glass first, then the whole car rolls out of the website onto the oak table, tyre smoke spilling from the screen behind it. Slow handheld push-in, real reflections and shadows on the oak table. The giant letters \"FAST\" start to lift off the web page. Calm, premium, magical. No cuts, no random objects, no distorted product, no floating text overlays.", "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture. A silver MacBook Pro standing open on a warm natural oak table, a soft linen cloth and a ceramic cup at the edge of frame, a sunlit cream plaster wall behind. On the laptop screen: a sleek racing-team website with a bold red hero banner, the serif-italic logo 'VELOCITÀ', a photo of the car, and the giant editorial headline 'FAST'. Everything is completely normal and calm — nothing has emerged yet. The laptop fills the central two thirds of the frame, slightly angled toward camera. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent racing red and carbon black. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.", "mj_prompt": "silver MacBook Pro open on a warm oak table, cream plaster wall, linen cloth, the laptop screen shows a sleek racing-team website with a bold red hero banner, the serif-italic logo 'VELOCITÀ', a photo of the car, and the giant editorial headline 'FAST', everything calm and normal, laptop fills the center of the vertical frame, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with racing red and carbon black accents --ar 9:16 --v 7 --style raw --s 50"}, {"n": 2, "title": "Transformation · טרנספורמציה", "short": "transformation", "t0": 4, "t1": 11, "shot": "MCU · orbit + push-in, accelerating", "desc": "המוצר בחוץ; האותיות הענקיות הופכות לאובייקטים פיזיים מ-brushed carbon fibre with red-and-white racing kerb stripes along their edges; רצועת אספלט רטוב של מסלול נפרשת על השולחן, ריסוס גשם ועשן צמיגים מסתחררים לתוך האותיות והמכונית מאיצה במקום — התנועה מאיצה עד לשיא.", "from": "k1", "to": "k2", "firstSrc": "keyframes/k1.png", "firstHint": "keyframes/k1.png", "lastSrc": "keyframes/k2.png", "lastHint": "keyframes/k2.png", "video": "videos/s02.mp4", "videoHint": "videos/s02.mp4", "video_prompt": "Continuous shot, the camera orbits and pushes closer with accelerating speed. Hyperrealistic live-action look, real physics, real optics. A strip of wet race-track asphalt unrolls across the table under the car, rain spray and tyre smoke swirl into the giant letters, the car accelerates in place with spinning wheels and streaks of motion blur. The huge letters \"FAST\" are solid brushed carbon fibre with red-and-white racing kerb stripes along their edges, some behind the red VELOCITÀ Formula 1 car, some in front of it. Tyre smoke, rain spray droplets, tiny rubber flecks move with real gravity and depth; motion builds to a euphoric peak. Product shape and branding stay accurate. No cuts, no random objects, no distorted product, no floating text overlays.", "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, the exact same laptop, table, wall and light as the reference scene. The red VELOCITÀ Formula 1 car is physically emerging from the laptop screen: the nose wing of the car pierces through the screen glass first, then the whole car rolls out of the website onto the oak table, tyre smoke spilling from the screen behind it. About half of the product is already out in the real room, casting a real contact shadow on the oak table; the rest is still inside the website. The giant editorial serif letters spelling exactly \"FAST\" (F-A-S-T) are starting to lift off the web page, about to become physical. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent racing red and carbon black. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.", "mj_prompt": "the red VELOCITÀ Formula 1 car physically bursting out of a MacBook screen onto a warm oak table: the nose wing of the car pierces through the screen glass first, then the whole car rolls out of the website onto the oak table, tyre smoke spilling from the screen behind it, half of it still inside the screen, giant serif letters \"FAST\" lifting off the web page, real contact shadow, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with racing red and carbon black accents --ar 9:16 --v 7 --style raw --s 50"}, {"n": 3, "title": "Hero · שוט הירו", "short": "hero", "t0": 11, "t1": 15, "shot": "MS · decelerating push-in → locked", "desc": "התנועה נבלמת בבת אחת לאלגנטיות איטית ומתיישבת על שוט הירו מושלם; הטאגליין \"BUILT FOR THE LAST LAP\" משולב בסצנה.", "from": "k2", "to": "k3", "firstSrc": "keyframes/k2.png", "firstHint": "keyframes/k2.png", "lastSrc": "keyframes/k3.png", "lastHint": "keyframes/k3.png", "video": "videos/s03.mp4", "videoHint": "videos/s03.mp4", "video_prompt": "Continuous shot. Hyperrealistic live-action look, real physics, real optics. The motion suddenly turns elegant and slow, everything settles with soft inertia, the camera decelerates and locks into a perfectly symmetrical frame: the car frozen perfectly still on a strip of glistening wet asphalt on the oak table, red-and-white kerbs at its sides, sharp reflections underneath. Keep the upper third calm and clean. Soft daylight, a last drift of tyre smoke. Premium, still, iconic. No cuts, no random objects, no distorted product, no floating text overlays.", "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, a surreal moment captured for real — same oak table and cream wall, the camera now closer and slightly orbited. The peak of a magical transformation: a strip of wet race-track asphalt unrolls across the table under the car, rain spray and tyre smoke swirl into the giant letters, the car accelerates in place with spinning wheels and streaks of motion blur. Huge physical 3D letters spelling exactly \"FAST\" (F-A-S-T), made of brushed carbon fibre with red-and-white racing kerb stripes along their edges, stand on the table around the product — some behind it, one partially in front of it, partially occluding it. Every letter correctly spelled. Tyre smoke, rain spray droplets, tiny rubber flecks frozen mid-motion as if shot at 1/8000s, with a hint of motion blur on the fastest elements. The laptop is still softly visible behind, its screen blending into the room. The product is exactly as in the reference — a highly detailed 1:8 scale model of a modern Formula 1 car in gloss racing red with white accents, carbon-fibre aero parts, slick tyres and 'VELOCITÀ' livery on the sidepods — accurate proportions, 'Velocità' branding readable. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent racing red and carbon black. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.", "mj_prompt": "surreal moment captured for real: a strip of wet race-track asphalt unrolls across the table under the car, rain spray and tyre smoke swirl into the giant letters, the car accelerates in place with spinning wheels and streaks of motion blur, giant 3D letters \"FAST\" made of brushed carbon fibre with red-and-white racing kerb stripes along their edges standing around the red VELOCITÀ Formula 1 car, some behind it, one in front, tyre smoke, rain spray droplets, tiny rubber flecks frozen mid-air, MacBook softly out of focus behind, camera close and slightly orbited, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with racing red and carbon black accents --ar 9:16 --v 7 --style raw --s 50"}], "layers": [{"id": "tagline", "text": "BUILT FOR THE LAST LAP", "split": "letter", "plane": "front", "planeSwitches": [], "from": 11.2, "to": 15, "preset": "assemble-tagline"}], "total": 15, "master": "Create a cinematic vertical 9:16 product advertisement in a premium editorial design style. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered.\n\nA realistic a silver MacBook Pro standing open on a warm natural oak table, a soft linen cloth and a ceramic cup at the edge of frame, a sunlit cream plaster wall behind displays a beautifully designed a sleek racing-team website with a bold red hero banner, the serif-italic logo 'VELOCITÀ', a photo of the car, and the giant editorial headline 'FAST' on its screen.\n\nThe camera slowly moves through the scene with subtle handheld realism and smooth cinematic motion.\n\nWithin the first second the digital world begins to physically come alive: a highly detailed 1:8 scale model of a modern Formula 1 car in gloss racing red with white accents, carbon-fibre aero parts, slick tyres and 'VELOCITÀ' livery on the sidepods emerges from the screen — the nose wing of the car pierces through the screen glass first, then the whole car rolls out of the website onto the oak table, tyre smoke spilling from the screen behind it — and interacts naturally with the surrounding environment. \n\nLarge, sophisticated typography spelling \"FAST\" becomes part of the physical space, oversized editorial letters made of brushed carbon fibre with red-and-white racing kerb stripes along their edges, integrated behind, around and partially obscured by the product.\n\nThe transformation should feel physically impossible but visually believable: a strip of wet race-track asphalt unrolls across the table under the car, rain spray and tyre smoke swirl into the giant letters, the car accelerates in place with spinning wheels and streaks of motion blur. The movement accelerates continuously.\n\nObjects, materials and particles (tyre smoke, rain spray droplets, tiny rubber flecks) move naturally with realistic gravity, reflections, shadows and depth.\n\nThe screen and physical environment seamlessly blend together. Maintain accurate product proportions and recognizable Velocità branding throughout.\n\nWarm premium art direction (cream, warm beige, natural oak, soft off-white + brand accent racing red and carbon black), sophisticated editorial composition, minimal luxury aesthetic, soft natural lighting, shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.\n\nThe transformation then suddenly becomes elegant and slow, resolving into a clean hero shot: the car frozen perfectly still on a strip of glistening wet asphalt on the oak table, red-and-white kerbs at its sides, sharp reflections underneath, with \"BUILT FOR THE LAST LAP\" clearly integrated into the environment.\n\nNo random objects, no chaotic motion, no unnecessary camera cuts, no distorted products, no floating text overlays.\n\nThe entire sequence should feel like one continuous magical transformation.", "final": "final.mp4", "finalTypo": "final_typo.mp4", "oneshot": "videos/oneshot.mp4"};
+const STAGE_COLORS = ['var(--s1)','var(--s2)','var(--s3)'];
+
+function copy(btn, text){
+  navigator.clipboard.writeText(text).then(()=>{btn.classList.add('copied');const o=btn.textContent;btn.textContent='✓ הועתק';setTimeout(()=>{btn.textContent=o;btn.classList.remove('copied')},1400)});
+}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+function imgSlot(label, src, hint){
+  const d=document.createElement('div'); d.className='slot';
+  d.innerHTML=`<span class="lbl">${esc(label)}</span><span class="ok">✓</span><div class="ph">ממתין<code>${esc(hint||src||'')}</code></div>`;
+  if(src){const im=new Image(); im.onload=()=>{d.querySelector('.ph')?.remove(); d.classList.add('has'); d.appendChild(im)}; im.src=src+'?t='+Date.now();}
+  return d;
+}
+function vidSlot(label, src, hint, cls){
+  const d=document.createElement('div'); d.className='slot '+(cls||'');
+  d.innerHTML=`<span class="lbl">${esc(label)}</span><span class="ok">✓</span><div class="ph">🎞️ וידאו ממתין<code>${esc(hint||src||'')}</code></div>`;
+  if(src){const v=document.createElement('video'); v.muted=true; v.loop=true; v.playsInline=true; v.controls=true; v.preload='metadata';
+    v.onloadedmetadata=()=>{d.querySelector('.ph')?.remove(); d.classList.add('has'); d.appendChild(v)};
+    v.src=src;}
+  return d;
+}
+
+document.getElementById('sub').textContent = DATA.subtitle;
+document.getElementById('pills').innerHTML = DATA.pills.map(([k,v])=>`<span class="pill">${esc(k)}: <b>${esc(v)}</b></span>`).join('');
+
+const topEl = document.getElementById('top');
+topEl.appendChild(imgSlot('PRODUCT', DATA.anchor, DATA.anchorHint));
+DATA.keyframes.forEach(k=>topEl.appendChild(imgSlot(k.id.toUpperCase(), k.src, k.hint)));
+
+const stages = document.getElementById('stages');
+DATA.stages.forEach((s,i)=>{
+  const el=document.createElement('div'); el.className='stage'; el.style.setProperty('--sc', STAGE_COLORS[i%3]);
+  el.innerHTML=`<div class="hd"><span class="num">S${String(s.n).padStart(2,'0')}</span><span class="t">${esc(s.title)}</span>
+      <span class="meta"><bdi dir="ltr">${s.t0}–${s.t1}s · ${esc(s.shot)}</bdi></span></div>
+    <div class="frames"></div>
+    <div class="desc">${esc(s.desc)}</div>
+    <div class="acts"></div>
+    <details><summary>video_prompt</summary><pre>${esc(s.video_prompt)}</pre></details>
+    <details><summary>image_prompt (${esc(s.from.toUpperCase())})</summary><pre>${esc(s.image_prompt)}</pre></details>`;
+  const fr=el.querySelector('.frames');
+  fr.appendChild(imgSlot('FIRST · '+s.from.toUpperCase(), s.firstSrc, s.firstHint));
+  const ar=document.createElement('div'); ar.className='arrow'; ar.textContent='←'; fr.appendChild(ar);
+  fr.appendChild(imgSlot('LAST · '+s.to.toUpperCase(), s.lastSrc, s.lastHint));
+  fr.appendChild(vidSlot('VIDEO', s.video, s.videoHint, 'vslot'));
+  const acts=el.querySelector('.acts');
+  [['📋 video prompt', s.video_prompt],['📋 image prompt', s.image_prompt],['📋 MJ prompt', s.mj_prompt]].forEach(([l,t])=>{
+    if(!t) return; const b=document.createElement('button'); b.textContent=l; b.onclick=()=>copy(b,t); acts.appendChild(b);});
+  stages.appendChild(el);
+});
+
+// typography track
+const tr=document.getElementById('track'); const T=DATA.total||15;
+const pct=t=>(Math.max(0,Math.min(T,t))/T*100)+'%';
+let html='<div class="ruler">';
+DATA.stages.forEach((s,i)=>{html+=`<div class="seg" style="left:${pct(s.t0)};width:calc(${pct(s.t1-s.t0)} - 3px);background:${STAGE_COLORS[i%3]}">S${s.n} ${esc(s.short)}</div>`});
+for(let t=0;t<=T;t++) html+=`<div class="tick" style="left:${pct(t)}"></div>`;
+html+='</div>';
+if(!DATA.layers.length) html+='<div class="desc">אין שכבות טקסט מונפשות (typography_mode = baked) — כל הטקסט אפוי בתוך ה-keyframes. אפשר להוסיף שכבות ב-text_layers.json.</div>';
+DATA.layers.forEach(l=>{
+  const planes=[...new Set([l.plane,...(l.planeSwitches||[])])].join(' → ');
+  html+=`<div class="lane"><div class="layer ${l.plane==='back'?'back':'front'}" style="left:${pct(l.from)};width:${pct(l.to-l.from)}"
+     title="${esc(l.id)}">“${esc(l.text)}” · ${esc(l.split)} · ${esc(l.preset||'custom keyframes')} · z: ${esc(planes)}</div></div>`;
+});
+html+=`<div class="legend"><span><span class="dot" style="background:var(--back)"></span>מאחורי המוצר (text_back)</span>
+  <span><span class="dot" style="background:var(--front)"></span>לפני המוצר (text_front)</span>
+  <span>שכבות: background → text_back → product_matte → text_front → fx</span></div>`;
+tr.innerHTML=html;
+
+const fin=document.getElementById('finals');
+fin.appendChild(vidSlot('final.mp4 — הרכבה', DATA.final, 'final.mp4'));
+fin.appendChild(vidSlot('final_typo.mp4 — עם טיפוגרפיה', DATA.finalTypo, 'final_typo.mp4'));
+fin.appendChild(vidSlot('one-shot (השוואה)', DATA.oneshot, 'videos/oneshot.mp4'));
+</script>
+</body>
+</html>

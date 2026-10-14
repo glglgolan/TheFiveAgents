@@ -1,0 +1,15 @@
+Scene: 51 — ניראל ואמנון
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s51.png
+Credits consumed: 80
+generationId: AaxCKtI6Tnp1FksgHxnXqLqkjHtHKEWxkdkYQAtfEMMpnNBOY596_z9qI5vIQXhh5FEZDs46
+
+Prompt:
+Nirel and Amnon stand together after the wedding. They look at each other, laugh softly at something unheard, and lean their heads together. The camera pulls slowly backward, revealing the glowing wedding venue behind them, the festoon lights and empty tables — and, in the foreground going out of focus, Barsa and Batata sitting side by side as a quiet visual callback. Warm evening light.
+
+Generated: 2026-08-20

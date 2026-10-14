@@ -1,0 +1,7 @@
+insert_id: A10
+scene_number: 39.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+Epic high-altitude drone view of a beautiful wedding venue at golden hour: an elegant stone-and-glass building set among cypress trees and manicured gardens, warm lights beginning to glow along the paths and under the pergola, white flower installations at the entrance, the surrounding landscape and distant hills stretching out under a low amber sun. Enormous cinematic scale, atmospheric depth, realistic architecture, sophisticated wedding-film aerial cinematography. No humans in frame, no readable text or signage. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

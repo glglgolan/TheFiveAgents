@@ -1,0 +1,15 @@
+Scene: 41 — ניראל מתכוננת
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s41.png
+Credits consumed: 30
+generationId: AV5yfmnrMKk7-uaTxHgP8yNqpAJLILoPH6XmmShbvKcqkZPe3tqIF9ZHtMnuS3JuT8vPprhr
+
+Prompt:
+The veil is lifted and settled gently over Nirel's hair. She turns slowly to the mirror and looks at herself. Her expression moves from playful anticipation to a quiet emotional realisation; her eyes gloss. She takes one breath and smiles softly. The camera arcs gently around her as warm window light fills the room and the sheer curtains lift. Sincere, unhurried, no text.
+
+Generated: 2026-08-20

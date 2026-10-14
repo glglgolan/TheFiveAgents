@@ -1,0 +1,18 @@
+Scene: 18
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s18.png (unchanged, hands-only close-up)
+Fix: previous video generated generic hands instead of Nirel's/Amnon's, since no
+face is visible in this shot to anchor identity. Bound both real Elements
+(Nirel <<<319175997618831>>>, Amnon <<<319176002326089>>>) even though only hands
+are on screen — confirmed working (pilot test for this whole batch).
+Credits consumed: 60
+generationId: AQhNcFCyu1RcosgTW3uVOhFqiCiAJWhPpWVWGTTKkbhB7RV4PUvAAFOV3_9MCFQ6xPAMRASk
+
+Prompt:
+The two letters slide gently together on the table. The camera cranes slowly down over them. <<<319175997618831>>>'s and <<<319176002326089>>>'s hands enter from opposite sides and their fingertips meet; the gap between their fingers forms a subtle V. The warm light shifts and a delicate V-shaped reflection blooms across the wood beside their hands, then softens. Intimate and meaningful, never graphic or artificial. No text.
+
+Generated: 2026-08-20

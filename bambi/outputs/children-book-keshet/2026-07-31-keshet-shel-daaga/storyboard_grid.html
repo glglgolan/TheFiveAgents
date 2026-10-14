@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>קשת של דאגה — מעשה בבן של השכן, דדוש השובב</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#1a1d24; --card2:#20242d; --line:#2c313c;
+    --ink:#e8eaed; --dim:#9aa0aa; --accent:#f0a63c; --focus:#5aa9e6;
+    --regen:#e0574b; --multi:#8b5cf6; --ok:#3fb950; --pending:#6b7280; --draft:#d9822b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,"Segoe UI","Heebo",Arial,sans-serif;padding:20px}
+  header{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    margin-bottom:6px;border-bottom:1px solid var(--line);padding-bottom:14px}
+  h1{font-size:20px;margin:0;font-weight:700}
+  .sub{color:var(--dim);font-size:13px}
+  .stats{margin-inline-start:auto;display:flex;gap:18px;font-size:13px;color:var(--dim)}
+  .stats b{color:var(--ink)}
+  .bar{font-size:12px;color:var(--dim);margin:12px 0 18px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .chip{display:inline-flex;align-items:center;gap:5px}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  button{background:var(--card2);color:var(--ink);border:1px solid var(--line);
+    border-radius:7px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}
+  button:hover{border-color:var(--accent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    overflow:hidden;display:flex;flex-direction:column;transition:.15s}
+  .card:hover{border-color:#3a4150;transform:translateY(-2px)}
+  .thumb{position:relative;aspect-ratio:16/9;background:var(--card2);
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph{color:var(--pending);font-size:12px;text-align:center;padding:8px;line-height:1.5}
+  .ph .big{font-size:26px;opacity:.5;display:block;margin-bottom:4px}
+  .num{position:absolute;top:8px;inset-inline-start:8px;background:rgba(0,0,0,.72);
+    color:#fff;font-weight:700;font-size:13px;border-radius:6px;padding:2px 9px}
+  .badges{position:absolute;top:8px;inset-inline-end:8px;display:flex;gap:5px}
+  .b{font-size:10px;font-weight:700;border-radius:5px;padding:2px 6px;color:#fff}
+  .b.regen{background:var(--regen)} .b.multi{background:var(--multi)}
+  .b.done{background:var(--ok)} .b.draft{background:var(--draft)}
+  .vid{display:flex;align-items:center;gap:5px;font-size:11px}
+  .vid .dot{width:7px;height:7px;border-radius:50%;background:var(--pending)}
+  .vid.ready .dot{background:var(--ok)}
+  .thumb img.isdraft{filter:saturate(.82) brightness(.94)}
+  .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .title{font-size:13.5px;font-weight:600;line-height:1.35}
+  .meta{display:flex;gap:8px;font-size:11px;color:var(--dim);flex-wrap:wrap}
+  .meta .t{color:var(--accent);font-weight:600}
+  .chars{display:flex;gap:4px;flex-wrap:wrap}
+  .cc{font-size:10px;background:var(--card2);border:1px solid var(--line);
+    border-radius:20px;padding:1px 8px;color:var(--dim)}
+  .narr{font-size:11.5px;color:var(--dim);line-height:1.5;
+    border-inline-start:2px solid var(--line);padding-inline-start:8px;margin-top:2px}
+  footer{margin-top:20px;color:var(--dim);font-size:11px;text-align:center;line-height:1.7}
+  kbd{background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:11px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎬 קשת של דאגה — מעשה בבן של השכן, דדוש השובב</h1>
+  <span class="sub" id="subtitle"></span>
+  <div class="stats">
+    <span><b id="sceneCount">–</b> סצנות</span>
+    <span><b id="totalDur">–</b></span>
+    <span><b id="imgCount">–</b> תמונות</span>
+    <span><b id="vidCount">–</b> וידאו</span>
+  </div>
+</header>
+
+<div class="bar">
+  <button onclick="location.reload()">↻ רענן (טען תמונות חדשות)</button>
+  <span class="chip"><span class="dot" style="background:var(--ok)"></span> נוצרה</span>
+  <span class="chip"><span class="dot" style="background:var(--draft)"></span> טיוטה (draft)</span>
+  <span class="chip"><span class="dot" style="background:var(--pending)"></span> ממתינה</span>
+  <span class="chip"><span class="dot" style="background:var(--regen)"></span> regen</span>
+  <span class="chip"><span class="dot" style="background:var(--multi)"></span> ריבוי תמונות</span>
+  <span class="chip"><span class="dot" style="background:var(--ok)"></span> וידאו קיים</span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>
+  תמונות ב-<code>scenes_painterly/</code> · מתעדכן ב-<kbd>↻ רענן</kbd> או <kbd>⌘R</kbd><br>
+  נוצר אוטומטית מ-<code>storyboard.json</code>
+</footer>
+
+<script>
+const DATA = {"subtitle": "קשת של דאגה — מעשה בבן של השכן, דדוש השובב", "scenes": [{"n": 1, "title": "שער הספר", "dur": 0, "chars": ["dedush"], "narr": "קשת של דאגה מעשה בבן של השכן — דדוש השובב", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 2, "title": "סבא בגינה ודדוש מציע עזרה", "dur": 0, "chars": ["grandpa_avraham", "dedush", "garden"], "narr": "פעם סבא אברהם עבד בגינת ביתו. דדוש, בנו של השכן שעבר במקרה ליד, ביקש לעזור לו בניכוש העשבים היבשים.", "ref": "dedush_anchor_v2.png", "shot": "MLS", "regen": false, "multi": false, "video": null}, {"n": 3, "title": "אזהרת הנעליים", "dur": 0, "chars": ["grandpa_avraham", "dedush"], "narr": "סבא אברהם הסכים ואמר: \"בעבודת ניכוש צריך לנעול נעליים גבוהות וסגורות. עבודת ניכוש מסוכנת, אפשר להידקר ולהיפצע…", "ref": "dedush_anchor_v2.png", "shot": "MCU", "regen": false, "multi": false, "video": null}, {"n": 4, "title": "דדוש מתחיל לנכש", "dur": 0, "chars": ["dedush"], "narr": "דדוש, מלא שמחה והתרגשות, לא הקשיב לסבא אברהם והחל לעבוד בניכוש העשבים.", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 5, "title": "רגע הדקירה והצעקה", "dur": 0, "chars": ["dedush"], "narr": "אך לא עבר זמן רב, ודדוש צעק: \"אוי! קוץ עבה דקר אותי ברגל!\" צעקות הכאב נשמעו עד הבית.", "ref": "dedush_anchor_v2.png", "shot": "MCU", "regen": false, "multi": false, "video": null}, {"n": 6, "title": "סבא רץ אליו", "dur": 0, "chars": ["grandpa_avraham", "dedush"], "narr": "סבא אברהם שמע את דדוש בוכה ורץ אליו. \"מה קרה, דדוש?\" שאל. \"קוץ עבה דקר אותי ברגל,\" ענה דדוש בדמעות. \"לא נעלתי…", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 7, "title": "ניקוי הפצע במים", "dur": 0, "chars": ["grandpa_avraham", "dedush"], "narr": "סבא אברהם מיהר להרגיע אותו ואמר: \"קודם ננקה את הפצע עם מים, ואז נחטא אותו ביוד.\"", "ref": "dedush_anchor_v2.png", "shot": "MCU", "regen": false, "multi": false, "video": null}, {"n": 8, "title": "הסירוב ליוד הצהוב", "dur": 0, "chars": ["grandpa_avraham", "dedush"], "narr": "דדוש התחיל לבכות שוב ואמר: \"לא! לא! לא! לא רוצה יוד צהוב!\" סבא אברהם ניסה להרגיע: \"הכאב יחלוף, היוד רק יחטא את…", "ref": "dedush_anchor_v2.png", "shot": "MCU", "regen": false, "multi": false, "video": null}, {"n": 9, "title": "לוח יוד — צהוב", "dur": 0, "chars": [], "narr": "לוח מוטיב נלווה לצד עמוד היוד הצהוב: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על הת…", "ref": "—", "shot": "still-life", "regen": false, "multi": false, "video": null}, {"n": 10, "title": "דודה זיווה והיוד החום", "dur": 0, "chars": ["aunt_ziva", "dedush", "grandpa_avraham"], "narr": "דודתו זיווה באה לעזור ואמרה: \"אני אביא יוד חום למרוח על הפצע\". אבל דדוש שוב בכה: \"לא! לא! לא! לא רוצה יוד חום!…", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 11, "title": "לוח יוד — חום", "dur": 0, "chars": [], "narr": "לוח מוטיב נלווה לצד עמוד היוד החום: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התו…", "ref": "—", "shot": "still-life", "regen": false, "multi": false, "video": null}, {"n": 12, "title": "דודה שלומית והיוד הירוק", "dur": 0, "chars": ["aunt_shulamit", "dedush", "aunt_ziva"], "narr": "הגיעו דודתו שלומית ואמרה: \"אני אביא יוד ירוק!\" אבל דדוש המשיך לצעוק: \"לא! לא! לא! לא רוצה יוד ירוק!\"", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 13, "title": "לוח יוד — ירוק", "dur": 0, "chars": [], "narr": "לוח מוטיב נלווה לצד עמוד היוד הירוק: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על הת…", "ref": "—", "shot": "still-life", "regen": false, "multi": false, "video": null}, {"n": 14, "title": "דוד יהודה והיוד הכחול", "dur": 0, "chars": ["uncle_yehuda", "dedush", "aunt_ziva", "aunt_shulamit"], "narr": "לבסוף הגיע דודו יהודה עם בקבוק יוד כחול. גם אז דדוש לא הסכים ואמר: \"לא! לא! לא! לא רוצה יוד כחול!\" הפצע של דדו…", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 15, "title": "לוח יוד — כחול", "dur": 0, "chars": [], "narr": "לוח מוטיב נלווה לצד עמוד היוד הכחול: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על הת…", "ref": "—", "shot": "still-life", "regen": false, "multi": false, "video": null}, {"n": 16, "title": "החברים והיוד הלבן — החיוך הראשון", "dur": 0, "chars": ["friends", "dedush"], "narr": "פתאום הופיעו חבריו של דדוש – עדי, רועי, ונועם. הם באו עם יוד מיוחד בצבע לבן. הם מרחו אותו בעדינות על הפצע, ודד…", "ref": "dedush_anchor_v2.png", "shot": "MS", "regen": false, "multi": false, "video": null}, {"n": 17, "title": "לוח יוד — לבן", "dur": 0, "chars": [], "narr": "לוח מוטיב נלווה לצד עמוד היוד הלבן: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התו…", "ref": "—", "shot": "still-life", "regen": false, "multi": false, "video": null}, {"n": 18, "title": "קשת של צבעים — כולם מסביבו", "dur": 0, "chars": ["dedush", "mom", "grandpa_avraham", "aunt_ziva", "aunt_shulamit", "uncle_yehuda", "friends"], "narr": "דדוש הביט על רגלו שצבעה הפך לקשת של צבעים. הוא ראה את סבא, הדודים, והחברים שעזרו לו בדרך שלהם. \"אתם יודעים מה?…", "ref": "dedush_anchor_v2.png", "shot": "MLS", "regen": false, "multi": false, "video": null}]};
+const SCENES_DIR = "scenes_painterly";
+
+const grid = document.getElementById('grid');
+
+let draftCount = 0, doneCount = 0, vidDoneCount = 0;
+
+DATA.scenes.forEach(s=>{
+  const card = document.createElement('div');
+  card.className='card';
+
+  const nn = String(s.n).padStart(2,'0');
+  const stem = s.multi ? `p${nn}a` : `p${nn}`;         // first image of the page
+  const finalSrc = `${SCENES_DIR}/${stem}.png`;
+  const draftSrc = `${SCENES_DIR}/${stem}_draft.png`;
+
+  const badges = [];
+  if(s.regen) badges.push('<span class="b regen">REGEN</span>');
+  if(s.multi) badges.push('<span class="b multi">×N</span>');
+
+  const chars = (s.chars||[]).map(c=>`<span class="cc">${c}</span>`).join('');
+
+  card.innerHTML = `
+    <div class="thumb">
+      <span class="num">S${nn}</span>
+      <div class="badges">${badges.join('')}</div>
+      <img alt="scene ${s.n}" data-stage="final">
+      <div class="ph"><span class="big">🎞️</span>${s.dur}s · ${s.shot}<br>ממתינה ליצירה</div>
+    </div>
+    <div class="body">
+      <div class="title">${s.title}</div>
+      <div class="meta"><span class="t">${s.dur}s</span><span>${s.shot}</span>${s.ref!=='—'?`<span>📎 ${s.ref}</span>`:'<span>—</span>'}</div>
+      <div class="chars">${chars||'<span class="cc">— ללא דמות —</span>'}</div>
+      <div class="narr">${s.narr}</div>
+      <div class="vid" id="vid-${s.n}"><span class="dot"></span><span class="lbl">וידאו: ממתין</span></div>
+    </div>`;
+
+  if(s.video){
+    const probe = document.createElement('video');
+    probe.preload = 'metadata';
+    probe.onloadedmetadata = ()=>{
+      const row = card.querySelector(`#vid-${s.n}`);
+      row.classList.add('ready');
+      row.querySelector('.lbl').textContent = 'וידאו: ✓ נוצר';
+      vidDoneCount++;
+      document.getElementById('vidCount').textContent = `${vidDoneCount}✓ / ${DATA.scenes.length}`;
+    };
+    probe.onerror = ()=>{};
+    probe.src = s.video;
+  }
+
+  const img = card.querySelector('img');
+  const thumb = img.parentElement;
+  img.onload = ()=>{
+    thumb.querySelector('.ph')?.remove();
+    const badgeBox = thumb.querySelector('.badges');
+    if(img.dataset.stage === 'draft'){
+      img.classList.add('isdraft');
+      badgeBox.insertAdjacentHTML('afterbegin','<span class="b draft">טיוטה</span>');
+      draftCount++;
+    } else {
+      badgeBox.insertAdjacentHTML('afterbegin','<span class="b done">✓</span>');
+      doneCount++;
+    }
+    document.getElementById('imgCount').textContent = `${doneCount}✓ · ${draftCount} טיוטה`;
+  };
+  img.onerror = ()=>{
+    if(img.dataset.stage === 'final'){          // no final → try the low-quality draft
+      img.dataset.stage = 'draft';
+      img.src = draftSrc;
+    } else {                                     // no draft either → leave placeholder
+      img.style.display = 'none';
+    }
+  };
+  img.src = finalSrc;                            // start by attempting the final
+
+  grid.appendChild(card);
+});
+
+const total = DATA.scenes.reduce((a,s)=>a+(s.dur||0),0);
+document.getElementById('subtitle').textContent = DATA.subtitle || '';
+document.getElementById('sceneCount').textContent = DATA.scenes.length;
+document.getElementById('totalDur').textContent = `${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}`;
+document.getElementById('imgCount').textContent = '…';
+document.getElementById('vidCount').textContent = `0 / ${DATA.scenes.length}`;
+</script>
+</body>
+</html>

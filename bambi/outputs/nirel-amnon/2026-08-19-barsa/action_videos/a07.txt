@@ -1,0 +1,11 @@
+insert_id: A7
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.0305 USD
+duration: 5s
+actual_cost: 0.1525 USD
+reference: action_scenes/a07.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: BJ89sqdULNeU4sxrNuul
+status: OK
+prompt:
+Extreme macro on white wedding fabric and lace floating and rippling in the air, backlit by warm golden light. The camera drifts elegantly for a beat, then accelerates and travels rapidly forward and underneath the material; the lace sweeps down across the entire lens in a full soft wipe, individual threads racing past in extreme close focus. Instead of stopping, the camera continues straight through the fabric — and as it emerges, the fabric's texture transforms mid-motion into a billowing cloud of white flour, the weave dissolving into suspended powder. The flour bursts outward toward the lens in a soft explosive bloom, particles catching the same golden light. The camera pushes through the powder and decelerates as it emerges into a warm pastry kitchen: marble counters, copper bowls, piping bags and coloured icing coming into focus through the settling flour haze. Seamless texture morph, realistic cloth and powder physics, cinematic 16:9, no humans, no text, no logos.

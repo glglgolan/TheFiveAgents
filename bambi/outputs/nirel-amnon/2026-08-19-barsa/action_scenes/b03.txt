@@ -1,0 +1,7 @@
+insert_id: B3
+scene_number: 35.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+A giant cinematic three-dimensional world map suspended in dark space: translucent glowing continents, luminous coastlines and arcing geographic routes floating in layers, deep blue lighting mixed with warm gold rim light, drifting particles. A football hangs in the foreground just above the surface of the map, catching a hard rim light, realistic worn leather and stitching. Dramatic chasing perspective from slightly behind and above the ball. Absolutely no readable place names, labels or text anywhere. No humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

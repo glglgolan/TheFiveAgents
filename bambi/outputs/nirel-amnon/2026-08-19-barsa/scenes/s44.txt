@@ -1,0 +1,12 @@
+Scene 44: ניראל צועדת
+
+PROMPT:
+A breathtaking cinematic wedding aisle. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent walks toward camera down the aisle in an elegant white wedding dress with a long flowing veil, holding a white bouquet, surrounded by hundreds of candles and white flowers, her face lit warm and open. At the far end of the aisle, small and soft in the background, AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent waits in his dark suit, visibly emotional. Guests as warm silhouettes on both sides, golden bokeh, premium cinematic wedding photography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17564 total (15584 in / 1980 out)

@@ -1,0 +1,11 @@
+insert_id: A9
+model: bytedance/seedance-2.0-fast (comparison sample)
+price_per_sec: 0.09135 USD (expected ~0.04035 USD/sec per brief — actual came in 2.26x higher, same ratio deviation seen on seedance-2.0-mini; likely a broader temporary-discount expiry across the Seedance line, not model-specific)
+duration: 6s
+actual_cost: 0.5481 USD
+reference: action_scenes/a09.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: yudK7PNL7kqy0nD4TzEE
+status: OK
+prompt:
+Low ground-level shot down a sunlit Ofakim street. Batata — a scruffy shaggy blonde-caramel terrier-type dog with a long coarse tousled coat, hair falling over her eyes and a shaggy beard — looks straight toward the lens, holds a beat, then her ears suddenly perk up and she bursts into a run. The camera drops into a fast low action-camera tracking move beside and ahead of her, the pavement streaking past just under the lens, her coat and beard flying back in the wind, dust and loose leaves kicking up behind her paws. She accelerates hard toward the lens, closes the distance and races directly past it, her body wiping the frame in extreme close foreground. The camera whips around 180 degrees to follow her from behind, motion-blurring the street into golden streaks, then settles into a tracking shot as she runs on toward the far end. A short-haired brown mackerel tabby cat enters frame from the opposite side at a fast trot. The two animals close on each other, and one heartbeat before they meet the image freezes for a fraction of a second — everything suspended, dust hanging in the air. Realistic animal locomotion and fur motion, no cartoon exaggeration, cinematic 16:9, no humans, no text, no logos.

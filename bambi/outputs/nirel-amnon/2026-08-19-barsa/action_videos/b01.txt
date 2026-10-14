@@ -1,0 +1,11 @@
+insert_id: B1
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.0305 USD
+duration: 5s
+actual_cost: 0.1525 USD
+reference: action_scenes/b01.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: bUtSZqwfQKg46TqSzA5o
+status: OK
+prompt:
+Extreme macro on Barsa's green-gold eye, the reflection of a candlelit decorated room curving across the cornea. The camera pushes rapidly straight into the pupil; the iris expands past the frame edges and the darkness of the pupil swallows the image. The camera emerges out the other side into the warm interior of the house, already flying forward at speed. It races through an open doorway, the frame wiping past the lens, down a hallway with wedding garlands brushing the top of frame, ducks low and passes beneath a table — table legs and a fallen ribbon streaking by — rises again through another doorway, banks around a tall arrangement of white flowers and strings of fairy lights, then accelerates toward an open window. It threads through the window frame and bursts out into open sky, the house dropping away below. In the final beat the camera whips sideways into full motion blur. Continuous single-take flight, physically coherent, cinematic 16:9, no humans, no text, no logos.

@@ -1,0 +1,3 @@
+Updated 2026-08-19 per user request: rings now match the real ring photo (bambi/reference/Nirel-Amnon_ Wedding/ref images/rings.jpeg) — Nirel (woman's hand) wears the engraved floral band shown on the right in the ref box, Amnon (man's hand) wears the plain polished band shown on the left. Regenerated at correct 16:9 (--size 1536x1024, was mistakenly 1:1 in v2). No face-swap needed (hands only, no faces in frame).
+v1 (previous) = s46_v1.png · this file = s46_v2.png
+References: yuval/reference/nirel-amnon/_proxy/d16.jpg, "bambi/reference/Nirel-Amnon_ Wedding/ref images/rings.jpeg"

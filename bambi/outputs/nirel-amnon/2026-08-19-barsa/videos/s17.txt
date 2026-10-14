@@ -1,0 +1,19 @@
+Scene: 17
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 12s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s17.png (unchanged)
+Fix: previous video generated generic people instead of Nirel/Amnon, since the
+first-frame image (empty rooms) has no visible identity anchor for either. Bound
+both real Elements (Nirel <<<319175997618831>>>, Amnon <<<319176002326089>>>).
+Took unusually long to render (~14 min vs 2-6 min for the other 5 identity-fix
+scenes) but completed successfully, not a stall.
+Credits consumed: 72
+generationId: Adnj3fXUgYNAsGcJ0jb9rR5wAb5fIT02nnj6mELvdi9d_qKTjXiS2SHR3yHPuoix5QcNCRWy
+
+Prompt:
+A charming morning discovery sequence. <<<319175997618831>>> walks into the room, reaches for her mug and finds a folded letter. At the same moment, elsewhere in the house, <<<319176002326089>>> lifts a photo frame and finds the other. Each opens their letter and reads silently; their faces soften. They lower the pages, look up, and realise across the room that they both did the same thing that night. They move toward each other. Warm morning light.
+
+Generated: 2026-08-20

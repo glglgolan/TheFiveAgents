@@ -1,0 +1,19 @@
+Scene: 29 — נכנסת בטטה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s29.png (unchanged)
+Fix: previous video showed Batata meeting a different, wrong dog. Root cause: prompt
+implied an on-screen reaction partner ("spots Barsa off-frame... the two look at each
+other"), which Kling filled by hallucinating a second visible dog. Rewrote to
+explicitly state Batata is the only living subject visible at all times, looking off
+toward the edge of frame rather than at a visible partner.
+Credits consumed: 30
+generationId: ATxkfDw8xfUmo0bqEpMVPt0PCzBzBjMR8THTte80cV-ss_YQHdFBq5bAh1bqwlTEphwRXQF0
+
+Prompt:
+Introduce Batata like a beloved supporting character. She trots into frame alone with confident little steps, her long shaggy coat bouncing and swinging, hair flopping over her eyes. She stops, looks around the elegant wedding setup, sniffs a flower arrangement, then turns her head and looks off toward the edge of frame with sudden interest, ears perking, her whole back end starting to wag with excitement. No other animal, person, or creature appears anywhere in the shot — Batata is the only living subject visible at all times. Warm push-in.
+
+Generated: 2026-08-20

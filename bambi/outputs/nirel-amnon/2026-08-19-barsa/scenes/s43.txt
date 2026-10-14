@@ -1,0 +1,11 @@
+Scene 43: המבט של ברסה
+
+PROMPT:
+A cinematic point-of-view shot from Barsa's perspective, camera height only 25 centimetres above the floor, looking down the length of a magnificent wedding aisle. Warm candlelight, white flowers lining the aisle, guests seated on either side rendered as soft out-of-focus silhouettes, an elegant floral arch glowing at the far end. At the very bottom edge of frame, slightly out of focus, the tips of two large upright pointed brown-tabby ears are just visible, framing the shot. Premium wedding film. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 15258 total (13329 in / 1929 out)

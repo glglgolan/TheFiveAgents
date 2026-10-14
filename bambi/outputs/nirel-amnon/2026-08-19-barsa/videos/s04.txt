@@ -1,0 +1,13 @@
+Scene: 04 — ניראל על הבמה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP)
+Duration: 8s
+Resolution: 1080p
+Aspect ratio: derived from first frame
+Reference (first frame): bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s04.png
+
+Prompt:
+Little Nirel performs energetically on the small stage: she spins, dances, throws her arms wide and strikes an exaggerated dramatic pose. The spotlight follows her smoothly. She is completely at home. At the end she gives a tiny confident bow as the red velvet curtain begins to close behind her. Slow push-in, warm theatrical light, floating dust motes in the beam.
+
+Generated: 2026-08-19
+Credits consumed: 80

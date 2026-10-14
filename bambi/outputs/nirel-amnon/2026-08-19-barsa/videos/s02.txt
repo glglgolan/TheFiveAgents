@@ -1,0 +1,13 @@
+Scene: 02 — העכבר נמלט
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP)
+Duration: 8s
+Resolution: 1080p
+Aspect ratio: derived from first frame
+Reference (first frame): bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s02.png
+
+Prompt:
+Barsa walks proudly toward the wedding aisle in her accidental bridal outfit. She notices the tiny grey mouse peeking from behind a floral arrangement; the mouse wiggles its nose and vanishes behind the flowers. Barsa's proud bridal expression snaps into focused hunter mode. She takes one step forward, stops, and turns her head directly to camera as if to say: this is personal. Slow push-in. No humans.
+
+Generated: 2026-08-19
+Credits consumed: 80

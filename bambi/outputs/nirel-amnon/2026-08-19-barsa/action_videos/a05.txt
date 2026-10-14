@@ -1,0 +1,11 @@
+insert_id: A5
+model: bytedance/seedance-2.0-mini
+price_per_sec: $0.03045
+duration: 6s
+actual_cost: $0.1827
+reference: action_scenes/a05.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: UT6tgeDOMgdnvrbk2rm2
+status: OK
+prompt:
+Open on a slow, peaceful aerial glide over the Indian landscape at dusk, barely moving, calm and wide. After a beat the camera speed-ramps dramatically and rockets forward, the ground blurring beneath it. It pitches down into a shallow dive toward a city, dropping between buildings — rooftops, balconies, laundry lines and strings of lights rushing past the lens on both sides as aggressive parallax. The camera banks sharply left with a visible roll, then a sudden bright burst of light blooms from frame centre and floods the entire image. As the bloom falls away, the light resolves not into an explosion but into an enormous shower of elegant cream and gold wedding confetti tumbling toward the lens. The confetti thickens, fills the screen and sweeps across the frame as a full foreground wipe, motion-blurred at the edges. Physically coherent aerial motion, realistic paper physics, cinematic 16:9, no humans, no text, no logos.

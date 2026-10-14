@@ -1,0 +1,10 @@
+Scene 07 — "יקומים מקבילים"
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+References (in order, one-shot multi-reference — up to 3 total):
+  1. yuval/reference/nirel-amnon/_proxy/d16.jpg (director-selected reference, both characters)
+  2. bambi/cast/nirel-amnon/nirel.png (Nirel anchor, added to reinforce face lock)
+  3. bambi/cast/nirel-amnon/amnon.png (Amnon anchor, added to reinforce face lock)
+Tokens: 17632 total (15607 in / 2025 out)
+
+Prompt:
+A cinematic split-world composition, one continuous frame divided by a glowing vertical seam of light. LEFT HALF: NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent — surrounded by open paint tubes, wet canvases, baking bowls and piped icing, theatrical stage lights, yellow flowers and bright fabric; saturated warm colour, yellow dominant. RIGHT HALF: AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent — surrounded by footballs, a spinning globe, pinned world maps, geopolitics books and stadium floodlights; cool blue-dominant light. The two halves are lit in opposing colour temperatures and meet at a soft glowing line down the centre. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

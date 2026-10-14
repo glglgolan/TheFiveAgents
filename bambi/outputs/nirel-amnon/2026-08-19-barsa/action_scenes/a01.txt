@@ -1,0 +1,7 @@
+insert_id: A1
+scene_number: 2.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+Ultra-cinematic FPV drone view from very high above a beautiful Israeli residential neighbourhood at golden hour: elegant low houses with tiled roofs and roof terraces, cypress and fig trees, warm low sunlight raking across the streets, long shadows, atmospheric haze between the blocks. One particular elegant house near the centre of frame reads clearly as the destination — a garden with white flowers and warm lights already glowing, an open upstairs window. Enormous sense of height and scale, dramatic aerial depth, realistic architecture, no humans in frame, no readable text or signage anywhere. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

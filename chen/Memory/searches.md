@@ -31,3 +31,18 @@
 **נבחר:** שילוב של כל המקורות — aharonium/fonts כבסיס, Google Fonts לפונטים נגישים ברשת, Culmus לפונטים קלאסיים, AlefAlefAlef לפונטים ישראליים מקוריים
 **קובץ ב-Content:** `2026-06-14-free-hebrew-fonts.md`
 ---
+
+## 2026-09-29 14:25 | Opus code-only 2D animation (no generative models)
+**מילות מפתח:** code-only animation, Remotion, SVG rig, macOS say, lip sync, Rhubarb, procedural audio, multi-agent, Intel Mac no brew
+**שאילתות שנעשו:** "Claude Code Remotion animated short film made entirely with code 2026", "Rhubarb Lip Sync PocketSphinx phonetic recognizer how it works", "Remotion license free for individuals company size 2026", "LLM generated SVG animation cartoon short film Claude \"entirely in code\"", "Motion Canvas render headless CLI video export ffmpeg 2025", "Manim LLM agent generated video benchmark failures", "\"Claude\" made an animated short film with no AI images, all procedural code, voices macOS say"
+**מקורות שנמצאו:**
+- [claude-animation-studio](https://github.com/i-afaqrashid/claude-animation-studio) — איכות: ⭐⭐⭐⭐⭐ — התקדים הקרוב ביותר: headless Chrome+ffmpeg, סגנון paper-cutout, TTS מערכתי + formant singer, סרטים של 16–58 שניות
+- [ft-motion](https://github.com/anupamme/ft-motion) — איכות: ⭐⭐⭐⭐ — Canvas2D כפונקציה של t, motion blur של 6 subframes, סאונד numpy/scipy
+- [Rhubarb Lip Sync README](https://github.com/DanielSWolf/rhubarb-lip-sync/blob/master/README.adoc) — איכות: ⭐⭐⭐⭐⭐ — PocketSphinx (HMM/GMM קלאסי, לא נוירוני), v1.14.0 macOS
+- [Remotion license FAQ](https://www.remotion.dev/docs/license/faq) — איכות: ⭐⭐⭐⭐⭐ — חינם לאנשים פרטיים ולחברות עד 3 עובדים
+- [HeyGen Code2Video benchmark](https://www.heygen.com/research/introducing-code2video-benchmark) — איכות: ⭐⭐⭐⭐ — דפוסי כשל: easing, התנגשות טקסט, קומפוזיציה שמרנית
+- [TheoremExplainAgent](https://arxiv.org/abs/2502.19400) — איכות: ⭐⭐⭐⭐ — הזיות קוד ב-Manim הן הכשל העיקרי
+- [ruidiao substack](https://ruidiao.substack.com/p/i-generated-a-cartoon-video-entirely) — איכות: ⭐⭐ — דוגמה נגדית (משתמש במודלים גנרטיביים)
+**נבחר:** claude-animation-studio כמקור ראשי (ריפו ראשוני שמוכיח שהמסלול code-only עובד), בצירוף Remotion/Rhubarb docs ובדיקות חיות של PyPI/npm/conda-forge על המכונה
+**קובץ ב-Content:** `2026-09-29-opus-code-only-animation.md`
+---

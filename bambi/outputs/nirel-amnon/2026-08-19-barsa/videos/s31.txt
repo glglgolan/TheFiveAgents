@@ -1,0 +1,15 @@
+Scene: 31 — בטטה גונבת את ההצגה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s31.png
+Credits consumed: 30
+generationId: AVgmdpIyfFwPscpO_oJYpwTxIExYKsBy7nK1EDdIvTjuMHjJNqseyXyTyaAu3q6KiSVdSS0O
+
+Prompt:
+Batata walks confidently down the wedding aisle, her shaggy coat bouncing with every step, straight into the warm spotlight. She stops in the centre, turns toward camera and gives an adorable proud open-mouthed smile. From the side Barsa watches, realising the scene has been stolen from her. Barsa rolls her eyes, flicks her tail once and walks out of frame. Comic timing, slow lateral track.
+
+Generated: 2026-08-20

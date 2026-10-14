@@ -1,0 +1,11 @@
+insert_id: A8
+model: minimax/hailuo-3 (comparison sample)
+price_per_sec: 0.13 USD (matched expected rate exactly)
+duration: 5s
+actual_cost: 0.6500 USD
+reference: action_scenes/a08.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: nQb3GhMHpj0tO47JXwmo
+status: OK
+prompt:
+Extreme close-up on the soccer ball hanging motionless in the spotlight inside the wedding hall, dust drifting through the beam. It hangs perfectly still for a beat — then it begins to spin in place, slowly at first, the stitching blurring as the rotation accelerates. A powerful unseen kick launches it straight at the lens: the ball fires forward, spinning fast, growing rapidly in frame while the background streaks into stretched light trails from the sudden camera pull. Air ripples and a faint shockwave of dust follows in its wake. The ball fills more and more of the frame until the leather texture is all that is visible, and one frame before impact the shot ends on a hard smash cut to black. Realistic ball physics, weight and spin, motion blur, cinematic 16:9, no humans, no text, no logos, no brand markings.

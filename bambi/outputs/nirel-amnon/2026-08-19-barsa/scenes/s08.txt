@@ -1,0 +1,12 @@
+Scene 8: ניראל והחתולים
+
+PROMPT:
+NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent. A whimsical cinematic home portrait: she sits cross-legged on a cosy sofa in a colourful creative living room, laughing, with several cats around her — one curled in her lap, one on the sofa back, one on the windowsill. BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle — Barsa herself sits closest to her, front and centre, with her almond green-gold eyes and the subtle inward drift of her right eye clearly visible. A crumpled tissue in Nirel's hand hints playfully at her allergy. Warm afternoon home light, plants, paintings, colourful throws. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d44.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19863 total (17827 in / 2036 out)

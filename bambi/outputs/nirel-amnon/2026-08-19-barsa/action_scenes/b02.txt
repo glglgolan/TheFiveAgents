@@ -1,0 +1,7 @@
+insert_id: B2
+scene_number: 25.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+A warm cinematic home kitchen frozen at the start of a chain reaction: eggs, a scatter of flour, bright yellow lemons, a wooden rolling pin, a spatula and a ball of dough suspended and tilting on a marble counter, copper bowls, a lemon meringue pie at the back, warm directional window light raking across the surfaces, flour dust already hanging in the beam. Counter-level composition, shallow depth of field, elegant food-film production design. No humans in frame, no text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

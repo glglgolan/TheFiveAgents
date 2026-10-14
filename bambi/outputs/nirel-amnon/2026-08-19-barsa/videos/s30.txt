@@ -1,0 +1,15 @@
+Scene: 30 — ברסה ובטטה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s (rounded from storyboard 12s: v2_6 only supports 5s or 10s)
+Duration in storyboard: 12s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s30.png
+Credits consumed: 30
+generationId: AU4f11ZGtHa_jQjUcNp6HAACzT96KgDWMjl7GBzy2qCz_WvwPvtcoSBFVIWtAg2-k3xmQPdF
+
+Prompt:
+Barsa and Batata work on the wedding preparations together. Barsa scans a checklist and taps an item, then points a paw toward the table; Batata bounds over to it and drags back a ribbon. Batata immediately gets tangled, spinning in place. Barsa watches for a beat, then calmly steps in and unwinds her. They exchange a proud look as if they just completed a major operation. Locked frame, warm light.
+
+Generated: 2026-08-20

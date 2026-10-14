@@ -1,0 +1,1 @@
+Updated 2026-08-19 per user request ("s38_v2 is better"): final = s38_v2.png content (pre-face-swap generation). History kept: s38_v1.png, s38_v2_swapped.png.

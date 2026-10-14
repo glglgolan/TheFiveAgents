@@ -1,0 +1,169 @@
+{
+  "project": "healing-hero",
+  "title": "Healing System — Hero Loop: The Thread of Light",
+  "logline": "חוט אור זהוב יחיד עובר בשקט מפנים לפנים — נקשר לרגע לקשר של מתח ליד החזה, ומשתחרר בנשיפה — ונגמר ברוגע שמתמוסס חזרה לפריים הראשון.",
+  "language": "he",
+  "aspect_ratio": "16:9",
+  "concept": "Option B — 'The Thread of Light'. Silent (no VO) 14.0s seamless hero background loop for the Healing System website. Four faces (2 women, 2 men, ages ~28–62) linked by one golden thread of light that always travels left-to-right and flows into the vertical slit of light. Beat structure: arrival (s1) → passing / first hint of tension (s2) → knot near the chest, then loosening (s3) → release and calm (s4) → dissolve back to s1.",
+  "format": {
+    "master": "16:9, 1920x1080 (generate at Kling 1080p), 24 fps",
+    "mobile_crop": "Must survive a center 9:16 crop (608x1080 of 1920x1080 = the central ~32% of frame width). Every face and the light slit sit inside the central third of the frame; the thread may run edge-to-edge (it simply gets shorter on mobile).",
+    "total_duration_sec": 14.0,
+    "shots": 4,
+    "on_screen_text": "none",
+    "voice": "none (VO film with 'Moshe' cloned voice is a later, separate deliverable)"
+  },
+  "visual_theme": {
+    "palette": "warm amber, honey gold and burnished copper highlights against deep umber / near-black shadow; wardrobe in muted earth tones (sand, oatmeal, sage-grey, olive, terracotta); skin tones rendered warm and natural, never orange",
+    "lighting": "dark warm interior lit by a single narrow vertical slit of golden-hour light placed just to the right of each face (inside the central third of frame); hard sliver of light on cheekbone and eye, everything else falls into soft deep shadow; the golden thread is a secondary, self-luminous light source with a faint bloom",
+    "film_look": "intimate cinematic portrait, 85mm lens look, shallow depth of field (f/1.8), soft out-of-focus glass panes and reflections in foreground, gentle halation around the light slit, fine 35mm film grain, slightly lifted blacks, no digital sharpness",
+    "motion": "very slow push-ins and lateral drifts only; subjects nearly still (breath, a slow blink, a gaze shift); the thread drifts like silk in still air, always moving left-to-right; no fast motion, no camera shake, no sparks or particle bursts",
+    "mood": "introspective, calm, safe, quietly hopeful — not hype, not mystical-cheesy; a feeling of being seen and of something finally letting go"
+  },
+  "cast": [
+    {
+      "id": "noa",
+      "name": "Noa — woman, early 30s",
+      "description": "Photorealistic portrait anchor. Woman, age 32, olive Mediterranean / Middle-Eastern skin with a warm undertone and faint freckles across the nose, long dark-brown wavy hair loosely gathered at the nape with a few loose strands framing her face, natural dark arched brows, hazel-brown eyes, soft natural lips, minimal makeup. Wearing a loose oatmeal/sand chunky-knit wool sweater with a relaxed crew neck, no jewelry except tiny thin gold hoop earrings. Calm, inward expression, lips closed. Three-quarter profile facing camera-right, lit by a single narrow vertical slit of warm golden-hour light from the right, dark warm interior background in deep shadow, 85mm, shallow depth of field, fine 35mm film grain, warm amber and umber palette. Neutral head-and-shoulders framing, face centered.",
+      "anchor_image": "bambi/cast/healing-hero/noa.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "daniel",
+      "name": "Daniel — man, mid 40s",
+      "description": "Photorealistic portrait anchor (look inspired by the inspiration contact sheet, but an original person). Man, age 45, fair sun-warmed European / Mediterranean skin with fine crow's feet and forehead lines, tousled curly salt-and-pepper hair receding slightly at the temples, full natural beard greying at the chin, light blue-grey eyes, strong straight nose. Wearing a faded sage-grey washed-linen grandad-collar (band collar) shirt, top two buttons open, slightly creased. Quiet, thoughtful expression, mouth closed. Three-quarter profile facing camera-right, lit by a single narrow vertical slit of warm golden-hour light from the right with a soft out-of-focus glass pane in the foreground, dark warm interior in deep shadow, 85mm, shallow depth of field, fine 35mm film grain, warm amber and umber palette. Head-and-shoulders, face centered.",
+      "anchor_image": "bambi/cast/healing-hero/daniel.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "kenji",
+      "name": "Kenji — man, late 20s",
+      "description": "Photorealistic portrait anchor. Man, age 28, East Asian (Japanese) descent, light-warm skin, short slightly tousled black hair with a soft fringe, clean-shaven, defined jawline, dark brown eyes, calm straight brows. Wearing a muted olive / khaki brushed-cotton overshirt, unbuttoned, over a bone-white plain crew-neck t-shirt; no jewelry. Quiet, inward, slightly guarded expression, mouth closed. Three-quarter profile facing camera-right, lit by a single narrow vertical slit of warm golden-hour light from the right, dark warm interior in deep shadow, 85mm, shallow depth of field, fine 35mm film grain, warm amber and umber palette. Framed from mid-chest up (his chest and hands matter in his shot), face in the upper center of frame.",
+      "anchor_image": "bambi/cast/healing-hero/kenji.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "amara",
+      "name": "Amara — woman, early 60s",
+      "description": "Photorealistic portrait anchor. Woman, age 62, West African descent, deep brown skin with a warm glow and soft natural laugh lines, close-cropped natural silver-grey coily hair, high cheekbones, calm dark brown eyes, full lips, small matte-gold stud earrings. Wearing a loose rust / terracotta washed-linen wrap top with a soft open neckline. Serene, grounded expression, mouth closed, a hint of a smile. Three-quarter profile facing camera-right, lit by a single narrow vertical slit of warm golden-hour light from the right, dark warm interior in deep shadow, 85mm, shallow depth of field, fine 35mm film grain, warm amber and umber palette. Head-and-shoulders, face centered.",
+      "anchor_image": "bambi/cast/healing-hero/amara.png",
+      "anchor_ready": false
+    },
+    {
+      "id": "golden-thread",
+      "name": "The golden thread (element)",
+      "description": "Element/style anchor, no person. A single impossibly thin continuous filament of warm golden light — like a glowing silk thread, about as thin as a hair — floating in a gentle S-curve through a dark warm interior, with a soft halo bloom and a faint inner shimmer; honey-gold core fading to amber at the edges. No sparks, no particles, no lightning, no neon, no multiple strands. Shot at 85mm, shallow depth of field, fine 35mm film grain, deep umber background with one narrow vertical slit of golden-hour light on the right.",
+      "anchor_image": "bambi/cast/healing-hero/golden-thread.png",
+      "anchor_ready": false
+    }
+  ],
+  "director_decisions": [
+    "4 shots / 14.0s total (3+3+4+4) — within the brief's 10–15s and 3–4 shots; overrides the skill's default 6–18 scenes because the brief is a short loop.",
+    "Cast: 4 faces = 2 women + 2 men, ages 28 / 32 / 45 / 62, four different ethnic backgrounds; wardrobe kept in muted earth tones so no single person pops out of the palette.",
+    "Daniel's look is derived from the inspiration contact sheet (curly salt-and-pepper hair, greying beard, linen shirt) as the 'style-defining' face — but described as an original person, not a copy.",
+    "Screen direction locked: every face is in three-quarter profile facing camera-right toward the light slit; the thread always travels left-to-right and flows into the slit. This keeps the 180-degree line and makes each cut feel like the thread is 'passed on'.",
+    "Knot placed on Kenji (young man), near his sternum under his open hand — a deliberate choice so the tension/release moment speaks to men too, not only women. Release is given to Amara (elder woman) for a grounded, safe ending.",
+    "Kling reliability: the knot is NOT asked to form from nothing — s3's first frame already contains a loose tangle; the video only tightens it slightly and then unwinds it. Untying is easier to animate cleanly than tying.",
+    "Mouths closed in every shot (silent loop; avoids 'talking' artifacts seen in the reference sheet where the man speaks).",
+    "Cut rhythm locked to a 60 BPM heartbeat (1 beat = 1.000s): cuts on beats at 3.0, 6.0, 10.0; the heartbeat slows to ~45 BPM inside the release shot and the loop seam lands on a beat at 14.0 = 0.0.",
+    "Seamless loop by cross-dissolve of s4's tail into s1's head (see loop_plan), plus a continuous grain overlay so grain does not 'jump' at the seam.",
+    "Delivered muted (browsers only autoplay muted video); the planned audio bed ships as a separate optional file."
+  ],
+  "kling_settings": {
+    "mode": "image-to-video from each scene's approved first frame (image_output)",
+    "model": "kling-video-v3_0 (or current Kling pro/master model)",
+    "duration": "5s per shot, then trimmed (see each scene's trim)",
+    "resolution": "1080p, 16:9",
+    "cfg_note": "keep prompt adherence moderate-high; one subject, one thread, slow motion",
+    "negative_prompt": "fast motion, camera shake, whip pan, zoom burst, talking, lip movement, open mouth, smiling broadly, sparks, fireworks, particle explosion, lightning, neon, multiple threads, thread snapping, extra hands, extra fingers, face morphing, identity change, flicker, text, watermark, logo"
+  },
+  "loop_plan": {
+    "method": "Duplicate s1's head at the end of the timeline. Cross-dissolve the last 0.6s of s4 (timeline 13.4–14.0) into s1's first 0.6s, then set the export in-point at s1+0.6s and the out-point at the end of that dissolve, so the first and last frames of the file are identical. Total exported length stays 14.0s.",
+    "visual_match": "s4 ends with the thread almost fully absorbed into the light slit and a calm, nearly still face; s1 begins with the thread just appearing at the left edge — the dissolve reads as 'the thread returns'. Grade s4's last second and s1's first second to the same exposure/white balance.",
+    "grain": "Apply grain as one continuous loopable 14.0s overlay on top of the edit (not baked per clip) so the seam is invisible.",
+    "export": "1920x1080 H.264 (high, ~8–10 Mbps) MP4 + VP9 WebM, no audio track; plus a 1080x1920 center-crop MP4 for mobile; poster frame = s1 frame at 0.0s."
+  },
+  "edit_notes": {
+    "transitions": "s1→s2 and s2→s3: match-cut on the beat — the thread exits frame right of the outgoing shot and enters frame left of the incoming shot at the same height (eye-line, ~40% from top); optional 4-frame dissolve if the hard cut feels abrupt. s3→s4: 8-frame (0.33s) soft dissolve centered on the 10.0s beat (the 'release'). s4→s1: 0.6s loop dissolve (loop_plan).",
+    "speed": "All clips may be slowed to 85–90% (optical-flow / frame blending) if Kling motion feels too lively — calm wins over realism.",
+    "grade": "Unify all four shots: warm amber highlights, deep umber shadows, lifted blacks, gentle halation on the light slit and thread. Match skin warmth across the four very different skin tones — never push the darker skin tones muddy or the lighter ones orange.",
+    "safe_area": "Before locking, preview a 9:16 center crop: each face and the slit must remain inside it."
+  },
+  "audio_notes": {
+    "status": "Planned only — generated later. No voice in this deliverable. Website plays the video muted; audio is an optional, separately-exported 14.0s loop (WAV + AAC) for an 'unmute' toggle or for social cut-downs.",
+    "music_pad": "Ambient healing pad, free-time (no rhythmic grid), a warm low drone in D with slow-swelling airy synth/string pad layers, soft low-passed texture, no melody hook, no bells-and-chimes cliché. Gently rises in density through s3 (subtle low-mid tension, a faint dissonant 2nd held over the knot) and resolves to an open consonant chord (D add9) at the 10.0s release, then thins out toward the loop seam. Must loop exactly at 14.0s — bounce with a tail-to-head crossfade so it is click-free.",
+    "heartbeat_sfx": "Soft, low-passed 'lub-dub' (felt more than heard, mostly <150 Hz), 60 BPM. Beat (lub) times: 0.0, 1.0, 2.0 | 3.0 (cut s1→s2), 4.0, 5.0 | 6.0 (cut s2→s3), 7.0, 8.0 (+2 dB, slightly fuller — knot tightest), 9.0 (back to normal level — knot starts to loosen) | 10.0 (cut s3→s4, softer, -2 dB, the 'release' beat), 11.35, 12.7 (slowing to ~45 BPM and fading, -4 to -6 dB) | 14.0 = 0.0 loop seam (beat returns at normal 60 BPM level, softened by the dissolve).",
+    "accents": "Optional, very quiet: a delicate glassy shimmer that follows the thread's movement (panned left-to-right with it); one long soft air swell / breath-like whoosh under the 10.0s release dissolve (non-vocal, no human breath sound required).",
+    "mix": "Pad around -24 LUFS short-term, heartbeat sitting just under it; no element should be startling on autoplay-with-sound. Fade nothing to silence at the seam — the loop must be continuous."
+  },
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Arrival — the thread appears (Noa)",
+      "duration_sec": 3,
+      "timecode": "00:00.0 – 00:03.0",
+      "heartbeat_sync": "Beats at 0.0 / 1.0 / 2.0; cut out on the beat at 3.0.",
+      "description": "נועה (30+) בפרופיל שלושה-רבעים מול סדק האור האנכי. חוט אור זהוב דק נכנס משמאל הפריים בגובה העיניים, מרחף מול פניה ונמשך ימינה אל תוך סדק האור. היא מרימה מבט לאט ועוקבת אחריו. Push-in איטי מאוד.",
+      "characters": ["noa", "golden-thread"],
+      "shot": { "type": "CU", "angle": "eye-level", "camera_move": "slow push-in" },
+      "image_prompt": "Intimate cinematic portrait, 16:9 frame, face centered in the middle third. A woman, age 32, olive Mediterranean skin with faint freckles, long dark-brown wavy hair loosely gathered at the nape with loose strands framing her face, hazel-brown eyes, wearing an oatmeal chunky-knit sweater, tiny thin gold hoop earrings. She is in three-quarter profile facing camera-right, eyes softly lowered, lips closed, calm. A single narrow vertical slit of warm golden-hour light stands just to the right of her face, catching her cheekbone and eye; the dark warm interior falls into deep umber shadow. A blurred glass pane in the left foreground holds soft amber reflections. A single impossibly thin filament of glowing golden light enters from the left edge of frame at eye level, just beginning its path toward her. 85mm, shallow depth of field, fine 35mm film grain, warm amber and deep shadow palette, no text.",
+      "video_prompt": "Very slow push-in toward her face. A single thin thread of glowing golden light drifts in from the left at eye level, gliding softly past in front of her face like silk in still air, and flows on toward the narrow vertical slit of light on the right. She slowly lifts her gaze to follow it, one calm breath, lips closed. Faint dust motes in the light, glass reflections shift subtly. Slow, calm, dreamlike, no fast motion.",
+      "kling_duration_sec": 5,
+      "trim": "Use source 0.5s–3.5s (3.0s). Skip Kling's first ~0.5s settle; the thread should be crossing her face around source 1.5–2.5s and reaching the slit by 3.5s. Keep 0.6s extra head (source 0.0–0.5 + the 0.6s loop dissolve) available as handle.",
+      "reference": "bambi/cast/healing-hero/noa.png",
+      "image_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/scenes/s01.png",
+      "video_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/videos/s01.mp4"
+    },
+    {
+      "scene_number": 2,
+      "title": "Passing — a first twist (Daniel)",
+      "duration_sec": 3,
+      "timecode": "00:03.0 – 00:06.0",
+      "heartbeat_sync": "Cut in on the beat at 3.0; beats at 4.0 / 5.0; cut out on the beat at 6.0.",
+      "description": "דניאל (45) — הלוק מדף ההשראה. החוט נכנס משמאל באותו גובה שבו יצא מהשוט הקודם, עובר קרוב ללחי ולזקן ומתחיל להסתלסל ולהתפתל קלות — רמז ראשון למתח. גבותיו מתכווצות מעט. Drift צידי איטי שמאלה-ימינה.",
+      "characters": ["daniel", "golden-thread"],
+      "shot": { "type": "CU", "angle": "eye-level", "camera_move": "slow lateral drift left-to-right" },
+      "image_prompt": "Intimate cinematic portrait, 16:9 frame, face centered in the middle third. A man, age 45, fair sun-warmed skin with fine crow's feet, tousled curly salt-and-pepper hair receding at the temples, full beard greying at the chin, light blue-grey eyes, wearing a faded sage-grey washed-linen band-collar shirt with the top buttons open. Three-quarter profile facing camera-right, mouth closed, quiet and thoughtful, brow very slightly tense. A single narrow vertical slit of warm golden-hour light just to the right of his face, with a soft out-of-focus glass pane and amber reflections in the foreground; dark warm interior in deep umber shadow. A single thin filament of glowing golden light enters from the left edge at eye level and passes close to his cheek, beginning to curl into a small loose twist. 85mm, shallow depth of field, fine 35mm film grain, warm amber and deep shadow palette, no text.",
+      "video_prompt": "Slow lateral camera drift from left to right. The thin glowing golden thread glides in from the left at eye level, passes close to his cheek and beard, and begins to curl and twist gently into small loose loops as it moves toward the vertical slit of light on the right. His brow tightens very slightly, a slow blink, a held breath, mouth closed. Soft glass reflections slide past. Slow, calm, quietly tense, no fast motion.",
+      "kling_duration_sec": 5,
+      "trim": "Use source 1.0s–4.0s (3.0s) — the middle of the clip, where the thread is next to his face and starting to twist. Match the thread's entry height to s1's exit height at the cut.",
+      "reference": "bambi/cast/healing-hero/daniel.png",
+      "image_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/scenes/s02.png",
+      "video_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/videos/s02.mp4"
+    },
+    {
+      "scene_number": 3,
+      "title": "The knot — tension, then loosening (Kenji)",
+      "duration_sec": 4,
+      "timecode": "00:06.0 – 00:10.0",
+      "heartbeat_sync": "Cut in on the beat at 6.0; beats at 7.0 / 8.0 (slightly fuller — knot tightest) / 9.0 (knot starts loosening); release dissolve centered on the beat at 10.0.",
+      "description": "קנג'י (28), MCU מאמצע החזה. כף ידו הפתוחה מונחת מעל עצם החזה, ומולה החוט מסובך לקשר רופף וזוהר — דפוס מאוחסן, מתח. הקשר מתהדק מעט, האצבעות נמתחות; בנשיפה איטית הלולאות מתרפות והחוט מתחיל להיפרם לקו חלק שזורם ימינה אל האור.",
+      "characters": ["kenji", "golden-thread"],
+      "shot": { "type": "MCU", "angle": "eye-level", "camera_move": "near-static, ultra-slow push-in" },
+      "image_prompt": "Intimate cinematic portrait, 16:9 frame, medium close-up from mid-chest up, face in the upper center of the middle third. A man, age 28, East Asian descent, light-warm skin, short slightly tousled black hair with a soft fringe, clean-shaven, dark brown eyes, wearing an unbuttoned muted olive brushed-cotton overshirt over a bone-white crew-neck t-shirt. Three-quarter profile facing camera-right, eyes lowered toward his chest, mouth closed, inward and slightly guarded. His right hand rests open over his sternum. Hovering just in front of his hand, the single thin thread of glowing golden light is wound into a loose, tangled knot of a few loops, glowing a little denser and brighter than the rest of the thread, which trails off to the left and right. A single narrow vertical slit of warm golden-hour light stands just to the right of his face; dark warm interior in deep umber shadow, soft out-of-focus glass in the foreground. 85mm, shallow depth of field, fine 35mm film grain, warm amber and deep shadow palette, no text.",
+      "video_prompt": "Almost static camera with an ultra-slow push-in. The glowing knot of golden thread in front of his chest tightens slightly as he holds his breath, his fingers tensing over his sternum. Then he exhales slowly, his shoulders soften, and the loops of the knot gently slacken and unwind one by one, the thread smoothing into a single calm line that drifts right toward the slit of light. Mouth closed. Slow, calm, no fast motion.",
+      "kling_duration_sec": 5,
+      "trim": "Use source 0.6s–4.6s (4.0s): 0.6–2.4 knot tightening / held breath (beats 7–8), 2.4–4.6 exhale and unwinding (beat 9 → release). If Kling unwinds too early, slow the clip to 85% and take the most legible 4.0s. The last 0.33s overlaps s4 in the release dissolve.",
+      "reference": "bambi/cast/healing-hero/kenji.png",
+      "image_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/scenes/s03.png",
+      "video_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/videos/s03.mp4"
+    },
+    {
+      "scene_number": 4,
+      "title": "Release — calm, back into the light (Amara)",
+      "duration_sec": 4,
+      "timecode": "00:10.0 – 00:14.0",
+      "heartbeat_sync": "Soft dissolve in on the 'release' beat at 10.0 (-2 dB); heartbeat slows to ~45 BPM: beats at 11.35 / 12.7 fading; loop seam lands on the beat at 14.0 = 0.0.",
+      "description": "אמארה (62). החוט, חופשי וחלק, מרחף בקשת S רכה מול פניה ונבלע בסדק האור, שמתבהר לרגע ונרגע. היא עוצמת עיניים, נשיפה ארוכה, חיוך קל. Pull-back איטי מאוד. הפריים האחרון שקט וכמעט סטטי — מתמוסס חזרה לשוט 1.",
+      "characters": ["amara", "golden-thread"],
+      "shot": { "type": "CU", "angle": "eye-level", "camera_move": "very slow pull-out" },
+      "image_prompt": "Intimate cinematic portrait, 16:9 frame, face centered in the middle third. A woman, age 62, West African descent, deep brown skin with a warm glow and soft laugh lines, close-cropped natural silver-grey coily hair, high cheekbones, calm dark brown eyes, small matte-gold stud earrings, wearing a loose rust terracotta washed-linen wrap top. Three-quarter profile facing camera-right, eyes half-closed, mouth closed with a hint of a peaceful smile, deeply relaxed. A single thin filament of glowing golden light floats loose and smooth in a gentle S-curve in front of her, flowing into the single narrow vertical slit of warm golden-hour light just to the right of her face. Dark warm interior in deep umber shadow, soft out-of-focus glass reflections in the foreground. 85mm, shallow depth of field, fine 35mm film grain, warm amber and deep shadow palette, no text.",
+      "video_prompt": "Very slow pull-out. The smooth golden thread floats loosely in a gentle S-curve past her face and flows into the narrow vertical slit of light, which softly brightens for a moment and then settles. She slowly closes her eyes, a long calm exhale, shoulders dropping, a faint peaceful smile, mouth closed. The thread fades almost completely into the light. Motion becomes nearly still by the end. Slow, serene, no fast motion.",
+      "kling_duration_sec": 5,
+      "trim": "Use source 0.5s–4.5s (4.0s). The final 0.6s must be calm and almost still (eyes closed, thread nearly gone) — that tail is the loop dissolve into s1. If Kling adds motion at the end, freeze-extend / slow the last 0.6s rather than cutting earlier.",
+      "reference": "bambi/cast/healing-hero/amara.png",
+      "image_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/scenes/s04.png",
+      "video_output": "bambi/outputs/healing-hero/2026-10-08-hero-loop/videos/s04.mp4"
+    }
+  ]
+}

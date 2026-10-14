@@ -1,0 +1,12 @@
+Scene 19: הודו
+
+PROMPT:
+A cinematic night scene inside a cosy Indian guesthouse room. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent are settling in for the night — open backpacks on the floor, a mosquito net gathered above the bed, patterned textiles, a small warm bedside lamp, an old ceiling fan turning slowly. Through the open window: warm night air, distant string-lights and rooftops. Nirel wears a colourful patterned travel dress; both look tired and content. Peaceful, softly lit, subtle romantic-comedy calm before something happens. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d69.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17553 total (15596 in / 1957 out)

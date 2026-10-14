@@ -1,0 +1,12 @@
+Scene 28: בעיית הכדורגל
+
+PROMPT:
+BARSA — a short-haired BROWN MACKEREL TABBY cat: dense short close-lying coat (never fluffy, never long-haired), warm golden-brown base with crisp narrow dark brown-black mackerel stripes, banded legs and a long ringed tapering tail, a distinct dark 'M' marking on the forehead, slender elegant oriental body, long slim legs, large upright pointed ears, white chin and muzzle, pink-brown nose, almond-shaped green-gold eyes with a SUBTLE CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a few degrees inward toward the bridge of her nose; gentle, natural and endearing, never cross-eyed or comical. She stands in the sharp foreground at the edge of a glamorous wedding dance floor, turned toward camera with an expression of pure disbelief, one paw lifted. A football rolls across the polished floor toward her between candles and fallen white petals. In the blurred background AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent is mid-celebration, arms thrown up, roaring as if his team just scored, surrounded by guests as soft silhouettes. Wedding lights, flowers, cinematic comedy framing, deep foreground/background separation. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 19830 total (17877 in / 1953 out)

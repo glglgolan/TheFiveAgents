@@ -1,0 +1,25 @@
+Barsa — cast anchor  (REGENERATED 2026-08-19 — strabismus fix)
+provider: OpenAI | model: gpt-image-1.5 (edits) | size 1536x1024 | quality medium +input_fidelity
+reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png (real photo)
+tokens: 9,021 (7,058 in / 1,963 out)
+
+NOTE 1: Character Bible in the master script says "fluffy cream-colored cat".
+The REAL Barsa is a short-haired brown mackerel tabby. Real cat wins (user decision).
+
+NOTE 2 — STRABISMUS (critical identifying trait, was MISSING in the first version):
+Barsa has a slight CONVERGENT STRABISMUS — her right eye (the viewer's left) drifts a
+few degrees inward toward the bridge of her nose, so the pupils are not perfectly
+parallel. In v1 the eyes came out perfectly symmetrical and forward-aligned and the
+squint disappeared. It must be present in EVERY render of Barsa — gentle and natural,
+an endearing imperfection, never cross-eyed / exaggerated / comical.
+
+--- PROMPT SENT ---
+Cinematic character anchor portrait of Barsa, a real domestic cat, full body three-quarter view, standing alert on a polished floor in a warm softly-lit elegant interior.
+
+BREED AND COAT (must match exactly): short-haired brown mackerel tabby. Dense, short, close-lying fur — NOT fluffy, NOT long-haired. Warm golden-brown base coat with crisp narrow dark brown-black vertical mackerel stripes running down the flanks, banded rings on the legs and tail. Distinct dark 'M' marking on the forehead between the ears. Slender, elegant oriental body type — lean and athletic with a long fine-boned frame, long slim legs, delicate paws. Large upright pointed ears set wide, with visible ear tufts and pink-brown inner ears. Long tapering tail with dark bands and a dark tip. White chin and muzzle. Pink-brown nose with a dark outline. Long white whiskers.
+
+EYES — CRITICAL DEFINING TRAIT: almond-shaped eyes, luminous green-gold with a warm amber inner ring and slit-oval dark pupils. She has a SUBTLE CONVERGENT STRABISMUS: her right eye (the viewer's left) is turned very slightly inward toward the bridge of her nose, so the two pupils are not perfectly parallel — one gazes straight at camera, the other drifts a few degrees nasally. This must be gentle and natural, a soft endearing imperfection that anyone who knows her would recognize instantly — clearly visible on close inspection but never exaggerated, never cross-eyed, never cartoonish or comical. Eyes remain bright, symmetrical in size and shape; only the gaze direction differs slightly.
+
+EXPRESSION: intelligent, self-assured, faintly sarcastic — a knowing look, chin slightly lifted, ears forward, calm confidence.
+
+STYLE: cinematic wedding-film look, photorealistic highly detailed animal fur with individual hair strands and soft rim-lit edges, premium animated-feature quality finish. Warm golden cinematic lighting, soft key light from the side, gentle volumetric light rays, subtle lens bloom on the highlights, shallow depth of field with creamy warm bokeh behind her. Clean neutral warm background so the character reads clearly. No humans, no text, no logos, no watermark.

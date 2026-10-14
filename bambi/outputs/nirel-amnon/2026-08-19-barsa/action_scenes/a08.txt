@@ -1,0 +1,10 @@
+insert_id: A8
+scene_number: 27.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK (regenerated 2026-08-20 — fixed wrong ball type)
+fix: original render used an American/rugby-style oval football because the prompt
+said "football" without qualification. Rewrote to explicitly specify a round classic
+soccer ball with black-and-white pentagon/hexagon panel pattern.
+prompt:
+A cinematic classic soccer football suspended motionless in mid-air inside an elegant wedding venue, lit by a single dramatic overhead spotlight that rims the ball. The ball is a traditional round soccer ball with the classic black-and-white truncated icosahedron (pentagon and hexagon) panel pattern, realistic worn white leather texture with black pentagon panels and visible stitching. Behind it, wedding lights, hanging bulbs, white flowers and the glow of a DJ booth dissolve into deep golden bokeh. Intense sports-commercial cinematography, low hero angle looking slightly up at the ball, very shallow depth of field, floating dust in the spotlight beam. No brand markings, no readable text, no humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed textures, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

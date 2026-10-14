@@ -1,0 +1,12 @@
+Design: הזמנה לחינה — יעל ודניאל (demo, template-first copy+edit)
+Design ID: DAHQ-4ZCEsg
+Edit URL:  https://www.canva.com/d/X-aEi6cO6_G6-PK
+View URL:  https://www.canva.com/d/ns4YaFYnR4zhtWm
+
+Source (NOT modified): DAHQ5mmssGQ — "Invitation - הזמנה לחינה של ניראל ואמנון"
+  shortlink: https://canva.link/bwtti4hus895ec3
+  edit URL:  https://www.canva.com/d/fIIqwEpwbQZY52M
+  copied page: 1 of 5 (burgundy + gold watercolor, hamsa divider)
+
+Method: copy-design (page_numbers=[1]) -> read-design(open_transaction) -> edit-design(replace_text x5) -> commit
+Graphics / fonts / colors / layout: untouched. Text values only.

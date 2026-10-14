@@ -1,0 +1,16 @@
+Scene: 36 — ערי הבירה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0 (Elements identity-binding, image_to_video)
+Duration: 10s
+Resolution: 720p
+enable_audio: false
+First frame: scenes/s36.png (unchanged)
+Fix: previous video generated a generic woman instead of Nirel, since only Amnon and
+the globe are visible in the first frame. Bound the real Nirel Element (<<<319175997618831>>>).
+Credits consumed: 60
+generationId: ARRE1BLewNah6Mo3FkVD7_Kpwp0QUwjkl1_Cs_at3eI8o8M7FUu20hsquSc0_2d1nKyZxMiK
+
+Prompt:
+Amnon spins a globe hard. Countries and cities ignite one after another as it turns. He points confidently, answering before the question lands, and the pace accelerates like a game show — point, light, point, light. <<<319175997618831>>> walks into frame and watches him with amused disbelief, arms crossed. Without missing a beat he points at another country. Push-in, blue-and-gold light, floating maps.
+
+Generated: 2026-08-20

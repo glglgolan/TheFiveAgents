@@ -1,0 +1,7 @@
+insert_id: A5
+scene_number: 21.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+Epic cinematic aerial view over India at dusk: a wide warm-hazed landscape of rivers, palm groves and terracotta rooftops, distant city lights just beginning to glow amber, layered atmospheric depth, soft dust in the low light, elegant travel-film composition, huge sense of scale and calm. Realistic environment, premium documentary aerial cinematography, no humans in frame, no readable text or signage. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

@@ -1,0 +1,15 @@
+Scene: 25 — מלכת המאפים
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s25.png
+Credits consumed: 80
+generationId: AUHqPEsQaocIiNcEj4gBylk9aIWixEUNPD50GywitlXiHtXHRmgjO2jkim8ONDyffSdH9Ws-
+
+Prompt:
+Nirel moves rapidly around the pastry kitchen: she whisks batter, flips a crepe in the pan, pipes a swirl onto the lemon pie, spins the cheesecake stand — and finally lifts a cloche to reveal the sculpted scissors-and-belt cake. Barsa watches from her stool, head tracking every movement. Nirel presents the cake proudly. Barsa slowly raises one paw as if delivering a verdict. Warm pan, energetic cutting.
+
+Generated: 2026-08-20

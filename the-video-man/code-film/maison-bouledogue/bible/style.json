@@ -1,0 +1,55 @@
+{
+  "title": "MAISON BOULEDOGUE — Collection Grotesque",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "durationFrames": 1440 },
+  "look": "Flat-vector paper cutout x 1960s Saul Bass / UPA fashion illustration. Bold silhouettes, thick ink outlines that 'boil', limited palette, paper grain, halftone shadows, gradient rim light. Characters animate on twos (pose changes every 2 frames), camera on ones.",
+  "palette": {
+    "paper": "#F2E8D5",
+    "paperDark": "#E2D3B8",
+    "ink": "#1B1A1F",
+    "curtain": "#9E1B32",
+    "curtainDark": "#5E0F1F",
+    "hotPink": "#E8467C",
+    "coral": "#F27A7D",
+    "blush": "#F7B3B8",
+    "mustard": "#E3A92B",
+    "gold": "#D4A24C",
+    "goldLight": "#F3D27A",
+    "teal": "#1F7A7A",
+    "tealLight": "#5FB3A9",
+    "navy": "#1D2340",
+    "plum": "#3B2A4A",
+    "pearl": "#F4EFE6",
+    "pearlShade": "#CFC6B8",
+    "leopard": "#C98B3E",
+    "bulldogFur": "#D9B48A",
+    "bulldogShade": "#A98159",
+    "mouseFur": "#9C9AA6",
+    "mouseShade": "#6E6C79",
+    "flamingo": "#F28BA8",
+    "giraffe": "#E8B04A",
+    "giraffeSpot": "#8A4B22",
+    "penguinBlack": "#23232B",
+    "white": "#FFFDF7",
+    "spot": "#FFF3C4"
+  },
+  "stroke": { "ink": 5, "inkThin": 3, "inkBold": 8, "linecap": "round", "linejoin": "round" },
+  "fonts": {
+    "display": "Georgia, 'Didot', 'Bodoni 72', serif",
+    "sans": "'Futura', 'Avenir Next', 'Helvetica Neue', sans-serif"
+  },
+  "characterHeights_px_at_scale1": {
+    "bulldog": 420,
+    "mouse": 170,
+    "flamingo": 760,
+    "giraffe": 900,
+    "penguin": 380
+  },
+  "rules": [
+    "Every color must come from palette via src/lib/style.ts — no hard-coded hex anywhere else.",
+    "No Math.random / Date — only seeded helpers in src/lib/rng.ts.",
+    "No linear easing on character motion. Anticipation -> action -> overshoot -> settle.",
+    "Dangling accessories (earrings, crystals, pearls, tassels, feathers) use damped springs from src/lib/motion.ts.",
+    "Pose changes on twos: use onTwos(frame) for character poses; camera and particles use raw frame.",
+    "Grotesque = absurd scale and accessory excess, never gore."
+  ]
+}

@@ -1,0 +1,15 @@
+Scene: 55 — הזוג האחרון / V^
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 12s
+Duration in storyboard: 12s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s55.png
+Credits consumed: 96
+generationId: ASe4qwo55yRbnziaAFi-XONMyNmfaDCOXX-yZHBriV7kAk--qs4vwCw4hwrwIINqbW99Ptnf
+
+Prompt:
+Nirel and Amnon stand beneath the arch, look at each other and smile. Barsa and Batata drift into the soft foreground. The camera pulls slowly backward through the glowing wedding hall, revealing candles, flowers and fairy lights layer by layer. The converging light beams behind the couple resolve into a warm V-shaped reflection across the floor. The final frame settles into a golden tableau. Hold for a beat.
+
+Generated: 2026-08-20

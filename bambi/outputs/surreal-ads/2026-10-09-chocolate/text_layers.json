@@ -1,0 +1,107 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 24,
+  "duration_sec": 15,
+  "grain": {
+    "amount": 0.12,
+    "size": 0.9
+  },
+  "plate": "final.mp4",
+  "matte": "matte/fg",
+  "background": "#EFE6DA",
+  "fonts": [
+    "Playfair Display"
+  ],
+  "layers": [
+    {
+      "id": "tagline",
+      "text": "MADE TO MELT",
+      "split": "letter",
+      "font": {
+        "family": "Playfair Display",
+        "weight": 700,
+        "size": 96,
+        "tracking": 0.06
+      },
+      "color": "#24130B",
+      "material": "shadow",
+      "plane": "front",
+      "from": 12.8,
+      "to": 15,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.14
+      },
+      "max_width": 0.98,
+      "preset": "assemble-tagline",
+      "keyframes": [
+        {
+          "t": 0,
+          "dx": 0,
+          "dy": 0,
+          "z": 0,
+          "rz": 0,
+          "rx": 0,
+          "scale": 0.92,
+          "opacity": 0,
+          "blur": 10
+        },
+        {
+          "t": 0.7,
+          "dx": 0,
+          "dy": 0,
+          "z": 0,
+          "rz": 0,
+          "rx": 0,
+          "scale": 1,
+          "opacity": 1,
+          "blur": 0,
+          "ease": "expo.out"
+        },
+        {
+          "t": 2.2,
+          "scale": 1.02,
+          "ease": "sine.inOut"
+        }
+      ],
+      "stagger": {
+        "each": 0.025,
+        "from": "center",
+        "seed": 4
+      },
+      "scatter": {
+        "at": [
+          0
+        ],
+        "dx": 60,
+        "dy": 24,
+        "z": 220,
+        "rz": 10,
+        "rx": 18,
+        "seed": 9
+      }
+    },
+    {
+      "type": "draw",
+      "text": "",
+      "font": {
+        "family": "Playfair Display",
+        "size": 1
+      },
+      "stroke": "#2B1810",
+      "boil": 1.6,
+      "id": "draw-underline",
+      "shape": "underline",
+      "size": 640,
+      "stroke_width": 6,
+      "from": 13.6,
+      "to": 15,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.178
+      },
+      "preset": "draw-on"
+    }
+  ]
+}

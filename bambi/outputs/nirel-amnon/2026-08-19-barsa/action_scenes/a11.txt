@@ -1,0 +1,7 @@
+insert_id: A11
+scene_number: 43.1
+provider: OpenAI (gpt-image-gen)
+reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+status: OK
+prompt:
+A low floor-level point-of-view shot from a cat's height, only 25 centimetres above the polished floor of a magnificent wedding hall, looking straight down the length of the long aisle. White flower arrangements and candles line both sides, a decorative ribbon trails from a chair, warm candlelight everywhere, guests seated on either side rendered as soft out-of-focus silhouettes, an elegant glowing floral arch at the far end. At the very bottom edge of frame, slightly out of focus, the tips of two large upright pointed brown-tabby ears frame the shot. Realistic cat-height perspective, shallow depth of field, no recognisable human faces, no readable text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

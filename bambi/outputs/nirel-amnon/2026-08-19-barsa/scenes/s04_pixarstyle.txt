@@ -1,0 +1,8 @@
+Scene 04 — "ניראל על הבמה"
+STYLE TEST — pixarstyle variant (alternative to photorealistic scene render)
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg
+Tokens: 8710 total (6772 in / 1938 out)
+
+Prompt:
+LITTLE NIREL — an Israeli girl about 6-7, curly brown hair, bright expressive mischievous face, colourful playful clothes with a strong yellow accent. A whimsical cinematic childhood stage scene: she stands confidently centre-stage on a small theatrical stage in a bright colourful costume with a yellow accent, one arm raised in a theatrical pose, playful triumphant expression. Deep red velvet curtains behind her, a warm follow-spot beam full of dust motes, soft silhouettes of a small audience in the dark foreground, painted wooden stage boards. STYLE: realistic Pixar/Disney-style premium 3D animated feature look — illustrative realism around 90%, not fully photographic; soft stylized skin shading with subtle painterly texture, large expressive eyes slightly enlarged in the animated-feature convention, warm cinematic lighting, shallow depth of field, rich color grading, full-frame lens quality, ultra-detailed but clearly an animated-feature render rather than a photograph. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

@@ -1,0 +1,193 @@
+{
+  "project": "surreal-ads",
+  "title": "Hush — SILENCE THE WORLD",
+  "logline": "האוזניות פורץ ממסך האתר, מתעמת עם האותיות הענקיות HEAR ונרגע לשוט הירו עם \"SILENCE THE WORLD\".",
+  "language": "he",
+  "aspect_ratio": "9:16",
+  "series": {
+    "name": "surreal-product-ad",
+    "version": 2,
+    "slug": "headphones",
+    "brief": {
+      "slug": "headphones",
+      "brand": "Hush",
+      "product": "premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo",
+      "product_short": "the graphite HUSH headphones",
+      "product_he": "האוזניות",
+      "website": "a minimal audio-brand website in graphite and olive: a product photo of the headphones, the logo 'HUSH', thin sound-wave graphics, and the giant editorial headline 'HEAR'",
+      "hero_word": "HEAR",
+      "letter_material": "brushed aluminium with softly bevelled edges",
+      "emergence": "the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk",
+      "transformation": "visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still",
+      "transformation_he": "גלי הקול הופכים לסרטי משי שזורמים סביב החדר ודרך האותיות, אותיות האלומיניום פועמות עם הבס — ואז שקט מוחלט",
+      "particles": "olive silk ribbons, fine dust in light beams",
+      "accent_color": "deep olive and graphite",
+      "accent_hex": "#6B7A4B",
+      "text_hex": "#23262B",
+      "hero_shot": "the headphones resting on a minimal walnut stand on the oak table, a single olive silk ribbon draped softly beside it, calm still light",
+      "tagline": "SILENCE THE WORLD",
+      "image_route": "gpt",
+      "typography_mode": "hybrid",
+      "look": "hyperreal",
+      "drawn_mode": "none"
+    },
+    "image_route": "gpt",
+    "typography_mode": "hybrid",
+    "keyframes": [
+      {
+        "id": "k0",
+        "label": "K0 — plain website",
+        "path": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k0.png",
+        "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture. A silver MacBook Pro standing open on a warm natural oak table, a soft linen cloth and a ceramic cup at the edge of frame, a sunlit cream plaster wall behind. On the laptop screen: a minimal audio-brand website in graphite and olive: a product photo of the headphones, the logo 'HUSH', thin sound-wave graphics, and the giant editorial headline 'HEAR'. Everything is completely normal and calm — nothing has emerged yet. The laptop fills the central two thirds of the frame, slightly angled toward camera. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+        "mj_prompt": "silver MacBook Pro open on a warm oak table, cream plaster wall, linen cloth, the laptop screen shows a minimal audio-brand website in graphite and olive: a product photo of the headphones, the logo 'HUSH', thin sound-wave graphics, and the giant editorial headline 'HEAR', everything calm and normal, laptop fills the center of the vertical frame, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with deep olive and graphite accents",
+        "references": [
+          "bambi/cast/surreal-ads/headphones-product.png"
+        ]
+      },
+      {
+        "id": "k1",
+        "label": "K1 — product half-out",
+        "path": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k1.png",
+        "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, the exact same laptop, table, wall and light as the reference scene. The graphite HUSH headphones is physically emerging from the laptop screen: the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk. About half of the product is already out in the real room, casting a real contact shadow on the oak table; the rest is still inside the website. The giant editorial serif letters spelling exactly \"HEAR\" (H-E-A-R) are starting to lift off the web page, about to become physical. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+        "mj_prompt": "the graphite HUSH headphones physically bursting out of a MacBook screen onto a warm oak table: the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk, half of it still inside the screen, giant serif letters \"HEAR\" lifting off the web page, real contact shadow, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with deep olive and graphite accents",
+        "references": [
+          "bambi/cast/surreal-ads/headphones-product.png",
+          "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k0.png"
+        ]
+      },
+      {
+        "id": "k2",
+        "label": "K2 — transformation peak",
+        "path": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k2.png",
+        "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, a surreal moment captured for real — same oak table and cream wall, the camera now closer and slightly orbited. The peak of a magical transformation: visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still. Huge physical 3D letters spelling exactly \"HEAR\" (H-E-A-R), made of brushed aluminium with softly bevelled edges, stand on the table around the product — some behind it, one partially in front of it, partially occluding it. Every letter correctly spelled. Olive silk ribbons, fine dust in light beams frozen mid-motion as if shot at 1/8000s, with a hint of motion blur on the fastest elements. The laptop is still softly visible behind, its screen blending into the room. The product is exactly as in the reference — premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo — accurate proportions, 'Hush' branding readable. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+        "mj_prompt": "surreal moment captured for real: visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still, giant 3D letters \"HEAR\" made of brushed aluminium with softly bevelled edges standing around the graphite HUSH headphones, some behind it, one in front, olive silk ribbons, fine dust in light beams frozen mid-air, MacBook softly out of focus behind, camera close and slightly orbited, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with deep olive and graphite accents",
+        "references": [
+          "bambi/cast/surreal-ads/headphones-product.png",
+          "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k1.png"
+        ]
+      },
+      {
+        "id": "k3",
+        "label": "K3 — hero",
+        "path": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k3.png",
+        "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, a premium hero packshot, perfectly composed and symmetrical: the headphones resting on a minimal walnut stand on the oak table, a single olive silk ribbon draped softly beside it, calm still light. Keep the upper third of the frame as calm clean negative space (the tagline is added later as animated typography); no text in the image apart from the product's own label. The framing echoes the opening shot — the laptop softly out of focus behind, the same oak table and cream wall. The product is exactly as in the reference — premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo — accurate proportions, 'Hush' branding readable. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+        "mj_prompt": "perfectly symmetrical hero packshot: the headphones resting on a minimal walnut stand on the oak table, a single olive silk ribbon draped softly beside it, calm still light, clean empty upper third of the frame, MacBook softly out of focus behind on the same oak table, hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with deep olive and graphite accents",
+        "references": [
+          "bambi/cast/surreal-ads/headphones-product.png",
+          "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k2.png"
+        ]
+      }
+    ],
+    "negatives": [
+      "no random objects",
+      "no chaotic motion",
+      "no unnecessary camera cuts",
+      "no distorted or melted product shape",
+      "no floating text overlays or subtitles",
+      "no misspelled or extra letters",
+      "no extra hands or people",
+      "no watermark",
+      "no CGI or 3D-render look",
+      "no plastic or waxy textures",
+      "no cartoon or illustration (unless explicitly hand-drawn elements)",
+      "no over-smoothing or AI sheen",
+      "no oversaturation"
+    ],
+    "look": "hyperreal",
+    "drawn_mode": "none",
+    "mj_params": "--ar 9:16 --v 7 --style raw --s 50",
+    "sound_hint": "soft ambient room tone, a glassy shimmer as the product breaks the screen, a rising whoosh through the transformation, a deep satisfying sub-hit and silence on the hero",
+    "text_layers": "text_layers.json",
+    "master_prompt": "master_prompt.txt",
+    "final": "bambi/outputs/surreal-ads/2026-10-09-headphones/final.mp4",
+    "final_typo": "bambi/outputs/surreal-ads/2026-10-09-headphones/final_typo.mp4",
+    "total_duration_sec": 15
+  },
+  "visual_theme": {
+    "palette": "cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite",
+    "lighting": "motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights",
+    "film_look": "shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color",
+    "motion": "one continuous camera move: slow handheld push-in, accelerating orbit through the transformation, decelerating into a locked symmetrical hero frame",
+    "mood": "minimal luxury, calm → wonder → euphoric rush → elegant stillness"
+  },
+  "cast": [
+    {
+      "id": "product",
+      "name": "Hush — האוזניות",
+      "description": "Clean premium studio packshot, vertical 9:16, of premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo. Brand name 'Hush' clearly printed. Centered on a cream seamless background, soft daylight, realistic materials, no other objects. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered.",
+      "anchor_image": "bambi/cast/surreal-ads/headphones-product.png",
+      "anchor_ready": false
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "Digital → Physical · דיגיטלי → פיזי",
+      "stage": "digital-to-physical",
+      "duration_sec": 4,
+      "description": "האתר נראה רגיל לגמרי — כבר בשנייה הראשונה האוזניות מתחיל לפרוץ את זכוכית המסך ויוצא לעולם הפיזי.",
+      "characters": [
+        "product"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture. A silver MacBook Pro standing open on a warm natural oak table, a soft linen cloth and a ceramic cup at the edge of frame, a sunlit cream plaster wall behind. On the laptop screen: a minimal audio-brand website in graphite and olive: a product photo of the headphones, the logo 'HUSH', thin sound-wave graphics, and the giant editorial headline 'HEAR'. Everything is completely normal and calm — nothing has emerged yet. The laptop fills the central two thirds of the frame, slightly angled toward camera. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+      "video_prompt": "Vertical 9:16, one continuous shot. Hyperrealistic live-action look, real physics, real optics. The website on the laptop looks completely normal, then within the first second the graphite HUSH headphones begins to physically push out through the screen glass — the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk. Slow handheld push-in, real reflections and shadows on the oak table. The giant letters \"HEAR\" start to lift off the web page. Calm, premium, magical. No cuts, no random objects, no distorted product, no floating text overlays.",
+      "reference": "bambi/cast/surreal-ads/headphones-product.png",
+      "image_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k0.png",
+      "end_reference": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k1.png",
+      "first_frame_key": "k0",
+      "end_frame_key": "k1",
+      "video_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/videos/s01.mp4"
+    },
+    {
+      "scene_number": 2,
+      "title": "Transformation · טרנספורמציה",
+      "stage": "transformation",
+      "duration_sec": 7,
+      "description": "המוצר בחוץ; האותיות הענקיות הופכות לאובייקטים פיזיים מ-brushed aluminium with softly bevelled edges; גלי הקול הופכים לסרטי משי שזורמים סביב החדר ודרך האותיות, אותיות האלומיניום פועמות עם הבס — ואז שקט מוחלט — התנועה מאיצה עד לשיא.",
+      "characters": [
+        "product"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level, slight low",
+        "camera_move": "orbit + push-in, accelerating"
+      },
+      "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, the exact same laptop, table, wall and light as the reference scene. The graphite HUSH headphones is physically emerging from the laptop screen: the headphones slide out of the screen with the sound-wave graphics peeling off the web page as physical ribbons of olive silk. About half of the product is already out in the real room, casting a real contact shadow on the oak table; the rest is still inside the website. The giant editorial serif letters spelling exactly \"HEAR\" (H-E-A-R) are starting to lift off the web page, about to become physical. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+      "video_prompt": "Continuous shot, the camera orbits and pushes closer with accelerating speed. Hyperrealistic live-action look, real physics, real optics. Visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still. The huge letters \"HEAR\" are solid brushed aluminium with softly bevelled edges, some behind the graphite HUSH headphones, some in front of it. Olive silk ribbons, fine dust in light beams move with real gravity and depth; motion builds to a euphoric peak. Product shape and branding stay accurate. No cuts, no random objects, no distorted product, no floating text overlays.",
+      "reference": "bambi/cast/surreal-ads/headphones-product.png",
+      "image_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k1.png",
+      "end_reference": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k2.png",
+      "first_frame_key": "k1",
+      "end_frame_key": "k2",
+      "video_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/videos/s02.mp4"
+    },
+    {
+      "scene_number": 3,
+      "title": "Hero · שוט הירו",
+      "stage": "hero",
+      "duration_sec": 4,
+      "description": "התנועה נבלמת בבת אחת לאלגנטיות איטית ומתיישבת על שוט הירו מושלם; הטאגליין \"SILENCE THE WORLD\" משולב בסצנה.",
+      "characters": [
+        "product"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level, symmetrical",
+        "camera_move": "decelerating push-in → locked"
+      },
+      "image_prompt": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture, a surreal moment captured for real — same oak table and cream wall, the camera now closer and slightly orbited. The peak of a magical transformation: visible sound waves become flowing silk ribbons that wrap around the room and through the letters, the aluminium letters ripple and pulse to the bass, then everything suddenly goes silent and still. Huge physical 3D letters spelling exactly \"HEAR\" (H-E-A-R), made of brushed aluminium with softly bevelled edges, stand on the table around the product — some behind it, one partially in front of it, partially occluding it. Every letter correctly spelled. Olive silk ribbons, fine dust in light beams frozen mid-motion as if shot at 1/8000s, with a hint of motion blur on the fastest elements. The laptop is still softly visible behind, its screen blending into the room. The product is exactly as in the reference — premium over-ear wireless headphones in matte graphite with brushed aluminium sliders, olive-green fabric ear cushions, and a small engraved 'HUSH' logo — accurate proportions, 'Hush' branding readable. Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered. Palette: cream, warm beige, natural oak, soft off-white + brand accent deep olive and graphite. Lighting: motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights. Look: shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color.",
+      "video_prompt": "Continuous shot. Hyperrealistic live-action look, real physics, real optics. The motion suddenly turns elegant and slow, everything settles with soft inertia, the camera decelerates and locks into a perfectly symmetrical frame: the headphones resting on a minimal walnut stand on the oak table, a single olive silk ribbon draped softly beside it, calm still light. Keep the upper third calm and clean. Soft daylight, a last drift of olive silk ribbons. Premium, still, iconic. No cuts, no random objects, no distorted product, no floating text overlays.",
+      "reference": "bambi/cast/surreal-ads/headphones-product.png",
+      "image_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k2.png",
+      "end_reference": "bambi/outputs/surreal-ads/2026-10-09-headphones/keyframes/k3.png",
+      "first_frame_key": "k2",
+      "end_frame_key": "k3",
+      "video_output": "bambi/outputs/surreal-ads/2026-10-09-headphones/videos/s03.mp4"
+    }
+  ]
+}

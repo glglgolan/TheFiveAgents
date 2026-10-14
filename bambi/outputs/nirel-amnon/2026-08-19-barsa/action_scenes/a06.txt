@@ -1,0 +1,7 @@
+insert_id: A6
+scene_number: 22.1
+provider: OpenAI (gpt-image-gen)
+reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+status: OK
+prompt:
+A cinematic top-down overhead shot of a large wooden table covered in wedding-planning materials: elegant blank invitations, sketches of camera equipment, fabric swatches in cream and blue, loose white flowers, two wedding rings on a velvet tray, a cake sketch, a football resting at one corner, faint cat paw prints across a sheet of paper, coloured sticky notes, a fountain pen, a half-full coffee cup. Dramatic warm directional light raking across from one side, deep shadows, organized chaos, premium cinematic production design, perfectly still. No humans in frame, no readable text or lettering anywhere on the papers. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

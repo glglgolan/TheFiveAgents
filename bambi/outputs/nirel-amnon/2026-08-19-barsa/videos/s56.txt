@@ -1,0 +1,15 @@
+Scene: 56 — הפאנץ' האחרון
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s (rounded from storyboard 8s: v2_6 only supports 5s or 10s)
+Duration in storyboard: 8s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s56.png
+Credits consumed: 30
+generationId: AZJCruNAvLKOuCX_k3DVUqRvKDgxNGkNd-1i8MmlCSj-vV7WwZvudTFH6xZgntyturhSx0Xz
+
+Prompt:
+The screen is almost dark. Barsa emerges slowly out of the darkness into a soft pool of light, wearing the tiny bridal veil. She settles, looks directly into camera, and gives one slow, confident wink. Then she turns unhurriedly and walks out of frame, tail up, as the warm wedding lights bloom and glow behind her. The frame holds on the empty golden bokeh. No humans, no text.
+
+Generated: 2026-08-20

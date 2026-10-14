@@ -1,0 +1,504 @@
+{
+  "project": "children-book-keshet",
+  "title": "קשת של דאגה — מעשה בבן של השכן, דדוש השובב",
+  "logline": "דדוש מתעלם מאזהרת סבא, נדקר מקוץ, ומגלה שכל בן משפחה וחבר דואג לו בדרכו — עד שרגלו הופכת לקשת של צבעים.",
+  "language": "he",
+  "aspect_ratio": "1:1",
+  "format": "illustrated children's book — 13 square pages (page 1 = cover, pages 2-13 = story). No video output.",
+  "visual_theme": {
+    "palette": "rich, saturated painterly digital palette with warm skin tones, soft cinematic warmth, deep tender colour grading, still carrying the lime-yellow/leaf-green garden foliage and rainbow accents from the story world",
+    "lighting": "cinematic soft lighting with a gentle warm rim light, shallow depth of field, polished premium storybook rendering",
+    "film_look": "ultra-detailed painterly digital character-art rendering, rich soft textures, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 page",
+    "motion": "N/A — still illustrations only",
+    "mood": "childlike, warm, tender and reassuring; a small worry held inside a lovingly rendered world"
+  },
+  "text_policy": "Every image_prompt explicitly forbids text. Page text (narration) is typeset next to the illustration during layout, never inside the image.",
+  "cast": [
+    {
+      "id": "dedush",
+      "name": "דדוש",
+      "anchor_image": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "anchor_ready": true,
+      "description": "Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and camel-brown high-top sneakers with pale soles. Full-body character sheet, friendly expression, consistent design to be repeated on every page. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "grandpa_avraham",
+      "name": "סבא אברהם",
+      "anchor_image": "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png",
+      "anchor_ready": true,
+      "description": "Grandpa Avraham, a warm and attractive man in his late 50s, broad face with a strong jaw and warm laugh-lines around his eyes, short salt-and-pepper hair neatly combed, clean-shaven, tanned skin, wearing a light beige button-up work shirt with rolled sleeves, olive-green work trousers, a wide straw sun hat and brown garden gloves, confident upright posture with an easy, genuine smile. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "aunt_ziva",
+      "name": "דודה זיווה",
+      "anchor_image": "bambi/cast/children-book-keshet/aunt_ziva_anchor.png",
+      "anchor_ready": true,
+      "description": "Aunt Ziva, a warm woman in her 60s, wavy shoulder-length dark auburn-mahogany hair tied back loosely, hazel eyes, soft gentle smile lines, wearing a soft terracotta-brown blouse with short sleeves and a cream apron skirt, small gold hoop earrings, caring energetic posture. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "aunt_shulamit",
+      "name": "דודה שלומית",
+      "anchor_image": "bambi/cast/children-book-keshet/aunt_shulamit_anchor.png",
+      "anchor_ready": true,
+      "description": "Aunt Shulamit, a beautiful young woman in her 30s, straight blonde hair worn loose, bright blue eyes, wearing a soft dusty-rose linen dress and simple flat sandals, calm reassuring posture, warm gentle smile. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "uncle_yehuda",
+      "name": "דוד יהודה",
+      "anchor_image": "bambi/cast/children-book-keshet/uncle_yehuda.png",
+      "anchor_ready": false,
+      "description": "Uncle Yehuda, a friendly man about 48, short dark hair with grey at the temples, trimmed dark beard, wearing a faded denim-blue short-sleeve shirt, khaki trousers and brown leather sandals, tall and easygoing. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "friends",
+      "name": "עדי, רועי ונועם",
+      "anchor_image": "bambi/cast/children-book-keshet/friends.png",
+      "anchor_ready": false,
+      "description": "Three children aged 6-7, friends of Dedush, standing side by side: Adi, a girl with curly light-brown hair in two short pigtails, pink t-shirt and yellow shorts; Roi, a boy with straight black hair and a striped sky-blue t-shirt with grey shorts; Noam, a boy with sandy blond hair and freckles, mint-green t-shirt and denim shorts. All in simple sneakers, cheerful expressions. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "mom",
+      "name": "אמא של דדוש",
+      "anchor_image": "bambi/cast/children-book-keshet/mom.png",
+      "anchor_ready": false,
+      "description": "Dedush's mother, a gentle woman about 34, long wavy chestnut-brown hair loosely tied, warm brown eyes like her son, wearing a soft cream knit top and a dusty-rose long skirt, tender caring expression. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    },
+    {
+      "id": "garden",
+      "name": "גינת סבא אברהם",
+      "anchor_image": "bambi/cast/children-book-keshet/garden.png",
+      "anchor_ready": false,
+      "description": "Grandpa Avraham's home garden: a low pale stone wall, flowering beds of small white and yellow wildflowers, dandelion puffs, dry weeds in one corner, a leafy lime-green tree at the right edge, a watering can and a small garden fork resting on the soil. Empty establishing view. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image."
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "שער הספר",
+      "duration_sec": 0,
+      "description": "עמוד השער: דדוש יושב על קיר אבן נמוך בגינה פורחת מוצפת אור, מביט למעלה בחיוך שקט. קשת אור עדינה ברקע. צד שמאל של הקומפוזיציה נשאר שקט ואוורירי — מקום לטקסט שיתווסף בהמשך בעימוד, לא בתמונה.",
+      "narration": "קשת של דאגה\nמעשה בבן של השכן — דדוש השובב",
+      "characters": [
+        "dedush"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Book cover illustration. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and camel-brown high-top sneakers with pale soles sits relaxed on a low pale stone wall in a sunlit blooming garden, one knee bent, hands resting beside him, looking upward to the left with a quiet happy smile. Behind him lime-yellow leafy branches and small white and yellow wildflowers; a very soft translucent rainbow of light arcs across the background on the left. The right third of the square frame is kept calm, bright and almost empty (open airy space, wildflowers only) so a title can be placed there later during layout. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference image contains Hebrew title text — do NOT reproduce it or any part of it; render the illustration only, leaving that area as clean empty background.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p01.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png"
+      ]
+    },
+    {
+      "scene_number": 2,
+      "title": "סבא בגינה ודדוש מציע עזרה",
+      "duration_sec": 0,
+      "description": "סבא אברהם כורע בגינה ומנכש עשבים יבשים. דדוש עובר במקרה ליד, נעצר בשער ומציע לעזור.",
+      "narration": "פעם סבא אברהם עבד בגינת ביתו. דדוש, בנו של השכן שעבר במקרה ליד, ביקש לעזור לו בניכוש העשבים היבשים.",
+      "characters": [
+        "grandpa_avraham",
+        "dedush",
+        "garden"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "A sunlit home garden. Grandpa Avraham, a warm and attractive man in his late 50s with short salt-and-pepper hair and a clean-shaven face, wearing a straw sun hat, beige rolled-sleeve work shirt, olive work trousers and brown garden gloves, kneels on the soil pulling dry weeds, a watering can beside him. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet stands at the low garden gate on the right, leaning forward eagerly with one hand raised, offering to help. Both faces turned toward each other, warm and friendly. Lime-green foliage frames the top, the edges of the frame wash out to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p02.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 3,
+      "title": "אזהרת הנעליים",
+      "duration_sec": 0,
+      "description": "סבא אברהם מסכים אבל מזהיר: לעבודת ניכוש צריך נעליים גבוהות וסגורות, אפשר להידקר מקוצים.",
+      "narration": "סבא אברהם הסכים ואמר: \"בעבודת ניכוש צריך לנעול נעליים גבוהות וסגורות. עבודת ניכוש מסוכנת, אפשר להידקר ולהיפצע מקוצים. לך ונעל נעליים מתאימות\".",
+      "characters": [
+        "grandpa_avraham",
+        "dedush"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Grandpa Avraham, a warm and attractive man in his late 50s with short salt-and-pepper hair, clean-shaven, and a straw hat, crouches down to eye level with Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, one gloved hand resting gently on the boy's shoulder and the other pointing down toward the boy's open sandals with a caring, warning expression. On the ground between them, well away from both their bodies, lies a small tangle of dry thorny weeds catching the light — nothing rests on or touches the boy's shoulders or body. The boy looks down at his feet, distracted and impatient. Soft garden greens blur into the white edges. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p03.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 4,
+      "title": "דדוש מתחיל לנכש",
+      "duration_sec": 0,
+      "description": "דדוש, מלא שמחה והתרגשות, לא מקשיב ומתחיל לנכש בנעליים לא מתאימות.",
+      "narration": "דדוש, מלא שמחה והתרגשות, לא הקשיב לסבא אברהם והחל לעבוד בניכוש העשבים.",
+      "characters": [
+        "dedush"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "high",
+        "camera_move": "static"
+      },
+      "image_prompt": "High angle looking down at Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, crouched happily among the weed bed, both hands gripping a bundle of dry brown weeds and pulling with excited energy, a big grin on his face, hair bouncing. Loose soil and small dry thorns scatter around his bare ankles and open sandals; a few tiny thorn shapes are visible on the ground very close to his foot, hinting at danger. Bright airy garden, lime-yellow leaves at the corners, edges dissolving into white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p04.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png"
+      ]
+    },
+    {
+      "scene_number": 5,
+      "title": "רגע הדקירה והצעקה",
+      "duration_sec": 0,
+      "description": "קוץ עבה דוקר את רגלו של דדוש. הוא צועק מכאב — הצעקות נשמעות עד הבית.",
+      "narration": "אך לא עבר זמן רב, ודדוש צעק: \"אוי! קוץ עבה דקר אותי ברגל!\" צעקות הכאב נשמעו עד הבית.",
+      "characters": [
+        "dedush"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "low",
+        "camera_move": "static"
+      },
+      "image_prompt": "Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet sits abruptly back on the ground, mouth open in a loud cry, eyes squeezed shut with tears starting, both hands clutching his right foot which he pulls up toward him; a single thick thorn is stuck in the side of his foot with a tiny red mark around it. Dry weeds fall from his other hand. Small pale motion streaks radiate outward from him to suggest the sudden shout. Garden light stays warm and soft, background washed almost fully to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p05.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png"
+      ]
+    },
+    {
+      "scene_number": 6,
+      "title": "סבא רץ אליו",
+      "duration_sec": 0,
+      "description": "סבא אברהם שומע את הבכי ורץ אליו. דדוש מודה בבושה שלא נעל נעליים מתאימות.",
+      "narration": "סבא אברהם שמע את דדוש בוכה ורץ אליו. \"מה קרה, דדוש?\" שאל. \"קוץ עבה דקר אותי ברגל,\" ענה דדוש בדמעות. \"לא נעלתי נעליים מתאימות,\" הודה בבושה.",
+      "characters": [
+        "grandpa_avraham",
+        "dedush"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Grandpa Avraham, his short salt-and-pepper hair catching the light, hurries in from the left, straw hat slipping back, one arm outstretched and knees bending as he rushes to reach Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, who sits on the ground on the right holding his hurt foot, tears on his cheeks, head lowered in shame, glancing up at his grandfather. A dropped garden fork lies between them. Motion is implied by his forward-leaning body and trailing shirt. Soft blooming garden, bright airy background fading to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p06.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 7,
+      "title": "ניקוי הפצע במים",
+      "duration_sec": 0,
+      "description": "סבא אברהם מרגיע ואומר: קודם ננקה את הפצע במים, ואז נחטא ביוד.",
+      "narration": "סבא אברהם מיהר להרגיע אותו ואמר: \"קודם ננקה את הפצע עם מים, ואז נחטא אותו ביוד.\"",
+      "characters": [
+        "grandpa_avraham",
+        "dedush"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Grandpa Avraham, salt-and-pepper hair, clean-shaven and warm-faced, kneels beside Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, who sits on the low stone wall with both feet bare — both of his open light-blue sandals have been taken off and sit empty together on the ground beside the wall — his hurt right foot resting on the grandfather's knee while the water is poured, his uninjured left foot bare too and tucked beside him on the wall; exactly two empty sandals on the ground, no feet inside them, no extra or floating feet anywhere in frame. The grandfather gently pours a thin clear stream of water from a small metal watering can over the boy's foot, his other hand steadying the ankle; he speaks calmly, face kind and reassuring. Tiny water droplets sparkle with faint rainbow glints. The boy still sniffles but watches. Warm airy garden, edges washing to cream white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p07.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 8,
+      "title": "הסירוב ליוד הצהוב",
+      "duration_sec": 0,
+      "description": "סבא מוציא בקבוקון יוד צהוב ודדוש בוכה: לא רוצה יוד צהוב! סבא מנסה להרגיע — הכאב יחלוף. בסוף סבא מורח בכל זאת — הרגל מקבלת את הכתם הצהוב הראשון.",
+      "narration": "דדוש התחיל לבכות שוב ואמר: \"לא! לא! לא! לא רוצה יוד צהוב!\" סבא אברהם ניסה להרגיע: \"הכאב יחלוף, היוד רק יחטא את הפצע\".",
+      "characters": [
+        "grandpa_avraham",
+        "dedush"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Grandpa Avraham, salt-and-pepper hair and clean-shaven, holds up a small glass bottle of bright yellow iodine and a cotton swab toward Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, who leans away with both palms pushed out in front of him, head turned aside, eyes shut tight, mouth wide open crying a loud refusal, fresh tears on his cheeks. His bare right foot rests on the wall, the small thorn puncture washed clean, still uncoloured. A soft yellow watercolor bloom spreads behind the bottle. The grandfather's face stays patient and gentle. Airy garden background dissolving to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p08.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 9,
+      "title": "לוח יוד — צהוב",
+      "duration_sec": 0,
+      "description": "לוח מוטיב נלווה לצד עמוד היוד הצהוב: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התווית.",
+      "narration": "",
+      "characters": [],
+      "shot": {
+        "type": "still-life",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Still-life illustration of a small glass medicine bottle with the Hebrew word \"צהוב\" printed on the label, bottle containing bright yellow liquid, ultra-detailed painterly digital rendering matching a premium storybook character-art style, rich soft textures, cinematic soft lighting, centered composition, background is a solid bright pastel yellow-orange decorated with a repeating pattern of small suns, lemon slices, and pineapple motifs, square 1:1, soft warm glow. The Hebrew word \"צהוב\" is composited onto the bottle label using the Miri font — this is the only text in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "",
+      "references": [],
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p09.png",
+      "video_output": ""
+    },
+    {
+      "scene_number": 10,
+      "title": "דודה זיווה והיוד החום",
+      "duration_sec": 0,
+      "description": "דודה זיווה באה לעזור עם יוד חום, ודדוש שוב מסרב.",
+      "narration": "דודתו זיווה באה לעזור ואמרה: \"אני אביא יוד חום למרוח על הפצע\". אבל דדוש שוב בכה: \"לא! לא! לא! לא רוצה יוד חום!\"",
+      "characters": [
+        "aunt_ziva",
+        "dedush",
+        "grandpa_avraham"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Aunt Ziva, a warm woman in her 60s with wavy dark auburn-mahogany shoulder-length hair tied back, terracotta-brown blouse and cream apron skirt, arrives from the left holding out a small bottle of brown iodine with an encouraging smile. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet sits on the low stone wall in the centre, shaking his head, one arm raised to refuse, crying; his hurt right foot, resting forward on the wall, already carries a soft yellow iodine stain from before. Grandpa Avraham, salt-and-pepper hair, stands behind on the right, hand on the boy's back. A soft warm-brown watercolor bloom floats near the bottle. Bright garden, edges fading to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p10.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png",
+        "bambi/cast/children-book-keshet/aunt_ziva_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 11,
+      "title": "לוח יוד — חום",
+      "duration_sec": 0,
+      "description": "לוח מוטיב נלווה לצד עמוד היוד החום: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התווית.",
+      "narration": "",
+      "characters": [],
+      "shot": {
+        "type": "still-life",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Still-life illustration of a small glass medicine bottle with the Hebrew word \"חום\" printed on the label, bottle containing rich brown liquid, ultra-detailed painterly digital rendering matching a premium storybook character-art style, rich soft textures, cinematic soft lighting, centered composition, background is a solid bright pastel caramel-tan decorated with a repeating pattern of small chocolate squares and cookies, square 1:1, soft warm glow. The Hebrew word \"חום\" is composited onto the bottle label using the Miri font — this is the only text in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "",
+      "references": [],
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p11.png",
+      "video_output": ""
+    },
+    {
+      "scene_number": 12,
+      "title": "דודה שלומית והיוד הירוק",
+      "duration_sec": 0,
+      "description": "דודה שלומית מגיעה עם יוד ירוק, ודדוש ממשיך לצעוק שלא רוצה.",
+      "narration": "הגיעו דודתו שלומית ואמרה: \"אני אביא יוד ירוק!\" אבל דדוש המשיך לצעוק: \"לא! לא! לא! לא רוצה יוד ירוק!\"",
+      "characters": [
+        "aunt_shulamit",
+        "dedush",
+        "aunt_ziva"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Aunt Shulamit, a beautiful young woman in her 30s with straight blonde hair and bright blue eyes, wearing a soft dusty-rose linen dress, steps in from the right offering a small bottle of green iodine, kneeling slightly. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet sits on the low stone wall in the centre, both hands over his eyes, mouth open in a wailing refusal; his hurt right foot, resting forward on the wall, already carries two soft overlapping stains, one yellow and one warm brown, from the earlier attempts. Aunt Ziva, her dark auburn-mahogany hair catching the light, stands behind on the left, still holding her brown bottle. A soft green watercolor bloom drifts by. Airy garden, white-washed edges. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p12.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/aunt_ziva_anchor.png",
+        "bambi/cast/children-book-keshet/aunt_shulamit_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 13,
+      "title": "לוח יוד — ירוק",
+      "duration_sec": 0,
+      "description": "לוח מוטיב נלווה לצד עמוד היוד הירוק: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התווית.",
+      "narration": "",
+      "characters": [],
+      "shot": {
+        "type": "still-life",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Still-life illustration of a small glass medicine bottle with the Hebrew word \"ירוק\" printed on the label, bottle containing bright green liquid, ultra-detailed painterly digital rendering matching a premium storybook character-art style, rich soft textures, cinematic soft lighting, centered composition, background is a solid bright pastel mint-green decorated with a repeating pattern of small mint leaves, lime slices, and green grapes, square 1:1, soft warm glow. The Hebrew word \"ירוק\" is composited onto the bottle label using the Miri font — this is the only text in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "",
+      "references": [],
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p13.png",
+      "video_output": ""
+    },
+    {
+      "scene_number": 14,
+      "title": "דוד יהודה והיוד הכחול",
+      "duration_sec": 0,
+      "description": "דוד יהודה מגיע עם בקבוק יוד כחול. דדוש שוב מסרב. הפצע כבר מלא בצבעים — אבל הכאב לא חלף.",
+      "narration": "לבסוף הגיע דודו יהודה עם בקבוק יוד כחול. גם אז דדוש לא הסכים ואמר: \"לא! לא! לא! לא רוצה יוד כחול!\" הפצע של דדוש כבר התמלא בצבעים, אבל הכאב לא חלף.",
+      "characters": [
+        "uncle_yehuda",
+        "dedush",
+        "aunt_ziva",
+        "aunt_shulamit"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Uncle Yehuda, a friendly man about 48 with short dark greying hair, trimmed dark beard, faded denim-blue shirt and khaki trousers, leans in from the left holding a bottle of blue iodine. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet sits on the low stone wall in the centre with his hurt right foot lifted forward toward the viewer, already painted in soft overlapping patches of yellow, brown and green; he turns his face away with a scrunched pained frown, one hand pushing the bottle back. Aunt Ziva (dark auburn-mahogany hair) and Aunt Shulamit (blonde hair, bright blue eyes) stand behind on the right watching with concern. Airy garden fading to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p14.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/aunt_ziva_anchor.png",
+        "bambi/cast/children-book-keshet/aunt_shulamit_anchor.png"
+      ]
+    },
+    {
+      "scene_number": 15,
+      "title": "לוח יוד — כחול",
+      "duration_sec": 0,
+      "description": "לוח מוטיב נלווה לצד עמוד היוד הכחול: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התווית.",
+      "narration": "",
+      "characters": [],
+      "shot": {
+        "type": "still-life",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Still-life illustration of a small glass medicine bottle with the Hebrew word \"כחול\" printed on the label, bottle containing bright blue liquid, ultra-detailed painterly digital rendering matching a premium storybook character-art style, rich soft textures, cinematic soft lighting, centered composition, background is a solid bright pastel sky-blue decorated with a repeating pattern of small sea waves, blueberries, and blue butterflies, square 1:1, soft warm glow. The Hebrew word \"כחול\" is composited onto the bottle label using the Miri font — this is the only text in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "",
+      "references": [],
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p15.png",
+      "video_output": ""
+    },
+    {
+      "scene_number": 16,
+      "title": "החברים והיוד הלבן — החיוך הראשון",
+      "duration_sec": 0,
+      "description": "פתאום מופיעים החברים עדי, רועי ונועם עם יוד מיוחד בצבע לבן. הם מורחים בעדינות — ודדוש סוף-סוף מחייך.",
+      "narration": "פתאום הופיעו חבריו של דדוש – עדי, רועי, ונועם. הם באו עם יוד מיוחד בצבע לבן. הם מרחו אותו בעדינות על הפצע, ודדוש, סוף-סוף, חייך.",
+      "characters": [
+        "friends",
+        "dedush"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Three children aged 6-7 gather closely around Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet, who sits on the low stone wall with his colourfully stained right foot extended: Adi, a girl with curly light-brown hair in two short pigtails, pink t-shirt and yellow shorts, kneels and dabs a white cotton swab softly onto his foot; Roi, a boy with straight black hair in a striped sky-blue t-shirt, holds a small bottle of pearly white iodine; Noam, a sandy-blond freckled boy in a mint-green t-shirt, rests a hand on Dedush's shoulder. Dedush smiles for the first time, tears drying. Gentle white and rainbow glow around the foot. Airy garden fading to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p16.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png"
+      ]
+    },
+    {
+      "scene_number": 17,
+      "title": "לוח יוד — לבן",
+      "duration_sec": 0,
+      "description": "לוח מוטיב נלווה לצד עמוד היוד הלבן: בקבוקון על רקע מוטיב תואם-צבע. תמונה נלווית בלבד, עם שם הצבע בעברית על התווית.",
+      "narration": "",
+      "characters": [],
+      "shot": {
+        "type": "still-life",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Still-life illustration of a small glass medicine bottle with the Hebrew word \"לבן\" printed on the label, bottle containing pearly white liquid with a soft glow, ultra-detailed painterly digital rendering matching a premium storybook character-art style, rich soft textures, cinematic soft lighting, centered composition, background is a solid bright pastel lavender-white decorated with a repeating pattern of small clouds, vanilla pods, daisies, and pearls, square 1:1, soft warm glow. The Hebrew word \"לבן\" is composited onto the bottle label using the Miri font — this is the only text in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "",
+      "references": [],
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p17.png",
+      "video_output": ""
+    },
+    {
+      "scene_number": 18,
+      "title": "קשת של צבעים — כולם מסביבו",
+      "duration_sec": 0,
+      "description": "דדוש מביט ברגלו שהפכה לקשת של צבעים ומבין שכל אחד דאג לו בדרכו. אמא מלטפת את ראשו, סבא מחייך בגאווה, החברים מוחאים כפיים.",
+      "narration": "דדוש הביט על רגלו שצבעה הפך לקשת של צבעים. הוא ראה את סבא, הדודים, והחברים שעזרו לו בדרך שלהם. \"אתם יודעים מה?\" אמר דדוש, \"אולי זה עדיין קצת כואב, אבל עכשיו אני מבין שכל אחד דואג לי בדרכו.\" אמא ליטפה את ראשו, סבא חייך בגאווה, והחברים מחאו כפיים. וכך, עם רגל צבעונית וחיוך גדול בלב, דדוש הבין: אפשר לעבור כל מכשול – כל עוד מוקפים באנשים שאוהבים אותך.",
+      "characters": [
+        "dedush",
+        "mom",
+        "grandpa_avraham",
+        "aunt_ziva",
+        "aunt_shulamit",
+        "uncle_yehuda",
+        "friends"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Warm group scene in the blooming garden. Dedush, a cheerful 6-7 year old boy with short wavy chestnut-brown hair, large warm brown eyes, round soft cheeks and fair skin, wearing a plain white short-sleeve t-shirt with a small chest pocket, dark navy denim jeans rolled up at the ankles, and simple light blue-grey open sandals, each with two wide adjustable straps crossing the foot secured by a small silver buckle, and a pale tan sole, on bare feet sits at the centre on the low stone wall, his right foot stretched forward and painted in soft bands of yellow, brown, green, blue and pearly white like a small rainbow; he looks down at it with a wide happy smile. His mother, a gentle woman about 34 with long wavy chestnut hair, cream knit top and dusty-rose skirt, stands behind him stroking his head. Grandpa Avraham, salt-and-pepper hair, clean-shaven and warmly handsome, wearing his straw hat, smiles proudly on the left; Aunt Ziva, dark auburn-mahogany hair, in terracotta, and Aunt Shulamit, blonde hair and bright blue eyes, in a dusty-rose dress, stand beside him; Uncle Yehuda in a denim-blue shirt behind them; the three friends Adi, Roi and Noam clap their hands on the right. A large soft translucent rainbow arcs overhead across the sky. Everyone warm and joyful, edges of the frame washing out to white. Ultra-detailed painterly digital rendering, rich soft textures, cinematic soft lighting with gentle rim light, shallow depth of field, polished premium storybook character-art style, warm and tender mood, very large expressive eyes with visible catchlights and detailed lashes, hair rendered in soft dimensional curls/detail, square 1:1 composition. Absolutely no text, no letters, no words, no writing, no numbers, no captions, no signage anywhere in the image. The reference images are character anchors supplied ONLY to match each corresponding character's face, hair and clothing — do NOT copy their poses, composition or background; build the scene described above instead. Absolutely no text, letters, words, numbers or captions anywhere in the image.",
+      "video_prompt": "N/A (still book illustration)",
+      "reference": "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+      "image_output": "bambi/outputs/children-book-keshet/2026-07-31-keshet-shel-daaga/scenes_painterly/p18.png",
+      "video_output": "",
+      "references": [
+        "bambi/cast/children-book-keshet/dedush_anchor_v2.png",
+        "bambi/cast/children-book-keshet/grandpa_avraham_anchor.png",
+        "bambi/cast/children-book-keshet/aunt_ziva_anchor.png",
+        "bambi/cast/children-book-keshet/aunt_shulamit_anchor.png"
+      ]
+    }
+  ]
+}

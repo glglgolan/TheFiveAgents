@@ -1,0 +1,12 @@
+Scene 36: ערי הבירה
+
+PROMPT:
+A spectacular cinematic room filled with floating translucent world maps, glowing globes and luminous geographic routes arcing through the air. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent stands in the centre like a genius game-show contestant, one arm extended, confidently pointing at a country on a suspended map, lit from below. Elegant deep blue lighting mixed with warm gold rim light, glowing continents, drifting particles. No readable place names or text anywhere. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17469 total (15528 in / 1941 out)

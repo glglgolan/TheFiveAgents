@@ -1,0 +1,462 @@
+[
+ {
+  "id": "L01",
+  "char": "announcer",
+  "start": 30,
+  "end": 145,
+  "maxEnd": 150,
+  "file": "audio/voice/L01.wav",
+  "text": "Mesdames, messieurs... and assorted mammals. Maison Bouledogue!",
+  "spoken": "Mesdames, messieurs... [[slnc 380]] ènde assortède mammeulz. [[slnc 300]] Maison Bouledogue!",
+  "voice": "Thomas",
+  "rate": 166,
+  "chain": "PitchShift -2 st -> PA horn band 280 Hz-5.2 kHz (24 dB/oct), Peak 1.7k +5, Peak 600 +2, Distortion 6 dB -> Compressor -20 3:1 -> synthetic stereo hall IR (RT60 1.9 s, 28 ms predelay, early reflections) convolution -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Mesdames",
+    30.0,
+    44.64
+   ],
+   [
+    "messieurs",
+    50.04,
+    63.0
+   ],
+   [
+    "and",
+    63.0,
+    83.76
+   ],
+   [
+    "assorted",
+    83.76,
+    97.2
+   ],
+   [
+    "mammals",
+    97.2,
+    107.04
+   ],
+   [
+    "Maison",
+    118.92,
+    130.2
+   ],
+   [
+    "Bouledogue",
+    130.2,
+    144.12
+   ]
+  ]
+ },
+ {
+  "id": "L02",
+  "char": "bulldog",
+  "start": 204,
+  "end": 290,
+  "maxEnd": 294,
+  "file": "audio/voice/L02.wav",
+  "text": "Pipette! The heels! Higher! Couture is pain!",
+  "spoken": "Pipette! [[slnc 96]] Ze ilze! [[slnc 84]] Aïeur! [[slnc 102]] Couture iz pèïne!",
+  "voice": "Grandpa (French (France))",
+  "rate": 205,
+  "chain": "PitchShift -4 st (RubberBand) -> parallel growl (140-2600 Hz band, Distortion 22 dB, 34 Hz AM fry, 22%) -> HPF 65 / LowShelf 190 Hz +5 / Peak 420 Hz -2.5 / Peak 2.8 kHz +2.5 / LPF 9k -> Compressor -22 dB 3.5:1 -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Pipette",
+    204.0,
+    214.32
+   ],
+   [
+    "The",
+    224.64,
+    230.4
+   ],
+   [
+    "heels",
+    230.4,
+    235.92
+   ],
+   [
+    "Higher",
+    247.68,
+    256.68
+   ],
+   [
+    "Couture",
+    269.04,
+    279.36
+   ],
+   [
+    "is",
+    279.72,
+    282.6
+   ],
+   [
+    "pain",
+    282.6,
+    288.6
+   ]
+  ]
+ },
+ {
+  "id": "L03",
+  "char": "mouse",
+  "start": 304,
+  "end": 365,
+  "maxEnd": 372,
+  "file": "audio/voice/L03.wav",
+  "text": "Any higher, Monsieur, and she will need oxygen.",
+  "spoken": "Any higher, [[slnc 60]] Monsieur, [[slnc 90]] and she will need oxygen.",
+  "voice": "Kathy",
+  "rate": 150,
+  "chain": "tape-speed resample +5 st (formants up) -> HPF 220 / Peak 900 -2 / Peak 3.2k +2 / HighShelf 4.5k +4 -> Compressor -24 dB 4:1 -> -16 LUFS, Limiter -1.5 (dry close mic)",
+  "words": [
+   [
+    "Any",
+    304.0,
+    311.32
+   ],
+   [
+    "higher",
+    311.32,
+    319.48
+   ],
+   [
+    "Monsieur",
+    321.76,
+    332.44
+   ],
+   [
+    "and",
+    337.84,
+    344.44
+   ],
+   [
+    "she",
+    344.44,
+    346.6
+   ],
+   [
+    "will",
+    346.6,
+    349.0
+   ],
+   [
+    "need",
+    349.6,
+    353.44
+   ],
+   [
+    "oxygen",
+    353.44,
+    363.4
+   ]
+  ]
+ },
+ {
+  "id": "L04",
+  "char": "bulldog",
+  "start": 382,
+  "end": 442,
+  "maxEnd": 448,
+  "file": "audio/voice/L04.wav",
+  "text": "Then give her oxygen... in pearls!",
+  "spoken": "Zenne guive eur oxygène... [[slnc 460]] inne peurles!",
+  "voice": "Grandpa (French (France))",
+  "rate": 179,
+  "chain": "PitchShift -4 st (RubberBand) -> parallel growl (140-2600 Hz band, Distortion 22 dB, 34 Hz AM fry, 22%) -> HPF 65 / LowShelf 190 Hz +5 / Peak 420 Hz -2.5 / Peak 2.8 kHz +2.5 / LPF 9k -> Compressor -22 dB 3.5:1 -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Then",
+    382.0,
+    391.6
+   ],
+   [
+    "give",
+    391.6,
+    395.68
+   ],
+   [
+    "her",
+    395.8,
+    399.64
+   ],
+   [
+    "oxygen",
+    399.52,
+    413.2
+   ],
+   [
+    "in",
+    427.6,
+    433.12
+   ],
+   [
+    "pearls",
+    433.24,
+    441.16
+   ]
+  ]
+ },
+ {
+  "id": "L05",
+  "char": "announcer",
+  "start": 470,
+  "end": 541,
+  "maxEnd": 548,
+  "file": "audio/voice/L05.wav",
+  "text": "Look one. Flamingo, in... Vertigo.",
+  "spoken": "Louk ouane. [[slnc 168]] Flamingo, [[slnc 36]] inne... [[slnc 312]] Vertigo.",
+  "voice": "Thomas",
+  "rate": 214,
+  "chain": "PitchShift -2 st -> PA horn band 280 Hz-5.2 kHz (24 dB/oct), Peak 1.7k +5, Peak 600 +2, Distortion 6 dB -> Compressor -20 3:1 -> synthetic stereo hall IR (RT60 1.9 s, 28 ms predelay, early reflections) convolution -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Look",
+    470.0,
+    475.76
+   ],
+   [
+    "one",
+    475.76,
+    485.0
+   ],
+   [
+    "Flamingo",
+    491.96,
+    505.88
+   ],
+   [
+    "in",
+    505.88,
+    515.96
+   ],
+   [
+    "Vertigo",
+    525.68,
+    540.32
+   ]
+  ]
+ },
+ {
+  "id": "L06",
+  "char": "announcer",
+  "start": 704,
+  "end": 778,
+  "maxEnd": 784,
+  "file": "audio/voice/L06.wav",
+  "text": "Look two. Giraffe, in forty feet of pearls.",
+  "spoken": "Louk tou. [[slnc 132]] Girafe, [[slnc 36]] inne forti fite ove peurlz.",
+  "voice": "Thomas",
+  "rate": 192,
+  "chain": "PitchShift -2 st -> PA horn band 280 Hz-5.2 kHz (24 dB/oct), Peak 1.7k +5, Peak 600 +2, Distortion 6 dB -> Compressor -20 3:1 -> synthetic stereo hall IR (RT60 1.9 s, 28 ms predelay, early reflections) convolution -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Look",
+    704.0,
+    709.88
+   ],
+   [
+    "two",
+    709.88,
+    714.56
+   ],
+   [
+    "Giraffe",
+    721.4,
+    736.76
+   ],
+   [
+    "in",
+    736.76,
+    746.96
+   ],
+   [
+    "forty",
+    746.96,
+    753.32
+   ],
+   [
+    "feet",
+    753.32,
+    761.6
+   ],
+   [
+    "of",
+    761.72,
+    765.2
+   ],
+   [
+    "pearls",
+    765.2,
+    776.6
+   ]
+  ]
+ },
+ {
+  "id": "L07",
+  "char": "bulldog",
+  "start": 862,
+  "end": 906,
+  "maxEnd": 920,
+  "file": "audio/voice/L07.wav",
+  "text": "Non. Non non non non.",
+  "spoken": "Non. [[slnc 260]] non non non non.",
+  "voice": "Grandpa (French (France))",
+  "rate": 165,
+  "chain": "PitchShift -4 st (RubberBand) -> parallel growl (140-2600 Hz band, Distortion 22 dB, 34 Hz AM fry, 22%) -> HPF 65 / LowShelf 190 Hz +5 / Peak 420 Hz -2.5 / Peak 2.8 kHz +2.5 / LPF 9k -> Compressor -22 dB 3.5:1 -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Non",
+    862.0,
+    869.8
+   ],
+   [
+    "Non",
+    886.48,
+    893.08
+   ],
+   [
+    "non",
+    893.08,
+    898.48
+   ],
+   [
+    "non",
+    898.48,
+    902.68
+   ],
+   [
+    "non",
+    902.68,
+    905.08
+   ]
+  ]
+ },
+ {
+  "id": "L08",
+  "char": "mouse",
+  "start": 1098,
+  "end": 1130,
+  "maxEnd": 1142,
+  "file": "audio/voice/L08.wav",
+  "text": "Oh... oh my.",
+  "spoken": "Oh... [[slnc 420]] oh my.",
+  "voice": "Kathy",
+  "rate": 150,
+  "chain": "tape-speed resample +5 st (formants up) -> HPF 220 / Peak 900 -2 / Peak 3.2k +2 / HighShelf 4.5k +4 -> Compressor -24 dB 4:1 -> -16 LUFS, Limiter -1.5 (dry close mic)",
+  "words": [
+   [
+    "Oh",
+    1098.0,
+    1105.44
+   ],
+   [
+    "oh",
+    1116.72,
+    1121.28
+   ],
+   [
+    "my",
+    1121.28,
+    1128.48
+   ]
+  ]
+ },
+ {
+  "id": "L09",
+  "char": "bulldog",
+  "start": 1250,
+  "end": 1321,
+  "maxEnd": 1326,
+  "file": "audio/voice/L09.wav",
+  "text": "Of course. It was... intentional.",
+  "spoken": "Off courss. [[slnc 212]] Itte ouaze... [[slnc 425]] intentionnelle.",
+  "voice": "Grandpa (French (France))",
+  "rate": 205,
+  "chain": "PitchShift -4 st (RubberBand) -> parallel growl (140-2600 Hz band, Distortion 22 dB, 34 Hz AM fry, 22%) -> HPF 65 / LowShelf 190 Hz +5 / Peak 420 Hz -2.5 / Peak 2.8 kHz +2.5 / LPF 9k -> Compressor -22 dB 3.5:1 -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Of",
+    1250.0,
+    1255.4
+   ],
+   [
+    "course",
+    1255.4,
+    1263.2
+   ],
+   [
+    "It",
+    1277.96,
+    1284.2
+   ],
+   [
+    "was",
+    1284.08,
+    1288.76
+   ],
+   [
+    "intentional",
+    1302.8,
+    1320.32
+   ]
+  ]
+ },
+ {
+  "id": "L10",
+  "char": "mouse",
+  "start": 1334,
+  "end": 1363,
+  "maxEnd": 1380,
+  "file": "audio/voice/L10.wav",
+  "text": "Of course, Monsieur.",
+  "spoken": "Of course, [[slnc 80]] Monsieur.",
+  "voice": "Kathy",
+  "rate": 150,
+  "chain": "tape-speed resample +5 st (formants up) -> HPF 220 / Peak 900 -2 / Peak 3.2k +2 / HighShelf 4.5k +4 -> Compressor -24 dB 4:1 -> -16 LUFS, Limiter -1.5 (dry close mic)",
+  "words": [
+   [
+    "Of",
+    1334.0,
+    1342.16
+   ],
+   [
+    "course",
+    1342.16,
+    1348.76
+   ],
+   [
+    "Monsieur",
+    1351.52,
+    1362.2
+   ]
+  ]
+ },
+ {
+  "id": "L11",
+  "char": "announcer",
+  "start": 1390,
+  "end": 1425,
+  "maxEnd": 1432,
+  "file": "audio/voice/L11.wav",
+  "text": "Maison Bouledogue.",
+  "spoken": "Maison [[slnc 60]] Bouledogue.",
+  "voice": "Thomas",
+  "rate": 148,
+  "chain": "PitchShift -2 st -> PA horn band 280 Hz-5.2 kHz (24 dB/oct), Peak 1.7k +5, Peak 600 +2, Distortion 6 dB -> Compressor -20 3:1 -> synthetic stereo hall IR (RT60 1.9 s, 28 ms predelay, early reflections) convolution -> -16 LUFS, Limiter -1.5",
+  "words": [
+   [
+    "Maison",
+    1390.0,
+    1402.24
+   ],
+   [
+    "Bouledogue",
+    1402.24,
+    1424.32
+   ]
+  ]
+ }
+]

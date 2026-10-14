@@ -1,0 +1,18 @@
+Scene: 47 — הריקוד הראשון
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (image_to_video)
+Duration: 10s
+Resolution: 720p
+First frame: scenes/s47.png (REGENERATED — Nirel now in real white wedding gown,
+Amnon in formal dark suit, guests in colourful festive attire instead of the
+generic yellow/blue-accent casual look; face-swapped from d16.jpg for accuracy)
+Fix: user requested Nirel/Amnon look like actual bride/groom, not the recurring
+casual outfit descriptors used across most of the film.
+Credits consumed: 80
+generationId: AZ7CDKXxwXNwwQc8Jx5gDYgw0n10TDrhDeJ5yf_XoxAeEDvd74swjA8WaOwrzwpqPy2UOMe8
+Old version preserved: scenes/s47_v1.png
+
+Prompt: (unchanged from original — only first frame changed)
+Nirel and Amnon begin their first dance, moving naturally and a little imperfectly, lost in each other. The camera circles slowly around them as the hanging lights brighten. Nirel spins out and Amnon catches her; they both laugh out loud. The shot widens and cranes up to reveal the whole glowing wedding hall and the ring of guests around them. Warm golden light, graceful motion.
+
+Generated: 2026-08-20

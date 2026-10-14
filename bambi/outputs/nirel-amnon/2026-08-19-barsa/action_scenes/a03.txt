@@ -1,0 +1,7 @@
+insert_id: A3
+scene_number: 13.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+A surreal cinematic roller-coaster track floating through a dreamlike landscape assembled from fragments of a couple's world: drifting islands of colour — open paint tubes and splashes of pigment, brushes, ribbons, a football, a spinning globe, warm string lights, floating framed photographs turned away from camera, suitcases and travel tags, white flowers, sheets of golden light. The polished track launches away from the lens and dives into the distance through the floating debris, vanishing into a glowing horizon. Forward-facing on-ride perspective from the front of the cart, dramatic one-point perspective, epic scale, premium feature-film visual effects, no humans in frame, no readable text or signage. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

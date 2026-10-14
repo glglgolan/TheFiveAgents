@@ -1,0 +1,7 @@
+insert_id: A7
+scene_number: 24.1
+provider: OpenAI (gpt-image-gen)
+reference: none
+status: OK
+prompt:
+Extreme cinematic macro shot of luxurious flowing white wedding fabric and delicate lace suspended in mid-air, seen from just below: soft golden light passing through the weave, translucent layers overlapping, intricate embroidered textile detail, tiny fibres catching the light, very shallow depth of field with the far edge dissolving into warm bokeh. Dynamic fabric motion frozen in an elegant sweeping composition, romantic wedding cinematography. No humans in frame, no faces, no text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.

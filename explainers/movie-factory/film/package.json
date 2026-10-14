@@ -1,0 +1,18 @@
+{
+  "name": "movie-factory-explainer",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Film out/film.mp4 --gl=swiftshader --concurrency=8 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "typescript": "^5.6.3"
+  }
+}

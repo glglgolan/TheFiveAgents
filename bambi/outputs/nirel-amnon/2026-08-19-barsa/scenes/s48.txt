@@ -1,0 +1,14 @@
+Scene 48: התפוצצות המסיבה
+
+PROMPT:
+A spectacular high-energy wedding dance floor at full blast: elegant guests packed and jumping, arms in the air, beams of moving light cutting through haze, gold confetti suspended mid-fall, warm golden lights with subtle blue and yellow accents, the DJ booth glowing at the back, flowers and candles on the surrounding tables. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent and AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent are at the centre of the crowd, mid-celebration. Low in the frame BATATA — a scruffy small-to-medium female dog, a shaggy terrier / wheaten type: long coarse tousled blonde-and-caramel coat falling in messy wind-blown strands, a curtain of hair hanging over her eyes, a long shaggy beard and moustache, dark brown nose, warm slightly goofy expression; her coat is straight and wiry-shaggy rather than curly, and deliberately unkempt and wind-blown rather than groomed or clipped — a scruffy street-terrier look, lovable and a little chaotic bounds happily between the dancers. On a high ledge at the right edge, above the chaos, BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle watches calmly. Premium music-video cinematography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (5):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/batata.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 22495 total (20479 in / 2016 out)

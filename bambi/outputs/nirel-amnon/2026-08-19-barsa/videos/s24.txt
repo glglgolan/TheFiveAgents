@@ -1,0 +1,21 @@
+Scene: 24
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP)
+Duration original (storyboard): 12s
+Duration submitted: 10s (rounded to nearest supported value: v2_6 only allows 5s or 10s)
+Resolution: 1080p (NOTE: deviation from planned 720p — the API rejects enable_audio=true
+at 720p for this model ("enable_audio is only supported at 1080p"). Audio-on was prioritized
+per explicit instruction to keep audio consistent with the rest of the film, so resolution
+was raised to 1080p instead of disabling audio. This costs ~10 credits/sec instead of the
+assumed ~8 credits/sec.)
+Audio: on (default)
+Credits consumed: 100
+
+Prompt:
+Nirel walks the boutique runway in the wedding dress and turns slowly; the fabric flows and
+catches the light. Barsa watches from the front row with an intensely critical stare,
+following her with only her eyes. Nirel tries another turn, glancing at the cat for a
+verdict. Barsa raises one paw, holds it — then gives a tiny, decisive approving nod. Nirel
+laughs. Elegant lateral tracking, champagne light.
+
+Generated: 2026-08-19

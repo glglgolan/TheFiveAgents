@@ -1,0 +1,6 @@
+Scene 31 — בטטה גונבת את ההצגה — FIXED after overnight-batch failure
+Same MPO fix as s29 — see that sidecar for root cause.
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+References: batata1_fixed.jpg (re-encoded), bambi/cast/nirel-amnon/batata.png, bambi/cast/nirel-amnon/barsa.png
+Tokens: 19819 total (17855 in / 1964 out)
+Prompt: see storyboard.json scene_number=31 image_prompt (unchanged from original).

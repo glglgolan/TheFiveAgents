@@ -1,0 +1,11 @@
+Scene 41: ניראל מתכוננת
+
+PROMPT:
+A cinematic bridal preparation scene. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent is seen mostly from behind and in elegant three-quarter profile, wearing a beautiful white wedding dress with delicate detailing, a long veil being settled over her hair. She stands before a tall mirror in a room flooded with soft golden window light; her reflection is soft and partial. Flowers, jewellery and a hairbrush on a dressing table, sheer curtains glowing. Intimate, restrained, deeply emotional. Premium wedding cinematography. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 13088 total (11176 in / 1912 out)

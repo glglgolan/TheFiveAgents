@@ -1,0 +1,23 @@
+{
+  "slug": "f1",
+  "brand": "Velocità",
+  "product": "a highly detailed 1:8 scale model of a modern Formula 1 car in gloss racing red with white accents, carbon-fibre aero parts, slick tyres and 'VELOCITÀ' livery on the sidepods",
+  "product_short": "the red VELOCITÀ Formula 1 car",
+  "product_he": "מכונית הפורמולה 1",
+  "website": "a sleek racing-team website with a bold red hero banner, the serif-italic logo 'VELOCITÀ', a photo of the car, and the giant editorial headline 'FAST'",
+  "hero_word": "FAST",
+  "letter_material": "brushed carbon fibre with red-and-white racing kerb stripes along their edges",
+  "emergence": "the nose wing of the car pierces through the screen glass first, then the whole car rolls out of the website onto the oak table, tyre smoke spilling from the screen behind it",
+  "transformation": "a strip of wet race-track asphalt unrolls across the table under the car, rain spray and tyre smoke swirl into the giant letters, the car accelerates in place with spinning wheels and streaks of motion blur",
+  "transformation_he": "רצועת אספלט רטוב של מסלול נפרשת על השולחן, ריסוס גשם ועשן צמיגים מסתחררים לתוך האותיות והמכונית מאיצה במקום",
+  "particles": "tyre smoke, rain spray droplets, tiny rubber flecks",
+  "accent_color": "racing red and carbon black",
+  "accent_hex": "#C8102E",
+  "text_hex": "#1B1B1B",
+  "hero_shot": "the car frozen perfectly still on a strip of glistening wet asphalt on the oak table, red-and-white kerbs at its sides, sharp reflections underneath",
+  "tagline": "BUILT FOR THE LAST LAP",
+  "image_route": "gpt",
+  "typography_mode": "hybrid",
+  "look": "hyperreal",
+  "drawn_mode": "none"
+}

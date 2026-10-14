@@ -1,0 +1,12 @@
+Scene 12: המפגש
+
+PROMPT:
+A cinematic romantic first-meeting frame. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent approaches from the left, trailing colourful artistic details — drifting yellow petals, a flicker of stage light, bright pigment in the air. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent approaches from the right, trailing cool blue details — faint map contour lines and stadium-blue light. They are still several steps apart, half-lit, both beginning to smile. Between them the two colour worlds are just starting to bleed into one warm golden pool of light, golden particles suspended in the air. Elegant sophisticated romantic-comedy mood. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d16.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17543 total (15600 in / 1943 out)

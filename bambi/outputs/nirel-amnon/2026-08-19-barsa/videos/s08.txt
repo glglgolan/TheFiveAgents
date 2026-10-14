@@ -1,0 +1,14 @@
+Scene: 08 - ניראל והחתולים
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 10s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s08.png (first_image)
+Credits consumed: 80
+
+Prompt:
+A comedic montage: Nirel sneezes lightly near a cat, then immediately scoops up another cat and cuddles it. She pours food into a bowl, sketches a cat on paper, then dozes on the sofa with cats draped over her. The contradiction is visually obvious and charming. End on Nirel surrounded by cats, completely happy, Barsa closest of all, looking at camera. Warm home light, quick affectionate cuts.
+
+Generated: 2026-08-19

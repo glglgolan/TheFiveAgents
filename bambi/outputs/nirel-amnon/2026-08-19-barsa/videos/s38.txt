@@ -1,0 +1,22 @@
+Scene: 38 — האנגלית שלה
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (image_to_video)
+Duration: 8s
+Resolution: 720p
+Audio: on (default, no toggle; v3_0_turbo always includes audio)
+First frame: scenes/s38.png (REGENERATED — Nirel now mid-gesture with mouth closed
+in a confident smile, instead of mid-word/mid-sentence; face-swapped from d16.jpg for
+accuracy)
+Fix: user observed Nirel's mouth visibly forming many words with no matching audio.
+Redesigned the shot (not just regenerated) to remove the "speaking" framing entirely,
+consistent with the film's established Barsa-only-narration convention (no other
+scene has lip-synced human dialogue). Comedy is now told through her eyes, hands and
+posture instead of visible speech.
+Credits consumed: 64 (video) + image regen (gpt-image, small)
+generationId: ARvGYYWkxmXQBnaWxWqIgldTSSsiRNmeMCgoUjc62SiZhcXF6DeeY87gcUHssVH4Fta9UZrS
+Old version preserved: scenes/s38_v1_speaking.png (original, mouth open/speaking)
+
+Prompt:
+Nirel stands mid-conversation, radiating easy confidence, gesturing expressively with her hands as if mid-story, her expression open and self-assured, mouth closed in a confident smile rather than talking. Then she notices familiar faces watching from the background. She freezes, her gesture stopping mid-air. Her confidence visibly drains; she looks away, fiddles with her sleeve, her smile turning sheepish and awkward. Amnon watches from behind, shaking with suppressed laughter. She shoots him a playful, murderous look. Slow push-in, warm light, precise comic timing. Her mouth stays closed or barely moves throughout the entire shot — the comedy is told entirely through her eyes, hands and posture, never through visible speech or lip movement.
+
+Generated: 2026-08-20

@@ -1,0 +1,15 @@
+Scene: 33 — דוקו מדעי
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s33.png
+Credits consumed: 30
+generationId: ARhlclIHHIO5HauI1tmTZf_SOKVzQlmmVstRGQuks1q_wF2scJ5WOTmrUJivFlazekFb1NC9
+
+Prompt:
+Nirel sits completely absorbed in the dinosaur documentary; the screen light shifts across her face as majestic dinosaurs move through the prehistoric landscape, then dissolve into colourful banded geological rock layers. She smiles with childlike wonder. Beside her Barsa's eyes droop lower and lower until she slumps sideways, fast asleep, while Nirel remains transfixed. Slow push-in, cool screen light against warm lamplight.
+
+Generated: 2026-08-20

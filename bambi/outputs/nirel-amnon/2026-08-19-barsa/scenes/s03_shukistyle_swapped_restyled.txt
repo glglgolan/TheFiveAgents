@@ -1,0 +1,51 @@
+Scene 03 — "ניראל הקטנה" — face-fidelity pipeline (swap + restyle) on approved shukistyle base
+
+Base image: bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle.png
+(approved illustrative-realism ~90% direction, style string verbatim from Shuki project's
+visual_theme.film_look)
+
+## Step 1 — face swap (local, insightface, free)
+Skill: .claude/skills/face-fidelity
+Source (real face): bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg
+Target: bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle.png
+Output: bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle_swapped.png
+
+Command:
+bash .claude/skills/face-fidelity/scripts/swap.sh \
+  "bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg" \
+  "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle.png" \
+  "bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle_swapped.png"
+
+Result: 1 source face / 1 target face detected, swap successful (inswapper_128).
+
+## QA — visible seam check
+Zoomed crop comparison (original vs swapped) showed a mild but noticeable seam: the swapped
+face read as flatter/more matte on skin, missing the warm golden backlight rim-glow present on
+the hair and shoulders in the rest of the image (the illustrative-realism ~90% look leans warmer
+and more stylized-lit than the raw swapped skin patch). Decision: run restyle pass (step 3 of
+SKILL.md), since this style is not close enough to full photoreal to skip it safely.
+
+## Step 2 — restyle pass (gpt-image-1.5, edits, input_fidelity)
+Provider: OpenAI, size=1536x1024, model=gpt-image-1.5
+Reference: bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle_swapped.png
+Output: bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle_swapped_restyled.png
+Tokens: 8652 total (6723 in / 1929 out)
+
+Prompt:
+"illustrative realism ~90%, Pixar/Disney-for-adults premium animated film, full-frame cinematic
+lens, shallow depth of field, ultra-detailed realistic textures, 8K masterpiece, 16:9. Redraw
+this exact image — same girl, same face, same pose, same composition, same outfit and background
+— fully in this illustration style with warm golden late-afternoon backlight glow consistently
+across the skin, hair and shoulders, removing any flat/matte photorealistic skin patch so the
+face blends seamlessly with the rest of the picture. Keep the exact facial structure and likeness
+(eyes, nose, mouth, face shape) from this reference exactly as-is, just restyle the skin
+rendering and lighting to match. No text, no subtitles, no logos, no watermark."
+
+## QA — after restyle
+Zoomed crop of restyled result: golden rim-light glow now consistent across skin/hair/shoulders,
+no visible seam/patch. Facial identity preserved from the swap (rounder face shape, darker
+hazel-brown eyes, fuller curl pattern matching the real photo more closely than the pre-swap
+base) while matching the surrounding illustrative-realism lighting. Chosen as final.
+
+## Final deliverable
+bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s03_shukistyle_swapped_restyled.png

@@ -1,0 +1,11 @@
+Scene 49: שקט אחרי המסיבה
+
+PROMPT:
+A quiet cinematic wedding hall late at night, long after the celebration. A few candles still burn low on abandoned tables, wilting white flowers, gold confetti scattered across the empty dance floor, one overturned chair. Warm dim golden light, deep peaceful shadows, faint haze still hanging in the air. In the middle of the empty floor sits BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tail, dark 'M' on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, alone and small in the wide frame, tail curled around her paws, looking toward the aisle. Elegant emotional cinematography. Absolutely NO humans in frame. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (2):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/barsa.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 15298 total (13397 in / 1901 out)

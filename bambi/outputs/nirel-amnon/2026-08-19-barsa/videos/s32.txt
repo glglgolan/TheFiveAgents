@@ -1,0 +1,15 @@
+Scene: 32 — צבעים
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s32.png
+Credits consumed: 80
+generationId: ARJj6XvDv-VBzxrqy7-T_eu9t2ksV1n_-ZJmKk5Rd1VeSm_u-_gqdm7kJhc86sFdCd3QvJ2v
+
+Prompt:
+A joyful artistic montage. Nirel paints a broad stroke, spins a length of coloured fabric around herself, sketches fast, dusts flour, and moves between creative stations without stopping. Yellow, blue and bright colours flow around her in the air. She ends by turning to camera with a playful smile while coloured paint particles drift and settle around her. Crane move, warm golden light, buoyant rhythm.
+
+Generated: 2026-08-20

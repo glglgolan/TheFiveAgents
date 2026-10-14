@@ -1,0 +1,14 @@
+Scene: 12 - המפגש
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 10s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s12.png (first_image)
+Credits consumed: 80
+
+Prompt:
+Romantic-comedy first meeting. Nirel and Amnon walk toward each other from opposite sides of frame; their worlds follow them — colourful artistic particles around her, cool blue map and football light around him. As the distance closes the two palettes bleed together into one warm golden atmosphere and the background dissolves into bokeh. They stop, look at each other and exchange a real smile. Slow lateral tracking, no text.
+
+Generated: 2026-08-19

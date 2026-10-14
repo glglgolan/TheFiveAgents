@@ -1,0 +1,11 @@
+insert_id: B3
+model: bytedance/seedance-2.0-mini
+price_per_sec: 0.0305 USD
+duration: 5s
+actual_cost: 0.1525 USD
+reference: action_scenes/b03.png
+aspect_ratio: 16:9 (derived from reference)
+job_id: G3o0s5bFJj8aoWHCgQvx
+status: OK
+prompt:
+A football launches away from the lens across a vast glowing three-dimensional world map floating in dark space. The camera chases it at extreme speed from just behind and above, holding the spinning ball near frame centre while the map streams beneath at enormous velocity. Translucent continents, luminous coastlines and arcing route lines rush past in layered parallax; glowing map fragments break loose and tumble by the lens as abstract graphic shapes with no readable labels. The ball crosses ocean after ocean, the lighting shifting from deep blue to warm gold as it travels. It banks, the camera banks with it in a rolling turn, then the ball suddenly reverses direction and flies straight back into the lens, spinning fast and growing until it fills the frame — hard cut on impact. Cinematic 16:9, no readable text or place names, no humans, no logos.

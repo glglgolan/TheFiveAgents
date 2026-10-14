@@ -1,0 +1,14 @@
+Scene: 07 - יקומים מקבילים
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 10s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s07.png (first_image)
+Credits consumed: 80
+
+Prompt:
+A dynamic parallel-world montage. On the left Nirel paints, pipes icing, spins fabric and dances; match cut to the right where Amnon kicks a football, spins a globe and traces a route across a map. Her side grows more saturated and yellow; his side grows deeper blue. Both halves slowly slide toward the glowing centre seam as if two universes are about to collide. Whip-pan match cuts, energetic rhythm.
+
+Generated: 2026-08-19

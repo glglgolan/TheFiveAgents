@@ -1,0 +1,27 @@
+Scene 03 — "ניראל הקטנה" — STYLE TEST v3: exact Shuki visual_theme.film_look, verbatim
+Provider: OpenAI (gpt-image-1.5, edits, size=1536x1024, quality=medium, input_fidelity)
+Reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg
+Tokens: 8716 total (6772 in / 1944 out)
+
+Context: v1 (nirel_child_pixarstyle / s03_pixarstyle) added "large expressive eyes slightly
+enlarged in the animated-feature convention" — NOT part of Shuki's actual style — which produced
+a generic oversized-eye Disney look and lost identity. User rejected. v2 (s03_realistic2) dialed
+realism up to 95-97%, explicitly natural eyes — user rejected as "not good" too. v3 here uses the
+EXACT verbatim style string from bambi/outputs/shuki/2026-07-24-aba-adama/storyboard.json
+visual_theme.film_look: "illustrative realism ~90%, Pixar/Disney-for-adults premium animated
+film, full-frame cinematic lens, shallow depth of field, ultra-detailed realistic textures, 8K
+masterpiece, 16:9" — no embellishment, no eye-size instruction either way, plus a front-facing
+tight-ish framing and identity-lock language.
+
+Prompt:
+LITTLE NIREL — an Israeli girl about 6-7, curly brown hair, bright expressive mischievous face,
+colourful playful clothes with a strong yellow accent. Face must match the reference photograph
+closely — same face shape, same curl pattern and hair volume, same specific mischievous
+expression, natural human eye proportions. A playful cinematic childhood scene: she stands beside
+a small family fish pond in a warm sunlit backyard, arms out for balance on the low stone rim,
+curious and full of energy. Around her: colourful toys, paint pots, brushes and craft materials
+scattered on the grass, orange goldfish flickering in the green water. Golden nostalgic
+late-afternoon sunlight, dappled shade from a fig tree, warm family-film atmosphere. STYLE:
+illustrative realism ~90%, Pixar/Disney-for-adults premium animated film, full-frame cinematic
+lens, shallow depth of field, ultra-detailed realistic textures, 8K masterpiece, 16:9. No text,
+no subtitles, no logos, no watermark.

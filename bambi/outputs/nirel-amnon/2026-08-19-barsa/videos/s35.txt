@@ -1,0 +1,15 @@
+Scene: 35 — כדורגל
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s35.png
+Credits consumed: 30
+generationId: AcyApYmWpGzyYG4zHy_4clJahEY1Uiq1t-y7LkP4T17YoJENEyiSCHs-oWFZbT_m0pwaD_iI
+
+Prompt:
+Amnon walks onto the sunset pitch, flicks the football up with his foot, catches it and spins it on one finger. He looks up toward the stadium as the floodlights climb to full. The camera arcs slowly around him while faint map contour lines shimmer as reflections in the grass. He ends looking off-frame with a proud private smile. Golden-hour backlight, slow orbital track, no logos or text.
+
+Generated: 2026-08-20

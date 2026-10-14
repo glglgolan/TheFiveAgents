@@ -1,0 +1,54 @@
+{
+  "project": "nirel-amnon",
+  "updated": "2026-08-19",
+  "rule": "ONLY positively-identified photos may be used as references. As of 2026-08-19 the user confirmed ALL 88 Drive photos are Nirel and Amnon, so nothing is quarantined — but any NEW photo added later must be confirmed before use.",
+  "confirmed": {
+    "barsa": {
+      "files": ["bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png"],
+      "source": "user-supplied, named",
+      "notes": "Brown mackerel tabby, short coat, dark 'M' on forehead, lean Oriental build, large upright ears, green-gold almond eyes, white chin/muzzle, long ringed tail. SIGNATURE TRAIT: slight convergent strabismus (one eye turns gently inward) — must be preserved in every generated image, subtly."
+    },
+    "batata": {
+      "files": [
+        "bambi/reference/Nirel-Amnon_ Wedding/ref images/batata1.jpeg",
+        "bambi/reference/Nirel-Amnon_ Wedding/ref images/batata2.jpeg",
+        "bambi/reference/Nirel-Amnon_ Wedding/ref images/batata3.jpeg"
+      ],
+      "source": "user-supplied, named",
+      "notes": "Scruffy blonde-and-caramel shaggy terrier/wheaten mix, long coarse tousled coat, hair falling over the eyes, brown nose, long beard and moustache. Script's 'Golden Doodle' is WRONG."
+    },
+    "nirel_child": {
+      "files": ["bambi/reference/Nirel-Amnon_ Wedding/ref images/Nirel girl.jpeg"],
+      "source": "user-supplied, named",
+      "notes": "Age ~6-7. Curly brown hair, yellow two-piece swimsuit, saluting, eating corn at a park. Yellow ties directly to the Character Bible ('loves yellow'). Scenes 03-04."
+    },
+    "amnon_child": {
+      "files": ["bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Little.jpeg"],
+      "source": "user-supplied, named",
+      "notes": "Age ~8-10. Short cropped hair, thick eyebrows, yellow football jersey with a soccer-ball crest. Ties directly to scene 05 ('football and geography'). Low resolution and cut out with a white sticker outline — soft, but identity is legible. Scenes 05-06."
+    },
+    "amnon_young": {
+      "files": [
+        "bambi/reference/Nirel-Amnon_ Wedding/ref images/Amnon Boy.jpeg",
+        "bambi/reference/Nirel-Amnon_ Wedding/ref images/amnon boy1.jpeg"
+      ],
+      "source": "user-supplied, named",
+      "notes": "Despite the filenames these are Amnon at roughly 18-22, NOT a child. Best fit for scene 12 (The Meeting). Both low-res and heavily filtered."
+    },
+    "couple_adult": {
+      "hero": "yuval/reference/nirel-amnon/_proxy/d16.jpg",
+      "hero_original": "311EB782-A207-4A35-8401-14BB08FCCD6F.JPG",
+      "files": "yuval/reference/nirel-amnon/_proxy/d01..d88.jpg (all 88)",
+      "source": "user-confirmed in chat 2026-08-19: 'כל התמונות הם של ניראל ואמנון'; d16 named as 'תמונה מעולה של שניהם'",
+      "notes": "PREFER d16 as the primary adult reference: both faces large, sharp, front-facing, even daylight, both smiling openly. Nirel — brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, hoop earrings. Amnon — full dark beard, short/receding hair, broad smile, thick brows.",
+      "with_barsa": ["d15", "d22", "d41", "d44"],
+      "india_engagement": {
+        "file": "yuval/reference/nirel-amnon/_proxy/d69.jpg",
+        "original": "D844C59D-34E8-488B-A765-447AE65F0816.JPG",
+        "notes": "The engagement in India — use for Act VII (scenes 19-21). Amnon in a dark jacket holding flowers; Nirel in an orange patterned dress with teal hair."
+      }
+    }
+  },
+  "quarantined": {},
+  "gaps": []
+}

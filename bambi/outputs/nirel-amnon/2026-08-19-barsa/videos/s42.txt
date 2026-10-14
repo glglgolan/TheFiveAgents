@@ -1,0 +1,15 @@
+Scene: 42 — אמנון מתכונן
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v2_6 (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: false (explicit: enable_audio=false, required to stay at 720p and within budget)
+First frame: scenes/s42.png
+Credits consumed: 30
+generationId: AbqNJTQoM6LxFZIEtHGOXdMjjdJbk_wQz3Cajwh_Z8yvI-c2SpVTbA0vk3_ID6_9i0LqsWJh
+
+Prompt:
+Amnon straightens his jacket and fastens a cufflink, serious and quietly emotional. He catches sight of the football in the corner, smiles to himself and gives it a gentle touch with two fingers. Then he notices the globe, laughs softly under his breath and shakes his head. Finally he turns toward the door and holds, waiting for Nirel. Slow push-in, warm window light.
+
+Generated: 2026-08-20

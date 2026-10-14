@@ -1,0 +1,13 @@
+Scene: 05 — אמנון הקטן
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP)
+Duration: 10s
+Resolution: 1080p
+Aspect ratio: derived from first frame
+Reference (first frame): bambi/outputs/nirel-amnon/2026-08-19-barsa/scenes/s05.png
+
+Prompt:
+Young Amnon bursts into the house after football, sweaty and messy. He drops the ball, grabs the globe and spins it rapidly, then jabs a finger at a country with the total seriousness of a geopolitical lecturer. He hears his family calling from the kitchen, gets distracted, and flicks one flip-flop off his foot; it launches into the air toward the kitchen. Camera pans with the flying flip-flop. Warm comedy timing.
+
+Generated: 2026-08-19
+Credits consumed: 100

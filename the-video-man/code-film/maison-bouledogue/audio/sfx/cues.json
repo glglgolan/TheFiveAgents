@@ -1,0 +1,483 @@
+{
+ "stats": {
+  "lufs_integrated": -20.0,
+  "true_peak_dbtp": -1.26,
+  "samples": 2880000,
+  "sr": 48000,
+  "seconds": 60.0,
+  "lufs_crowd": -17.47,
+  "lufs_foley": -24.66,
+  "lufs_ambience": -37.85
+ },
+ "cues": [
+  {
+   "from_frame": 0,
+   "to_frame": 1440,
+   "id": "theatre_room_tone",
+   "stem": "ambience",
+   "desc": "pink-noise HVAC air + faint 60 Hz hum; drops to ~-70 dBFS in the dead silence 1041-1175"
+  },
+  {
+   "from_frame": 0,
+   "to_frame": 1040,
+   "id": "crowd_murmur",
+   "stem": "ambience",
+   "desc": "28 formant-babble voices; hush at spotlight (12-40), muffled through wall in S2, cut dead at the gasp (1040)"
+  },
+  {
+   "from_frame": 12,
+   "to_frame": 12,
+   "id": "spot_on",
+   "stem": "foley",
+   "desc": "spotlight clunk: pitch-drop thump + modal metal + latch"
+  },
+  {
+   "from_frame": 12,
+   "to_frame": 48,
+   "id": "spot_sweep",
+   "stem": "foley",
+   "desc": "spot yoke friction squeak + motor while sweeping"
+  },
+  {
+   "from_frame": 13,
+   "to_frame": 192,
+   "id": "arc_hum",
+   "stem": "foley",
+   "desc": "carbon-arc spotlight buzz"
+  },
+  {
+   "from_frame": 56,
+   "to_frame": 104,
+   "id": "letter_thumps",
+   "stem": "foley",
+   "desc": "13 marquee-letter thumps every 4 f (56..104), panned L->R across the title"
+  },
+  {
+   "from_frame": 112,
+   "to_frame": 192,
+   "id": "title_applause",
+   "stem": "crowd",
+   "desc": "polite applause under title reveal (70 clappers), hard cut 192"
+  },
+  {
+   "from_frame": 116,
+   "to_frame": 142,
+   "id": "subtitle_shimmer",
+   "stem": "foley",
+   "desc": "sparkle grains + rising swish"
+  },
+  {
+   "from_frame": 132,
+   "to_frame": 132,
+   "id": "flash",
+   "stem": "foley",
+   "desc": "shutter ch-chk + flashbulb pop + capacitor whine"
+  },
+  {
+   "from_frame": 141,
+   "to_frame": 141,
+   "id": "flash",
+   "stem": "foley",
+   "desc": "shutter ch-chk + flashbulb pop + capacitor whine"
+  },
+  {
+   "from_frame": 147,
+   "to_frame": 147,
+   "id": "flash",
+   "stem": "foley",
+   "desc": "shutter ch-chk + flashbulb pop + capacitor whine"
+  },
+  {
+   "from_frame": 158,
+   "to_frame": 158,
+   "id": "flash",
+   "stem": "foley",
+   "desc": "shutter ch-chk + flashbulb pop + capacitor whine"
+  },
+  {
+   "from_frame": 176,
+   "to_frame": 192,
+   "id": "curtain_whip",
+   "stem": "foley",
+   "desc": "velvet whoosh w/ flutter, velvet whap ~190, hard cut 192"
+  },
+  {
+   "from_frame": 192,
+   "to_frame": 456,
+   "id": "backstage_room_tone",
+   "stem": "ambience",
+   "desc": "smaller brighter room tone + fluorescent 50 Hz hum"
+  },
+  {
+   "from_frame": 192,
+   "to_frame": 456,
+   "id": "fabric_rustles",
+   "stem": "ambience",
+   "desc": "random tulle / garment-bag rustles"
+  },
+  {
+   "from_frame": 193,
+   "to_frame": 213,
+   "id": "sewing_machine",
+   "stem": "ambience",
+   "desc": "motor whine + stitch clatter run (off left)"
+  },
+  {
+   "from_frame": 196,
+   "to_frame": 230,
+   "id": "assistant_footsteps",
+   "stem": "ambience",
+   "desc": "hurrying dresser footsteps crossing"
+  },
+  {
+   "from_frame": 199,
+   "to_frame": 219,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 214,
+   "to_frame": 262,
+   "id": "hammer",
+   "stem": "foley",
+   "desc": "3 hammer hits on metal heel cage (214, 238, 262), each a little higher"
+  },
+  {
+   "from_frame": 226,
+   "to_frame": 240,
+   "id": "sewing_machine",
+   "stem": "ambience",
+   "desc": "motor whine + stitch clatter run (off left)"
+  },
+  {
+   "from_frame": 247,
+   "to_frame": 267,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 280,
+   "to_frame": 300,
+   "id": "heel_ratchet",
+   "stem": "foley",
+   "desc": "telescoping ratchet 'crrrk' 280-300 + lock clunk at 300"
+  },
+  {
+   "from_frame": 318,
+   "to_frame": 352,
+   "id": "sewing_machine",
+   "stem": "ambience",
+   "desc": "motor whine + stitch clatter run (off left)"
+  },
+  {
+   "from_frame": 331,
+   "to_frame": 351,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 340,
+   "to_frame": 372,
+   "id": "assistant_footsteps",
+   "stem": "ambience",
+   "desc": "hurrying dresser footsteps crossing"
+  },
+  {
+   "from_frame": 371,
+   "to_frame": 391,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 392,
+   "to_frame": 436,
+   "id": "sewing_machine",
+   "stem": "ambience",
+   "desc": "motor whine + stitch clatter run (off left)"
+  },
+  {
+   "from_frame": 418,
+   "to_frame": 438,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 420,
+   "to_frame": 450,
+   "id": "assistant_footsteps",
+   "stem": "ambience",
+   "desc": "hurrying dresser footsteps crossing"
+  },
+  {
+   "from_frame": 438,
+   "to_frame": 450,
+   "id": "pearl_whip",
+   "stem": "foley",
+   "desc": "whoosh + 46 pearl-on-pearl rattle clicks along the swing"
+  },
+  {
+   "from_frame": 450,
+   "to_frame": 470,
+   "id": "hanger_clatter",
+   "stem": "ambience",
+   "desc": "wire hangers clinking + rail scrape"
+  },
+  {
+   "from_frame": 488,
+   "to_frame": 580,
+   "id": "stiletto_clicks",
+   "stem": "foley",
+   "desc": "metal-cage stiletto clicks every 12 f: [488, 500, 512, 524, 536, 548, 560, 572], pan -0.85 -> 0"
+  },
+  {
+   "from_frame": 488,
+   "to_frame": 700,
+   "id": "chandelier_jingle",
+   "stem": "foley",
+   "desc": "crystal prism pings: gentle while walking, WILD 612-652 swinging L/R, settles by 664"
+  },
+  {
+   "from_frame": 586,
+   "to_frame": 606,
+   "id": "flash_storm",
+   "stem": "foley",
+   "desc": "10 press flashes at frames [586.0, 587.2, 587.7, 588.6, 591.0, 593.1, 594.7, 598.0, 599.9, 604.0]"
+  },
+  {
+   "from_frame": 613,
+   "to_frame": 660,
+   "id": "crowd_ooh",
+   "stem": "crowd",
+   "desc": "44 voices 'ooh' (u->o, pitch swell) during teeter"
+  },
+  {
+   "from_frame": 656,
+   "to_frame": 690,
+   "id": "crowd_aah",
+   "stem": "crowd",
+   "desc": "44 voices relieved falling 'aah' (breathy)"
+  },
+  {
+   "from_frame": 658,
+   "to_frame": 716,
+   "id": "flamingo_applause",
+   "stem": "crowd",
+   "desc": "light relieved applause as flamingo exits"
+  },
+  {
+   "from_frame": 664,
+   "to_frame": 690,
+   "id": "stiletto_clicks_exit",
+   "stem": "foley",
+   "desc": "exit clicks [664, 676, 688], pan 0 -> +0.9"
+  },
+  {
+   "from_frame": 720,
+   "to_frame": 792,
+   "id": "hoof_heel_clicks",
+   "stem": "foley",
+   "desc": "hoof-heel clops every 12 f [720, 732, 744, 756, 768, 780, 792] + subtle pearl rattle, pan -0.85 -> 0"
+  },
+  {
+   "from_frame": 800,
+   "to_frame": 812,
+   "id": "neck_swoop",
+   "stem": "foley",
+   "desc": "soft air swoosh of the neck-swoop pose"
+  },
+  {
+   "from_frame": 806,
+   "to_frame": 822,
+   "id": "flash_storm",
+   "stem": "foley",
+   "desc": "8 press flashes at frames [806.0, 810.5, 810.6, 811.1, 814.8, 815.0, 815.3, 819.0]"
+  },
+  {
+   "from_frame": 840,
+   "to_frame": 846,
+   "id": "PEARL_SNAP",
+   "stem": "foley",
+   "desc": "silk strand crack + downward twang, burst whoosh, 80 pearl-pearl collisions"
+  },
+  {
+   "from_frame": 842,
+   "to_frame": 856,
+   "id": "crowd_oh",
+   "stem": "crowd",
+   "desc": "short shocked 'oh!' at the snap"
+  },
+  {
+   "from_frame": 850,
+   "to_frame": 936,
+   "id": "pearl_rain",
+   "stem": "foley",
+   "desc": "360+26 pearls, 2626 individual modal impacts on ballistic bounce-decay schedules (dense 850-900), ~30% roll away 900-936"
+  },
+  {
+   "from_frame": 852,
+   "to_frame": 870,
+   "id": "sunglasses_slide",
+   "stem": "foley",
+   "desc": "stick-slip squeak down the nose (852-866), last nudge 867-870 + tiny tick"
+  },
+  {
+   "from_frame": 921,
+   "to_frame": 956,
+   "id": "crowd_titter",
+   "stem": "crowd",
+   "desc": "small ripple of laughter after \"Non non non\""
+  },
+  {
+   "from_frame": 956,
+   "to_frame": 988,
+   "id": "penguin_pitter_pat",
+   "stem": "foley",
+   "desc": "flipper-foot pats every 4 f [956, 960, 964, 968, 972, 976, 980, 984, 988], pan -0.85 -> -0.25"
+  },
+  {
+   "from_frame": 992,
+   "to_frame": 1001,
+   "id": "slip_whoop",
+   "stem": "foley",
+   "desc": "slide-whistle whoop up + rubbery foot skid"
+  },
+  {
+   "from_frame": 992,
+   "to_frame": 1036,
+   "id": "rolling_pearl_rumble",
+   "stem": "foley",
+   "desc": "brown-noise rumble + ~260/s granular pearl clicks, pans L->R with the slide"
+  },
+  {
+   "from_frame": 1004,
+   "to_frame": 1040,
+   "id": "crowd_whoa",
+   "stem": "crowd",
+   "desc": "rising tension 'ooooOOH' under the slide, cut at 1040"
+  },
+  {
+   "from_frame": 1012,
+   "to_frame": 1036,
+   "id": "spin_whirr",
+   "stem": "foley",
+   "desc": "rotation-rate AM whoosh (3->10 Hz) + whirr tone, pan orbits"
+  },
+  {
+   "from_frame": 1035,
+   "to_frame": 1046,
+   "id": "launch_whoosh",
+   "stem": "foley",
+   "desc": "edge knock + whoosh as penguin flies off the runway end"
+  },
+  {
+   "from_frame": 1040,
+   "to_frame": 1051,
+   "id": "CROWD_GASP",
+   "stem": "crowd",
+   "desc": "60 unvoiced formant-shaped inhales (+10 voiced hah!), onsets within ~70 ms, abrupt stop -> dead silence"
+  },
+  {
+   "from_frame": 1060,
+   "to_frame": 1172,
+   "id": "float_wind",
+   "stem": "ambience",
+   "desc": "gentle high-air breeze + veil flutter while penguin floats"
+  },
+  {
+   "from_frame": 1060,
+   "to_frame": 1090,
+   "id": "UMBRELLA_POP",
+   "stem": "foley",
+   "desc": "sub whump + fabric snap + rib clicks + spring boing"
+  },
+  {
+   "from_frame": 1152,
+   "to_frame": 1152,
+   "id": "single_clap",
+   "stem": "crowd",
+   "desc": "one lonely clap (left), big hall tail"
+  },
+  {
+   "from_frame": 1166,
+   "to_frame": 1166,
+   "id": "second_clap",
+   "stem": "crowd",
+   "desc": "a second clapper (right)"
+  },
+  {
+   "from_frame": 1176,
+   "to_frame": 1177,
+   "id": "confetti_cannons",
+   "stem": "foley",
+   "desc": "two pneumatic confetti cannons L/R"
+  },
+  {
+   "from_frame": 1176,
+   "to_frame": 1412,
+   "id": "UPROAR_applause",
+   "stem": "crowd",
+   "desc": "180 clappers, burst at 1176, bump at bow 1244, thins under S6 dialogue, gone by 1412"
+  },
+  {
+   "from_frame": 1176,
+   "to_frame": 1332,
+   "id": "cheering",
+   "stem": "crowd",
+   "desc": "130 'woo/yeah/bravo/hey' formant voices, densest 1176-1200, 'bravo' bump at the bow"
+  },
+  {
+   "from_frame": 1178,
+   "to_frame": 1250,
+   "id": "whistles",
+   "stem": "crowd",
+   "desc": "8 wolf / finger whistles"
+  },
+  {
+   "from_frame": 1180,
+   "to_frame": 1300,
+   "id": "confetti_rustle",
+   "stem": "foley",
+   "desc": "falling paper confetti grains, thinning"
+  },
+  {
+   "from_frame": 1238,
+   "to_frame": 1260,
+   "id": "bulldog_bow",
+   "stem": "foley",
+   "desc": "comic stick-slip wood creak + cloth swish"
+  },
+  {
+   "from_frame": 1328,
+   "to_frame": 1328,
+   "id": "wink_ting",
+   "stem": "foley",
+   "desc": "sparkle-bell ting"
+  },
+  {
+   "from_frame": 1377,
+   "to_frame": 1384,
+   "id": "final_title_slam",
+   "stem": "foley",
+   "desc": "rising pre-whoosh into sub boom + slam + plate ring"
+  },
+  {
+   "from_frame": 1410,
+   "to_frame": 1428,
+   "id": "last_pearl_roll",
+   "stem": "foley",
+   "desc": "single pearl rolling toward camera, rising + brightening, seam ticks"
+  },
+  {
+   "from_frame": 1428,
+   "to_frame": 1428,
+   "id": "LENS_CLINK",
+   "stem": "foley",
+   "desc": "glass lens clink, beating partial pairs"
+  }
+ ]
+}

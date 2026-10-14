@@ -1,0 +1,15 @@
+Scene: 27 — ה-DJ
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 12s
+Duration in storyboard: 12s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s27.png
+Credits consumed: 96
+generationId: AT2dDkCAZJUajckzywBanMlr8tGNfYfyYf0hAbG83SwSZTSg3r3raoQs7VMk4YWtdWo_SAjX
+
+Prompt:
+Barsa climbs onto the DJ booth and studies the mixing console with professional suspicion. She taps a single button — the entire hall erupts in light. She drags a fader up with one paw and the beat swells; she starts bobbing her head with total confidence. The room behind her explodes into a spectacular wedding dance party. She turns to camera, deeply satisfied. Crane rise, pulsing lights.
+
+Generated: 2026-08-20

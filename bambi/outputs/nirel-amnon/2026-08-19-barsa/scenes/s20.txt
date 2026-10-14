@@ -1,0 +1,12 @@
+Scene 20: "יורים עלינו!"
+
+PROMPT:
+A cinematic suspense-comedy bedroom at night in an Indian guesthouse. NIREL — an Israeli woman in her early 30s, brown hair pulled back with teal-dyed lower strands, thick brows, warm hazel eyes, an open expressive smile, hoop earrings; colourful playful styling with a yellow accent sits bolt upright in bed, duvet clutched to her chest, eyes wide with alarm, one arm outstretched toward him. AMNON — an Israeli man in his early 30s, a full dark beard, short cropped slightly receding dark hair, thick brows, a broad warm smile; understated styling with a blue accent is halfway out of bed on all fours on the floor, mid-crawl toward the window with absurdly serious commando determination. The curtains breathe inward from the distant noise outside; cool blue moonlight cuts across the room in slats. Moody but safe cinematic lighting, low angle from floor level. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
+
+REFERENCES (3):
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/yuval/reference/nirel-amnon/_proxy/d69.jpg
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/nirel.png
+  - /Users/lirazgolan/claude_projects/TheFiveAgents/bambi/cast/nirel-amnon/amnon.png
+
+SIZE: 1536x1024
+RESULT: OK via OpenAI (gpt-image-1.5, quality=medium) — tokens: 17613 total (15599 in / 2014 out)

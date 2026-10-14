@@ -1,0 +1,15 @@
+Scene: 40 — האולם הריק
+Project: nirel-amnon (wedding film — Barsa narrates)
+Model: kling-video-v3_0_turbo (Kling MCP, image_to_video)
+Duration submitted: 10s
+Duration in storyboard: 10s
+Resolution: 720p
+enable_audio: n/a (kling-video-v3_0_turbo has no enable_audio parameter; audio is always included)
+First frame: scenes/s40.png
+Credits consumed: 80
+generationId: Ac7VbLukNJiHFvRPvq34AIkBYbwIE5R602vLn9NZJyQ5RDVfMWMAclZdmd9nSuZatvAJRUAO
+
+Prompt:
+Slow cinematic reveal of the empty wedding hall. The camera glides steadily down the aisle. Candle flames flicker, flowers sway gently, fairy lights breathe. Reflected candlelight on the floor converges into a subtle V-shaped highlight ahead of the lens. The camera passes beneath the floral arch and finally settles on Barsa, sitting alone at the end of the aisle, looking proud. No humans, no text.
+
+Generated: 2026-08-20

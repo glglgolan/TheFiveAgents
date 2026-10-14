@@ -1,0 +1,14 @@
+Scene: 06 - תקרית החומוס
+Project: nirel-amnon
+Method: Kling (MCP)
+Model: kling-video-v3_0_turbo
+Duration: 8s
+Resolution: 720p
+Aspect ratio: derived from first_image
+Reference: ../scenes/s06.png (first_image)
+Credits consumed: 64
+
+Prompt:
+Dramatic slow-motion comedy. The flip-flop spins through the air like a precision missile, rotating slowly. Cut to the hummus plate waiting in perfect stillness. The flip-flop lands dead centre in the hummus with a soft splat; oil ripples outward. Hold the beat. Then young Amnon turns to camera with the completely innocent expression of a child who has no idea how this happened. Comedic timing, no slapstick distortion.
+
+Generated: 2026-08-19

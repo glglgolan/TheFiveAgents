@@ -1,0 +1,7 @@
+insert_id: B1
+scene_number: 38.1
+provider: OpenAI (gpt-image-gen)
+reference: bambi/reference/Nirel-Amnon_ Wedding/ref images/barsa.png
+status: OK
+prompt:
+Extreme cinematic macro close-up of the eye of BARSA — a short-haired brown mackerel tabby cat: dense short close-lying coat (never fluffy), warm golden-brown base with crisp narrow dark brown-black stripes, banded legs, long ringed tapering tail, a dark 'M' marking on the forehead, slender oriental body, long slim legs, large upright pointed ears, white chin and muzzle, green-gold eyes with a subtle convergent strabismus in her right eye — a single almond-shaped green-gold eye filling most of the frame, the vertical pupil sharp and deep, warm candlelight and the blurred reflection of a decorated room curving across the wet surface of the cornea, individual short striped hairs and whisker roots visible around the lid, razor-thin depth of field. Warm golden key light from the side. No humans in frame, no text. STYLE: cinematic wedding-film look, photorealistic highly detailed fur and skin, premium animated-feature quality, warm golden cinematic lighting, rich golden bokeh, shallow depth of field, volumetric light, subtle lens bloom, elegant production design, sophisticated camera language. No text, no subtitles, no logos, no watermark. 16:9 cinematic.
