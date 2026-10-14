@@ -1,0 +1,18 @@
+{
+  "fps": 24,
+  "totalFrames": 1440,
+  "bpm": 120,
+  "framesPerBeat": 12,
+  "shots": [
+    { "id": "S1", "from": 0, "to": 240, "set": "__set_id__", "summary": "__what happens, beat by beat, in plain language__" }
+  ],
+  "dialogue": [
+    { "id": "L01", "shot": "S1", "char": "__character_id__", "start": 30, "maxEnd": 150, "text": "__line__" }
+  ],
+  "events": [
+    { "f": 0, "id": "__event_id__", "note": "__what happens at this exact frame — the SFX/music agents key off these__" }
+  ],
+  "music": {
+    "notes": "__one paragraph describing the intended score, cue by cue, referencing event frames above__"
+  }
+}

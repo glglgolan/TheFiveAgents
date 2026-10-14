@@ -1,0 +1,214 @@
+{
+  "series": "surreal-product-ad",
+  "version": 2,
+  "aspect_ratio": "9:16",
+  "fps": 24,
+  "defaults": {
+    "device_setting": "a silver MacBook Pro standing open on a warm natural oak table, a soft linen cloth and a ceramic cup at the edge of frame, a sunlit cream plaster wall behind",
+    "image_route": "gpt",
+    "typography_mode": "hybrid",
+    "font_family": "Playfair Display",
+    "tagline_integration": "as large refined serif letters standing physically on the table behind the product, softly lit, casting real shadows",
+    "palette_base": "cream, warm beige, natural oak, soft off-white",
+    "sound_hint": "soft ambient room tone, a glassy shimmer as the product breaks the screen, a rising whoosh through the transformation, a deep satisfying sub-hit and silence on the hero",
+    "look": "hyperreal",
+    "drawn_mode": "none",
+    "drawn_style": "fine white ink hand-drawn line art, slightly imperfect pen strokes",
+    "device_setting_short": "silver MacBook Pro open on a warm oak table, cream plaster wall, linen cloth"
+  },
+  "visual_theme": {
+    "palette": "{{palette_base}} + brand accent {{accent_color}}",
+    "lighting": "{{look_lighting}}",
+    "film_look": "{{look_film_look}}",
+    "motion": "one continuous camera move: slow handheld push-in, accelerating orbit through the transformation, decelerating into a locked symmetrical hero frame",
+    "mood": "minimal luxury, calm → wonder → euphoric rush → elegant stillness"
+  },
+  "negatives": [
+    "no random objects",
+    "no chaotic motion",
+    "no unnecessary camera cuts",
+    "no distorted or melted product shape",
+    "no floating text overlays or subtitles",
+    "no misspelled or extra letters",
+    "no extra hands or people",
+    "no watermark"
+  ],
+  "mj_negatives": "random objects, distorted product, misspelled text, extra letters, watermark, people, hands, clutter",
+  "stages": [
+    {
+      "n": 1,
+      "id": "digital-to-physical",
+      "title": "Digital → Physical",
+      "title_he": "דיגיטלי → פיזי",
+      "duration_sec": 4,
+      "from_key": "k0",
+      "to_key": "k1",
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "description_he": "האתר נראה רגיל לגמרי — כבר בשנייה הראשונה {{product_he}} מתחיל לפרוץ את זכוכית המסך ויוצא לעולם הפיזי.",
+      "video_prompt": "Vertical 9:16, one continuous shot. {{video_realism}} The website on the laptop looks completely normal, then within the first second {{product_short}} begins to physically push out through the screen glass — {{emergence}}. {{drawn_s1}} Slow handheld push-in, real reflections and shadows on the oak table. The giant letters {{hero_word_q}} start to lift off the web page. Calm, premium, magical. {{negatives_short}}"
+    },
+    {
+      "n": 2,
+      "id": "transformation",
+      "title": "Transformation",
+      "title_he": "טרנספורמציה",
+      "duration_sec": 7,
+      "from_key": "k1",
+      "to_key": "k2",
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level, slight low",
+        "camera_move": "orbit + push-in, accelerating"
+      },
+      "description_he": "המוצר בחוץ; האותיות הענקיות הופכות לאובייקטים פיזיים מ-{{letter_material}}; {{transformation_he}} — התנועה מאיצה עד לשיא.",
+      "video_prompt": "Continuous shot, the camera orbits and pushes closer with accelerating speed. {{video_realism}} {{transformation_c}}. The huge letters {{hero_word_q}} are solid {{letter_material}}, some behind {{product_short}}, some in front of it. {{particles_c}} move with real gravity and depth; motion builds to a euphoric peak. Product shape and branding stay accurate. {{negatives_short}}"
+    },
+    {
+      "n": 3,
+      "id": "hero",
+      "title": "Hero",
+      "title_he": "שוט הירו",
+      "duration_sec": 4,
+      "from_key": "k2",
+      "to_key": "k3",
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level, symmetrical",
+        "camera_move": "decelerating push-in → locked"
+      },
+      "description_he": "התנועה נבלמת בבת אחת לאלגנטיות איטית ומתיישבת על שוט הירו מושלם; הטאגליין {{tagline_q}} משולב בסצנה.",
+      "video_prompt": "Continuous shot. {{video_realism}} The motion suddenly turns elegant and slow, everything settles with soft inertia, the camera decelerates and locks into a perfectly symmetrical frame: {{hero_shot}}. {{tagline_clause}} Soft daylight, a last drift of {{particles_first}}. Premium, still, iconic. {{negatives_short}}"
+    }
+  ],
+  "keyframes": [
+    {
+      "id": "k0",
+      "label": "K0 — plain website",
+      "prompt": "{{shot_style}}. {{device_setting_c}}. On the laptop screen: {{website}}{{drawn_website}} Everything is completely normal and calm — nothing has emerged yet. The laptop fills the central two thirds of the frame, slightly angled toward camera. {{realism}} {{theme}}",
+      "mj_prompt": "{{device_setting_short}}, the laptop screen shows {{website}}{{mj_drawn_k0}}, everything calm and normal, laptop fills the center of the vertical frame, {{mj_style}}"
+    },
+    {
+      "id": "k1",
+      "label": "K1 — product half-out",
+      "prompt": "{{shot_style}}, the exact same laptop, table, wall and light as the reference scene. {{product_short_c}} is physically emerging from the laptop screen: {{emergence}}. About half of the product is already out in the real room, casting a real contact shadow on the oak table; the rest is still inside the website. {{drawn_k1}} {{k1_letters}} {{realism}} {{theme}}",
+      "mj_prompt": "{{product_short}} physically bursting out of a MacBook screen onto a warm oak table: {{emergence}}, half of it still inside the screen{{mj_drawn_k1}}{{mj_letters_k1}}, real contact shadow, {{mj_style}}"
+    },
+    {
+      "id": "k2",
+      "label": "K2 — transformation peak",
+      "prompt": "{{shot_style}}, a surreal moment captured for real — same oak table and cream wall, the camera now closer and slightly orbited. The peak of a magical transformation: {{transformation}}. {{k2_letters}} {{particles_c}} frozen mid-motion as if shot at 1/8000s, with a hint of motion blur on the fastest elements. The laptop is still softly visible behind, its screen blending into the room. {{product_lock}} {{realism}} {{theme}}",
+      "mj_prompt": "surreal moment captured for real: {{transformation}}{{mj_letters_k2}}, {{particles}} frozen mid-air, MacBook softly out of focus behind, camera close and slightly orbited, {{mj_style}}"
+    },
+    {
+      "id": "k3",
+      "label": "K3 — hero",
+      "prompt": "{{shot_style}}, a premium hero packshot, perfectly composed and symmetrical: {{hero_shot}}. {{k3_tagline}} The framing echoes the opening shot — the laptop softly out of focus behind, the same oak table and cream wall. {{product_lock}} {{realism}} {{theme}}",
+      "mj_prompt": "perfectly symmetrical hero packshot: {{hero_shot}}{{mj_tagline}}, MacBook softly out of focus behind on the same oak table, {{mj_style}}"
+    }
+  ],
+  "master_prompt": "Create a cinematic vertical 9:16 product advertisement in a premium editorial design style. {{realism}}\n\nA realistic {{device_setting}} displays a beautifully designed {{website}} on its screen.\n\nThe camera slowly moves through the scene with subtle handheld realism and smooth cinematic motion.\n\nWithin the first second the digital world begins to physically come alive: {{product}} emerges from the screen — {{emergence}} — and interacts naturally with the surrounding environment. {{drawn_master}}\n\nLarge, sophisticated typography spelling {{hero_word_q}} becomes part of the physical space, oversized editorial letters made of {{letter_material}}, integrated behind, around and partially obscured by the product.\n\nThe transformation should feel physically impossible but visually believable: {{transformation}}. The movement accelerates continuously.\n\nObjects, materials and particles ({{particles}}) move naturally with realistic gravity, reflections, shadows and depth.\n\nThe screen and physical environment seamlessly blend together. Maintain accurate product proportions and recognizable {{brand}} branding throughout.\n\nWarm premium art direction ({{palette}}), sophisticated editorial composition, minimal luxury aesthetic, soft natural lighting, {{look_film_look}}.\n\nThe transformation then suddenly becomes elegant and slow, resolving into a clean hero shot: {{hero_shot}}, with {{tagline_q}} clearly integrated into the environment.\n\nNo random objects, no chaotic motion, no unnecessary camera cuts, no distorted products, no floating text overlays.\n\nThe entire sequence should feel like one continuous magical transformation.",
+  "looks": {
+    "hyperreal": {
+      "description": "Default since v2 — hyperrealistic commercial cinematography; surreal events, but every material, light and physics reads as real.",
+      "shot_style": "Vertical 9:16 hyperrealistic commercial product photograph, indistinguishable from a real high-end camera capture",
+      "lighting": "motivated natural window daylight from camera-left with physically accurate global illumination, soft contact shadows, real bounce light and specular highlights",
+      "film_look": "shot on ARRI Alexa 35 with a Cooke S7/i 50mm and a Laowa probe macro for close-ups, true optical depth of field and lens breathing, micro-detail (surface pores, fibres, dust motes, fine scratches), accurate refraction and caustics in glass and liquid, subsurface scattering, real-world scale, natural film grain, ungraded-to-premium color",
+      "realism": "Hyperrealistic: real-world materials, physically correct light, reflections, refraction and shadows; every surreal element obeys real physics and looks photographed, not rendered.",
+      "video_realism": "Hyperrealistic live-action look, real physics, real optics.",
+      "negatives_extra": [
+        "no CGI or 3D-render look",
+        "no plastic or waxy textures",
+        "no cartoon or illustration (unless explicitly hand-drawn elements)",
+        "no over-smoothing or AI sheen",
+        "no oversaturation"
+      ],
+      "mj_negatives_extra": "CGI, 3D render, plastic, cartoon, illustration, oversaturated, smooth skin, AI look",
+      "mj_params": "--ar 9:16 --v 7 --style raw --s 50",
+      "film_look_short": "hyperreal live-action, Alexa 35 + macro",
+      "mj_style": "hyperrealistic commercial photography, shot on ARRI Alexa 35 with Cooke 50mm, real optical depth of field, micro-detail, natural film grain, soft window daylight from the left, cream and oak palette with {{accent_color}} accents"
+    },
+    "editorial": {
+      "description": "v1 look — warm editorial magazine photorealism.",
+      "shot_style": "Vertical 9:16 photorealistic editorial product photograph",
+      "lighting": "soft natural window daylight from camera-left, gentle warm bounce, realistic soft shadows",
+      "film_look": "photorealistic premium product cinematography, 50mm-equivalent vertical frame, shallow depth of field, subtle 35mm film grain, editorial magazine aesthetic",
+      "realism": "",
+      "video_realism": "",
+      "negatives_extra": [],
+      "mj_negatives_extra": "",
+      "mj_params": "--ar 9:16 --v 7 --style raw --s 150",
+      "film_look_short": "editorial photoreal",
+      "mj_style": "photorealistic editorial product photography, 50mm, shallow depth of field, subtle film grain, soft window daylight, cream and oak palette with {{accent_color}} accents"
+    }
+  },
+  "drawn_modes": {
+    "none": {},
+    "sketch-to-real": {
+      "description": "The product on the website is a hand-drawn sketch; its lines lift off the screen and solidify into the hyperreal product — drawing → reality is the S1 hook.",
+      "website_suffix": "The product on the page is shown as a hand-drawn sketch ({{drawn_style}}), not a photo.",
+      "k1": "The hand-drawn sketch lines of the product ({{drawn_style}}) are visibly peeling off the screen and turning into the real object mid-transition — the part still inside the screen is drawn line art, the part already out is hyperreal.",
+      "s1": "The drawn sketch of the product peels off the screen line by line and solidifies into the hyperreal object.",
+      "master": "The product first appears on the website as a hand-drawn sketch ({{drawn_style}}) whose lines peel off the screen and solidify into the hyperreal product.",
+      "k2": "",
+      "kinetic": false,
+      "mj_allow": "illustration"
+    },
+    "annotations": {
+      "description": "Hyperreal footage + animated hand-drawn accents on top (underlines, circles, arrows, sparkles, swooshes) drawn stroke-by-stroke in the kinetic-typography layer — never baked into the AI frames.",
+      "website_suffix": "",
+      "k1": "",
+      "s1": "",
+      "master": "",
+      "k2": "",
+      "kinetic": true
+    },
+    "both": {
+      "description": "sketch-to-real in S1 + animated hand-drawn accents in S2/S3.",
+      "website_suffix": "The product on the page is shown as a hand-drawn sketch ({{drawn_style}}), not a photo.",
+      "k1": "The hand-drawn sketch lines of the product ({{drawn_style}}) are visibly peeling off the screen and turning into the real object mid-transition — the part still inside the screen is drawn line art, the part already out is hyperreal.",
+      "s1": "The drawn sketch of the product peels off the screen line by line and solidifies into the hyperreal object.",
+      "master": "The product first appears on the website as a hand-drawn sketch ({{drawn_style}}) whose lines peel off the screen and solidify into the hyperreal product.",
+      "k2": "",
+      "kinetic": true,
+      "mj_allow": "illustration"
+    }
+  },
+  "mj_anchor_prompt": "studio packshot of {{product}}, brand name '{{brand}}' clearly printed, centered on a cream seamless background, nothing else in frame, {{mj_style}}",
+  "optional_beats": {
+    "macro_beat": {
+      "description": "Extra calm brand macro between the transformation peak and the hero — the rush snaps into stillness on a close-up where the brand reads perfectly. 4 clips instead of 3. ON by default since MELT (proven 4/4/3/4 structure); set \"macro_beat\": false in the brief to disable.",
+      "insert_after": "transformation",
+      "durations": {
+        "digital-to-physical": 4,
+        "transformation": 4,
+        "macro-beat": 3,
+        "hero": 4
+      },
+      "keyframe": {
+        "id": "k2b",
+        "label": "K2b — brand macro",
+        "prompt": "{{shot_style}}, an extreme macro close-up: {{macro_shot}}. Calm and still after the rush, true optical shallow depth of field. {{product_lock}} {{realism}} {{theme}}",
+        "mj_prompt": "extreme macro close-up: {{macro_shot}}, calm and still, shallow depth of field, {{mj_style}}"
+      },
+      "stage": {
+        "n": 0,
+        "id": "macro-beat",
+        "title": "Macro beat",
+        "title_he": "מאקרו מותג",
+        "duration_sec": 3,
+        "shot": {
+          "type": "ECU",
+          "angle": "high, slight top-down",
+          "camera_move": "snap-in → slow drift"
+        },
+        "description_he": "השיא נעצר בבת אחת לשקט: מאקרו של המוצר שבו שם המותג נקרא בבירור.",
+        "video_prompt": "Continuous shot. {{video_realism}} The rush suddenly snaps into stillness: the camera dives into an extreme macro of {{product_short}} — {{macro_shot}}. Shallow depth of field, a slow gentle drift, a few particles settling. Premium, sensual, calm. {{negatives_short}}"
+      },
+      "default": true
+    }
+  }
+}

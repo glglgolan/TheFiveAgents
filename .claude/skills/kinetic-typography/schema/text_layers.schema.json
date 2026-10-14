@@ -1,0 +1,439 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Kinetic typography — text_layers.json",
+  "description": "One data file, any renderer. Coordinates: x/y normalized 0..1 of the frame (layer anchor); dx/dy/z in px (1 px at z=0 in both CSS-3D and three.js); rotations in degrees; t in seconds from the layer's `from` (or 0..1 when a preset is normalized).",
+  "type": "object",
+  "required": [
+    "width",
+    "height",
+    "fps",
+    "duration_sec",
+    "layers"
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "default": 1080
+    },
+    "height": {
+      "type": "integer",
+      "default": 1920
+    },
+    "fps": {
+      "type": "number",
+      "default": 24
+    },
+    "duration_sec": {
+      "type": "number"
+    },
+    "plate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "relative to the run dir: final.mp4, or a still (keyframes/k3.png) for tests"
+    },
+    "matte": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "folder of RGBA product-cutout frames from extract_matte.sh (default matte/fg)"
+    },
+    "background": {
+      "type": "string",
+      "description": "CSS colour under the plate"
+    },
+    "perspective": {
+      "type": "number",
+      "default": 1400,
+      "description": "CSS-3D perspective in px — lower = stronger depth"
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/layer"
+      }
+    },
+    "grain": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "0..0.3 — film grain on text/drawing passes only, to sit inside live-action footage (hyperreal look)"
+        },
+        "size": {
+          "type": "number",
+          "description": "noise frequency (default 0.9)"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "keyframe": {
+      "type": "object",
+      "required": [
+        "t"
+      ],
+      "properties": {
+        "t": {
+          "type": "number"
+        },
+        "ease": {
+          "type": "string",
+          "description": "any GSAP ease: power1-4.in/out/inOut, expo, sine, back.out(2), elastic.out(1,0.4), bounce.out, steps(6)…"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "tracking": {
+          "type": "number",
+          "description": "letter spacing in em (layer level)"
+        },
+        "orbit": {
+          "type": "number",
+          "description": "ring rotation in degrees (layer level, needs `ring`)"
+        },
+        "ring": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "morph line→ring (0..1)"
+        },
+        "lrx": {
+          "type": "number"
+        },
+        "lry": {
+          "type": "number"
+        },
+        "lrz": {
+          "type": "number"
+        },
+        "lscale": {
+          "type": "number"
+        },
+        "lopacity": {
+          "type": "number"
+        },
+        "dx": {
+          "type": "number"
+        },
+        "dy": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        },
+        "rx": {
+          "type": "number"
+        },
+        "ry": {
+          "type": "number"
+        },
+        "rz": {
+          "type": "number"
+        },
+        "scale": {
+          "type": "number"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "blur": {
+          "type": "number"
+        },
+        "plane": {
+          "enum": [
+            "back",
+            "front",
+            "auto"
+          ],
+          "description": "step-switches the z-layer at this time: back = behind the product matte"
+        },
+        "draw": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "stroke progress for draw layers"
+        }
+      }
+    },
+    "layer": {
+      "type": "object",
+      "required": [
+        "id",
+        "text",
+        "font",
+        "from",
+        "to"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "split": {
+          "enum": [
+            "letter",
+            "word",
+            "none"
+          ],
+          "default": "letter"
+        },
+        "engine": {
+          "enum": [
+            "css",
+            "three"
+          ],
+          "default": "css",
+          "description": "css = CSS-3D (any Google Font, blur, shadows) · three = real lit 3D meshes (fonts/*.typeface.json)"
+        },
+        "font": {
+          "type": "object",
+          "required": [
+            "family",
+            "size"
+          ],
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "Google Font family (css engine)"
+            },
+            "weight": {
+              "type": "integer"
+            },
+            "size": {
+              "type": "number",
+              "description": "px"
+            },
+            "tracking": {
+              "type": "number",
+              "description": "em"
+            },
+            "italic": {
+              "type": "boolean"
+            },
+            "three_font": {
+              "type": "string",
+              "description": "key of fonts/<key>.typeface.json (three engine): playfair_bold, heebo_black, …"
+            }
+          }
+        },
+        "color": {
+          "type": "string"
+        },
+        "material": {
+          "enum": [
+            "flat",
+            "shadow",
+            "extruded",
+            "glass",
+            "outline"
+          ]
+        },
+        "depth": {
+          "type": "number",
+          "description": "extrusion px"
+        },
+        "plane": {
+          "enum": [
+            "back",
+            "front",
+            "auto"
+          ],
+          "default": "front",
+          "description": "auto = z<0 behind the product, z>=0 in front"
+        },
+        "from": {
+          "type": "number"
+        },
+        "to": {
+          "type": "number"
+        },
+        "anchor": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          }
+        },
+        "max_width": {
+          "type": "number",
+          "description": "fraction of frame width before wrapping on spaces"
+        },
+        "line_height": {
+          "type": "number"
+        },
+        "preset": {
+          "enum": [
+            "emerge-from-screen",
+            "orbit-behind-product",
+            "shatter-to-particles",
+            "assemble-tagline",
+            "breathe",
+            "drop-with-gravity",
+            "draw-on",
+            "draw-on-off"
+          ]
+        },
+        "preset_params": {
+          "type": "object",
+          "description": "override the preset's stagger / scatter / ring / plane"
+        },
+        "keyframes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/keyframe"
+          },
+          "description": "if present, replaces the preset's keyframes"
+        },
+        "stagger": {
+          "type": "object",
+          "properties": {
+            "each": {
+              "type": "number"
+            },
+            "from": {
+              "enum": [
+                "start",
+                "end",
+                "center",
+                "edges",
+                "random"
+              ]
+            },
+            "seed": {
+              "type": "integer"
+            }
+          }
+        },
+        "scatter": {
+          "type": "object",
+          "description": "seeded random offsets added at the listed keyframe indices",
+          "properties": {
+            "at": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            "dx": {
+              "type": "number"
+            },
+            "dy": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            },
+            "rx": {
+              "type": "number"
+            },
+            "ry": {
+              "type": "number"
+            },
+            "rz": {
+              "type": "number"
+            },
+            "scale": {
+              "type": "number"
+            },
+            "seed": {
+              "type": "integer"
+            }
+          }
+        },
+        "ring": {
+          "type": "object",
+          "properties": {
+            "radius": {
+              "type": "number"
+            },
+            "tilt": {
+              "type": "number"
+            },
+            "arc": {
+              "type": "number"
+            },
+            "face": {
+              "enum": [
+                "camera",
+                "outward"
+              ]
+            }
+          }
+        },
+        "units": {
+          "type": "object",
+          "description": "per-letter override: { \"2\": { \"keyframes\": [...] } } — letter index 2 gets its own path"
+        },
+        "type": {
+          "enum": [
+            "text",
+            "draw"
+          ],
+          "default": "text",
+          "description": "draw = hand-drawn accent (stroke draw-on + boil)"
+        },
+        "shape": {
+          "enum": [
+            "underline",
+            "circle",
+            "arrow",
+            "sparkle",
+            "swoosh",
+            "star",
+            "scribble",
+            "bracket"
+          ],
+          "description": "draw layers — built-in hand-drawn shape"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "draw layers — custom SVG path data in a 0..100 viewBox (strokes draw in order)"
+        },
+        "stroke": {
+          "type": "string"
+        },
+        "stroke_width": {
+          "type": "number"
+        },
+        "size": {
+          "type": "number",
+          "description": "draw layers — px width"
+        },
+        "aspect": {
+          "type": "number"
+        },
+        "boil": {
+          "type": "number",
+          "description": "hand-drawn wobble px at 12fps (0 = static)"
+        },
+        "env": {
+          "type": "boolean",
+          "default": true,
+          "description": "three engine — studio environment reflections"
+        },
+        "shadow_catcher": {
+          "type": "boolean",
+          "description": "three engine — soft cast shadow on a backdrop plane"
+        }
+      }
+    }
+  }
+}

@@ -42,6 +42,21 @@ description: Use when the user wants to turn raw story material into a structure
    הרשת מציגה כרטיס לכל סצנה (מספר, משך, shot, דמויות, קטע קריינות/תיאור) ומזהה אוטומטית **תמונות** שכבר נוצרו ב-`scenes/` (או `scenes_v2/` וכו', לפי שם קובץ הסטוריבורד) **וגם וידאו** שכבר נוצר בנתיב `video_output` של הסצנה. **↻ רענן** בדפדפן טוען תמונות/וידאו חדשים ברגע שנוצרים — לא צריך ליצור מחדש את ה-HTML בכל סבב. זו תוצרת קבועה של כל run, כמו `storyboard.md`, ומשמשת כ**widget למעקב אחרי כל תהליך היצירה** (תמונות → וידאו) לאורך הפרויקט — לא רק שלב אחד.
 7. **דיווח לאישור** — החזר לראובן את הטבלה + קישור ל-grid. **לא** מפעילים סוכנים אחרים מכאן.
 
+## מצב סדרה (series mode) — Surreal Product Ad
+
+כשהמשתמש רוצה **כמה פרסומות באותה שפה חזותית** ("פרסומת סוריאליסטית", "surreal product ad", "אותה סדרה", "עוד פרסומת כמו הבושם"): לא כותבים סטוריבורד חופשי — ממלאים **brief** ומריצים את הגנרטור:
+
+```bash
+python3 .claude/skills/storyboard-director/scripts/build_series.py bambi/input/surreal-ads/<slug>/brief.json
+python3 .claude/skills/storyboard-director/scripts/render_series_index.py bambi/outputs/surreal-ads
+```
+
+- חתימה נעולה: 3 שלבים (דיגיטלי→פיזי / טרנספורמציה / הירו), 15s, 9:16, שרשור keyframes K0→K3 (פריים ראשון+אחרון לכל שלב).
+- `image_route`: `gpt` (יובל) או `midjourney` (ידני — `midjourney_prompts.md`). `typography_mode`: `baked` / `hybrid` / `layered` (שכבת `kinetic-typography`).
+- widget: `render_series_grid.py` (לא `render_grid.py`) — first/last/video לכל שלב + מסלול טיפוגרפיה + final.
+- פרטים מלאים, טבלת החתימה ומשתני ה-brief: `series/surreal-product-ad/SERIES.md`. מקור הטמפלייטים: `series/surreal-product-ad/templates.json`.
+- סדרה חדשה = תיקייה חדשה תחת `series/<name>/` עם `templates.json` + `brief.schema.json`, ואז `build_series.py --series <name>`.
+
 ## עקרונות voiceover
 
 כשהמשתמש מספק קריינות מקור (טקסט חופשי, Google Doc, script קיים):
@@ -68,7 +83,7 @@ description: Use when the user wants to turn raw story material into a structure
 
 ## מגבלה ידועה
 
-`gpt-image-gen` מקבל **רפרנס יחיד**. בסצנה רב-דמותית, `reference` מצביע על עוגן הדמות הדומיננטית. שילוב כמה דמויות בפריים אחד = שיפור עתידי.
+`gpt-image-gen` תומך כיום ב-`--reference` חוזר (עד 3) — ראה CLAUDE.md, "one-shot מרובה-רפרנסים".
 
 ## Requirements
 

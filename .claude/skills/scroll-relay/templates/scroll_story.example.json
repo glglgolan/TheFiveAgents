@@ -1,0 +1,20 @@
+{
+  "fps": 24, "duration_sec": 6, "width": 1600, "height": 1040, "background": "#EFE6DA", "ink": "#2B1810",
+  "fonts": [{"family": "Playfair Display", "weights": [700, 900]}, {"family": "Inter", "weights": [400, 600]}],
+  "nav": {"brand": "MELT / CHOCOLATIER", "items": ["Shop", "Origins", "Journal"], "cta": "Order"},
+  "sections": [
+    {"id": "hero", "height": 1040,
+     "words": [{"text": "MELT", "size": 380, "x": 90, "y": 230, "plane": "back", "color": "#7A4A2A", "enter": {"t": 0.1, "dy": 80, "blur": 12, "stagger": 0.06}},
+               {"text": "made to", "size": 64, "italic": true, "x": 100, "y": 170, "plane": "front", "enter": {"t": 0.5}}],
+     "media": [{"dir": "media/bar", "x": 640, "y": 120, "w": 640, "h": 880, "map": [[0, 1], [6, 1]], "plane": 1}]},
+    {"id": "flow", "height": 1040, "bg": "#E8DCCB",
+     "words": [{"text": "FLOW", "size": 420, "x": 40, "y": 300, "plane": "back", "color": "#C9A27E", "parallax": 0.25, "enter": {"t": 1.5, "dy": 120, "stagger": 0.05}}],
+     "media": [{"dir": "media/s02", "x": 560, "y": 40, "w": 640, "h": 960, "map": [[1.2, 1], [4.3, 97]], "plane": 0}]},
+    {"id": "shop", "height": 1040,
+     "words": [{"text": "FIND YOUR BAR", "size": 110, "x": 0, "width": 1600, "align": "center", "y": 120, "plane": "front", "enter": {"t": 4.6, "stagger": 0.03}}],
+     "cards": [{"x": 300, "y": 360, "w": 300, "h": 420, "img": "media/bar/000001.png", "title": "Dark 72%", "price": "$9", "enter": 4.9},
+               {"x": 650, "y": 360, "w": 300, "h": 420, "img": "media/s02/000090.jpg", "title": "Molten", "price": "$12", "enter": 5.05},
+               {"x": 1000, "y": 360, "w": 300, "h": 420, "img": "media/bar/000001.png", "title": "Gold Foil", "price": "$14", "enter": 5.2}]}
+  ],
+  "scroll": [{"t": 0, "y": 0}, {"t": 1.0, "y": 0}, {"t": 1.8, "y": 1040, "ease": "inOut"}, {"t": 4.2, "y": 1040}, {"t": 4.9, "y": 2080, "ease": "inOut"}, {"t": 6, "y": 2080}]
+}

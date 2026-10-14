@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Surreal Product Ad — brief",
+  "description": "One brief = one reel in the surreal-product-ad series. Prompt values in English; *_he fields in Hebrew for the storyboard table.",
+  "type": "object",
+  "required": [
+    "slug",
+    "brand",
+    "product",
+    "product_he",
+    "website",
+    "hero_word",
+    "letter_material",
+    "emergence",
+    "transformation",
+    "transformation_he",
+    "particles",
+    "accent_color",
+    "hero_shot",
+    "tagline"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "e.g. perfume, coffee, f1"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name shown on the product/site (fictional placeholder or real client)"
+    },
+    "product": {
+      "type": "string",
+      "description": "Precise visual description of the product — shape, material, colour, label. Reused in every prompt for consistency"
+    },
+    "product_short": {
+      "type": "string",
+      "description": "Short name used in video prompts (keeps them 60–90 words), e.g. 'the MAISON ROSÉ glass perfume bottle'"
+    },
+    "product_he": {
+      "type": "string",
+      "description": "שם המוצר בעברית לטבלה (למשל: בקבוק הבושם)"
+    },
+    "device_setting": {
+      "type": "string",
+      "description": "Override the series-default MacBook-on-oak-table setting (keep it for series consistency)"
+    },
+    "website": {
+      "type": "string",
+      "description": "What the site on screen looks like — layout, colours, hero image, the big editorial word"
+    },
+    "hero_word": {
+      "type": "string",
+      "maxLength": 6,
+      "description": "Stage-2 giant physical word, ≤6 letters, UPPERCASE (PINK, GRIND, FAST)"
+    },
+    "letter_material": {
+      "type": "string",
+      "description": "What the physical letters are made of"
+    },
+    "emergence": {
+      "type": "string",
+      "description": "Stage 1 — HOW the product breaks out of the screen"
+    },
+    "transformation": {
+      "type": "string",
+      "description": "Stage 2 — the impossible physical transformation"
+    },
+    "transformation_he": {
+      "type": "string",
+      "description": "תיאור הטרנספורמציה בעברית לטבלה"
+    },
+    "particles": {
+      "type": "string",
+      "description": "Secondary elements in motion (mist, petals, beans, spray)"
+    },
+    "environment": {
+      "type": "string",
+      "description": "Optional extra environment notes added to the theme"
+    },
+    "accent_color": {
+      "type": "string",
+      "description": "Brand accent on top of the series' cream/beige base"
+    },
+    "hero_shot": {
+      "type": "string",
+      "description": "Stage 3 — the final perfectly composed product shot"
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Final tagline, UPPERCASE recommended"
+    },
+    "tagline_integration": {
+      "type": "string",
+      "description": "How the tagline physically lives in the hero scene"
+    },
+    "sound_hint": {
+      "type": "string"
+    },
+    "image_route": {
+      "enum": [
+        "gpt",
+        "midjourney"
+      ],
+      "default": "gpt",
+      "description": "gpt = Yuval via gpt-image-gen · midjourney = manual, from midjourney_prompts.md"
+    },
+    "typography_mode": {
+      "enum": [
+        "baked",
+        "hybrid",
+        "layered"
+      ],
+      "default": "hybrid",
+      "description": "baked = all text inside keyframes · hybrid = hero_word baked, tagline animated in the typography layer · layered = no text in keyframes, everything animated"
+    },
+    "font_family": {
+      "type": "string",
+      "description": "Google Font for the typography layer (default Playfair Display)"
+    },
+    "mj_style_ref": {
+      "type": "string",
+      "description": "Optional Midjourney --sref URL (series style image)"
+    },
+    "mj_product_ref": {
+      "type": "string",
+      "description": "Optional Midjourney --oref URL (product image)"
+    },
+    "text_layers": {
+      "type": "array",
+      "description": "Optional override — full kinetic-typography layers (see .claude/skills/kinetic-typography/schema/text_layers.schema.json). If omitted, the builder generates defaults from typography_mode"
+    },
+    "accent_hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Accent colour hex for animated letters"
+    },
+    "text_hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Tagline text colour hex (dark reads best on the cream set)"
+    },
+    "look": {
+      "enum": [
+        "hyperreal",
+        "editorial"
+      ],
+      "default": "hyperreal",
+      "description": "hyperreal (v2 default) = hyperrealistic live-action look; editorial = v1 warm magazine photorealism"
+    },
+    "drawn_mode": {
+      "enum": [
+        "none",
+        "sketch-to-real",
+        "annotations",
+        "both"
+      ],
+      "default": "none",
+      "description": "Hand-drawn elements joined with the hyperreal footage: sketch-to-real = the website shows a drawn sketch that becomes the real product (baked into K0/K1/S1); annotations = animated hand-drawn accents in the kinetic layer; both"
+    },
+    "drawn_style": {
+      "type": "string",
+      "description": "Style of the drawn elements (default: fine white ink hand-drawn line art)"
+    },
+    "drawn_hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Stroke colour of animated hand-drawn accents (default text_hex)"
+    },
+    "tagline_y": {
+      "type": "number",
+      "minimum": 0.05,
+      "maximum": 0.9,
+      "default": 0.16,
+      "description": "Vertical position of the animated tagline (0=top) — move it when the hero frame's empty space differs"
+    },
+    "macro_beat": {
+      "type": [
+        "boolean",
+        "object"
+      ],
+      "description": "Add a calm brand-macro beat (keyframe k2b) between the transformation peak and the hero → 4 clips (4/4/3/4s). Object form: {\"shot\": \"<macro description>\"}"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-07-24
+last_updated: 2026-09-07
 ---
 
 # TheFiveAgents — מפתח ידע
@@ -26,6 +26,7 @@ last_updated: 2026-07-24
 - [[CLAUDE-md]] — הוראות ראשיות לסוכן ראובן
 - [[env-example]] — משתני סביבה לפרויקט
 - [[gitignore]] — קבצים להתעלמות מ-Git
+- [[launch-json]] — שרת preview סטטי (פורט 8765)
 
 ---
 
@@ -56,8 +57,13 @@ last_updated: 2026-07-24
 
 ### וידאו / סטוריבורד
 - [[storyboard-director]] — סיפור גולמי → סטוריבורד מובנה (במבי)
+- [[sitcom-recreation]] — סצנה בסגנון סדרה קיימת ב-MiniMax H3 (cast + theme עקביים)
 - [[openrouter-video-gen]] — יצירת קליפים דרך OpenRouter (the-video-man)
 - [[video-editor]] — עריכה/הרכבה ב-ffmpeg: מעברים, מהירות, אודיו, ייצוא (the-video-man)
+- [[kinetic-typography]] — טיפוגרפיה מונפשת ב-Remotion: keyframes פר-אות, 3D, טקסט מאחורי המוצר (the-video-man)
+- [[cinematic-finish]] — גימור ברמת סוכנות: אפקטים בקוד + סאונד היברידי (MELT)
+- [[scroll-relay]] — אתר שגולל בלפטופ + דקדוק relay/exploded/cadence (פענוח enky)
+- [[surreal-product-ad-series]] — סדרת פרסומות 9:16 מ-brief: דיגיטלי→פיזי→טרנספורמציה→הירו (במבי)
 
 ---
 
@@ -71,3 +77,9 @@ obsidian-vault/
 ├── skills/              ← תיעוד לכל סקיל
 └── config/              ← תיעוד לקבצי הגדרות
 ```
+- [[canva_designer]]
+- [[presentation_builder]]
+- [[spa-builder]]
+- [[face-fidelity]]
+- [[gemini-image-gen]]
+- [[presentation-builder]]

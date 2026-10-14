@@ -1,0 +1,11 @@
+{
+  "description": "Letters fall from above with physical gravity and a bounce onto the table plane (good for heavy materials: clay, chocolate, metal).",
+  "normalized": true,
+  "plane": "front",
+  "stagger": { "each": 0.09, "from": "start" },
+  "keyframes": [
+    { "t": 0,    "dy": -1200, "rz": -12, "opacity": 1 },
+    { "t": 0.55, "dy": 0, "rz": 0, "ease": "bounce.out" },
+    { "t": 1,    "dy": 0 }
+  ]
+}

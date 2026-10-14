@@ -1,0 +1,11 @@
+{
+  "description": "Letters fly out of the laptop screen plane toward camera (z -900 → overshoot → rest), staggered from the centre. Stage 1.",
+  "normalized": true,
+  "plane": "front",
+  "stagger": { "each": 0.07, "from": "center" },
+  "keyframes": [
+    { "t": 0,    "z": -900, "rx": 28, "scale": 0.55, "opacity": 0, "blur": 16 },
+    { "t": 0.5,  "z": 140,  "rx": -4, "scale": 1.08, "opacity": 1, "blur": 0, "ease": "power3.out" },
+    { "t": 1,    "z": 0,    "rx": 0,  "scale": 1,    "opacity": 1, "blur": 0, "ease": "power2.inOut" }
+  ]
+}

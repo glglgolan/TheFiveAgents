@@ -1,6 +1,6 @@
 ---
 name: openrouter-video-gen
-description: Generate videos via OpenRouter Video API (async). Supports Kling v3.0 Pro, Seedance 2.0, and Seedance 2.0 Fast. Text-to-video or image-to-video with reference image (sent via input_references). Auto-derives aspect ratio from reference. Used by the-video-man agent as the OpenRouter pathway (alongside an optional Kling-via-MCP pathway).
+description: Generate videos via OpenRouter Video API (async). Supports Kling v3.0 Pro, Seedance 2.0 family (2.0 / Fast / Mini), FLUX.3 Video, and MiniMax H3. Text-to-video or image-to-video with reference image (sent via input_references). Auto-derives aspect ratio from reference. Used by the-video-man agent as the OpenRouter pathway (alongside an optional Kling-via-MCP pathway).
 ---
 
 # openrouter-video-gen
@@ -13,11 +13,18 @@ description: Generate videos via OpenRouter Video API (async). Supports Kling v3
 
 ## מודלים נתמכים
 
-| מודל | ID | מחיר משוער |
+מחירים מאומתים ישירות מול openrouter.ai/models ב-2026-08-20 (לא הערכה).
+
+| מודל | ID | מחיר |
 |---|---|---:|
 | Kling v3.0 Pro | `kwaivgi/kling-v3.0-pro` | ~$0.05/sec |
-| Seedance 2.0 | `bytedance/seedance-2.0` | ~$0.10/sec |
-| Seedance 2.0 Fast | `bytedance/seedance-2.0-fast` | ~$0.12/sec (עם רפרנס) |
+| Seedance 2.0 | `bytedance/seedance-2.0` | $0.06726/sec |
+| Seedance 2.0 Fast | `bytedance/seedance-2.0-fast` | $0.04035/sec |
+| Seedance 2.0 Mini | `bytedance/seedance-2.0-mini` | $0.01345/sec (**60% הנחה זמנית** — לבדוק שוב לפני הרצות גדולות, ההנחה עלולה לפוג) |
+| FLUX.3 Video | `black-forest-labs/flux-3-video` | $0.17/sec ב-720p, עד $0.53/sec ב-1080p continuation. תומך first+last frame ואודיו מסונכרן. ⚠️ זמינות 67% ב-3 ימים אחרונים — מודל חדש/לא יציב, לצפות לכשלים |
+| MiniMax H3 | `minimax/hailuo-3` | $0.13/sec. תומך first+last frame, video-to-video motion transfer. זמינות 92.7% |
+
+**LTX Video אינו זמין ב-OpenRouter** (נבדק 2026-08-20, אין תוצאה בקטלוג).
 
 ## שימוש
 
@@ -42,6 +49,14 @@ bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
     "<output>.mp4" \
     --model kwaivgi/kling-v3.0-pro \
     --reference yuval/outputs/wedding_images/scene21.png
+
+# פריים ראשון + פריים אחרון (interpolation) — לשרשור keyframes רציף
+bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
+    "<prompt>" \
+    "<output>.mp4" \
+    --model kwaivgi/kling-v3.0-pro \
+    --reference keyframes/k0.png \
+    --end-frame keyframes/k1.png
 ```
 
 ## פרמטרים
@@ -54,6 +69,7 @@ bash .claude/skills/openrouter-video-gen/scripts/generate-video.sh \
   - יש `--reference` → נגזר אוטומטית מממדי התמונה.
   - אין → `16:9`.
 - `--reference` — נתיב לתמונה (PNG/JPG). תקודד ל-base64 data URL ותישלח כ-`input_references: [{type: "image_url", image_url: {url: ...}}]` ב-payload (הפורמט הרשמי של OpenRouter, לפי cookbook: reference-to-video).
+- `--end-frame` — נתיב לתמונת **פריים אחרון**. כשקיים, הבקשה נשלחת כ-`frame_images` (`frame_type: first_frame` מ-`--reference` + `frame_type: last_frame`) במקום `input_references`. דורש מודל שמופיע עם `"last_frame"` ב-`supported_frame_images` (`curl https://openrouter.ai/api/v1/videos/models`). נבדק 2026-10-08 — תומכים: Kling v3.0 Pro/Std, Kling O1, Seedance 2.0 / Fast / Mini / 2.5, Hailuo 3 / 3-max, FLUX.3 Video, Veo 3.1, Wan 2.7. לא תומכים: Grok Imagine, Runway Gen-4.5, Wan 3.0, HappyHorse. משמש את סדרת `surreal-product-ad` (שרשור K0→K1→K2→K3).
 
 ## Flow פנימי
 

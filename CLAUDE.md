@@ -23,6 +23,7 @@
 | **the-font-designer** | מעצב הפונטים — יצירת פונטים עבריים נכונים כווריאציה מבסיס OFL |
 | **presentation_builder** | בונה המצגות — מצגות/פיצ'דקים מנושא + חומרי רקע (HTML / PPTX / Remotion MP4) |
 | **spa-builder** | בונה אפליקציות הווב — אפליקציות SPA / דפים אינטראקטיביים / דשבורדים / כלים |
+| **canva_designer** | בונה העיצובים הממותגים — פוסטים/באנרים/פלייארים/כרטיסי ביקור/לוגואים דרך Canva MCP, כולל brand kit |
 
 ---
 
@@ -69,6 +70,13 @@ bambi/         # workspace של במבי, הבמאי
   │       └── scenes/  # תמונות פריים-ראשון פר סצנה (sNN.png)
   └── Memory/
       └── jobs.md      # לוג סטוריבורדים
+canva/         # workspace של canva_designer
+  ├── Memory/
+  │   └── jobs.md      # לוג עיצובים (query, brand kit, design_url, QA עברית)
+  └── outputs/         # עיצובים מוגמרים — תת-תיקייה לפר-פרוייקט
+      └── <project>/<YYYY-MM-DD>-<slug>/
+          ├── design_url.txt   # קישור עריכה בקנבה
+          └── export.<ext>     # קובץ מיוצא, אם התבקש
 Content/       # מאמרי גלם (מקור: ידני או מחן — input ליעל)
 Output/        # תוצרים סופיים (.md + .html)
 ```
@@ -88,7 +96,8 @@ Output/        # תוצרים סופיים (.md + .html)
 **Triggers (English):** image of, picture of, generate image, illustration, draw
 **Reference:** `yuval/reference/`
 **Output:** `yuval/outputs/<YYYY-MM-DD>-<slug>.png` + sibling `.txt` (עם ה-prompt)
-**Skill:** `gpt-image-gen` · `face-fidelity` (החלפת פנים מקומית לדיוק פנים — חינמי, ללא טוקנים)
+**Skill:** `gpt-image-gen` (ברירת מחדל, וקבוע ל-pipeline של במבי) · `gemini-image-gen` (Gemini, אלטרנטיבה נבחרת — ⚠️ זמנית לא זמינה: 429 quota=0 גם עם billing מחובר, כנראה billing על פרויקט GCP לא-נכון) · `face-fidelity` (החלפת פנים מקומית לדיוק פנים — חינמי, ללא טוקנים)
+**בחירת ספק:** בקשת תמונה בודדת → OpenAI בלי לשאול. "פרויקט מלא" (כמה תמונות) → שואל קודם OpenAI/Gemini/ספק אחר. pipeline של במבי (cast/סצנות) תמיד ב-`gpt-image-gen`.
 **דיוק פנים:** כשהתמונה כוללת אדם אמיתי עם רפרנס — יובל מריץ `face-fidelity` swap מהפרוקסי האמיתי אחרי היצירה
 
 ### חן — חוקרת הרשת
@@ -112,6 +121,7 @@ Output/        # תוצרים סופיים (.md + .html)
 **Input:** חומר גלם ב-`bambi/input/<project>/` — סיפור מלוכלך *או* סטוריבורד מוכן לסידור
 **Output:** `bambi/outputs/<project>/<YYYY-MM-DD>-<slug>/storyboard.json` + `storyboard.md` + `storyboard_grid.html` (רשת חזותית חיה) + entry ב-`bambi/Memory/jobs.md`
 **Skill:** `storyboard-director` (כולל `schema.json` + `scripts/render_md.py` + `scripts/render_grid.py`)
+**מצב סדרה:** `scripts/build_series.py` + `series/surreal-product-ad/` — brief → סטוריבורד 3-שלבי נעול (9:16, 15s, keyframes K0→K3), widget (`render_series_grid.py`), `production.md`, `midjourney_prompts.md`. Triggers: "פרסומת סוריאליסטית", "סדרת פרסומות", "אותה סדרה", "surreal product ad". ראה Flow "סדרת Surreal Product Ad"
 **התנהגות:** מזהה **לבד** סיפור גולמי (פירוק מלא) מול סטוריבורד מוכן (נירמול בלבד); מחזיר JSON+MD לאישור; **לא** מפעיל סוכנים אחרים
 **הערה:** את התמונות/וידאו מריץ **ראובן** אחרי אישור — ראה Flow "סיפור → סטוריבורד → תמונות → וידאו"
 
@@ -122,6 +132,11 @@ Output/        # תוצרים סופיים (.md + .html)
 **Output:** `the-video-man/outputs/<project>/<YYYY-MM-DD>-<slug>.mp4` + `.txt` + entry ב-Memory
 **Skill:** `openrouter-video-gen` (Kling v3.0 Pro / Seedance 2.0 / Seedance 2.0 Fast, דרך OpenRouter) — נתיב נוסף: Kling ישירות דרך MCP server (`klingai`), כשמחובר; אין skill מקומי לנתיב הזה, זו קריאת MCP tool ישירה
 **Skill (עריכה/פוסט):** `video-editor` — עוטף ffmpeg להרכבת הקליפים לסרט מוגמר: מעברים חלקים (xfade), התאמת מהירות ל-voiceover (`fit_to_audio`), מיקס קריינות+מוזיקה עם ducking, כתוביות RTL, ייצוא H.264. דורש `ffmpeg`≥4.3. זרימה: `build_plan_from_storyboard.py` → `assemble.py` → `<run>/final.mp4`
+**Skill (טיפוגרפיה מונפשת):** `kinetic-typography` — שכבת טקסט מעל וידאו מוגמר ב-Remotion: keyframes פר-אות (x/y/z/סיבוב/scale/blur, כל ease של GSAP, stagger/scatter), CSS-3D או three.js (אותיות תלת-ממד אמיתיות, כולל עברית), ו-**z-index אמיתי** — אותיות עוברות מאחורי המוצר דרך matte מקומי (rembg). מקומי, ללא עלות API; ffmpeg מובנה ב-venv שלו (`concat.sh`, `mux_audio.sh`). Studio: `preview_start "typo-studio"`. Triggers: "טקסט שזז", "טיפוגרפיה מונפשת", "אותיות תלת-ממד", "טקסט מאחורי המוצר", "kinetic typography"
+**Skill (גימור ברמת סוכנות):** `cinematic-finish` — הפלייבוק של MELT לגימור אחרי שהקליפים קיימים. אפקטי תמונה בקוד: speed-ramp, impact, שברי זכוכית נושאי-מסך, whip-pan, grade. סאונד היברידי: CUES.md ממפת התנועה, ואז סוכן composer (Sonnet) שכותב stems בקוד נעולים לפריים, ואז SFX פיזיים ב-ElevenLabs (2 takes, נבחרים בניתוח), ואז מיקס בגיין סטטי עם true-peak limiter (**אסור loudnorm דינמי**). Triggers: "שייראה מקצועי", "אפקטי עריכה", "מוזיקה ו-SFX", "סאונד", "חוויה אקסטרימית", "agency level"
+**Skill (אתר שגולל בלפטופ):** `scroll-relay` — שוט לפטופ נעול שבתוך המסך שלו אתר גולל כלפי מטה. פרקים מחוברים ב-relay של חומר (פולים → מטחנה → טחון → דריפר → כוס), exploded view של המוצר, מילים ענקיות מאחורי החלקים, ו-reveal כל ≤0.7s. מנוע: קומפוזיציית `ScrollStory` (Remotion) ו-`screen_insert.py` (green-screen pin). הדקדוק (relay / cadence / exploded) חובה גם בפורמט breakout. Triggers: "אתר שגולל", "פירוק המכונה לחלקים", "המשכיות כלפי מטה", "exploded view", "scroll website reel"
+**פריים ראשון+אחרון:** `generate-video.sh ... --reference <first> --end-frame <last>` (Kling v3.0 Pro / Seedance 2.0 / Hailuo 3 / Veo 3.1)
+**Skill (מסלול חלופי, ללא AI גנרטיבי):** `code-film-studio` — סרט שלם נוצר **כולו בקוד**: ויזואל ב-Remotion/React/SVG, קולות `say` קלאסיים בלבד, מוזיקה/SFX/ליפסינק מסונתזים (numpy/scipy, ללא ML), רינדור CPU בלבד. Triggers: "בקוד בלבד", "בלי AI גנרטיבי", "purely in code", "without generative AI". יקר ואיטי יחסית (תזמור רב-סוכנים) — the-video-man מדווח הערכת עלות ומחכה לאישור לפני שמתחיל. פרטים: `.claude/skills/code-film-studio/SKILL.md`
 **ברירות מחדל:** משך 5s · AR 16:9 (או נגזר מהרפרנס אם קיים)
 **התנהגות:** **תמיד שואל איזה מודל** לפני הרצה, ומציע המלצה לפי סוג הסצנה. **וגם**, אם קיימות שתי שיטות ייצור זמינות (OpenRouter + Kling MCP), שואל קודם איזו שיטה
 **דרישה:** `OPENROUTER_API_KEY` תקין ב-`.env` (לנתיב OpenRouter)
@@ -154,6 +169,15 @@ Output/        # תוצרים סופיים (.md + .html)
 **Skill:** `spa-builder`
 **התנהגות:** **מחליט לבד** קובץ-יחיד מול framework לפי הבקשה; שואל רק כשעמום. שאלות מינימליות (סגנון, שפה אם לא ברור); QA בדפדפן אמיתי
 **הבחנה:** ל**אפליקציות/דפים** בלבד. מצגות/דקים → `presentation_builder`
+
+### canva_designer — בונה העיצובים הממותגים
+**Triggers (עברית):** קנבה, עיצוב ממותג, פוסט לרשתות, פוסט לאינסטגרם/פייסבוק, באנר, פלייר, כרטיס ביקור, לוגו, תבנית מיתוג, brand kit
+**Triggers (English):** canva, branded design, social post, banner, flyer, business card, logo, brand template, brand kit
+**Input:** תיאור העיצוב (כולל טקסט מדויק לשילוב) + design_type + brand kit אופציונלי מראובן
+**Output:** `canva/outputs/<project>/<YYYY-MM-DD>-<slug>/design_url.txt` (קישור עריכה בקנבה) + `export.<ext>` אם התבקש ייצוא + entry ב-`canva/Memory/jobs.md`
+**MCP:** מחובר כ-connector של claude.ai בשם "Canva" (`claude mcp list`), tools תחת prefix `mcp__<connector-id>__*` — connector ברמת claude.ai ולא project `.mcp.json` כמו klingai, אז ה-ID יכול להשתנות אם המשתמש מנתק/מחבר מחדש
+**התנהגות:** שואל brand kit לפני generate-design (`list-brand-kits` אם כן); **QA חזותי חובה על כל candidate לפני הצגה** — נבדק ואומת: עברית מיוצרת עם איות נכון וכיווניות RTL תקינה, **אבל** יש bug אמיתי של גלישת טקסט RTL מעבר לקצה ה-canvas ב-autofit — צריך לפתוח כל thumbnail ולבדוק חיתוך לפני שמציגים למשתמש; ייצוא רק בפורמט שאושר ע"י `get-export-formats`
+**הבחנה:** לעיצובים **ממותגים/מבוססי-תבנית** (פוסטים, באנרים, פלייארים, לוגואים, כרטיסי ביקור). **לא** למצגות/דקים (`generate-design` לא תומך ב-`presentation` בכלל → `presentation_builder`), **לא** לאפליקציות (`spa-builder`), **לא** לאיור מותאם-אישית בלי brand kit (`יובל`)
 
 ---
 
@@ -198,6 +222,24 @@ Output/        # תוצרים סופיים (.md + .html)
 5. **שלב הרכבה סופית (אופציונלי)** — אם המשתמש רוצה סרט מוגמר (לא רק קליפים בודדים): ראובן מפעיל את **the-video-man** עם skill `video-editor`. אם יש `narration` בסטוריבורד — מרכיבים קודם קובץ קריינות מוקלט (הקלטה אנושית או TTS חיצוני, מחוץ לצוות הסוכנים) ומזינים אותו כ-`--voiceover` עם `--fit-to-audio` (מותח את הקליפים כך שאורך הסרט = אורך הקריינות). פלט: `<run>/final.mp4`.
 
 **מקרה קצה:** אם ה-input כבר סטוריבורד מוכן, במבי רק מנרמל אותו לסכמה (שלב 1 מתקצר); השלבים 2–5 זהים.
+
+---
+
+## Flow: סדרת Surreal Product Ad (Digital → Physical → Transformation → Hero)
+
+כשמבקשים פרסומת מוצר בשפה הסוריאליסטית הקבועה (או "עוד אחת לסדרה"):
+
+1. **brief** — ראובן/במבי ממלאים `bambi/input/surreal-ads/<slug>/brief.json` (מותג, מוצר, מילה ≤6 אותיות, חומר האותיות, טרנספורמציה, הירו, טאגליין, צבע מבטא; `look` = `hyperreal` (ברירת מחדל) | `editorial`; `drawn_mode` = `none`|`sketch-to-real`|`annotations`|`both`; `image_route` = `gpt`|`midjourney`; `typography_mode` = `baked`|`hybrid`|`layered`).
+2. **במבי** — `build_series.py <brief>` → `bambi/outputs/surreal-ads/<date>-<slug>/` (storyboard + `storyboard_grid.html` + `production.md` + `midjourney_prompts.md` + `master_prompt.txt` + `text_layers.json`). **עוצרים לאישור.**
+3. **keyframes** — `gpt`: **יובל** מייצר עוגן מוצר ואז K0→K3 (כל K עם העוגן + ה-K הקודם כ-`--reference`). `midjourney`: המשתמש מייצר ידנית מ-`midjourney_prompts.md` ושומר ל-`keyframes/kN.png`. ה-widget מזהה בשני המקרים (↻).
+3a. **relay + exploded + cadence** (חובה) — במבי כותב שרשרת relay (פלט כל שלב = קלט הבא, כלפי מטה), ביט exploded-view של המוצר, וטבלת reveals לשנייה (≤0.7s). פורמט חלופי: `format: "scroll-relay"` (skill `scroll-relay`).
+3b. **QA רציפות** — כל זוג K(n)→K(n+1): אותו צד מוצר, אותו מיקום ביס/נזק, אותו סט. תיקון זול: Nano Banana 2 דרך Kling (15 קרדיטים).
+4. **the-video-man** — 4 קליפים (4/4/3/4 כולל macro beat, ברירת מחדל), first+tail (Kling MCP v3.0 מומלץ; שואל מודל ושיטה כרגיל) → `concat.sh` → `fx_edit.py` של `cinematic-finish` (אפקטי תמונה בקוד) → `final.mp4`.
+5. **kinetic-typography** (אם `hybrid`/`layered`) — שכבות מעוגנות בלבד, ורק אחרי שהמצלמה נעצרת → `render.sh` → `final_typo.mp4`.
+5b. **סאונד היברידי** (`cinematic-finish` §B) — `motion_map.py`, ואז `audio/v4/CUES.md`, ואז composer ברקע ו-SFX מ-`sfx_plan.json` (estimate ואישור), ואז `mix.py` → `<BRAND>_final.mp4`.
+6. **פיילוט ראשון** על פרסומת אחת + השוואה ל-one-shot (`master_prompt.txt`, קליפ 15s יחיד) לפני הרצת כל הסדרה. **מציגים עלות ומחכים לאישור** לפני כל הרצה בתשלום.
+
+אינדקס הסדרה: `python3 .claude/skills/storyboard-director/scripts/render_series_index.py bambi/outputs/surreal-ads` → `index.html`. פרטים: `.claude/skills/storyboard-director/series/surreal-product-ad/SERIES.md`.
 
 ---
 

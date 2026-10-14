@@ -1,0 +1,94 @@
+{
+  "project": "my-sitcom",
+  "series_note": "Original ensemble sitcom in the visual language of a 90s multi-cam studio comedy.",
+  "format": "multi-cam studio sitcom",
+  "aspect_ratio": "16:9",
+  "model": "minimax/hailuo-3",
+  "default_duration": 8,
+  "look": {
+    "preset": "90s multi-cam studio sitcom",
+    "prompt_string": "Shot on 35mm film with a four-camera studio setup in front of a live audience, warm high-key lighting with soft fill and almost no shadows, medium focal length lenses, rich saturated palette of warm oranges, olive greens and browns, practical table lamps and neon signs in frame, fine 35mm grain, locked-off camera, proscenium apartment set with the fourth wall open to the audience."
+  },
+  "audio_bed": {
+    "ambience": "room tone of a small city apartment",
+    "laugh": "a warm studio audience laugh beginning right after the last line",
+    "music": "no music"
+  },
+  "cast": [
+    {
+      "id": "nora",
+      "name": "Nora",
+      "description": "woman in her late twenties, shoulder-length dark brown hair with a center part, expressive brown eyes, sharp features",
+      "wardrobe": "olive green cardigan over a white tee, high-waisted jeans",
+      "voice": "dry and deadpan",
+      "anchor_image": "bible/cast/nora.png",
+      "anchor_ready": false,
+      "source": "original archetype"
+    },
+    {
+      "id": "dev",
+      "name": "Dev",
+      "description": "man in his early thirties, short black curly hair, round friendly face, light stubble",
+      "wardrobe": "rust-orange flannel shirt over a grey henley, dark corduroys",
+      "voice": "warm and slightly clueless",
+      "anchor_image": "bible/cast/dev.png",
+      "anchor_ready": false,
+      "source": "original archetype"
+    }
+  ],
+  "sets": [
+    {
+      "id": "apartment",
+      "name": "The apartment living room",
+      "description": "a cozy third-floor apartment living room, worn brown couch facing the camera, mismatched armchair, cluttered kitchen counter behind, a large window with a fire escape, framed posters on warm ochre walls",
+      "line_of_action": "couch faces the fourth wall; Nora always camera-left, Dev always camera-right",
+      "plate_image": "bible/sets/apartment_ensemble.png"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s01",
+      "set": "apartment",
+      "characters": ["nora", "dev"],
+      "duration": 8,
+      "beat": "setup",
+      "shot": { "type": "MS", "angle": "eye level", "camera_tag": "[Static shot]" },
+      "framing": "two-shot, both seated on the couch, Nora camera-left, Dev camera-right",
+      "image_prompt": "Two-shot of Nora seated camera-left and Dev seated camera-right on the worn brown couch, both facing the open fourth wall, eye-level medium shot, table lamp glowing behind them.",
+      "timeline": [
+        "0-2s Dev turns to Nora holding a mug",
+        "2-6s Dev speaks, Nora slowly lowers her book",
+        "6-8s Nora answers flatly and returns to the book"
+      ],
+      "dialogue": [
+        { "who": "dev", "delivery": "warm and slightly clueless", "line": "I think the plant is judging me." },
+        { "who": "nora", "delivery": "flat, without looking up", "line": "It should." }
+      ],
+      "sfx": "a mug set down on a wooden table",
+      "constraints": "faces, hair, wardrobe and set exactly as in the reference frame; camera stays locked",
+      "reference": "frames/s01.png",
+      "image_output": "frames/s01.png",
+      "video_output": "videos/s01.mp4"
+    },
+    {
+      "id": "s02",
+      "set": "apartment",
+      "characters": ["nora"],
+      "duration": 6,
+      "beat": "reaction",
+      "shot": { "type": "MCU", "angle": "eye level", "camera_tag": "[Push in]" },
+      "framing": "medium close-up on Nora, camera-left of frame center",
+      "image_prompt": "Medium close-up of Nora on the couch, book half lowered, one eyebrow raised, warm lamp light from behind.",
+      "timeline": [
+        "0-3s Nora holds a flat stare toward Dev off-screen",
+        "3-6s she shakes her head once and lifts the book back up"
+      ],
+      "dialogue": [],
+      "sfx": "a page turning",
+      "constraints": "same face, hair and cardigan as the reference frame; slow push-in only, no pan",
+      "reference": "frames/s02.png",
+      "image_output": "frames/s02.png",
+      "video_output": "videos/s02.mp4"
+    }
+  ]
+}

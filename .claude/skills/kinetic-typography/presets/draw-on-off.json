@@ -1,0 +1,11 @@
+{
+  "description": "Hand-drawn accent that draws on, holds, then fades away — for transient emphasis during the transformation.",
+  "normalized": true,
+  "plane": "front",
+  "keyframes": [
+    { "t": 0,    "draw": 0, "lopacity": 1 },
+    { "t": 0.35, "draw": 1, "ease": "power2.out" },
+    { "t": 0.75, "lopacity": 1 },
+    { "t": 1,    "lopacity": 0, "ease": "power2.in" }
+  ]
+}

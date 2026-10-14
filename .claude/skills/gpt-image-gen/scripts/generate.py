@@ -97,7 +97,7 @@ def call_generations(endpoint: str, key: str, model: str, prompt: str, size: str
             "Content-Type": "application/json",
         },
     )
-    with urllib.request.urlopen(req, timeout=180) as r:
+    with urllib.request.urlopen(req, timeout=420) as r:
         return json.loads(r.read())
 
 
@@ -146,7 +146,7 @@ def call_edits(endpoint: str, key: str, model: str, prompt: str, size: str, qual
             "Content-Type": f"multipart/form-data; boundary={boundary}",
         },
     )
-    with urllib.request.urlopen(req, timeout=240) as r:
+    with urllib.request.urlopen(req, timeout=420) as r:
         return json.loads(r.read())
 
 

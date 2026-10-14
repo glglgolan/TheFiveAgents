@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "typo-studio",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        ".claude/skills/kinetic-typography/scripts/studio.sh"
+      ],
+      "port": 3123
+    }
+  ]
+}

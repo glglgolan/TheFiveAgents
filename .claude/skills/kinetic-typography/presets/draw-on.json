@@ -1,0 +1,10 @@
+{
+  "description": "Hand-drawn accent: the stroke draws itself on (multi-stroke shapes draw stroke after stroke), then stays with a gentle boil.",
+  "normalized": true,
+  "plane": "front",
+  "keyframes": [
+    { "t": 0,    "draw": 0, "lopacity": 1, "lscale": 0.98 },
+    { "t": 0.45, "draw": 1, "lscale": 1, "ease": "power2.out" },
+    { "t": 1,    "draw": 1 }
+  ]
+}

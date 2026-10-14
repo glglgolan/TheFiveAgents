@@ -1,6 +1,6 @@
 ---
 file_path: .claude/skills/storyboard-director/SKILL.md
-last_updated: 2026-07-24
+last_updated: 2026-10-08
 owner: במבי
 ---
 
@@ -13,10 +13,14 @@ owner: במבי
 ו-`storyboard_grid.html` (רשת חזותית חיה, דרך `render_grid.py`) — הרשת מזהה אוטומטית תמונות
 שנוצרו ב-`scenes/`. stdlib בלבד.
 
+**מצב סדרה (2026-10-08):** `scripts/build_series.py` + `series/<name>/` (templates.json + brief.schema.json) → סטוריבורד נעול מ-brief; widget ייעודי `render_series_grid.py` + אינדקס `render_series_index.py`. schema: `end_reference`, `series`.
+
 ## שייך ל
 במבי (הבמאי).
 
 ## קבצים קשורים
+- [[kinetic-typography]]
+- [[surreal-product-ad-series]]
 - [[במבי-הבמאי]]
 - [[gpt-image-gen]]
 - [[openrouter-video-gen]]

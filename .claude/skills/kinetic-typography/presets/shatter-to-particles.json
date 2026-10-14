@@ -1,0 +1,12 @@
+{
+  "description": "The word holds, then each letter explodes outward in 3D, spinning, blurring and fading. Good exit at the transformation peak.",
+  "normalized": true,
+  "plane": "auto",
+  "stagger": { "each": 0.025, "from": "random", "seed": 11 },
+  "scatter": { "at": [2], "dx": 560, "dy": 900, "z": 1000, "rx": 140, "ry": 140, "rz": 220, "seed": 5 },
+  "keyframes": [
+    { "t": 0,    "dx": 0, "dy": 0, "z": 0, "rz": 0, "opacity": 1, "blur": 0, "scale": 1 },
+    { "t": 0.35, "scale": 1.06, "ease": "sine.inOut" },
+    { "t": 1,    "dx": 0, "dy": 0, "z": 0, "rx": 0, "ry": 0, "rz": 0, "opacity": 0, "blur": 12, "scale": 0.7, "ease": "power3.in" }
+  ]
+}

@@ -27,3 +27,16 @@
 .playwright-mcp/
 scratchpad/
 /scratchpad
+
+# audio / data binaries — local only (same policy as images/video)
+*.wav
+*.mp3
+*.npy
+*.docx
+
+# dependencies & build artifacts
+node_modules/
+.venv/
+__pycache__/
+build/
+*.log

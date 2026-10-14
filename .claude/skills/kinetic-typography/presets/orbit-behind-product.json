@@ -1,0 +1,11 @@
+{
+  "description": "The word morphs from a line into a 3D ring and orbits the product with accelerating speed. plane=auto: letters with z<0 pass BEHIND the product matte, z>=0 come back in FRONT. Stage 2.",
+  "normalized": true,
+  "plane": "auto",
+  "ring": { "radius": 380, "tilt": 10, "arc": 360, "face": "camera" },
+  "keyframes": [
+    { "t": 0,    "ring": 0, "orbit": 0,   "scale": 1 },
+    { "t": 0.22, "ring": 1, "ease": "power2.inOut" },
+    { "t": 1,    "orbit": 600, "scale": 1.12, "ease": "power2.in" }
+  ]
+}

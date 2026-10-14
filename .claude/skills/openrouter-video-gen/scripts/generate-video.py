@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Generate a video via OpenRouter's async Video API.
 
-Supports text-to-video and image-to-video (first-frame reference).
+Supports text-to-video, image-to-video (first-frame reference) and
+first+last-frame interpolation (--end-frame, sent as `frame_images`).
 Auto-derives aspect ratio from reference if not explicitly provided.
 
 Usage:
   python3 generate-video.py "<prompt>" "<output.mp4>" --model <id>
-      [--duration 5] [--aspect-ratio 16:9] [--reference <image>]
+      [--duration 5] [--aspect-ratio 16:9] [--reference <image>] [--end-frame <image>]
 
 Reads OPENROUTER_API_KEY from project .env. stdlib only.
 """
@@ -102,14 +103,25 @@ def http_request(url: str, key: str, method: str = "GET", body: dict | None = No
         return json.loads(r.read())
 
 
-def submit_job(key: str, model: str, prompt: str, duration: int, aspect_ratio: str, reference: Path | None) -> str:
+def submit_job(key: str, model: str, prompt: str, duration: int, aspect_ratio: str, reference: Path | None,
+               end_frame: Path | None = None) -> str:
     body: dict = {
         "model": model,
         "prompt": prompt,
         "duration": duration,
         "aspect_ratio": aspect_ratio,
     }
-    if reference:
+    if end_frame:
+        # first+last frame: OpenRouter `frame_images` (model must list "last_frame"
+        # in supported_frame_images — GET /api/v1/videos/models)
+        frames = []
+        if reference:
+            frames.append({"type": "image_url", "image_url": {"url": encode_reference(reference)},
+                           "frame_type": "first_frame"})
+        frames.append({"type": "image_url", "image_url": {"url": encode_reference(end_frame)},
+                       "frame_type": "last_frame"})
+        body["frame_images"] = frames
+    elif reference:
         body["input_references"] = [
             {
                 "type": "image_url",
@@ -168,6 +180,7 @@ def main() -> int:
     parser.add_argument("--duration", type=int, default=5, help="Seconds (default 5)")
     parser.add_argument("--aspect-ratio", help="16:9 | 9:16 | 1:1 (auto-derived from reference if omitted)")
     parser.add_argument("--reference", help="Optional first-frame reference image")
+    parser.add_argument("--end-frame", help="Optional last-frame image (first+last interpolation via frame_images)")
 
     args = parser.parse_args()
     output = Path(args.output)
@@ -199,11 +212,16 @@ def main() -> int:
         print(f"שגיאה: תמונת רפרנס לא נמצאה: {ref_path}", file=sys.stderr)
         return 2
 
-    print(f"שולח: model={args.model}, duration={args.duration}s, ar={ar}, reference={'✓' if ref_path else '—'}",
+    end_path = Path(args.end_frame) if args.end_frame else None
+    if end_path and not end_path.exists():
+        print(f"שגיאה: תמונת פריים-אחרון לא נמצאה: {end_path}", file=sys.stderr)
+        return 2
+
+    print(f"שולח: model={args.model}, duration={args.duration}s, ar={ar}, reference={'✓' if ref_path else '—'}, end_frame={'✓' if end_path else '—'}",
           file=sys.stderr)
 
     try:
-        job_id = submit_job(key, args.model, args.prompt, args.duration, ar, ref_path)
+        job_id = submit_job(key, args.model, args.prompt, args.duration, ar, ref_path, end_path)
         print(f"job_id: {job_id}", file=sys.stderr)
         result = poll_until_done(key, job_id)
         # OpenRouter returns "unsigned_urls" (list) for completed jobs; older docs mention "video_url"

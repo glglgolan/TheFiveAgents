@@ -12,9 +12,16 @@ stdlib only — no external deps (matches gpt-image-gen / openrouter-video-gen /
 
 Usage:
     python3 render_grid.py <storyboard.json> [output.html] [--scenes-dir <dir>]
+                           [--merge <other_storyboard.json>]
 
 If output.html is omitted, writes a sibling <storyboard-stem>_grid.html next to the input.
 If --scenes-dir is omitted, it's inferred: storyboard.json -> scenes/, storyboard_v2.json -> scenes_v2/.
+
+--merge folds a second storyboard (e.g. action_storyboard.json of short transition
+inserts) into the same grid, sorted by scene_number so decimal inserts (2.1, 7.1, …)
+land between the main scenes they sit between. Scenes carrying
+`"scene_type": "action_insert"` are rendered in a distinct accent so they read as a
+separate layer from the main storyboard.
 """
 import json
 import os
@@ -36,6 +43,7 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
     --bg:#0f1115; --card:#1a1d24; --card2:#20242d; --line:#2c313c;
     --ink:#e8eaed; --dim:#9aa0aa; --accent:#f0a63c; --focus:#5aa9e6;
     --regen:#e0574b; --multi:#8b5cf6; --ok:#3fb950; --pending:#6b7280; --draft:#d9822b;
+    --action:#22d3ee;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -80,6 +88,21 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
     border-radius:20px;padding:1px 8px;color:var(--dim)}
   .narr{font-size:11.5px;color:var(--dim);line-height:1.5;
     border-inline-start:2px solid var(--line);padding-inline-start:8px;margin-top:2px}
+  .style{font-size:10.5px;line-height:1.4;padding:4px 8px;border-radius:6px;
+    background:rgba(240,166,60,.10);border:1px solid rgba(240,166,60,.28);color:var(--accent)}
+  .style.parody{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.35);color:#c4b5fd}
+  /* --- action inserts: a distinct layer sitting between the main scenes --- */
+  .card.action{background:linear-gradient(180deg,rgba(34,211,238,.07),transparent 42%);
+    border-color:rgba(34,211,238,.42);border-style:dashed}
+  .card.action:hover{border-color:var(--action)}
+  .card.action .num{background:rgba(34,211,238,.92);color:#06232b}
+  .card.action .meta .t{color:var(--action)}
+  .card.action .thumb{background:#16242a}
+  .b.action{background:var(--action);color:#06232b}
+  .b.opt{background:transparent;border:1px solid var(--action);color:var(--action)}
+  .style.action{background:rgba(34,211,238,.10);border-color:rgba(34,211,238,.32);color:#a5eef7}
+  .ffr{font-size:10.5px;color:var(--dim);display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .ffr b{color:var(--action);font-weight:700}
   footer{margin-top:20px;color:var(--dim);font-size:11px;text-align:center;line-height:1.7}
   kbd{background:var(--card2);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:11px}
 </style>
@@ -104,6 +127,8 @@ TEMPLATE_HEAD = """<!DOCTYPE html>
   <span class="chip"><span class="dot" style="background:var(--regen)"></span> regen</span>
   <span class="chip"><span class="dot" style="background:var(--multi)"></span> ריבוי תמונות</span>
   <span class="chip"><span class="dot" style="background:var(--ok)"></span> וידאו קיים</span>
+  <span class="chip"><span class="dot" style="background:#8b5cf6"></span> שינוי סגנון בסצנה (פרודיה ז'אנרית)</span>
+  <span class="chip"><span class="dot" style="background:#22d3ee"></span> ⚡ שוט אקשן מוכנס (insert)</span>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -125,37 +150,54 @@ DATA.scenes.forEach(s=>{
   const card = document.createElement('div');
   card.className='card';
 
+  const isAction = s.kind === 'action';
+  if(isAction) card.classList.add('action');
+
   const nn = String(s.n).padStart(2,'0');
   const stem = s.multi ? `s${nn}a` : `s${nn}`;         // first image of the scene
-  const finalSrc = `${SCENES_DIR}/${stem}.png`;
-  const draftSrc = `${SCENES_DIR}/${stem}_draft.png`;
+  // Python resolves img/draft explicitly (handles decimal inserts + separate folders);
+  // fall back to the sNN convention for storyboards rendered by older callers.
+  const finalSrc = s.img   || `${SCENES_DIR}/${stem}.png`;
+  const draftSrc = s.draft || `${SCENES_DIR}/${stem}_draft.png`;
 
   const badges = [];
+  if(isAction) badges.push(`<span class="b action">⚡ ${s.insertId||'INSERT'}</span>`);
+  if(s.optional) badges.push('<span class="b opt">בונוס</span>');
   if(s.regen) badges.push('<span class="b regen">REGEN</span>');
   if(s.multi) badges.push('<span class="b multi">×N</span>');
 
   const chars = (s.chars||[]).map(c=>`<span class="cc">${c}</span>`).join('');
+  const numLabel = isAction ? (s.insertId || `⚡${s.n}`) : `S${nn}`;
+  const domId = String(s.n).replace('.','_');
+
+  const ffrRow = isAction ? `<div class="ffr">
+      <span>פריים ראשון: <b>${s.firstFrame||'—'}</b></span>
+      ${s.placement?`<span>· ${s.placement}</span>`:''}
+      ${s.priority?`<span>· עדיפות ${s.priority}</span>`:''}
+    </div>` : '';
 
   card.innerHTML = `
     <div class="thumb">
-      <span class="num">S${nn}</span>
+      <span class="num">${numLabel}</span>
       <div class="badges">${badges.join('')}</div>
       <img alt="scene ${s.n}" data-stage="final">
-      <div class="ph"><span class="big">🎞️</span>${s.dur}s · ${s.shot}<br>ממתינה ליצירה</div>
+      <div class="ph"><span class="big">${isAction?'⚡':'🎞️'}</span>${s.dur}s · ${s.shot}<br>ממתינה ליצירה</div>
     </div>
     <div class="body">
       <div class="title">${s.title}</div>
       <div class="meta"><span class="t">${s.dur}s</span><span>${s.shot}</span>${s.ref!=='—'?`<span>📎 ${s.ref}</span>`:'<span>—</span>'}</div>
+      ${ffrRow}
       <div class="chars">${chars||'<span class="cc">— ללא דמות —</span>'}</div>
+      ${s.style ? `<div class="style${isAction?' action':(s.styleParody?' parody':'')}">${s.style}</div>` : ''}
       <div class="narr">${s.narr}</div>
-      <div class="vid" id="vid-${s.n}"><span class="dot"></span><span class="lbl">וידאו: ממתין</span></div>
+      <div class="vid" id="vid-${domId}"><span class="dot"></span><span class="lbl">וידאו: ממתין</span></div>
     </div>`;
 
   if(s.video){
     const probe = document.createElement('video');
     probe.preload = 'metadata';
     probe.onloadedmetadata = ()=>{
-      const row = card.querySelector(`#vid-${s.n}`);
+      const row = card.querySelector(`#vid-${domId}`);
       row.classList.add('ready');
       row.querySelector('.lbl').textContent = 'וידאו: ✓ נוצר';
       vidDoneCount++;
@@ -230,13 +272,33 @@ def video_rel_path(video_output, run_dir):
     return rel if not rel.startswith("..") else None
 
 
+def rel_to_run(path, run_dir):
+    """Make a repo-root-relative path loadable from the grid HTML (which lives in run_dir)."""
+    if not path:
+        return None
+    try:
+        rel = os.path.relpath(path, run_dir)
+    except ValueError:
+        return None
+    return rel if not rel.startswith("..") else None
+
+
 def build_scene_row(s, run_dir):
     shot = s.get("shot") or {}
     shot_str = shot.get("type", "—") if isinstance(shot, dict) else "—"
     ref = s.get("reference") or ""
     ref_name = os.path.basename(ref) if ref else "—"
     narr = s.get("narration") or s.get("description") or ""
-    return {
+    style_note = s.get("style_note") or ""
+    is_action = s.get("scene_type") == "action_insert"
+
+    img = rel_to_run(s.get("image_output"), run_dir)
+    draft = None
+    if img:
+        stem, ext = os.path.splitext(img)
+        draft = f"{stem}_draft{ext}"
+
+    row = {
         "n": s["scene_number"],
         "title": s.get("title", f"סצנה {s['scene_number']}"),
         "dur": s.get("duration_sec", 0),
@@ -247,7 +309,23 @@ def build_scene_row(s, run_dir):
         "regen": bool(s.get("regenerate", False)),
         "multi": "image_prompts" in s,
         "video": video_rel_path(s.get("video_output"), run_dir),
+        "style": style_note,
+        # heuristic: any style_note containing an emoji/marker distinct from the
+        # project's base look is flagged as a parody/shift — projects that set
+        # style_note only on outlier scenes (leaving it empty elsewhere) also work.
+        "styleParody": bool(style_note) and "לוק בסיסי" not in style_note,
     }
+    if img:
+        row["img"] = img
+        row["draft"] = draft
+    if is_action:
+        row["kind"] = "action"
+        row["insertId"] = s.get("insert_id", "")
+        row["firstFrame"] = s.get("first_frame_type", "")
+        row["placement"] = s.get("placement", "")
+        row["priority"] = s.get("priority")
+        row["optional"] = bool(s.get("optional", False))
+    return row
 
 
 def main():
@@ -259,11 +337,15 @@ def main():
     args = sys.argv[2:]
     out_path = None
     scenes_dir_override = None
+    merge_paths = []
 
     i = 0
     while i < len(args):
         if args[i] == "--scenes-dir" and i + 1 < len(args):
             scenes_dir_override = args[i + 1]
+            i += 2
+        elif args[i] == "--merge" and i + 1 < len(args):
+            merge_paths.append(args[i + 1])
             i += 2
         elif not args[i].startswith("--"):
             out_path = args[i]
@@ -277,7 +359,23 @@ def main():
     scenes_dir = scenes_dir_override or infer_scenes_dir(sb_path)
     run_dir = os.path.dirname(os.path.abspath(sb_path))
 
-    rows = [build_scene_row(s, run_dir) for s in sb.get("scenes", [])]
+    all_scenes = list(sb.get("scenes", []))
+    merged_count = 0
+    for mp in merge_paths:
+        with open(mp, encoding="utf-8") as f:
+            extra = json.load(f).get("scenes", [])
+        all_scenes.extend(extra)
+        merged_count += len(extra)
+    # prefer an explicit "order" field (final narrative sequence, independent of
+    # scene_number/asset-filename identity) when every scene carries one; otherwise,
+    # when merging, fall back to the historical numeric-scene_number sort (single-file
+    # mode with no "order" keeps the JSON's own array order).
+    if all(s.get("order") is not None for s in all_scenes):
+        all_scenes.sort(key=lambda s: float(s["order"]))
+    elif merge_paths:
+        all_scenes.sort(key=lambda s: float(s["scene_number"]))
+
+    rows = [build_scene_row(s, run_dir) for s in all_scenes]
     total = sum(r["dur"] for r in rows)
     data = {
         "subtitle": sb.get("title", sb.get("project", "")),
@@ -299,9 +397,13 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(html)
 
-    mins, secs = divmod(total, 60)
+    mins, secs = divmod(int(total), 60)
     print(f"[written] {out_path}")
     print(f"  scenes: {len(rows)} | total duration: {mins}:{secs:02d} | scenes_dir: {scenes_dir}/")
+    if merged_count:
+        n_action = sum(1 for r in rows if r.get("kind") == "action")
+        print(f"  merged: {merged_count} extra scene(s) from {len(merge_paths)} file(s) "
+              f"| action inserts: {n_action}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,23 @@
+{
+  "width": 1080, "height": 1920, "fps": 24, "duration_sec": 15,
+  "plate": null, "matte": null, "matteCount": 0,
+  "background": "#EFE6DA",
+  "layers": [
+    { "id": "hero-emerge", "text": "PINK", "split": "letter", "engine": "css",
+      "font": { "family": "Playfair Display", "weight": 700, "size": 330, "tracking": 0.02 },
+      "color": "#C9748A", "material": "extruded", "depth": 18, "from": 0.4, "to": 4.4,
+      "anchor": { "x": 0.5, "y": 0.32 }, "preset": "emerge-from-screen" },
+    { "id": "hero-orbit", "text": "PINK", "split": "letter", "engine": "css",
+      "font": { "family": "Playfair Display", "weight": 700, "size": 330, "tracking": 0.02 },
+      "color": "#C9748A", "material": "extruded", "depth": 18, "from": 4.4, "to": 11.2,
+      "anchor": { "x": 0.5, "y": 0.32 }, "preset": "orbit-behind-product" },
+    { "id": "tagline", "text": "PINK YOUR LIFE", "split": "letter",
+      "font": { "family": "Playfair Display", "weight": 600, "size": 92, "tracking": 0.08 },
+      "color": "#3A2228", "material": "shadow", "from": 11.2, "to": 15,
+      "anchor": { "x": 0.5, "y": 0.16 }, "max_width": 0.86, "preset": "assemble-tagline" },
+    { "id": "brand-3d", "text": "ROSE", "split": "letter", "engine": "three",
+      "font": { "family": "Playfair Display", "three_font": "playfair_bold", "size": 170 },
+      "color": "#C9748A", "material": "extruded", "depth": 36, "from": 11.6, "to": 15,
+      "anchor": { "x": 0.5, "y": 0.8 }, "preset": "drop-with-gravity" }
+  ]
+}

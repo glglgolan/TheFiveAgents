@@ -1,0 +1,19 @@
+{
+  "title": "__TITLE__",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "durationFrames": 1440 },
+  "look": "__ONE_LINE_ART_DIRECTION__ — e.g. 'Flat-vector paper cutout x 1960s Saul Bass / UPA illustration. Bold silhouettes, thick boiling ink outlines, limited palette, halftone shading, gradient rim light.'",
+  "palette": {
+    "paper": "#F2E8D5", "ink": "#1B1A1F"
+    /* fill in every named color the film needs — characters, sets, props all reference these keys only, never raw hex */
+  },
+  "stroke": { "ink": 5, "inkThin": 3, "inkBold": 8, "linecap": "round", "linejoin": "round" },
+  "fonts": { "display": "Georgia, 'Didot', 'Bodoni 72', serif", "sans": "'Futura', 'Avenir Next', 'Helvetica Neue', sans-serif" },
+  "characterHeights_px_at_scale1": { "__character_id__": 400 },
+  "rules": [
+    "Every color must come from palette via src/lib/style.ts (C.*) — no hard-coded hex anywhere else.",
+    "No Math.random / Date — only seeded helpers in src/lib/rng.ts.",
+    "No linear easing on character motion. Anticipation -> action -> overshoot -> settle.",
+    "Dangling accessories use damped springs from src/lib/motion.ts.",
+    "Pose changes on twos: use onTwos(frame) for character poses; camera and particles use raw frame."
+  ]
+}

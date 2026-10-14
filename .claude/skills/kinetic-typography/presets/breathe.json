@@ -1,0 +1,10 @@
+{
+  "description": "Subtle hero idle — slow fade-in, gentle scale and tracking opening. Use for brand lines on the final shot.",
+  "normalized": true,
+  "plane": "front",
+  "keyframes": [
+    { "t": 0,   "opacity": 0, "scale": 0.98, "blur": 6, "tracking": 0.04 },
+    { "t": 0.3, "opacity": 1, "blur": 0, "ease": "power2.out" },
+    { "t": 1,   "scale": 1.04, "tracking": 0.1, "ease": "sine.inOut" }
+  ]
+}
