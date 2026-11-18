@@ -46,3 +46,14 @@
 **נבחר:** claude-animation-studio כמקור ראשי (ריפו ראשוני שמוכיח שהמסלול code-only עובד), בצירוף Remotion/Rhubarb docs ובדיקות חיות של PyPI/npm/conda-forge על המכונה
 **קובץ ב-Content:** `2026-09-29-opus-code-only-animation.md`
 ---
+
+## 2026-11-18 12:00 | קורסי YouTube: hooks, pattern interrupt, retention (חלקי)
+**מילות מפתח:** hooks, pattern interrupt, retention, short-form, retention editing, YouTube course
+**שאילתות שנעשו:** "YouTube course video hooks retention pattern interrupt short-form first 3 seconds", "YouTube playlist video editing retention techniques pattern interrupts long form hooks series", "youtube.com Alex Hormozi OR Brendan Kane OR Think Media hooks short form video course playlist", "youtube full course how to edit videos for retention pattern interrupts full tutorial"
+**מקורות שנמצאו:**
+- [START HERE TO LEARN VIDEO EDITING & IMPROVE RETENTION](https://www.youtube.com/playlist?list=PLvUg-IRiErnN02pgC-p2_AB-74NMbhAaI) — איכות: לא אומת — יוצר/צפיות לא ידועים, youtube.com חסום ל-WebFetch
+- [How to Make Visual Hooks Like Alex Hormozi](https://www.youtube.com/watch?v=z62FjNmLo8M) — איכות: לא אומת — סרטון בודד, ערוץ לא ידוע
+- [How To Edit SO GOOD That People Can't Stop Watching](https://www.youtube.com/watch?v=C3U1YGwLopU) — איכות: לא אומת
+**נבחר:** לא נבחר קורס. המשימה לא הושלמה, נדרש לאפשר youtube.com ולהריץ מחדש.
+**קובץ ב-Content:** `2026-11-18-youtube-hooks-retention-courses.md`
+---
