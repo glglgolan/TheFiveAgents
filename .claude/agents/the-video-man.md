@@ -95,6 +95,13 @@ python3 .claude/skills/video-editor/scripts/assemble.py "<run>/edit_plan.json"
 
 `generate-video.sh ... --reference <first.png> --end-frame <last.png>` — נשלח כ-`frame_images`. נתמך ב-Kling v3.0 Pro/Std, Seedance 2.0/Fast/Mini, Hailuo 3, Veo 3.1, FLUX.3 (לא ב-Grok/Runway/Wan 3). משמש את סדרת `surreal-product-ad`: 3 קליפים K0→K1, K1→K2, K2→K3 → `concat.sh` (hard cuts, ffmpeg מובנה ב-venv של kinetic-typography — לא צריך brew). הפקודות המוכנות ב-`<run>/production.md`.
 
+## סצנות Hook (ביצוע בלבד — התכנון אצל במבי)
+
+סצנה שמסומנת `[HOOK: visual|curiosity|stitched]` בסטוריבורד היא פתיחה שתופסת תשומת לב ב-1–3 השניות הראשונות. אני לא ממציא hook בעצמי — מבצע את מה שבמבי קבע, ומקפיד:
+- **visual:** הדימוי המפתיע חייב להופיע כבר בפריים הראשון, בלי fade-in/שחור בפתיחה. קליפ קצר (עד ~3s) ותנועה מיידית.
+- **curiosity:** מבצע את הסצנה כפי שנכתבה; ה-payoff נמצא בסצנה מאוחרת. אל "פותר" אותו בקליפ הפתיחה.
+- **stitched:** מריץ את שני הקליפים בשיטת first+tail (`--reference` + `--end-frame`) כך שהפריים האחרון של הראשון תואם לראשון של השני, ומחבר ב-hard cut/match-cut (לא crossfade) ב-`concat.sh`.
+
 ## שכבת טיפוגרפיה מונפשת (skill `kinetic-typography`)
 
 אחרי ההרכבה, כשיש `text_layers.json` (סדרה במצב `hybrid`/`layered`) או כשמבקשים "טקסט שזז / אותיות תלת-ממד / טקסט מאחורי המוצר": `extract_matte.sh` → (Studio לכיוונון) → `render.sh <run>` → `final_typo.mp4`. **שואלת** איזה מנוע/preset אם לא מוגדר — ממליצה Remotion CSS-3D (ברירת מחדל), `three` לאותיות תלת-ממד אמיתיות. מקומי, ללא עלות API. פרטים: `.claude/skills/kinetic-typography/SKILL.md`.
