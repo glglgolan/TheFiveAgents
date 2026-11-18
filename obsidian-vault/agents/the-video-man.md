@@ -1,6 +1,6 @@
 ---
 file_path: .claude/agents/the-video-man.md
-last_updated: 2026-10-08
+last_updated: 2026-11-18
 owner: the-video-man
 ---
 
@@ -17,9 +17,11 @@ The Video Man — מפיק הווידאו
 ## קבצים קשורים
 - [[surreal-product-ad-series]]
 - [[openrouter-video-gen]]
+- [[code-film-studio]]
 - [[ראובן-מנכל]]
 
 ## מיקום
 `.claude/agents/the-video-man.md`
 
 - גימור ברמת סוכנות: [[cinematic-finish]] (מ-2026-10-10).
+- מסלול Kling דרך MCP (`klingai`) כשמחובר, ושאילת מודל ושיטה לפני הרצה; מסלול בקוד בלבד: [[code-film-studio]] (מ-2026-11-18).

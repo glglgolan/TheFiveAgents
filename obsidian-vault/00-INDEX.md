@@ -62,6 +62,7 @@ last_updated: 2026-09-07
 - [[video-editor]] — עריכה/הרכבה ב-ffmpeg: מעברים, מהירות, אודיו, ייצוא (the-video-man)
 - [[kinetic-typography]] — טיפוגרפיה מונפשת ב-Remotion: keyframes פר-אות, 3D, טקסט מאחורי המוצר (the-video-man)
 - [[cinematic-finish]] — גימור ברמת סוכנות: אפקטים בקוד + סאונד היברידי (MELT)
+- [[code-film-studio]] — סרט שלם בקוד בלבד, בלי AI גנרטיבי (the-video-man)
 - [[scroll-relay]] — אתר שגולל בלפטופ + דקדוק relay/exploded/cadence (פענוח enky)
 - [[surreal-product-ad-series]] — סדרת פרסומות 9:16 מ-brief: דיגיטלי→פיזי→טרנספורמציה→הירו (במבי)
 
