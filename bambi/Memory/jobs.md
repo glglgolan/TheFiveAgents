@@ -614,3 +614,8 @@ Kling MCP image_to_image `gemini-3.1-flash-image`, refs [K3, K2b], 2k 9:16 → 1
 
 ## 2026-11-24 | video-effects-series | ep01-hooks — v2 (משוב לירז)
 אותה תיקיית run, נכתב מחדש: בלי דמות/אווטאר (voiceover + אובייקטים/גרפיקה בלבד; cast = אובייקט black_box), קריינות ברבים, הצגה עצמית "שמי לירז..." עם ציר זמן גרפי (Remotion) בסצנות 3–4, caption_note עם תרגומי מונחים (לאישור), CRUMPLE נשאר. 18 סצנות, 57s.
+
+---
+
+## 2026-11-24 | video-effects-series | ep01-hooks — v2.1
+קריינות: המושגים נאמרים כביטוי מלא (Visual Hook / Curiosity Hook / Stitched Hook); caption_note עודכן בהתאם (לאישור). משכי סצנות ללא שינוי.

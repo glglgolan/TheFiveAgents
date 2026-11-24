@@ -133,7 +133,7 @@
       "scene_number": 7,
       "title": "ההקדמה: Visual",
       "duration_sec": 3,
-      "description": "[INTERRUPT: audio] חיתוך חד לסטודיו כחול: שלט ניאון בצורת עין ענברית מהבהב ונדלק. סאונד: סקרץ' קצר וחיתוך לשקט. (הערכת קריינות: 7 מילים ≈ 2.7 שנ') | caption_note (הצעה — לאישור): Visual — חזותי",
+      "description": "[INTERRUPT: audio] חיתוך חד לסטודיו כחול: שלט ניאון בצורת עין ענברית מהבהב ונדלק. סאונד: סקרץ' קצר וחיתוך לשקט. (הערכת קריינות: 8 מילים ≈ 3.1 שנ') | caption_note (הצעה — לאישור): Visual Hook — וו חזותי",
       "characters": [],
       "shot": {
         "type": "MCU",
@@ -145,8 +145,8 @@
       "reference": "",
       "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s07.png",
       "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s07.mp4",
-      "narration": "הראשון: Visual. תמונה שאי אפשר לעבור עליה.",
-      "caption_note": "הצעה — לאישור: Visual — חזותי"
+      "narration": "הראשון: Visual Hook. תמונה שאי אפשר לעבור עליה.",
+      "caption_note": "הצעה — לאישור: Visual Hook — וו חזותי"
     },
     {
       "scene_number": 8,
@@ -170,7 +170,7 @@
       "scene_number": 9,
       "title": "הקדמה: Curiosity והקופסה",
       "duration_sec": 4,
-      "description": "[INTERRUPT: audio — שקט פתאומי] חדר חשוך. קופסה שחורה קטנה על שולחן עץ, אור ענבר דולף מחור המנעול. באמצע (~2s): [INTERRUPT: motion] קפיצת dutch angle. פתיחת לולאה: התשובה (מה בקופסה) נענית בסצנה 16. (הערכת קריינות: 8 מילים ≈ 3.1 שנ') | caption_note (הצעה — לאישור): Curiosity — סקרנות",
+      "description": "[INTERRUPT: audio — שקט פתאומי] חדר חשוך. קופסה שחורה קטנה על שולחן עץ, אור ענבר דולף מחור המנעול. באמצע (~2s): [INTERRUPT: motion] קפיצת dutch angle. פתיחת לולאה: התשובה (מה בקופסה) נענית בסצנה 16. (הערכת קריינות: 9 מילים ≈ 3.5 שנ') | caption_note (הצעה — לאישור): Curiosity Hook — וו סקרנות",
       "characters": [],
       "shot": {
         "type": "MS",
@@ -182,8 +182,8 @@
       "reference": "bambi/cast/video-effects-series/black_box_ep01.png",
       "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s09.png",
       "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s09.mp4",
-      "narration": "השני: Curiosity. פותחים שאלה, ומשאירים את התשובה לסוף.",
-      "caption_note": "הצעה — לאישור: Curiosity — סקרנות"
+      "narration": "השני: Curiosity Hook. פותחים שאלה, ומשאירים את התשובה לסוף.",
+      "caption_note": "הצעה — לאישור: Curiosity Hook — וו סקרנות"
     },
     {
       "scene_number": 10,
@@ -207,7 +207,7 @@
       "scene_number": 11,
       "title": "הקדמה: Stitched והטבעת",
       "duration_sec": 3,
-      "description": "[INTERRUPT: cut] אולפן קרם בהיר: טבעת עגולה גדולה עומדת על בסיס, ובתוכה נראה חוף בשקיעה. המצלמה עוברת דרך הטבעת: match-cut לסצנה 12 (צורה ← צורה). (הערכת קריינות: 7 מילים ≈ 2.7 שנ') | caption_note (הצעה — לאישור): Stitched — תפור / מחובר",
+      "description": "[INTERRUPT: cut] אולפן קרם בהיר: טבעת עגולה גדולה עומדת על בסיס, ובתוכה נראה חוף בשקיעה. המצלמה עוברת דרך הטבעת: match-cut לסצנה 12 (צורה ← צורה). (הערכת קריינות: 8 מילים ≈ 3.1 שנ') | caption_note (הצעה — לאישור): Stitched Hook — וו תפור/מחובר",
       "characters": [],
       "shot": {
         "type": "MS",
@@ -219,8 +219,8 @@
       "reference": "",
       "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s11.png",
       "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s11.mp4",
-      "narration": "השלישי: Stitched. חיבור חלק בין שני עולמות.",
-      "caption_note": "הצעה — לאישור: Stitched — תפור / מחובר",
+      "narration": "השלישי: Stitched Hook. חיבור חלק בין שני עולמות.",
+      "caption_note": "הצעה — לאישור: Stitched Hook — וו תפור/מחובר",
       "end_reference": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s12.png"
     },
     {
@@ -281,7 +281,7 @@
       "scene_number": 15,
       "title": "מיפוי מהיר: whip-pan",
       "duration_sec": 3,
-      "description": "[INTERRUPT: motion — whip-pan] פאן מהיר בין שלושת השערים, כל שער נדלק ברגע שהמונח שלו נאמר. (הערכת קריינות: 6 מילים ≈ 2.3 שנ') | caption_note (הצעה — לאישור): Visual — חזותי · Curiosity — סקרנות · Stitched — תפור / מחובר",
+      "description": "[INTERRUPT: motion — whip-pan] פאן מהיר בין שלושת השערים, כל שער נדלק ברגע שהמונח שלו נאמר. (הערכת קריינות: 9 מילים ≈ 3.5 שנ') | caption_note (הצעה — לאישור): Visual Hook — וו חזותי · Curiosity Hook — וו סקרנות · Stitched Hook — וו תפור/מחובר",
       "characters": [],
       "shot": {
         "type": "MS",
@@ -293,8 +293,8 @@
       "reference": "",
       "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s15.png",
       "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s15.mp4",
-      "narration": "הפתעה? Visual. סקרנות? Curiosity. חיבור? Stitched.",
-      "caption_note": "הצעה — לאישור: Visual — חזותי · Curiosity — סקרנות · Stitched — תפור / מחובר"
+      "narration": "הפתעה? Visual Hook. סקרנות? Curiosity Hook. חיבור? Stitched Hook.",
+      "caption_note": "הצעה — לאישור: Visual Hook — וו חזותי · Curiosity Hook — וו סקרנות · Stitched Hook — וו תפור/מחובר"
     },
     {
       "scene_number": 16,
