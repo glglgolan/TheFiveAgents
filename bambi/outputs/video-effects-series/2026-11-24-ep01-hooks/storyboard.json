@@ -1,0 +1,345 @@
+{
+  "project": "video-effects-series",
+  "title": "ששש... עורכים כאן וידאו — פרק 1: 3 סוגי hooks",
+  "logline": "פרק פתיחה שמסביר שלושה סוגי hooks (Visual / Curiosity / Stitched) ופותח בעצמו ב-hook Stitched שמוכיח את הנושא.",
+  "language": "he",
+  "aspect_ratio": "9:16",
+  "visual_theme": {
+    "palette": "deep navy, warm amber accent, cream highlights",
+    "lighting": "soft key light with warm amber rim light, glow bloom on neon",
+    "film_look": "clean cinematic 35mm full-frame, fine subtle grain, vertical 9:16, safe margins top 10% / bottom 25%",
+    "motion": "snappy purposeful camera, a pattern interrupt every 2-3 seconds, smooth match-cuts, no lip-sync (host never speaks on camera)",
+    "mood": "playful, confident, tech-cool, intriguing"
+  },
+  "cast": [
+    {
+      "id": "avatar",
+      "name": "המנחה — לוק בסיסי (פרק 1)",
+      "description": "The host: adult presenter whose face is identical in every scene (locked to the real reference photos). Base look for episode 1: short neat hair, plain charcoal crew-neck t-shirt, no accessories, natural friendly expression. Soft cinematic lighting, vertical 9:16 portrait, neutral dark navy background.",
+      "anchor_image": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "anchor_ready": false
+    }
+  ],
+  "scenes": [
+    {
+      "scene_number": 1,
+      "title": "[HOOK: stitched] פתח ← פתח: עדשת הטלפון",
+      "duration_sec": 2,
+      "description": "[INTERRUPT: motion] קלוז אפ על הטלפון של המנחה בסטודיו כחול כהה. המצלמה נכנסת במהירות אל עדשת הטלפון העגולה עד שכל הפריים שחור-עגול. ללא דיבור. החצי הראשון של ה-match-cut: הפריים האחרון = עיגול שחור במרכז.",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "ECU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) stands in a dark navy studio, arm extended toward camera holding a smartphone; the phone's round camera lens is large and dead-center, dark glass opening framing the middle of the image, host's face softly blurred behind. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Fast, smooth push-in straight into the round phone camera lens, the host's face receding as the dark circular lens glass swallows the frame. Final frames: pure black circle edge-to-center, perfectly centered, ready for a match-cut to the next scene. No speech, host stays silent, no mouth movement. Locked vertical framing.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s01.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s01.mp4",
+      "end_reference": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s02.png"
+    },
+    {
+      "scene_number": 2,
+      "title": "[HOOK: stitched] יציאה מהמנהרה",
+      "duration_sec": 2,
+      "description": "[INTERRUPT: cut] החצי השני של ה-match-cut: אותו עיגול שחור הוא פתח מנהרה בטון, והמנחה יוצא ממנו אל גג בשקיעה. ללא דיבור. 'אפקט האוזן' מ-The Rumor: פתח ← פתח.",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "View from inside a dark round concrete tunnel, a perfectly centered circle of golden-hour light at the end, the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) silhouetted walking out toward camera into a rooftop with a soft city skyline. Black circular frame edge matches a centered circle. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Starts on the black circular tunnel mouth, identical shape and position to the previous shot. The host walks out of the opening toward camera as the circle of light widens into a golden-hour rooftop. Camera pulls back smoothly, host stops, looks into camera with a calm confident half-smile. Silent, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s02.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s02.mp4"
+    },
+    {
+      "scene_number": 3,
+      "title": "שלוש שניות",
+      "duration_sec": 4,
+      "description": "[INTERRUPT: verbal] המנחה על הגג מחזיק טלפון, האגודל גולל. כרטיסי פיד עפים בפריים, ואז המנחה מרים כף יד כמו תמרור עצור. באמצע הסצנה (~2s): [INTERRUPT: motion] דחיפת מצלמה חדה אל היד. (הערכת קריינות: 11 מילים ≈ 4.2 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) on a sunset rooftop, one hand holding a smartphone, thumb mid-swipe, translucent social-feed cards streaking past in the air around; other hand raised palm-out like a stop sign. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "The host swipes a thumb upward; glowing feed cards streak past the camera in motion blur. Then the host raises the free palm like a stop sign, the cards freeze mid-air. At the midpoint the camera snaps in with a quick push toward the raised palm. Silent host, no speech, confident expression. Handheld energy, crisp motion.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s03.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s03.mp4",
+      "narration": "שלוש שניות. זה כל מה שיש לך כדי לעצור אצבע שגוללת."
+    },
+    {
+      "scene_number": 4,
+      "title": "HOOK מתפוצצת",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: visual] [TEXT-FX: explode — HOOK] אותיות תלת-ממד ענקיות בצבע ענבר HOOK מרחפות מול המנחה; המנחה מצלצל באצבעות והמילה מתפוצצת לרסיסים וניצוצות. מילת מפתח ראשית של הפרק. האותיות נוספות כשכבת kinetic-typography. (הערכת קריינות: 7 מילים ≈ 2.7 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) on the rooftop, right hand raised ready to snap fingers; in front of the host, empty space where giant glossy 3D amber letters will float (the word HOOK is added later as a typography layer, leave clear space behind it). Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Low angle slow push-in. The host snaps fingers; at the snap, a giant 3D amber word explodes outward into glowing shards and sparks that fly past the camera, a brief white flash, then dust settles. Host reacts with a small satisfied nod, silent, no speech. Reserve the frame center for the typography layer (explode FX).",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s04.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s04.mp4",
+      "narration": "קוראים לזה HOOK, והיום תכירו שלושה סוגים."
+    },
+    {
+      "scene_number": 5,
+      "title": "ההקדמה: Visual",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: audio] חזרה לסטודיו הכחול (חיתוך). המנחה מצביע על שלט ניאון בצורת עין ענברית. סאונד: סקרץ' קצר וחיתוך לשקט. (הערכת קריינות: 7 מילים ≈ 2.7 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in a dark navy studio pointing one finger up beside a glowing amber neon sign shaped like an open eye, no text. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Hard-cut energy: the host snaps a finger up toward the amber neon eye sign, which flickers brighter with a soft glow pulse. Camera makes a slight handheld drift and a tiny push-in. Host's eyes follow the sign then return to camera. Silent, no speech, no lip movement. Clean studio background, amber bloom.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s05.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s05.mp4",
+      "narration": "הראשון: Visual. תמונה שאי אפשר לעבור עליה."
+    },
+    {
+      "scene_number": 6,
+      "title": "דוגמה: הליכה על התקרה",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: visual] סלון רגיל, והמנחה הולך הפוך על התקרה: בד החולצה ושיער נופלים כלפי מטה. הוכחה חזותית ל-Visual Hook. (הערכת קריינות: 8 מילים ≈ 3.1 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "low",
+        "camera_move": "tracking"
+      },
+      "image_prompt": "Ordinary warm living room shot upside down: the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) walking on the ceiling, hair and t-shirt hanging toward the floor, furniture mounted above on the floor line, calm face. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Low tracking shot following the host walking across the ceiling of an ordinary living room, hair and shirt hanging downward in a convincing inverted gravity. A hanging lamp stands up from the floor-ceiling. Smooth gimbal motion, camera slightly rotates at the end. Host stays silent, relaxed, glances once toward camera. No speech.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s06.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s06.mp4",
+      "narration": "משהו שהעין לא מצפה לו, בלי להגיד מילה."
+    },
+    {
+      "scene_number": 7,
+      "title": "הקדמה: Curiosity והקופסה",
+      "duration_sec": 4,
+      "description": "[INTERRUPT: audio — שקט פתאומי] חדר חשוך. על שולחן קופסה שחורה קטנה עם אור ענבר דולף מחור המנעול; המנחה נשען אליה, גבה מורמת. באמצע (~2s): [INTERRUPT: motion] קפיצת dutch angle. פתיחת לולאה: התשובה (מה בקופסה) נענית בסצנה 14. (הערכת קריינות: 8 מילים ≈ 3.1 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "dutch",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "Dark minimal room, a small matte-black box on a wooden table with amber light leaking from its keyhole; the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) leans toward it from the side, one eyebrow raised, curious. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Slow push-in on the glowing black box as the host leans in with one raised eyebrow. At the midpoint the camera tilts into a slight dutch angle and the amber glow pulses once. The host's finger hovers above the lid without touching it. Mysterious tension, silent host, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s07.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s07.mp4",
+      "narration": "השני: Curiosity. פותחים שאלה, ומשאירים את התשובה לסוף."
+    },
+    {
+      "scene_number": 8,
+      "title": "הקופסה נפתחת מעט",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: motion] המכסה נפתח סדק, אור ענבר פורץ, המנחה מושיט יד ואז מושך אותה ומנענע אצבע 'לא עכשיו'. התשובה נדחית (payoff בסצנה 14). (הערכת קריינות: 8 מילים ≈ 3.1 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "Close-up of the small black box lid cracked open a few millimeters with a thin blade of amber light, the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in the background reaching one hand toward it. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "The box lid creaks open a crack, a thin blade of amber light slices across the host's face. The host reaches a hand toward it, hesitates, pulls back and wags a finger 'not yet' toward camera with a playful smile. The lid snaps shut. Locked camera, tiny handheld sway, silent, no speech.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s08.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s08.mp4",
+      "narration": "כמו תעלומה שאתה חייב לראות איך היא נגמרת."
+    },
+    {
+      "scene_number": 9,
+      "title": "הקדמה: Stitched והטבעת",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: cut] שוט חדש, אולפן בהיר. המנחה מחזיק טבעת/מסגרת עגולה מול המצלמה, ובתוכה נראה חוף בשקיעה. הטבעת גדלה וממלאת את הפריים: match-cut לסצנה 10 (צורה ← צורה). (הערכת קריינות: 7 מילים ≈ 2.7 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in a bright minimal cream studio holding a large round ring frame up to camera; through the ring a small sunset beach with a round sun is visible; the ring is perfectly centered. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "The host lifts the round ring toward camera; the camera pushes through it while the ring edge expands to fill the frame, revealing the sunset beach and the round sun as the new full frame. Final frame: a circular sun disc centered, matching the ring's size and position. Silent host, no speech.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s09.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s09.mp4",
+      "narration": "השלישי: Stitched. חיבור חלק בין שני עולמות.",
+      "end_reference": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s10.png"
+    },
+    {
+      "scene_number": 10,
+      "title": "הצורה נשארת: החוף",
+      "duration_sec": 4,
+      "description": "[INTERRUPT: visual] המשך ה-match-cut: דיסקת השמש באותו גודל ומיקום כמו הטבעת. המנחה מהלך על קו המים בשקיעה. באמצע (~2s): [INTERRUPT: cut] חיתוך חד אל הסטודיו (סצנה 11). (הערכת קריינות: 9 מילים ≈ 3.5 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "LS",
+        "angle": "eye-level",
+        "camera_move": "tilt"
+      },
+      "image_prompt": "Wide sunset beach, a large round sun disc exactly centered above the horizon, the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) walking at the waterline in warm silhouette-lit profile. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Starts on the centered round sun disc identical to the previous ring's size and position. Camera tilts down slowly from the sun to the host walking along the waterline, wet sand reflecting amber light. Gentle waves, wind in the hair. The host glances to camera once, silent, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s10.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s10.mp4",
+      "narration": "אותה צורה בסוף של סצנה אחת, ובתחילה של הבאה."
+    },
+    {
+      "scene_number": 11,
+      "title": "הלולאה: חזרה לעדשה",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: motion] הסטודיו הכחול מהסצנה 1: המנחה מחזיק טלפון ומקרין חיוך ידעני, המצלמה דוחפת שוב אל העדשה. הוכחה: 'ככה בנינו את הפתיחה'. (הערכת קריינות: 7 מילים ≈ 2.7 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in the dark navy studio from the opening shot, holding the smartphone toward camera with a knowing smile, the round camera lens centered. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Callback to the opening: the host raises the phone toward camera with a knowing half-smile, then taps the lens twice with a fingertip. Camera pushes gently toward the round lens, a brief amber glint across the glass. Short, crisp, same framing as the first shot. Host silent, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s11.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s11.mp4",
+      "narration": "ככה בנינו את הפתיחה של הסרטון הזה."
+    },
+    {
+      "scene_number": 12,
+      "title": "איך בוחרים: שלושה שערים",
+      "duration_sec": 4,
+      "description": "[INTERRUPT: verbal — שאלה] אולם חשוך עם שלושה שערי ניאון: עין (Visual), סימן שאלה (Curiosity), טבעת (Stitched) — סמלים בלבד, בלי טקסט. המנחה במרכז מביט לצופה. באמצע (~2s): [INTERRUPT: motion] דחיפה פנימה. (הערכת קריינות: 10 מילים ≈ 3.8 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MLS",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "Dark symmetrical hall with three glowing neon archways side by side (an eye symbol, a question-mark symbol, a ring symbol, symbols only, no words), the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) standing between them facing camera, hands slightly open. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Symmetrical slow push-in toward the host standing between the three glowing archways. The host looks at the camera, tilts the head slightly like asking a question, then spreads both hands toward the three arches, each pulsing amber in sequence. At the midpoint the push accelerates slightly. Silent, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s12.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s12.mp4",
+      "narration": "אז איך בוחרים? שואלים מה הצופה צריך להרגיש בשנייה הראשונה."
+    },
+    {
+      "scene_number": 13,
+      "title": "מיפוי מהיר: whip-pan",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: motion — whip-pan] פאן מהיר בין שלושת השערים, כל שער נדלק ברגע שהמילה שלו נאמרת. המנחה מצביע על כל אחד. (הערכת קריינות: 6 מילים ≈ 2.3 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MS",
+        "angle": "eye-level",
+        "camera_move": "pan"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in front of the three neon archways (eye, question mark, ring symbols, no words), pointing to the left arch, motion energy. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Rapid whip-pan across three archways: left eye arch lights up, whip to the center question arch, whip to the right ring arch, each igniting amber as the host points to it in turn. Quick, crisp, rhythmic with strong motion blur between pans. Host silent, expressive hands, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s13.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s13.mp4",
+      "narration": "הפתעה? Visual. סקרנות? Curiosity. חיבור? Stitched."
+    },
+    {
+      "scene_number": 14,
+      "title": "פיי-אוף: מה בקופסה",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: visual] המכסה נפתח לגמרי ועדשת מצלמה זוהרת מרחפת החוצה בקרן ענבר. המנחה מרים אותה לעבר המצלמה. התשובה לפתיחת הלולאה של סצנה 7–8 וגם לסגירת ה-hook של סצנה 1 (העדשה). (הערכת קריינות: 6 מילים ≈ 2.3 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "low",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "Dark room, the small black box now wide open on the table, a glowing round camera lens floating out of it on a beam of amber light, the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) holding it up toward camera with a proud smile. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "The black box lid bursts open, a glowing round camera lens rises on an amber beam. The host catches it, lifts it toward the camera and the lens glass glows bright. Slight low-angle push-in, light rays and floating dust. Answers the earlier mystery. Silent host, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s14.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s14.mp4",
+      "narration": "ובקופסה? העדשה שפתחה את הסרטון הזה."
+    },
+    {
+      "scene_number": 15,
+      "title": "[CTA: curiosity] הקימוט",
+      "duration_sec": 4,
+      "description": "[INTERRUPT: motion] המנחה מחזיק דף נייר ריק מול המצלמה (המילה CRUMPLE נוספת כשכבת טקסט חיה על הדף), ואז תופס אותו, מקמט לכדור וזורק לעבר המצלמה. [TEXT-FX: grab-crumple — CRUMPLE] הוק curiosity לפרק 2. ביצוע: קליפ AI נפרד של הקימוט האמיתי. (הערכת קריינות: 10 מילים ≈ 3.8 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "MCU",
+        "angle": "eye-level",
+        "camera_move": "static"
+      },
+      "image_prompt": "the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in the dark navy studio holding up a blank sheet of white paper at chest height facing camera, other hand open and ready to grab; paper kept blank (a word is added later as a typography layer). Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "The host grabs the blank sheet in a fist and crumples it into a tight ball in one decisive motion, paper folding and crinkling realistically. Then tosses the paper ball underhand toward the camera, it fills the lens and the frame goes dark amber. Fast, tactile, silent host with a playful grin. No speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s15.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s15.mp4",
+      "narration": "בפרק הבא: איך תופסים מילה באוויר, ומקמטים אותה כמו נייר?"
+    },
+    {
+      "scene_number": 16,
+      "title": "סיום: ששש",
+      "duration_sec": 3,
+      "description": "[INTERRUPT: audio — לחישה] קלוז אפ: המנחה מניח אצבע על השפתיים ב'ששש...' וקורץ. עצירה על הפריים 0.5s. שוליים בטוחים בתחתית לכתוביות. (הערכת קריינות: 6 מילים ≈ 2.3 שנ')",
+      "characters": [
+        "avatar"
+      ],
+      "shot": {
+        "type": "CU",
+        "angle": "eye-level",
+        "camera_move": "push-in"
+      },
+      "image_prompt": "Close-up of the host (face identical to the reference image, base look: short neat hair, plain charcoal crew-neck t-shirt) in the dark navy studio, a finger pressed to the lips in a shushing gesture, a playful wink, amber rim light. Vertical 9:16 frame, clean cinematic look, deep navy and warm amber palette with cream highlights, soft key light with amber rim light, 35mm full-frame, subtle fine grain; subject centered inside the safe area (top 10% and bottom 25% of the frame kept uncluttered, no text or captions).",
+      "video_prompt": "Slow gentle push-in on the host who raises a finger to the lips in a shush and winks toward camera, a soft amber light pulse on the cheek. Final half-second holds still on the shush for the logo. Quiet, intimate ending. Host's lips stay closed, silent, no speech, no lip movement.",
+      "reference": "bambi/cast/video-effects-series/avatar_base_ep01.png",
+      "image_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/scenes/s16.png",
+      "video_output": "bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/clips/s16.mp4",
+      "narration": "עקבו ושמרו. ששש... עורכים כאן וידאו."
+    }
+  ]
+}

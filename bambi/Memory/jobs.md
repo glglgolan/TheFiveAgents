@@ -603,3 +603,9 @@ K0 gpt-image-2 t2i · K1/K2/K2b/K3 gpt-image-1.5 edits (input_fidelity) with ref
 
 ## 2026-10-10 | surreal-ads | chocolate (MELT) — K3 bite continuity fix via Nano Banana 2 (Kling)
 Kling MCP image_to_image `gemini-3.1-flash-image`, refs [K3, K2b], 2k 9:16 → 15 Kling credits (vs ~$0.25–0.30 OpenAI high). Result: composition identical, bite on same corner as K2b, drip kept. Old K3 → `_qa/k3_gpt_nobite.png`. Pending: re-run S4 (K2b→K3).
+
+---
+
+## 2026-11-24 | video-effects-series | ep01-hooks — "3 סוגי hooks"
+סטוריבורד פרק 1 (9:16, 51s, 16 סצנות, דמות אחת: avatar_base_ep01, voiceover בלבד ללא lip-sync). Hook: Stitched (פתח עדשה ← מנהרה, סצנות 1-2). TEXT-FX: HOOK explode (סצנה 4) + CRUMPLE grab-crumple (סצנה 15, CTA). Curiosity payoff: קופסה (7-8 ← 14). 110 מילות קריינות. ממתין לאישור.
+קישור: bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/storyboard.md
