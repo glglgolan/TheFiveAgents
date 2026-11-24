@@ -171,3 +171,34 @@ a blank sheet of white paper floating upright in a dark navy studio facing camer
 ```
 a vintage amber recording studio lamp glowing on a dark navy wall, soft bloom, no text on the lamp, deep navy and warm amber palette with cream highlights, soft key light with warm amber rim light, clean cinematic 35mm full-frame look, fine subtle grain, vertical composition, subject centered with empty space at top and bottom, no text, no letters, no people, no face
 ```
+
+
+---
+
+## תיקונים אחרי הסבב הראשון
+
+סדר: קודם עוגן עדשה חדש, ואז סצנה 1, ואז סצנה 16. בכולן אותה עדשה: קנה שחור מט, טבעת זהב דקה, זכוכית אמבר, בלי חריטות.
+
+### עוגן עדשה (מחליף את הקודם) — שם קובץ: `bambi/cast/video-effects-series/lens_anchor_ep01.png`
+
+**רפרנס:** אין (זה העוגן עצמו).
+
+```
+a large round camera lens seen from the front, perfectly centered and frontal, a round camera lens with a smooth matte black barrel, a thin polished gold ring, and deep amber-gold glass, concentric glass reflections inside, completely smooth surface with no engravings, no markings, no numbers, no letters, plain dark navy background, macro product photo, deep navy and warm amber palette with cream highlights, soft key light with warm amber rim light, clean cinematic 35mm full-frame look, fine subtle grain, vertical composition, subject centered with empty space at top and bottom, no text, no letters, no people, no face
+```
+
+### סצנה 1 (מחליפה) — שם קובץ: `scenes/s01.png`
+
+**רפרנס:** עוגן העדשה החדש. **לא** `s02.png` (הוא הכניס לתמונה הקודמת את המנהרה והעיר). את גודל העיגול משווים לסצנה 2 בעין.
+
+```
+a graphite smartphone standing upright on a small silver tripod, seen from the back, perfectly frontal, one single large round camera lens dead-center filling about 70 percent of the frame width, a round camera lens with a smooth matte black barrel, a thin polished gold ring, and deep amber-gold glass, the lens is the only camera on the phone, plain dark navy studio background, empty dark room, nothing else in the scene, no tunnel, no city, no ring, deep navy and warm amber palette with cream highlights, soft key light with warm amber rim light, clean cinematic 35mm full-frame look, fine subtle grain, vertical composition, subject centered with empty space at top and bottom, no text, no letters, no people, no face
+```
+
+### סצנה 16 (מחליפה) — שם קובץ: `scenes/s16.png`
+
+**רפרנס:** חובה: עוגן הקופסה הקיים ועוגן העדשה החדש.
+
+```
+dark room, the small matte-black box with a gold clasp and gold keyhole plate wide open on a dark wooden table, a glowing round camera lens floating out of it on a beam of amber light, the lens has a smooth matte black barrel, a thin polished gold ring, and deep amber-gold glass, smooth with no engravings or markings, floating dust, low angle, deep navy and warm amber palette with cream highlights, soft key light with warm amber rim light, clean cinematic 35mm full-frame look, fine subtle grain, vertical composition, subject centered with empty space at top and bottom, no text, no letters, no people, no face
+```
