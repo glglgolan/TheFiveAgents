@@ -609,3 +609,8 @@ Kling MCP image_to_image `gemini-3.1-flash-image`, refs [K3, K2b], 2k 9:16 → 1
 ## 2026-11-24 | video-effects-series | ep01-hooks — "3 סוגי hooks"
 סטוריבורד פרק 1 (9:16, 51s, 16 סצנות, דמות אחת: avatar_base_ep01, voiceover בלבד ללא lip-sync). Hook: Stitched (פתח עדשה ← מנהרה, סצנות 1-2). TEXT-FX: HOOK explode (סצנה 4) + CRUMPLE grab-crumple (סצנה 15, CTA). Curiosity payoff: קופסה (7-8 ← 14). 110 מילות קריינות. ממתין לאישור.
 קישור: bambi/outputs/video-effects-series/2026-11-24-ep01-hooks/storyboard.md
+
+---
+
+## 2026-11-24 | video-effects-series | ep01-hooks — v2 (משוב לירז)
+אותה תיקיית run, נכתב מחדש: בלי דמות/אווטאר (voiceover + אובייקטים/גרפיקה בלבד; cast = אובייקט black_box), קריינות ברבים, הצגה עצמית "שמי לירז..." עם ציר זמן גרפי (Remotion) בסצנות 3–4, caption_note עם תרגומי מונחים (לאישור), CRUMPLE נשאר. 18 סצנות, 57s.
