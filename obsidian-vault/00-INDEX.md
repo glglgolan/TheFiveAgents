@@ -83,3 +83,4 @@ obsidian-vault/
 - [[face-fidelity]]
 - [[gemini-image-gen]]
 - [[presentation-builder]]
+- [[code-film-studio]]
