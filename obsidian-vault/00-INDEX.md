@@ -78,6 +78,7 @@ obsidian-vault/
 └── config/              ← תיעוד לקבצי הגדרות
 ```
 - [[canva_designer]]
+- [[amazon-bot]]
 - [[presentation_builder]]
 - [[spa-builder]]
 - [[face-fidelity]]

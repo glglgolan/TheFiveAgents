@@ -1,0 +1,25 @@
+name = "amazon-israel-bot"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV לשמירת תוצאות חיפוש (לכפתורים), מכסה חודשית, ושאלות הבהרה פתוחות.
+# צור עם: npx wrangler kv namespace create BOT_KV  — והדבק את ה-id כאן.
+[[kv_namespaces]]
+binding = "BOT_KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+# שם המשתמש של הבוט בלי @ (לזיהוי אזכורים בקבוצה)
+BOT_USERNAME = "REPLACE_WITH_BOT_USERNAME"
+# תקרת חיפושי SerpApi לחודש (המסלול החינמי = 250)
+MONTHLY_SEARCH_LIMIT = "250"
+# ערך פרמטר shipping_location של SerpApi. לאמת בבדיקה הראשונה עם /debug
+SHIPPING_LOCATION = "IL"
+# מודל Claude לפירוש הבקשות ודירוג התוצאות
+CLAUDE_MODEL = "claude-opus-5-5"
+RESULTS_PER_PAGE = "5"
+
+# Secrets (לא כאן! להגדיר עם `npx wrangler secret put <NAME>`):
+#   TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, SERPAPI_KEY, ANTHROPIC_API_KEY,
+#   ALLOWED_CHAT_IDS (רשימה מופרדת בפסיקים), ADMIN_USER_ID

@@ -24,6 +24,7 @@
 | **presentation_builder** | בונה המצגות — מצגות/פיצ'דקים מנושא + חומרי רקע (HTML / PPTX / Remotion MP4) |
 | **spa-builder** | בונה אפליקציות הווב — אפליקציות SPA / דפים אינטראקטיביים / דשבורדים / כלים |
 | **canva_designer** | בונה העיצובים הממותגים — פוסטים/באנרים/פלייארים/כרטיסי ביקור/לוגואים דרך Canva MCP, כולל brand kit |
+| **amazon-bot** | בוט טלגרם משפחתי (Cloudflare Worker, רץ 24/7) — חיפוש מוצרים באמאזון עם משלוח חינם לישראל. **שירות פרוס, לא subagent** |
 
 ---
 
@@ -70,6 +71,7 @@ bambi/         # workspace של במבי, הבמאי
   │       └── scenes/  # תמונות פריים-ראשון פר סצנה (sNN.png)
   └── Memory/
       └── jobs.md      # לוג סטוריבורדים
+amazon-bot/    # בוט טלגרם (Cloudflare Worker) — src/, test/, scripts/set-webhook.sh, README.md
 canva/         # workspace של canva_designer
   ├── Memory/
   │   └── jobs.md      # לוג עיצובים (query, brand kit, design_url, QA עברית)
@@ -178,6 +180,15 @@ Output/        # תוצרים סופיים (.md + .html)
 **MCP:** מחובר כ-connector של claude.ai בשם "Canva" (`claude mcp list`), tools תחת prefix `mcp__<connector-id>__*` — connector ברמת claude.ai ולא project `.mcp.json` כמו klingai, אז ה-ID יכול להשתנות אם המשתמש מנתק/מחבר מחדש
 **התנהגות:** שואל brand kit לפני generate-design (`list-brand-kits` אם כן); **QA חזותי חובה על כל candidate לפני הצגה** — נבדק ואומת: עברית מיוצרת עם איות נכון וכיווניות RTL תקינה, **אבל** יש bug אמיתי של גלישת טקסט RTL מעבר לקצה ה-canvas ב-autofit — צריך לפתוח כל thumbnail ולבדוק חיתוך לפני שמציגים למשתמש; ייצוא רק בפורמט שאושר ע"י `get-export-formats`
 **הבחנה:** לעיצובים **ממותגים/מבוססי-תבנית** (פוסטים, באנרים, פלייארים, לוגואים, כרטיסי ביקור). **לא** למצגות/דקים (`generate-design` לא תומך ב-`presentation` בכלל → `presentation_builder`), **לא** לאפליקציות (`spa-builder`), **לא** לאיור מותאם-אישית בלי brand kit (`יובל`)
+
+
+### amazon-bot — בוט אמאזון משפחתי (שירות פרוס)
+**מה:** בוט טלגרם בקבוצה המשפחתית שמחפש ב-amazon.com ומציג רק מוצרים עם "FREE Shipping to Israel". רץ על Cloudflare Workers, לא על המחשב.
+**קוד:** `amazon-bot/` (TypeScript) · מדריך התקנה: `amazon-bot/README.md`
+**מקורות:** SerpApi (חינם עד 250 חיפושים/חודש) + Claude API (פירוש בקשה + דירוג)
+**Triggers (לשינויים בבוט):** בוט אמאזון, בוט טלגרם, משלוח חינם לישראל
+**התנהגות:** ראובן עורך את הקוד ב-`amazon-bot/`, מריץ `npm test` + `npm run typecheck`, והמשתמש פורס עם `npx wrangler deploy`
+**שלב 2 (מתוכנן):** מעקב מחירים — גילוי ב-SerpApi + מעקב RSS (CamelCamelCamel) + Cron Trigger + אימות משלוח לפני התראה
 
 ---
 
